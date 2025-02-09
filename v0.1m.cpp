@@ -1,36 +1,44 @@
 #include "manolib.h"
+const int MaxStud=100;
+const int MaxPaz=20;
 
 struct Stud
 {
-    std::string Vardas="a",Pavarde="b";
-    std::vector <int> paz;
-    double galutinis=2;
+    string Vardas="a",Pavarde="b";
+    int paz[MaxPaz];
+    int pazcount;
     int egz;
     char vm;
+    double galutinis;
 
 };
 
+
 int main()
 {
-    vector<Stud> grupe;
-
-    while(true)
+    Stud grupe[MaxStud];
+    int students=0;
+    
+    while(students < MaxStud)  
     {
         Stud laik;
+        
+
         cout<<"Input name: "<<endl;
         cin>>laik.Vardas;
         cout<<"Input surname: "<<endl;
         cin>>laik.Pavarde;
 
         cout<<"Input your hw scores 1-10. After your last one enter 11 "<<endl;
-        int paz;
+        int paz, i=0;
         cin>>paz;
-        while(paz>=0 && paz<=10)
+        while(paz>=0 && paz<=10 && i<MaxPaz)
         {
-            laik.paz.push_back(paz);
+            laik.paz[i++]= paz;
             cin>>paz;
         }
-
+        laik.pazcount=i;
+        
         cout<<"Enter exam score: ";
         cin>>laik.egz;
 
@@ -42,8 +50,7 @@ int main()
             cin>>laik.vm;
         }
 
-
-        grupe.push_back(laik);
+        grupe[students++]=laik;
 
         cout<<"Enter more students? (y/n)";
         char x;
@@ -57,30 +64,31 @@ int main()
         
     }
 
-    for(auto &n :grupe){
+    for(int i=0; i<students; i++){
         int suma=0;
-            for(auto n: n.paz)
+            for(int j=0; j<grupe[i].pazcount; j++)
             {
-            suma=suma+n;}
-            if(n.vm=='v'){
-                n.galutinis= 0.4*(suma/n.paz.size())+0.6*n.egz;
+            suma+=grupe[i].paz[j];}
+
+            if(grupe[i].vm=='v'){
+                grupe[i].galutinis= 0.4*(suma/grupe[i].pazcount)+0.6*grupe[i].egz;
             }
-            else if (n.paz.size()%2==0){
-                n.galutinis=0.4*(n.paz[n.paz.size()/2] + n.paz[n.paz.size()/2-1])/2 +0.6*n.egz;
+            else if (grupe[i].pazcount%2==0){
+                grupe[i].galutinis=0.4*(grupe[i].paz[grupe[i].pazcount/2] + grupe[i].paz[grupe[i].pazcount/2-1])/2 +0.6*grupe[i].egz;
             }
             else{
-                n.galutinis=0.4*n.paz[n.paz.size()/2] +0.6*n.egz;
+                grupe[i].galutinis=0.4*grupe[i].paz[grupe[i].pazcount/2] +0.6*grupe[i].egz;
             }
         }
 
     cout<<std::left<<setw(10)<<"Vardas"<<setw(10)<<"Pavarde"<<setw(10)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
     cout<<"-----------------------------------------------------------"<<endl;
-
-for(auto n :grupe)
+    
+for(int i=0; i<students; i++)
 {
-    cout<<std::left<<setw(10)<<n.Vardas<<setw(10)<<n.Pavarde<<setw(10);
-    if(n.vm == 'a') cout<<std::fixed<<std::setprecision(2)<<n.galutinis<<"         -"<<endl;
-    else cout<<" -                "<<std::fixed<<std::setprecision(2)<<n.galutinis<<endl;
+    cout<<std::left<<setw(10)<<grupe[i].Vardas<<setw(10)<<grupe[i].Pavarde<<setw(10);
+    if(grupe[i].vm == 'a') cout<<std::fixed<<std::setprecision(2)<<grupe[i].galutinis<<"         -"<<endl;
+    else cout<<" -                "<<std::fixed<<std::setprecision(2)<<grupe[i].galutinis<<endl;
 }
 
 }
