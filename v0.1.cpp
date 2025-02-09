@@ -2,8 +2,8 @@
 
 struct Stud
 {
-    std::string Vardas="a",Pavarde="b";
-    std::vector <int> paz;
+    string Vardas="a",Pavarde="b";
+    vector <int> paz;
     double galutinis=2;
     int egz;
     char vm;
@@ -14,12 +14,102 @@ int main()
 {
     vector<Stud> grupe;
 
+    char a;
+    cout<<"Do you want to input everything manually, input names and generate scores, or generate everything? \n (m/s/r)";
+    cin>>a;
+    while(a!= 'm' && a!= 's' &&a!= 'r') 
+    {   
+        cout<<"Invalid input. Enter m or r"<<endl;
+        cin>>a;
+    }
+    if(a=='r')//Visko "generavimas"
+    {
+        cout<<"How many students do you want to generate? ";
+        int n;
+        cin>>n;
+        srand(time(NULL));
+        for(int i=0; i<n; i++)
+        {
+            Stud laik;
+            
+            int gender=rand()%2;
+            if(gender==0){
+                laik.Vardas=FNames[rand()%25];
+                laik.Pavarde=FSurnames[rand()%25];
+            }
+            else{
+                laik.Vardas=MNames[rand()%25];
+                laik.Pavarde=MSurnames[rand()%25];
+            }
+           
+            for(int j=0; j<5; j++)
+            {
+                laik.paz.push_back(rand()%10);
+            }
+            laik.egz=rand()%10;
+
+            if(rand()%2==0) laik.vm='a';
+            else laik.vm='m';
+            grupe.push_back(laik);
+        }
+    }
+     
+    else if(a=='s')//Vardo ir pavardes ivedimas, pazymiu generavimas
+     {
+        cout<<"Input student names manually, generate scores"<<endl;
+
+        while(true)
+        {
+            Stud laik;
+            cout<<"Input name: ";
+            cin>>laik.Vardas;
+            cout<<"Input surname: ";
+            cin>>laik.Pavarde;
+
+            cout<<"How many homework scores do you want to generate? ";
+            int n;
+            cin>>n;
+            srand(time(NULL));
+            for(int i=0; i<n; i++)
+            {
+                laik.paz.push_back(rand()%10);
+                laik.egz=rand()%10;
+            }
+
+            cout<<"Calculate final score with average or median? (a/m)";
+            cin>>laik.vm;
+            while(laik.vm!= 'a' && laik.vm!= 'm') 
+            {   
+                cout<<"Invalid input. Enter a or m"<<endl;
+                cin>>laik.vm;
+            }
+
+
+            grupe.push_back(laik);
+
+            cout<<"Enter more students? (y/n)";
+            char x;
+            cin>>x;
+            while(x!= 'y' && x!= 'n') 
+            {   
+                cout<<"Invalid input. Enter y or n"<<endl;
+                cin>>x;
+            }
+            if(x=='n') break;
+            
+        }
+     }
+    
+    else//Visko ivedimas ranka
+    {
+        cout<<"Input students manually"<<endl;
+       
     while(true)
     {
         Stud laik;
-        cout<<"Input name: "<<endl;
+        cout<<"Input name: ";
         cin>>laik.Vardas;
-        cout<<"Input surname: "<<endl;
+        cout<<"Input surname: ";
         cin>>laik.Pavarde;
 
         cout<<"Input your hw scores 1-10. After your last one enter 11 "<<endl;
@@ -56,7 +146,9 @@ int main()
         if(x=='n') break;
         
     }
+    }
 
+    //Galutinio pazymio skaiciavimas
     for(auto &n :grupe){
         int suma=0;
             for(auto n: n.paz)
@@ -73,12 +165,12 @@ int main()
             }
         }
 
-    cout<<std::left<<setw(10)<<"Vardas"<<setw(10)<<"Pavarde"<<setw(10)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
+    //Isvedimas
+    cout<<std::left<<setw(12)<<"Vardas"<<setw(15)<<"Pavarde"<<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
     cout<<"-----------------------------------------------------------"<<endl;
-
 for(auto n :grupe)
 {
-    cout<<std::left<<setw(10)<<n.Vardas<<setw(10)<<n.Pavarde<<setw(10);
+    cout<<std::left<<setw(15)<<n.Vardas<<setw(20)<<n.Pavarde<<setw(7);
     if(n.vm == 'a') cout<<std::fixed<<std::setprecision(2)<<n.galutinis<<"         -"<<endl;
     else cout<<" -                "<<std::fixed<<std::setprecision(2)<<n.galutinis<<endl;
 }
