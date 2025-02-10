@@ -5,8 +5,8 @@ struct Stud
     string Vardas="a",Pavarde="b";
     vector <int> paz;
     double galutinis=2;
-    int egz;
-    char vm;
+    int egz=2;
+    char vm= 'a';
 
 };
 
@@ -15,13 +15,14 @@ int main()
     vector<Stud> grupe;
 
     char a;
-    cout<<"Do you want to input everything manually, input names and generate scores, or generate everything? \n (m/s/r)";
+    cout<<"Do you want to input everything manually, input names and generate scores, or generate everything?(m/s/r)";
     cin>>a;
     while(a!= 'm' && a!= 's' &&a!= 'r') 
     {   
-        cout<<"Invalid input. Enter m or r"<<endl;
+        cout<<"Invalid input. Enter m , s or r"<<endl;
         cin>>a;
     }
+
     if(a=='r')//Visko "generavimas"
     {
         cout<<"How many students do you want to generate? ";
@@ -44,9 +45,9 @@ int main()
            
             for(int j=0; j<5; j++)
             {
-                laik.paz.push_back(rand()%10);
+                laik.paz.push_back(rand()%11);
             }
-            laik.egz=rand()%10;
+            laik.egz=rand()%11;
 
             if(rand()%2==0) laik.vm='a';
             else laik.vm='m';
@@ -54,7 +55,7 @@ int main()
         }
     }
      
-    else if(a=='s')//Vardo ir pavardes ivedimas, pazymiu generavimas
+    else if(a=='s') //Vardo ir pavardes ivedimas, pazymiu generavimas
      {
         cout<<"Input student names manually, generate scores"<<endl;
 
@@ -100,10 +101,9 @@ int main()
         }
      }
     
-    else//Visko ivedimas ranka
+    else //Visko ivedimas ranka
     {
-        cout<<"Input students manually"<<endl;
-       
+    cout<<"Input students manually"<<endl;
     while(true)
     {
         Stud laik;
@@ -166,12 +166,12 @@ int main()
         }
 
     //Isvedimas
-    cout<<std::left<<setw(12)<<"Vardas"<<setw(15)<<"Pavarde"<<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
+    cout<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"<<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
     cout<<"-----------------------------------------------------------"<<endl;
 for(auto n :grupe)
 {
-    cout<<std::left<<setw(15)<<n.Vardas<<setw(20)<<n.Pavarde<<setw(7);
-    if(n.vm == 'a') cout<<std::fixed<<std::setprecision(2)<<n.galutinis<<"         -"<<endl;
+    cout<<std::left<<setw(15)<<n.Vardas<<setw(18)<<n.Pavarde<<setw(7);
+    if(n.vm == 'a') cout<<std::fixed<<std::setprecision(2)<<n.galutinis<<"            -"<<endl;
     else cout<<" -                "<<std::fixed<<std::setprecision(2)<<n.galutinis<<endl;
 }
 

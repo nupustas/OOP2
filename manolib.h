@@ -12,30 +12,31 @@ using std::setw;
 
 string MNames[] = {
     "Andrius", "Dainius",   "Jonas"  "Marius", "Orestas", "Povilas", 
-    "Aidas",  "Tomas",  "Vejas", "Žygimantas",  "Vaidotas",
-    "Marius",   "Linas", "Kęstutis", "Tomas", "Vaidotas", "Dainius", 
+    "Aidas",  "Tomas",  "Vejas", "Zygimantas",  "Vaidotas",
+    "Marius",   "Linas", "Kestutis", "Tomas", "Vaidotas", "Dainius", 
      "Martynas",   "Gintaras",  "Dainius", "Tomas", "Vaidotas",
      "Antanas", "Paulius",   "Jonas"
 };
 
 string MSurnames[] = {
-    "Petrauskas", "Jankauskas", "Kazlauskas", "Žukauskas", "Kavaliauskas", "Stankevičius", "Bieliauskas", 
-    "Būdvytis", "Giedraitis",  "Rimkus",  "Valiukas", "Juknevičius", "Vaitkevičius", 
+    "Petrauskas", "Jankauskas", "Kazlauskas", "Zukauskas", "Kavaliauskas", "Stankevicius", "Bieliauskas", 
+    "Budvytis", "Giedraitis",  "Rimkus",  "Valiukas", "Juknevicius", "Vaitkevicius", 
      "Vasiliauskas", "Navickas",  "Urbonas", "Grigonis", "Rutkauskas",  
-    "Vaitkus", "Pakalnis", "Norkus", "Skripka", "Butkevičius", "Nedzinskas", "Mickevičius",  
+    "Vaitkus", "Pakalnis", "Norkus", "Skripka", "Butkevicius", "Nedzinskas", "Mickevicius",  
 };
 
 string FNames[] = {
-    "Eglė", "Indrė", "Lina","Neringa","Sigutė","Ugnė","Laura","Viktorija",
-    "Rasa","Gintarė","Agne","Ieva", "Milda","Margarita","Aistė", "Vilma",
-    "Rūta","Aistė","Gabija","Jūratė","Jurgita", "Vaiva", "Ula", "Greta",
+    "Egle", "Indre", "Lina","Neringa","Sigute","Ugne","Laura","Viktorija",
+    "Rasa","Gintare","Agne","Ieva", "Milda","Margarita","Aiste", "Vilma",
+    "Ruta","Aiste","Gabija","Jurate","Jurgita", "Vaiva", "Ula", "Greta",
     "Kotryna"
 
 };
+
 string FSurnames[] = {
-"Kavaliauskaitė","Petronytė","Šeškinytė","Pakalnaitė","Daugėlaitė","Simonaitytė",
-"Giedrė","Žukaitė", "Bieliauskaitė","Kaminskaitė",  "Dapšytė", "Kučinskaitė", 
-"Vaitkevičiūtė", "Vasiliauskaitė", "Navickaitė", "Urbonaitė", "Grigonienė",
- "Rutkauskaitė", "Vaitkutė", "Pakalnytė", "Norkutė", "Skripkaitė", "Butkevičiūtė",
-"Mickevičiūtė", "Brazaitė"
+"Norkute","Petronyte","Seskinyte","Pakalnaite","Daugelaite","Simonaityte",
+"Giedre","Zukaite", "Norkute", "Kaminskaite", "Dapsyte", "Kucinskaite", 
+"Vaitkeviciute", "Vasiliauskaite", "Navickaite", "Urbonaite", "Grigoniene",
+ "Rutkauskaite", "Vaitkute", "Pakalnyte", "Norkute", "Skripkaite", "Butkeviciute",
+"Mickeviciute", "Brazaite"
 };
