@@ -54,7 +54,7 @@ int main()
            
             for(int j=0; j<5; j++)
             {
-                laik.paz[j]= rand()%10;
+                laik.paz[j]= rand()%11;
             }
             laik.egz=rand()%11;
             laik.pazcount=5;
@@ -155,6 +155,8 @@ int main()
     }
 
     for(int i=0; i<students; i++){
+
+        sort(grupe[i].paz, grupe[i].paz+grupe[i].pazcount);
         double suma=0;
             for(int j=0; j<grupe[i].pazcount; j++)
             {

@@ -150,6 +150,8 @@ int main()
 
     //Galutinio pazymio skaiciavimas
     for(auto &n :grupe){
+        sort(n.paz.begin(), n.paz.end());
+
         int suma=0;
             for(auto n: n.paz)
             {

@@ -2,6 +2,8 @@
 #include<iomanip> 
 #include<iostream>
 #include<ctime>
+#include<algorithm>
+
 
 using std::cout;
 using std::cin;
@@ -9,6 +11,7 @@ using std::endl;
 using std::vector;
 using std::string;
 using std::setw;
+using std::sort;
 
 string MNames[] = {
     "Andrius", "Dainius",   "Jonas"  "Marius", "Orestas", "Povilas", 
