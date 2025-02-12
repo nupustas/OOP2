@@ -15,15 +15,15 @@ int main()
     vector<Stud> grupe;
 
     char a;
-    cout<<"Do you want to input everything manually, input names and generate scores, or generate everything?(m/s/r)";
+    cout<<"Do you want to input everything manually, input names and generate scores, or generate everything?(1/2/3)";
     cin>>a;
-    while(a!= 'm' && a!= 's' &&a!= 'r') 
+    while(a!= '1' && a!= '2' &&a!= '3') 
     {   
-        cout<<"Invalid input. Enter m , s or r"<<endl;
+        cout<<"Invalid input. Enter 1, 2 or 3"<<endl;
         cin>>a;
     }
 
-    if(a=='r')//Visko "generavimas"
+    if(a=='3')//Visko "generavimas"
     {
         cout<<"How many students do you want to generate? ";
         int n;
@@ -55,7 +55,7 @@ int main()
         }
     }
      
-    else if(a=='s') //Vardo ir pavardes ivedimas, pazymiu generavimas
+    else if(a=='2') //Vardo ir pavardes ivedimas, pazymiu generavimas
      {
         cout<<"Input student names manually, generate scores"<<endl;
 
