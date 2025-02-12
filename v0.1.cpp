@@ -1,21 +1,13 @@
 #include "manolib.h"
 
-struct Stud
-{
-    string Vardas="a",Pavarde="b";
-    vector <int> paz;
-    double galutinis=2;
-    int egz=2;
-    char vm= 'a';
-
-};
-
 int main()
 {
     vector<Stud> grupe;
 
-    char a;
-    cout<<"Do you want to input everything manually, input names and generate scores, or generate everything?(1/2/3)";
+    char a; 
+    cout<<"1-Input everything manually"<<endl;
+    cout<<"2-Input names, generate scores"<<endl;
+    cout<<"3-Generate everything"<<endl;
     cin>>a;
     while(a!= '1' && a!= '2' &&a!= '3') 
     {   
@@ -25,9 +17,14 @@ int main()
 
     if(a=='3')//Visko "generavimas"
     {
+        cout<<"Selected '3-Generate everything' "<<endl;
+        cout<<endl;
         cout<<"How many students do you want to generate? ";
         int n;
         cin>>n;
+        cout<<"How many homework scores do you want to generate? ";
+        int x;
+        cin>>x;
         srand(time(NULL));
         for(int i=0; i<n; i++)
         {
@@ -43,7 +40,7 @@ int main()
                 laik.Pavarde=MSurnames[rand()%25];
             }
            
-            for(int j=0; j<5; j++)
+            for(int j=0; j<x; j++)
             {
                 laik.paz.push_back(rand()%11);
             }
@@ -56,8 +53,9 @@ int main()
     }
      
     else if(a=='2') //Vardo ir pavardes ivedimas, pazymiu generavimas
-     {
-        cout<<"Input student names manually, generate scores"<<endl;
+     {  
+        cout << "Selected 2-Input names, generate scores" << endl;
+        cout<<endl;
 
         while(true)
         {
@@ -73,9 +71,9 @@ int main()
             srand(time(NULL));
             for(int i=0; i<n; i++)
             {
-                laik.paz.push_back(rand()%10);
-                laik.egz=rand()%10;
+                laik.paz.push_back(rand()%11);
             }
+            laik.egz=rand()%11;
 
             cout<<"Calculate final score with average or median? (a/m)";
             cin>>laik.vm;
@@ -84,7 +82,6 @@ int main()
                 cout<<"Invalid input. Enter a or m"<<endl;
                 cin>>laik.vm;
             }
-
 
             grupe.push_back(laik);
 
@@ -103,7 +100,8 @@ int main()
     
     else //Visko ivedimas ranka
     {
-    cout<<"Input students manually"<<endl;
+        cout << "Selected 1-Input everything manually" << endl;
+        cout<<endl;
     while(true)
     {
         Stud laik;
