@@ -18,6 +18,9 @@ using std::sort;
 using std::left;
 using std::fixed;
 using std::setprecision;
+using std::getline;
+using std::ifstream;
+
 
 struct Stud
 {

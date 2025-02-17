@@ -21,7 +21,18 @@ int main()
         cin>>a;
     }
 
-    if(a=='3')//Visko "generavimas"
+    if (a== '4') //Failo nuskaitymas
+    {   
+        string filename = "studentai10000.txt";
+        int n;
+        cout<<"How many students to read from file?";
+        cin>>n;
+
+        vector<string> lines = ReadLinesFromFile(filename, n);
+        grupe = ParseStudents(lines);
+    }
+
+    else if(a=='3')//Visko "generavimas"
     {
         GenerateEverything(grupe);
     }
