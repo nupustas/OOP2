@@ -1,8 +1,12 @@
+#ifndef MANOLIB_H
+#define MANOLIB_H
+
 #include<vector>
 #include<iomanip> 
 #include<iostream>
 #include<ctime>
 #include<algorithm>
+#include<fstream>
 
 using std::cout;
 using std::cin;
@@ -26,30 +30,31 @@ struct Stud
     char vm= 'a';
  };
 
-string MNames[] = {
+const string MNames[] = {
     "Andrius", "Dainius", "Jonas" , "Marius", "Orestas", "Povilas", 
     "Aidas",  "Tomas",  "Vejas", "Zygimantas",  "Vaidotas",
-    "Marius",   "Linas", "Kestutis", "Tomas", "Vaidotas", "Dainius", 
-     "Martynas",   "Gintaras",  "Dainius", "Tomas", "Vaidotas",
-     "Antanas", "Paulius",   "Jonas"
+    "Linas", "Kestutis", "Vaidotas", "Martynas",   "Gintaras",
+     "Tomas", "Antanas", "Paulius",   "Jonas"
 };
-string MSurnames[] = {
+const string MSurnames[] = {
     "Petrauskas", "Jankauskas", "Kazlauskas", "Zukauskas", "Kavaliauskas", "Stankevicius", "Bieliauskas", 
     "Budvytis", "Giedraitis",  "Rimkus",  "Valiukas", "Juknevicius", "Vaitkevicius", 
      "Vasiliauskas", "Navickas",  "Urbonas", "Grigonis", "Rutkauskas",  
     "Vaitkus", "Pakalnis", "Norkus", "Skripka", "Butkevicius", "Nedzinskas", "Mickevicius",  
 };
-string FNames[] = {
+const string FNames[] = {
     "Egle", "Indre", "Lina","Neringa","Sigute","Ugne","Laura","Viktorija",
     "Rasa","Gintare","Agne","Ieva", "Milda","Margarita","Aiste", "Vilma",
     "Ruta","Aiste","Gabija","Jurate","Jurgita", "Vaiva", "Ula", "Greta",
     "Kotryna"
 
 };
-string FSurnames[] = {
+const string FSurnames[] = {
 "Norkute","Petronyte","Seskinyte","Pakalnaite","Daugelaite","Simonaityte",
 "Giedre","Zukaite", "Norkute", "Kaminskaite", "Dapsyte", "Kucinskaite", 
 "Vaitkeviciute", "Vasiliauskaite", "Navickaite", "Urbonaite", "Grigoniene",
  "Rutkauskaite", "Vaitkute", "Pakalnyte", "Norkute", "Skripkaite", "Butkeviciute",
 "Mickeviciute", "Brazaite"
 };
+
+#endif
