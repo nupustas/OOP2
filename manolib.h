@@ -33,6 +33,13 @@ struct Stud
     char vm= 'a';
  };
 
+ bool compareByName(const Stud& a, const Stud& b) {
+    return a.Vardas < b.Vardas;  // Sort in ascending order (A-Z)
+}
+bool compareBySurname(const Stud& a, const Stud& b) {
+    return a.Pavarde < b.Pavarde;  // Sort in ascending order (A-Z)
+}
+
 const string MNames[] = {
     "Andrius", "Dainius", "Jonas" , "Marius", "Orestas", "Povilas", 
     "Aidas",  "Tomas",  "Vejas", "Zygimantas",  "Vaidotas",
