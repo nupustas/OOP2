@@ -10,9 +10,10 @@ vector<string> ReadLinesFromFile(const string& filename, int studentCount) {
     }
 
     string line;
+    getline(fd, line); // Skip the first line
     int count = 0;
     while (getline(fd, line) && count < studentCount) {
-        if (!line.empty()) { // Avoid empty lines
+        if (!line.empty()) { // skip tuscias linijas
             lines.push_back(line);
             count++;
         }
