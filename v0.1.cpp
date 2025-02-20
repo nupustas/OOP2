@@ -39,6 +39,14 @@ int main()
     cout<<"How many homework scores do you want to generate? ";
     int x;
     cin>>x;
+    cout<<"How do you want to calculate final score? (a/m) ";
+    char vm;
+    cin>>vm;
+    while(vm!= 'a' && vm!= 'm') 
+    {   
+        cout<<"Invalid input. Enter a or m"<<endl;
+        cin>>vm;
+    }
     srand(time(NULL));
     for(int i=0; i<n; i++)
     {
@@ -60,7 +68,7 @@ int main()
             }
             laik.egz=rand()%11;
 
-            if(rand()%2==0) laik.vm='a';
+            if(vm=='a') laik.vm='a';
             else laik.vm='m';
             grupe.push_back(laik);
         
