@@ -7,6 +7,7 @@
 #include<ctime>
 #include<algorithm>
 #include<fstream>
+#include<chrono>
 
 using std::cout;
 using std::cin;
@@ -20,6 +21,7 @@ using std::fixed;
 using std::setprecision;
 using std::getline;
 using std::ifstream;
+using std::ofstream;
 
 
 struct Stud
