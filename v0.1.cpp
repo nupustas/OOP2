@@ -1,4 +1,7 @@
 #include "manolib.h"
+#include "ReadFile.cpp"
+#include "FinalScore.cpp"
+
 
 int main()
 {
@@ -8,29 +11,48 @@ int main()
     cout<<"1-Input everything manually"<<endl;
     cout<<"2-Input names, generate scores"<<endl;
     cout<<"3-Generate everything"<<endl;
+    cout<<"4-Read from file"<<endl;
     cin>>a;
-    while(a!= '1' && a!= '2' &&a!= '3') 
+    while(a!= '1' && a!= '2' &&a!= '3' &&a!= '4') 
     {   
-        cout<<"Invalid input. Enter 1, 2 or 3"<<endl;
+        cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
         cin>>a;
     }
 
-    if(a=='3')//Visko "generavimas"
+    if (a== '4') //Failo nuskaitymas
+    {   
+        string filename;
+        cout<<"Input file name: ";
+        cin>>filename;
+        
+        vector<string> lines = ReadLinesFromFile(filename);
+        grupe = ParseStudents(lines);
+
+    }
+    else if(a=='3')//Visko "generavimas"
     {
-        cout<<"Selected '3-Generate everything' "<<endl;
-        cout<<endl;
-        cout<<"How many students do you want to generate? ";
-        int n;
-        cin>>n;
-        cout<<"How many homework scores do you want to generate? ";
-        int x;
-        cin>>x;
-        srand(time(NULL));
-        for(int i=0; i<n; i++)
-        {
-            Stud laik;
-            
-            int gender=rand()%2;
+    cout<<"Selected '3-Generate everything' "<<endl;
+    cout<<endl;
+    cout<<"How many students do you want to generate? ";
+    int n;
+    cin>>n;
+    cout<<"How many homework scores do you want to generate? ";
+    int x;
+    cin>>x;
+    cout<<"How do you want to calculate final score? (a/m) ";
+    char vm;
+    cin>>vm;
+    while(vm!= 'a' && vm!= 'm') 
+    {   
+        cout<<"Invalid input. Enter a or m"<<endl;
+        cin>>vm;
+    }
+    srand(time(NULL));
+    for(int i=0; i<n; i++)
+    {
+        Stud laik;
+        
+        int gender=rand()%2;
             if(gender==0){
                 laik.Vardas=FNames[rand()%25];
                 laik.Pavarde=FSurnames[rand()%25];
@@ -46,12 +68,13 @@ int main()
             }
             laik.egz=rand()%11;
 
-            if(rand()%2==0) laik.vm='a';
+            if(vm=='a') laik.vm='a';
             else laik.vm='m';
             grupe.push_back(laik);
-        }
+        
+
     }
-     
+    }
     else if(a=='2') //Vardo ir pavardes ivedimas, pazymiu generavimas
      {  
         cout << "Selected 2-Input names, generate scores" << endl;
@@ -96,8 +119,7 @@ int main()
             if(x=='n') break;
             
         }
-     }
-    
+     }   
     else //Visko ivedimas ranka
     {
         cout << "Selected 1-Input everything manually" << endl;
@@ -130,7 +152,6 @@ int main()
             cin>>laik.vm;
         }
 
-
         grupe.push_back(laik);
 
         cout<<"Enter more students? (y/n)";
@@ -145,28 +166,46 @@ int main()
         
     }
     }
+        FinalScore(grupe);//Galutinio pazymio skaiciavimas
 
-    //Galutinio pazymio skaiciavimas
-    for(auto &n :grupe){
-        sort(n.paz.begin(), n.paz.end());
-
-        int suma=0;
-            for(auto n: n.paz)
-            {
-            suma=suma+n;}
-            if(n.vm=='v'){
-                n.galutinis= 0.4*(suma/n.paz.size())+0.6*n.egz;
-            }
-            else if (n.paz.size()%2==0){
-                n.galutinis=0.4*(n.paz[n.paz.size()/2] + n.paz[n.paz.size()/2-1])/2 +0.6*n.egz;
-            }
-            else{
-                n.galutinis=0.4*n.paz[n.paz.size()/2] +0.6*n.egz;
-            }
+    cout<<"How do you want to sort the students?"<<endl;
+        cout<<"1-By name"<<endl;
+        cout<<"2-By surname"<<endl;
+        cout<<"3-By final score descending"<<endl;
+        cout<<"4-By final score ascending"<<endl;
+        int x;
+        cin>>x;
+        while(x!=1 && x!=2 && x!=3 && x!=4)
+        {
+            cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
+            cin>>x;
+        }
+        cout<<"Show results in file or terminal?"<<endl;
+        cout<<"1-file"<<endl;
+        cout<<"2-terminal"<<endl;
+        int y;
+        cin>>y;
+        while(y!=1 && y!=2)
+        {
+            cout<<"Invalid input. Enter 1 or 2"<<endl;
+            cin>>y;
         }
 
+        
+        if(x==1)std::sort(grupe.begin(), grupe.end(), compareByName);
+        else if(x==2)std::sort(grupe.begin(), grupe.end(), compareBySurname);
+        else if(x==3)std::sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {
+            return a.galutinis > b.galutinis;
+        });
+        else std::sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {
+            return a.galutinis < b.galutinis;
+        });
+
+
     //Isvedimas
-    cout<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"<<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
+   if (y==2) {
+    cout<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"
+    <<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
     cout<<"-----------------------------------------------------------"<<endl;
 for(auto n :grupe)
 {
@@ -174,5 +213,19 @@ for(auto n :grupe)
     if(n.vm == 'a') cout<<std::fixed<<std::setprecision(2)<<n.galutinis<<"            -"<<endl;
     else cout<<" -                "<<std::fixed<<std::setprecision(2)<<n.galutinis<<endl;
 }
-
+   }
+   else
+   {
+       ofstream out("rezultatai.txt");
+       out<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"
+       <<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
+       out<<"-----------------------------------------------------------"<<endl;
+   for(auto n :grupe)
+   {
+       out<<std::left<<setw(15)<<n.Vardas<<setw(18)<<n.Pavarde<<setw(7);
+       if(n.vm == 'a') out<<std::fixed<<std::setprecision(2)<<n.galutinis<<"            -"<<endl;
+       else out<<" -                "<<std::fixed<<std::setprecision(2)<<n.galutinis<<endl;
+   }
+   out.close();
+   }
 }
