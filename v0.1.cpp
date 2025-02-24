@@ -203,7 +203,9 @@ int main()
 
 
     //Isvedimas
-   if (y==2) {cout<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"<<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
+   if (y==2) {
+    cout<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"
+    <<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
     cout<<"-----------------------------------------------------------"<<endl;
 for(auto n :grupe)
 {
@@ -215,7 +217,8 @@ for(auto n :grupe)
    else
    {
        ofstream out("rezultatai.txt");
-       out<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"<<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
+       out<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"
+       <<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
        out<<"-----------------------------------------------------------"<<endl;
    for(auto n :grupe)
    {

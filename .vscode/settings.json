@@ -59,6 +59,7 @@
         "regex": "cpp",
         "fstream": "cpp",
         "chrono": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "cstdarg": "cpp"
     }
 }
