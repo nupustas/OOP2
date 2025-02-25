@@ -2,16 +2,21 @@
 
 using namespace std;
 
-vector<string> ReadLinesFromFile(const string& filename) {
+vector<string> ReadLinesFromFile() {
     vector<string> lines;
-    auto start = std::chrono::high_resolution_clock::now();
-
+    
+    string filename;
+    cout << "Enter file name: ";
+    cin>>filename;
     ifstream fd(filename);
-    if (!fd) {
+    while(!fd) {
         cout << "File not found!" << endl;
-        return lines;
+        cout << "Enter existing file name: ";
+        cin >> filename;
+        fd.open(filename);
     }
-
+ 
+    auto start = std::chrono::high_resolution_clock::now();
     string line;
     getline(fd, line); // Skip first line
     int count = 0;
@@ -27,7 +32,6 @@ vector<string> ReadLinesFromFile(const string& filename) {
 
     auto end = std::chrono::high_resolution_clock::now();
     
-    // Correct time calculation
     std::chrono::duration<double> duration = end - start;
 
     cout << "Read " << count << " lines in " 
@@ -37,7 +41,7 @@ vector<string> ReadLinesFromFile(const string& filename) {
     return lines;
 }
 
-// Function to process each line and extract student data
+// Atskiria studentus iš eilučių
 vector<Stud> ParseStudents(const vector<string>& lines) {
     vector<Stud> grupe;
     auto start = std::chrono::high_resolution_clock::now();
@@ -65,9 +69,9 @@ vector<Stud> ParseStudents(const vector<string>& lines) {
     
     std::chrono::duration<double> duration = end - start;
 
-    cout << "Split " << grupe.size() << " students in " 
-         << std::fixed << std::setprecision(2) 
-         << duration.count() << " seconds" << endl;
+    cout <<"Split " << grupe.size() << " students in " 
+         <<std::fixed << std::setprecision(2) 
+         <<duration.count() << " seconds" << endl;
 
     return grupe;
 }

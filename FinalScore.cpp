@@ -1,16 +1,17 @@
 #include "manolib.h"
 
-void FinalScore(vector<Stud> &grupe)
+void FinalScore(vector<Stud> &grupe, char am)
 {
 
-    for(auto &n :grupe){
+    for(auto &n :grupe)
+    {
         sort(n.paz.begin(), n.paz.end());
 
         int suma=0;
             for(auto n: n.paz)
             {
             suma=suma+n;}
-            if(n.vm=='v'){
+            if(am=='a'){
                 n.galutinis= 0.4*(suma/n.paz.size())+0.6*n.egz;
             }
             else if (n.paz.size()%2==0){
