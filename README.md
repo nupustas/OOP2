@@ -2,8 +2,7 @@
 
 This project is a C++ application that calculates the final grades for students based on their homework and exam scores.
 
-V0.1
-## Project Structure
+## V0.1 Project Structure
 
 - `.vscode/settings.json`: VSCode settings for file associations.
 - `.vscode/tasks.json`: VSCode tasks for building the project.
