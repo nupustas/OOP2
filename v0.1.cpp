@@ -131,8 +131,7 @@ int main()
      }   
     else //Failo nuskaitymas
     {
-        vector<string> lines = ReadLinesFromFile();
-        grupe = ParseStudents(lines);
+        grupe = ReadFile();
     }
         
     cout<<"Calculate final scores using average or median? (a/m)"<<endl;
@@ -150,18 +149,18 @@ int main()
         cout<<"2-By surname"<<endl;
         cout<<"3-By final score descending"<<endl;
         cout<<"4-By final score ascending"<<endl;
-        int x;
-        cin>>x;
-        while(x!=1 && x!=2 && x!=3 && x!=4)
+        char x;
+        std::cin.get()>>x;
+        while(x!='1' && x!='2' && x!='3' && x!='4')
         {
             cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
             cin>>x;
         }
 
-        if(x==1)sort(grupe.begin(), grupe.end(), compareByName);
-        else if(x==2)sort(grupe.begin(), grupe.end(), compareBySurname);
+        if(x=='1')sort(grupe.begin(), grupe.end(), compareByName);
+        else if(x=='2')sort(grupe.begin(), grupe.end(), compareBySurname);
 
-            else if(x==3)sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {
+            else if(x=='3')sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {
                 return a.galutinis > b.galutinis;});
 
                 else sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {

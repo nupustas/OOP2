@@ -6,7 +6,7 @@ void FinalScore(vector<Stud> &grupe, char am)
     for(auto &n :grupe)
     {
         sort(n.paz.begin(), n.paz.end());
-
+        n.vm=am;
         int suma=0;
             for(auto n: n.paz)
             {
