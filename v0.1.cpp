@@ -84,9 +84,9 @@ int main()
            
             for(int j=0; j<x; j++)
             {
-                laik.paz.push_back(rand()%11);
+                laik.paz.push_back(rand()%10);
             }
-            laik.egz=rand()%11; 
+            laik.egz=rand()%10; 
             
             grupe.push_back(laik);
 
@@ -111,9 +111,9 @@ int main()
             srand(time(NULL));
             for(int i=0; i<n; i++)
             {
-                laik.paz.push_back(rand()%11);
+                laik.paz.push_back(rand()%10);
             }
-            laik.egz=rand()%11;
+            laik.egz=rand()%10;
 
             grupe.push_back(laik);
 
@@ -150,7 +150,7 @@ int main()
         cout<<"3-By final score descending"<<endl;
         cout<<"4-By final score ascending"<<endl;
         char x;
-        std::cin.get()>>x;
+        cin>>x;
         while(x!='1' && x!='2' && x!='3' && x!='4')
         {
             cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
