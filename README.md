@@ -22,11 +22,9 @@ V0.2
 - Output options: The application can output results to a file or the terminal.
 
 ## Efficiency tests
-  -Reading lines into a buffer
-    *studentai10000.txt ~0.05s
-    *studentai100000.txt ~0.23s
-    
-  -Splitting lines into each student
-    *studentai10000.txt ~0.45s
-    *studentai100000.txt ~1.78s
+  studentai10000.txt ~0.2s
+
+  studentai100000.txt ~1.75s
+
+  studentai1000000.txt ~12.5s
     
