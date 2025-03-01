@@ -9,7 +9,7 @@ vector<Stud> ReadFile() {
     cin >> filename;
     ifstream fd(filename);
     while (!fd) {
-        cout << "File not found!" << endl;
+        std::cerr << "File not found!" << endl;
         cout << "Enter existing file name: ";
         cin >> filename;
         fd.open(filename);

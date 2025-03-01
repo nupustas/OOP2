@@ -1,6 +1,6 @@
 #include "manolib.h"
 
-int OutputToTerminal(vector<Stud> grupe)
+void OutputToTerminal(vector<Stud> grupe)
 {
     cout<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"
     <<setw(15)<<"Galutinis (Vid.)"<<" / "<<"Galutinis (Med.)"<<endl;
@@ -13,7 +13,7 @@ for(auto n :grupe)
   }
 }
 
-int OutputToFile(vector<Stud> grupe)
+void OutputToFile(vector<Stud> grupe)
 {
     ofstream out("rezultatai.txt");
     out<<std::left<<setw(15)<<"Vardas"<<setw(15)<<"Pavarde"

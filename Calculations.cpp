@@ -31,6 +31,13 @@ void FinalScore(vector<Stud> grupe)
         }
 }
 
+bool compareByName(const Stud& a, const Stud& b) {
+    return a.Vardas < b.Vardas;  // (A-Z)
+}
+bool compareBySurname(const Stud& a, const Stud& b) {
+    return a.Pavarde < b.Pavarde;  // (A-Z)
+}
+
 void Sorting(vector<Stud> grupe)
 {
     cout<<"How do you want to sort the students?"<<endl;
@@ -56,10 +63,6 @@ void Sorting(vector<Stud> grupe)
                     return a.galutinis < b.galutinis;});
 
 }
-bool compareByName(const Stud& a, const Stud& b) {
-    return a.Vardas < b.Vardas;  // (A-Z)
-}
-bool compareBySurname(const Stud& a, const Stud& b) {
-    return a.Pavarde < b.Pavarde;  // (A-Z)
-}
+
+
 

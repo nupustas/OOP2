@@ -16,25 +16,39 @@ int main()
         cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
         cin>>a;
     }
-
+try
+{
     if (a== '1') //Visko ivedimas ranka
     {   
         grupe = ManualInput();
-    }
+    } 
+    else if(a=='2') //Vardo ir pavardes ivedimas, pazymiu generavimas
+     {  
+        grupe = GenerateScores();
+     } 
     else if(a=='3')//Visko "generavimas"
     {
         grupe = GenerateEverything();
     }
-    else if(a=='2') //Vardo ir pavardes ivedimas, pazymiu generavimas
-     {  
-        grupe = GenerateScores();
-     }   
     else //Failo nuskaitymas
     {
         grupe = ReadFile();
     }
-        
-    FinalScore(grupe); //Galutinio pazymio skaiciavimas
+}
+catch(std::exception& e)
+{
+    std::cerr<<e.what()<<endl;
+    return 0;
+}
+
+    try{
+        FinalScore(grupe); //Galutinio pazymio skaiciavimas
+       }
+    catch(string& msg)
+    {
+        cout<<msg<<endl;
+        return 0;
+    }
 
     Sorting(grupe); //Rusiavimas
 
