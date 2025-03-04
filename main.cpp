@@ -10,8 +10,9 @@ int main()
     cout<<"2-Input names, generate scores"<<endl;
     cout<<"3-Generate everything"<<endl;
     cout<<"4-Read from file"<<endl;
+    cout<<"5-Generate file"<<endl;
     cin>>a;
-    while(a!= '1' && a!= '2' &&a!= '3' &&a!= '4') 
+    while(a!= '1' && a!= '2' &&a!= '3' &&a!= '4' &&a!= '5') //Patikrinimas ar ivestas skaicius yra tinkamas
     {   
         cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
         cin>>a;
@@ -29,6 +30,10 @@ try
     else if(a=='3')//Visko "generavimas"
     {
         grupe = GenerateEverything();
+    }
+    else if(a=='5') //Failo generavimas
+    {
+        GenerateFile();
     }
     else //Failo nuskaitymas
     {

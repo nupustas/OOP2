@@ -8,6 +8,7 @@
 #include "Calculations.cpp"
 #include "Output.cpp"
 #include "ManualInput.cpp"
+#include "GenerateFIles.cpp"
 
 void FinalScore(vector<Stud> grupe);
 vector<Stud> ReadFile();
@@ -17,5 +18,6 @@ vector<Stud> GenerateEverything();
 void Sorting(vector<Stud> grupe);
 void OutputToTerminal(vector<Stud> grupe);
 void OutputToFile(vector<Stud> grupe);
+void GenerateFile();
 
 #endif
