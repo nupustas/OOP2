@@ -48,6 +48,7 @@ try
 
         auto start = std::chrono::high_resolution_clock::now();
         string filename = GenerateFile(StudentCount);
+        cout<<filename<<endl;
 
         grupe = ReadFile(filename);
         FinalScore(grupe);
@@ -55,7 +56,7 @@ try
         
         auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double> duration = end - start;
-        cout<<filename<<" failo testo laikas: "<<duration.count()<<" s"<<endl;
+        cout<<filename<<" failo testo laikas: "<<fixed<<setprecision(5)<<duration.count()<<" s"<<endl;
         return 0;
     }
 }

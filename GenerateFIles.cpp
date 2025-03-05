@@ -63,7 +63,7 @@ void SplitFile(vector<Stud>& grupe)
 
     auto end_split = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> split_duration = end_split - start_split;
-    cout << "Splitting took: " << split_duration.count() << " s" << endl;
+    cout << "Dalijimas uztruko: "<<fixed<<setprecision(5)<<split_duration.count() << " s" << endl;
 
     
     
@@ -78,7 +78,7 @@ void SplitFile(vector<Stud>& grupe)
     }
 
 
-auto start_write = std::chrono::high_resolution_clock::now();
+auto startV = std::chrono::high_resolution_clock::now();
     // Write headers
     fr1 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
         << setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << endl;
@@ -93,9 +93,11 @@ auto start_write = std::chrono::high_resolution_clock::now();
         else
             fr1 << " -                " << fixed << setprecision(2) << n.galutinis << endl;
     }
+    auto endV = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> Vduration = endV - startV;
+    cout << "Vargsu irasymo i faila: "<<fixed<<setprecision(5)<< Vduration.count() << " s" << endl;
 
-
-
+    auto startK = std::chrono::high_resolution_clock::now();
 fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
         << setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << endl;
     fr2 << "-----------------------------------------------------------" << endl;
@@ -108,10 +110,13 @@ fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
             fr2 << " -                " << fixed << setprecision(2) << n.galutinis << endl;
     }
 
+    auto endK = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> Kduration = endK - startK;
+    cout << "Kietu irasymo i faila: "<<fixed<<setprecision(5)<< Kduration.count() << " s" << endl;
+
+
     fr1.close();
     fr2.close();
 
-    auto end_write = std::chrono::high_resolution_clock::now();
-    std::chrono::duration<double> write_duration = end_write - start_write;
-    cout << "Writing to files took: " << write_duration.count() << " s" << endl;
+    
 }
