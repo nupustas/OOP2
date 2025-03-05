@@ -28,7 +28,7 @@ string GenerateFile(int StudentCount)
         {
             fr<<FNames[rand()%25]<<" "<<FSurnames[rand()%25]<<" ";
         }
-        for(int j=0; j<15; j++)
+        for(int j=0; j<10; j++)
         {
             fr<<rand()%10<<" ";
         }
@@ -63,9 +63,8 @@ void SplitFile(vector<Stud>& grupe)
 
     auto end_split = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> split_duration = end_split - start_split;
-    cout << "Dalijimas uztruko: "<<fixed<<setprecision(5)<<split_duration.count() << " s" << endl;
+    //cout << "Dalijimas uztruko: "<<fixed<<setprecision(5)<<split_duration.count() << " s" << endl;
 
-    
     
 
     ofstream fr1("Vargsiukai.txt");
@@ -95,7 +94,7 @@ auto startV = std::chrono::high_resolution_clock::now();
     }
     auto endV = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> Vduration = endV - startV;
-    cout << "Vargsu irasymo i faila: "<<fixed<<setprecision(5)<< Vduration.count() << " s" << endl;
+    //cout << "Vargsu irasymo i faila: "<<fixed<<setprecision(5)<< Vduration.count() << " s" << endl;
 
     auto startK = std::chrono::high_resolution_clock::now();
 fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
@@ -112,7 +111,7 @@ fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
 
     auto endK = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> Kduration = endK - startK;
-    cout << "Kietu irasymo i faila: "<<fixed<<setprecision(5)<< Kduration.count() << " s" << endl;
+    //cout << "Kietu irasymo i faila: "<<fixed<<setprecision(5)<< Kduration.count() << " s" << endl;
 
 
     fr1.close();
