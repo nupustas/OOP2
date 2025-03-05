@@ -41,7 +41,6 @@ string GenerateFile(int StudentCount)
     return filename;
 }
 
-
 void SplitFile(vector<Stud>& grupe)
 {
     auto start_split = std::chrono::high_resolution_clock::now();

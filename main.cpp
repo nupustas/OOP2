@@ -50,13 +50,7 @@ try
             int StudentCount;
             cout<<"Enter the number of students"<<endl;
             cin>>StudentCount;
-
-            auto startCreate = std::chrono::high_resolution_clock::now();
-            string filename = GenerateFile(StudentCount);
-            auto endCreate = std::chrono::high_resolution_clock::now();
-            std::chrono::duration<double> durationCreate = endCreate - startCreate;
-            cout<<filename<<" sukurtas per "<<fixed<<setprecision(5)<<durationCreate.count()<<"s"<<endl;
-                    
+            string filename = GenerateFile(StudentCount);                    
         }
 
         string filename;
