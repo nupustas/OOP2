@@ -40,18 +40,23 @@ try
     cin >> filename;
         grupe = ReadFile(filename);
     }
-    else if(a=='5') //Failo generavimas
+    else if(a=='5') //Failo generavimas/testavimas
     {
         cout<<"Ar norite generuoti faila?(y/n)";
         char choice;
         cin>>choice;
-        if(choice=='y')
+        if(choice=='y'|| choice=='Y')
         {
             int StudentCount;
             cout<<"Enter the number of students"<<endl;
             cin>>StudentCount;
+
+            auto startCreate = std::chrono::high_resolution_clock::now();
             string filename = GenerateFile(StudentCount);
-            cout<<"Sugeneruotas failas: "<<filename<<endl;
+            auto endCreate = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> durationCreate = endCreate - startCreate;
+            cout<<filename<<" sukurtas per "<<fixed<<setprecision(5)<<durationCreate.count()<<"s"<<endl;
+                    
         }
 
         string filename;
@@ -96,9 +101,9 @@ catch(std::exception& e)
     try{
         FinalScore(grupe); //Galutinio pazymio skaiciavimas
        }
-    catch(string& msg)
+    catch(std::exception& e)
     {
-        cout<<msg<<endl;
+        std::cerr<<e.what()<<endl;
         return 0;
     }
 

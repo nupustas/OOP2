@@ -32,8 +32,17 @@ This project is a C++ application that calculates the final grades for students 
 
 
 ## Efficiency tests 
-* 1000     students ~0,08s
-* 10000    students ~0,93s
-* 100000   students ~9,34s
-* 1000000  students ~114,52s 
-* 10000000 students ~453.02s
+------------------------------
+# File creation tests average
+* 1000     students ~0.0572s
+* 10000    students ~0.1515s
+* 100000   students ~1.3236s
+* 1000000  students ~9.5843
+* 10000000 students ~58.0035s
+
+# File splitting tests average 
+* 1000     students ~0.08s
+* 10000    students ~0.93s
+* 100000   students ~9.34s
+* 1000000  students ~114.52s 
+* 10000000 students ~208.48s

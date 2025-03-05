@@ -3,7 +3,7 @@
 string GenerateFile(int StudentCount)
 {
 
-    string filename = "Studentai_"+std::to_string(StudentCount)+".txt";
+    string filename = "Studentai"+std::to_string(StudentCount)+".txt";
     ifstream fd(filename);
     if(fd.good())
     {
@@ -11,6 +11,7 @@ string GenerateFile(int StudentCount)
     }
     fd.close();
 
+    auto start = std::chrono::high_resolution_clock::now();
     ofstream fr(filename);
     if(!fr)
     {
@@ -34,6 +35,9 @@ string GenerateFile(int StudentCount)
         }
         fr<<rand()%10<<endl;
     }
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = end - start;
+    cout<<filename <<" sukurtas per "<<fixed<<setprecision(5)<<duration.count() << " s" << endl;
     return filename;
 }
 
