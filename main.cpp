@@ -3,6 +3,7 @@
 
 int main()
 {
+    
     vector<Stud> grupe;
 
     char a; 
@@ -17,6 +18,7 @@ int main()
         cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
         cin>>a;
     }
+   while(true){
 try
 {
     if (a== '1') //Visko ivedimas ranka
@@ -31,13 +33,21 @@ try
     {
         grupe = GenerateEverything();
     }
+    else if(a=='4') //Failo nuskaitymas
+    {
+        string filename;
+    cout << "Enter file name: ";
+    cin >> filename;
+        grupe = ReadFile(filename);
+    }
     else if(a=='5') //Failo generavimas
     {
         GenerateFile();
-    }
-    else //Failo nuskaitymas
-    {
-        grupe = ReadFile();
+
+        ReadFile("STUDENTAI.txt");
+        FinalScore(grupe);
+        SplitFile(grupe);
+        break;
     }
 }
 catch(std::exception& e)
@@ -45,6 +55,7 @@ catch(std::exception& e)
     std::cerr<<e.what()<<endl;
     return 0;
 }
+
 
     try{
         FinalScore(grupe); //Galutinio pazymio skaiciavimas
@@ -73,6 +84,6 @@ catch(std::exception& e)
    if (y==2) OutputToTerminal(grupe);
    else OutputToFile(grupe);
 
-
-    return 0;
+break;
+}
 }

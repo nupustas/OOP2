@@ -19,5 +19,6 @@ void Sorting(vector<Stud> grupe);
 void OutputToTerminal(vector<Stud> grupe);
 void OutputToFile(vector<Stud> grupe);
 void GenerateFile();
+void SplitFile(vector<Stud> grupe);
 
 #endif

@@ -1,12 +1,9 @@
 #include "manolib.h"
 
-vector<Stud> ReadFile() {
+vector<Stud> ReadFile(string filename) {
     vector<Stud> grupe;
     grupe.reserve(1000001);
 
-    string filename;
-    cout << "Enter file name: ";
-    cin >> filename;
     ifstream fd(filename);
     while (!fd) {
         std::cerr << "File not found!" << endl;
@@ -47,9 +44,9 @@ vector<Stud> ReadFile() {
     
     std::chrono::duration<double> duration = end - start;
 
-    cout <<" Read " << grupe.size() << " students in " 
+    cout <<" Failas is " << grupe.size() << " studentu nuskaitytas per " 
          << std::fixed << std::setprecision(2) 
-         << duration.count() << " seconds" << endl;
+         << duration.count() << " s" << endl;
 
     return grupe;
 }
