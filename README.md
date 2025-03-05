@@ -3,28 +3,37 @@
 This project is a C++ application that calculates the final grades for students based on their homework and exam scores.
 
 V0.2
-## V0.2 Structure
+
+# Student Grade Calculator
+
+This project is a C++ application that calculates the final grades for students based on their homework and exam scores. The application allows users to input student data manually or generate it randomly.
+
+## V0.4 Structure
 
 - `.vscode/settings.json`: VSCode settings for file associations.
 - `.vscode/tasks.json`: VSCode tasks for building the project.
 - `manolib.h`: Header file containing the `Stud` structure and utility functions.
 - `functions.h`: Header file containing function declarations.
-- `v0.1.cpp`: Main application file for vector-based implementation.
-- `v0.1.exe`: Executable generated from `v0.1.cpp`.
+- `main.cpp`: Main application file for vector-based implementation.
+- `main.exe`: Executable generated from `main.cpp`.
 - `ReadFile.cpp`: Source file for reading student data from a file.
 - `FinalScore.cpp`: Source file for calculating final scores.
-- `studentai10000.txt`: Sample input file with 10,000 students.
-- `studentai100000.txt`: Sample input file with 100,000 students.
+- `GenerateScores.cpp`: Source file for generating scores.
+- `GenerateFiles.cpp`: Source file for generating files.
+- `ManualInput.cpp`: Source file for manual input.
+- `Output.cpp`: Source file for outputting results.
+- `studentai10000.txt`: Generated sample input file with 10,000 students.
 
-## New functions added via V0.2
-- Read from file: The application can now read student data from a file.
-- Sort options: The application provides options to sort students by name, surname, or final score (ascending or descending).
-- Output options: The application can output results to a file or the terminal.
 
-## Efficiency tests
-  studentai10000.txt ~0.2s
+## New functions added via V0.4
 
-  studentai100000.txt ~1.75s
+- **Generate file**: The application can generate a file with a specified number of students.
+- **Test function**: The function tests the efficiency of the file reading, writing and sorting functions
 
-  studentai1000000.txt ~12.5s
-    
+
+## Efficiency tests 
+* 1000     students ~0,08s
+* 10000    students ~0,93s
+* 100000   students ~9,34s
+* 1000000  students ~114,52s 
+* 10000000 students ~453.02s
