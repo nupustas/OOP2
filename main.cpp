@@ -18,7 +18,7 @@ int main()
         cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
         cin>>a;
     }
-   while(true){
+
 try
 {
     if (a== '1') //Visko ivedimas ranka
@@ -42,12 +42,21 @@ try
     }
     else if(a=='5') //Failo generavimas
     {
-        GenerateFile();
+        int StudentCount;
+        cout<<"Enter the number of students"<<endl;
+        cin>>StudentCount;
 
-        ReadFile("STUDENTAI.txt");
+        auto start = std::chrono::high_resolution_clock::now();
+        string filename = GenerateFile(StudentCount);
+
+        grupe = ReadFile(filename);
         FinalScore(grupe);
         SplitFile(grupe);
-        break;
+        
+        auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double> duration = end - start;
+        cout<<filename<<" failo testo laikas: "<<duration.count()<<" s"<<endl;
+        return 0;
     }
 }
 catch(std::exception& e)
@@ -84,6 +93,5 @@ catch(std::exception& e)
    if (y==2) OutputToTerminal(grupe);
    else OutputToFile(grupe);
 
-break;
-}
+ return 0;
 }

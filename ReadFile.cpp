@@ -44,7 +44,7 @@ vector<Stud> ReadFile(string filename) {
     
     std::chrono::duration<double> duration = end - start;
 
-    cout <<" Failas is " << grupe.size() << " studentu nuskaitytas per " 
+    cout <<"Failas is " << grupe.size() << " studentu nuskaitytas per " 
          << std::fixed << std::setprecision(2) 
          << duration.count() << " s" << endl;
 

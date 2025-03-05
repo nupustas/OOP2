@@ -31,7 +31,7 @@ struct Stud
     int* pazArr = nullptr;
     int pazcount;
     double galutinis=2;
-    int egz=2;
+    int egz=1;
     char vm= 'a';
  };
 

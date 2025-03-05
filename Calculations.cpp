@@ -1,6 +1,6 @@
 #include "manolib.h"
 
-void FinalScore(vector<Stud> grupe)
+void FinalScore(vector<Stud>& grupe)
 {
     cout<<"Calculate final scores using average or median? (a/m)"<<endl;
     char am;
@@ -29,6 +29,7 @@ void FinalScore(vector<Stud> grupe)
                 n.galutinis=0.4*n.paz[n.paz.size()/2] +0.6*n.egz;
             }
         }
+        
 }
 
 bool compareByName(const Stud& a, const Stud& b) {
