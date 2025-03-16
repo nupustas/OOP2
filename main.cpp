@@ -3,7 +3,6 @@
 
 int main()
 {
-    
     vector<Stud> grupe;
 
     char a; 
@@ -59,17 +58,16 @@ try
         
         cout<<filename<<endl;
 
-        auto startRead = std::chrono::high_resolution_clock::now();
+        auto startRead = std::chrono::high_resolution_clock::now();//timeris failo skaitymui
         grupe = ReadFile(filename);
         auto endRead = std::chrono::high_resolution_clock::now();
 
         FinalScore(grupe);
-        auto startSort = std::chrono::high_resolution_clock::now();
-        sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {
-            return a.galutinis < b.galutinis;});
+        auto startSort = std::chrono::high_resolution_clock::now();//timeris rusiavimui
+        Sorting(grupe);
         auto endSort = std::chrono::high_resolution_clock::now();
 
-        auto startSplit = std::chrono::high_resolution_clock::now();
+        auto startSplit = std::chrono::high_resolution_clock::now();//timeris failo paskirstymui i 2
         SplitFile(grupe);
         auto endSplit = std::chrono::high_resolution_clock::now();
         
@@ -77,7 +75,7 @@ try
         std::chrono::duration<double> durationSort = endSort - startSort;
         std::chrono::duration<double> durationSplit = endSplit - startSplit;
         cout<<filename<<" failo nuskaitymo laikas: "<<fixed<<setprecision(5)<<durationRead.count()<<" s"<<endl;
-        cout<<filename<<" failo rusiavimas didejimo tvarka (sort): "<<fixed<<setprecision(5)<<durationSort.count()<<" s"<<endl;
+        cout<<filename<<" failo rusiavimas : "<<fixed<<setprecision(5)<<durationSort.count()<<" s"<<endl;
         cout<<filename<<" failo paskirstymo ir irasymo laikas: "<<fixed<<setprecision(5)<<durationSplit.count()<<" s"<<endl;
         cout<<filename<<" is viso uztruko: "<<fixed<<setprecision(5)<<durationRead.count()+durationSort.count()+durationSplit.count()<<" s"<<endl;
 

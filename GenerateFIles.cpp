@@ -68,8 +68,6 @@ void SplitFile(vector<Stud>& grupe)
     std::chrono::duration<double> split_duration = end_split - start_split;
     //cout << "Dalijimas uztruko: "<<fixed<<setprecision(5)<<split_duration.count() << " s" << endl;
 
-    
-
     ofstream fr1("Vargsiukai.txt");
     ofstream fr2("Kietiakai.txt");
 
@@ -78,7 +76,6 @@ void SplitFile(vector<Stud>& grupe)
         std::cerr << "Error opening output files!" << endl;
         return;
     }
-
 
 auto startV = std::chrono::high_resolution_clock::now();
     // Write headers
@@ -116,9 +113,6 @@ fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
     std::chrono::duration<double> Kduration = endK - startK;
     //cout << "Kietu irasymo i faila: "<<fixed<<setprecision(5)<< Kduration.count() << " s" << endl;
 
-
     fr1.close();
-    fr2.close();
-
-    
+    fr2.close();   
 }

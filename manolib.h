@@ -31,31 +31,30 @@ struct Stud
     int* pazArr = nullptr;
     int pazcount;
     double galutinis=2;
-    int egz=1;
+    int egz=2;
     char vm= 'a';
  };
 
-const string MNames[25] = {
+const string MNames[] = {
     "Andrius", "Dainius", "Jonas" , "Marius", "Orestas", "Povilas", 
     "Aidas",  "Tomas",  "Vejas", "Zygimantas",  "Vaidotas",
     "Linas", "Kestutis", "Vaidotas", "Martynas",   "Gintaras",
-    "Tomas", "Antanas", "Paulius",   "Jonas", "Mantas", "Rokas", "Mindaugas",
-    "Darius", "Dziugas"
+     "Tomas", "Antanas", "Paulius",   "Jonas"
 };
-const string MSurnames[25] = {
+const string MSurnames[] = {
     "Petrauskas", "Jankauskas", "Kazlauskas", "Zukauskas", "Kavaliauskas", "Stankevicius", "Bieliauskas", 
     "Budvytis", "Giedraitis",  "Rimkus",  "Valiukas", "Juknevicius", "Vaitkevicius", 
      "Vasiliauskas", "Navickas",  "Urbonas", "Grigonis", "Rutkauskas",  
     "Vaitkus", "Pakalnis", "Norkus", "Skripka", "Butkevicius", "Nedzinskas", "Mickevicius",  
 };
-const string FNames[25] = {
+const string FNames[] = {
     "Egle", "Indre", "Lina","Neringa","Sigute","Ugne","Laura","Viktorija",
     "Rasa","Gintare","Agne","Ieva", "Milda","Margarita","Aiste", "Vilma",
     "Ruta","Aiste","Gabija","Jurate","Jurgita", "Vaiva", "Ula", "Greta",
     "Kotryna"
 
 };
-const string FSurnames[25] = {
+const string FSurnames[] = {
 "Norkute","Petronyte","Seskinyte","Pakalnaite","Daugelaite","Simonaityte",
 "Giedre","Zukaite", "Norkute", "Kaminskaite", "Dapsyte", "Kucinskaite", 
 "Vaitkeviciute", "Vasiliauskaite", "Navickaite", "Urbonaite", "Grigoniene",

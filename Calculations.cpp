@@ -39,7 +39,7 @@ bool compareBySurname(const Stud& a, const Stud& b) {
     return a.Pavarde < b.Pavarde;  // (A-Z)
 }
 
-void Sorting(vector<Stud> grupe)
+void Sorting(vector<Stud>& grupe)
 {
     cout<<"How do you want to sort the students?"<<endl;
         cout<<"1-By name"<<endl;
@@ -62,6 +62,8 @@ void Sorting(vector<Stud> grupe)
 
                 else sort(grupe.begin(), grupe.end(), [](const Stud& a, const Stud& b) {
                     return a.galutinis < b.galutinis;});
+
+        
 
 }
 
