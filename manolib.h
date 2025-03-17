@@ -9,6 +9,7 @@
 #include<fstream>
 #include<chrono>
 
+
 using std::cout;
 using std::cin;
 using std::endl;
@@ -26,13 +27,12 @@ using std::ofstream;
 
 struct Stud
 {
-    string Vardas="a",Pavarde="b";
+    string Vardas, Pavarde;
     vector <int> paz;
-    int* pazArr = nullptr;
     int pazcount;
-    double galutinis=2;
-    int egz=2;
-    char vm= 'a';
+    double galutinis;
+    int egz;
+    char vm;
  };
 
 const string MNames[] = {

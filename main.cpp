@@ -1,121 +1,92 @@
 #include "manolib.h"
 #include "functions.h"
+#include <limits>
+
+// Choose which container to use by commenting/uncommenting
+using Container = std::vector<Stud>;
+//using Container = std::list<Stud>;
+//using Container = std::deque<Stud>;
 
 int main()
 {
-    vector<Stud> grupe;
+    Container grupe;
+    char a;
 
-    char a; 
-    cout<<"1-Input everything manually"<<endl;
-    cout<<"2-Input names, generate scores"<<endl;
-    cout<<"3-Generate everything"<<endl;
-    cout<<"4-Read from file"<<endl;
-    cout<<"5-test"<<endl;
-    cin>>a;
-    while(a!= '1' && a!= '2' &&a!= '3' &&a!= '4' &&a!= '5') //Patikrinimas ar ivestas skaicius yra tinkamas
-    {   
-        cout<<"Invalid input. Enter 1, 2, 3 or 4"<<endl;
-        cin>>a;
+    cout << "1 - Input everything manually" << endl;
+    cout << "2 - Input names, generate scores" << endl;
+    cout << "3 - Generate everything" << endl;
+    cout << "4 - Read from file" << endl;
+    cout << "5 - Performance test" << endl;
+    
+    cin >> a;
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    while (a < '1' || a > '5')  
+    {
+        cout << "Invalid input. Enter 1, 2, 3, 4, or 5: ";
+        cin >> a;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 
-try
-{
-    if (a== '1') //Visko ivedimas ranka
-    {   
-        grupe = ManualInput();
+    if (a == '1') 
+    {
+        grupe = ManualInput<Container>();
     } 
-    else if(a=='2') //Vardo ir pavardes ivedimas, pazymiu generavimas
-     {  
-        grupe = GenerateScores();
-     } 
-    else if(a=='3')//Visko "generavimas"
+    else if (a == '2') 
     {
-        grupe = GenerateEverything();
-    }
-    else if(a=='4') //Failo nuskaitymas
+        grupe = GenerateScores<Container>();
+    } 
+    else if (a == '3') 
+    {
+        grupe = GenerateEverything<Container>();
+    } 
+    else if (a == '4') 
     {
         string filename;
-    cout << "Enter file name: ";
-    cin >> filename;
-        grupe = ReadFile(filename);
-    }
-    else if(a=='5') //Failo generavimas/testavimas
-    {
-        cout<<"Ar norite generuoti faila?(y/n)";
-        char choice;
-        cin>>choice;
-        if(choice=='y'|| choice=='Y')
+        cout << "Enter file name: ";
+        cin >> filename;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        
+        grupe = ReadFile<Container>(filename);
+        
+        if (grupe.empty()) 
         {
-            int StudentCount;
-            cout<<"Enter the number of students"<<endl;
-            cin>>StudentCount;
-            string filename = GenerateFile(StudentCount);                    
+            cout << "Error: Could not read file or file is empty." << endl;
+            return 1;
         }
-
-        string filename;
-        cout<<"Iveskite testo faila: ";
-        cin>>filename;
-        
-        cout<<filename<<endl;
-
-        auto startRead = std::chrono::high_resolution_clock::now();//timeris failo skaitymui
-        grupe = ReadFile(filename);
-        auto endRead = std::chrono::high_resolution_clock::now();
-
-        FinalScore(grupe);
-        auto startSort = std::chrono::high_resolution_clock::now();//timeris rusiavimui
-        Sorting(grupe);
-        auto endSort = std::chrono::high_resolution_clock::now();
-
-        auto startSplit = std::chrono::high_resolution_clock::now();//timeris failo paskirstymui i 2
-        SplitFile(grupe);
-        auto endSplit = std::chrono::high_resolution_clock::now();
-        
-        std::chrono::duration<double> durationRead = endRead - startRead;
-        std::chrono::duration<double> durationSort = endSort - startSort;
-        std::chrono::duration<double> durationSplit = endSplit - startSplit;
-        cout<<filename<<" failo nuskaitymo laikas: "<<fixed<<setprecision(5)<<durationRead.count()<<" s"<<endl;
-        cout<<filename<<" failo rusiavimas : "<<fixed<<setprecision(5)<<durationSort.count()<<" s"<<endl;
-        cout<<filename<<" failo paskirstymo ir irasymo laikas: "<<fixed<<setprecision(5)<<durationSplit.count()<<" s"<<endl;
-        cout<<filename<<" is viso uztruko: "<<fixed<<setprecision(5)<<durationRead.count()+durationSort.count()+durationSplit.count()<<" s"<<endl;
-
-
+    } 
+    else if (a == '5') 
+    {
+        grupe = SpeedTesting<Container>();
         return 0;
     }
-}
-catch(std::exception& e)
-{
-    std::cerr<<e.what()<<endl;
+
+    if (grupe.empty())  
+    {
+        cout << "Error: No data to process." << endl;
+        return 1;
+    }
+
+    FinalScore(grupe); // Calculating final scores
+
+    Sorting(grupe); // Sorting students
+
+    cout << "Show results in file or terminal?" << endl;
+    cout << "1 - File" << endl;
+    cout << "2 - Terminal" << endl;
+
+    int y;
+    cin >> y;
+    while (y != 1 && y != 2) 
+    {
+        cout << "Invalid input. Enter 1 or 2: ";
+        cin >> y;
+    }
+
+    if (y == 2) 
+        OutputToTerminal(grupe);
+    else 
+        OutputToFile(grupe);
+
     return 0;
-}
-
-
-    try{
-        FinalScore(grupe); //Galutinio pazymio skaiciavimas
-       }
-    catch(std::exception& e)
-    {
-        std::cerr<<e.what()<<endl;
-        return 0;
-    }
-
-    Sorting(grupe); //Rusiavimas
-
-
-        cout<<"Show results in file or terminal?"<<endl;
-        cout<<"1-file"<<endl;
-        cout<<"2-terminal"<<endl;
-        int y;
-        cin>>y;
-        while(y!=1 && y!=2 || y>10)
-        {
-            cout<<"Invalid input. Enter 1 or 2"<<endl;
-            cin>>y;
-        }
-
-    //Isvedimas
-   if (y==2) OutputToTerminal(grupe);
-   else OutputToFile(grupe);
-
- return 0;
 }
