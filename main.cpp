@@ -11,6 +11,7 @@ using Container = std::vector<Stud>;
 int main()
 {
     Container grupe;
+    cout << "Using container: " << typeid(Container).name() << endl;
     char a;
 
     cout << "1 - Input everything manually" << endl;

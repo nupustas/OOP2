@@ -175,7 +175,7 @@ void Sorting(Container &grupe) {
         cout << "Invalid input. Enter 1, 2, 3, or 4: ";
         cin >> x;
     }
-
+    auto chrono_start = std::chrono::high_resolution_clock::now();
     // Lambda for sorting
     auto comparator = [&](const Stud &a, const Stud &b) {
         if (x == '1') return a.Vardas < b.Vardas;
@@ -190,6 +190,9 @@ void Sorting(Container &grupe) {
     } else {
         sort(grupe.begin(), grupe.end(), comparator);  // Use std::sort for vector & deque
     }
+    auto chrono_end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> duration = chrono_end - chrono_start;
+    cout << "SORTING TOOK: " << fixed << setprecision(5) << duration.count() << " s" << endl;
 }
 
 // Templated function to output results
