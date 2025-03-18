@@ -9,12 +9,14 @@ This project is a C++ application that calculates the final grades for students 
 🖥 Testavimo sistemos parametrai:
 
 Procesorius: Intel Core i5-10300H
+
 Operatyvioji atmintis: 2×4GB DDR4 3200MHz
+
 Diskas: 512GB NVMe SSD
 
-#1.1 Failo sukūrimas
+1.1 Failo sukūrimas
 
-| File              | Vector   | List     | Deque    |        
+| Failas             | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
 | Studentai1000     |  0.0216s |  0.0055s |  0.0062s |
 | Studentai10000    |  0.2120s |  0.0645s |  0.0587s | 
@@ -25,7 +27,7 @@ Diskas: 512GB NVMe SSD
 ---------------------------------------------------------------------------------------------------
 1.2 Failo skaitymas
                                
-| File              | Vector   | List     | Deque    |        
+| Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
 | Studentai1000     |  0.0489s |  0.0233s |  0.0060s |
 | Studentai10000    |  0.0985s |  0.0318s |  0.0298s | 
@@ -36,10 +38,10 @@ Diskas: 512GB NVMe SSD
 ---------------------------------------------------------------------------------------------------
 1.3 Rušiavimas didėjimo tvarka
                                
-| File              | Vector   | List     | Deque    |        
+| Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
 | Studentai1000     |  0.0003s |  0.0001s |  0.0003s |
-| Studentai10000    |   0.0031s |  0.0013s |  0.0044s | 
+| Studentai10000    |  0.0031s |  0.0013s |  0.0044s | 
 | Studentai100000   |  0.0521s |  0.0357s |  0.0471s | 
 | Studentai1000000  |  0.4716s |  0.6341s |  0.5915s | 
 | Studentai10000000 |  5.7443s |  9.6336s |  7.2021s |  
@@ -47,7 +49,7 @@ Diskas: 512GB NVMe SSD
 ---------------------------------------------------------------------------------------------------
 1.4 Studentų skirstymas į dvi grupes
                                
-| File              | Vector   | List     | Deque    |        
+| Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
 | Studentai1000     |  0.0178s |  0.0290s |  0.0053s |
 | Studentai10000    |  0.0820s |  0.0478s |  0.0453s | 
