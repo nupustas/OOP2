@@ -60,6 +60,7 @@
         "fstream": "cpp",
         "chrono": "cpp",
         "ratio": "cpp",
-        "cstdarg": "cpp"
+        "cstdarg": "cpp",
+        "list": "cpp"
     }
 }
