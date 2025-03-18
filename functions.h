@@ -181,7 +181,7 @@ void Sorting(Container &grupe) {
         if (x == '1') return a.Vardas < b.Vardas;
         if (x == '2') return a.Pavarde < b.Pavarde;
         if (x == '3') return a.galutinis > b.galutinis;
-        return a.galutinis < b.galutinis;
+        else return a.galutinis < b.galutinis;
     };
 
     // Use different sorting depending on the container type
