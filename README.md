@@ -2,54 +2,98 @@
 
 This project is a C++ application that calculates the final grades for students based on their homework and exam scores.
 
-V0.2
+---------------------------------------------------------------------------------------------------
+v1.0 efficiency tests
 
-# Student Grade Calculator
+Hardware:
+CPU: Intel Core i5-10300H
+RAM: 2x4gb 3200mhz
+SSD: NVMe 512gb
 
-This project is a C++ application that calculates the final grades for students based on their homework and exam scores. The application allows users to input student data manually or generate it randomly.
+## Time tests using different types of containers
+1.1 File creation tests average
+Vector
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     |  0.0216s |
+| Studentai10000    |  0.2120s | 
+| Studentai100000   |  1.7440s | 
+| Studentai1000000  |  10.653s | 
+| Studentai10000000 |  32.871s | 
 
-## V0.4 Structure
+List
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     | Data 2   |
+| Studentai10000    | Data 5   | 
+| Studentai100000   | Data 5   | 
+| Studentai1000000  | Data 5   | 
+| Studentai10000000 | Data 5   | 
 
-- `.vscode/settings.json`: VSCode settings for file associations.
-- `.vscode/tasks.json`: VSCode tasks for building the project.
-- `manolib.h`: Header file containing the `Stud` structure and utility functions.
-- `functions.h`: Header file containing function declarations.
-- `main.cpp`: Main application file for vector-based implementation.
-- `main.exe`: Executable generated from `main.cpp`.
-- `ReadFile.cpp`: Source file for reading student data from a file.
-- `FinalScore.cpp`: Source file for calculating final scores.
-- `GenerateScores.cpp`: Source file for generating scores.
-- `GenerateFiles.cpp`: Source file for generating files.
-- `ManualInput.cpp`: Source file for manual input.
-- `Output.cpp`: Source file for outputting results.
-- `studentai10000.txt`: Generated sample input file with 10,000 students.
+Deque
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     | Data 2   |
+| Studentai10000    | Data 5   | 
+| Studentai100000   | Data 5   | 
+| Studentai1000000  | Data 5   | 
+| Studentai10000000 | Data 5   | 
+
+---------------------------------------------------------------------------------------------------
+1.2 File reading tests average
+Vector
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     |  0.0489s |
+| Studentai10000    |  0.0985s | 
+| Studentai100000   |  0.4100s | 
+| Studentai1000000  |  4.3490s | 
+| Studentai10000000 |  20.571s | 
+
+List
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     | Data 2   |
+| Studentai10000    | Data 5   | 
+| Studentai100000   | Data 5   | 
+| Studentai1000000  | Data 5   | 
+| Studentai10000000 | Data 5   | 
+
+Deque
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     | Data 2   |
+| Studentai10000    | Data 5   | 
+| Studentai100000   | Data 5   | 
+| Studentai1000000  | Data 5   | 
+| Studentai10000000 | Data 5   | 
 
 
-## New functions added via V0.4
+---------------------------------------------------------------------------------------------------
+1.3 File splitting and writing tests average
+Vector
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     |  0.0178s |
+| Studentai10000    |  0.0820s | 
+| Studentai100000   |  0.8640s | 
+| Studentai1000000  |  6.9530s | 
+| Studentai10000000 |  53.871s | 
 
-- **Generate file**: The application can generate a file with a specified number of students.
-- **Test function**: The function tests the efficiency of the file reading, writing and sorting functions
+List
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     | Data 2   |
+| Studentai10000    | Data 5   | 
+| Studentai100000   | Data 5   | 
+| Studentai1000000  | Data 5   | 
+| Studentai10000000 | Data 5   | 
 
-
-## Efficiency tests 
-------------------------------
-# File creation tests average of 5
-* 1000     students ~0.0216s
-* 10000    students ~0.210s
-* 100000   students ~1.744s
-* 1000000  students ~10.653s
-* 10000000 students ~58.871s
-
-# File reading tests average of 5
-* 1000     students ~0.049s
-* 10000    students ~0.098s
-* 100000   students ~0.41s
-* 1000000  students ~4.349s
-* 10000000 students ~43.247s
-
-# File splitting tests average of 5
-* 1000     students ~0.018s
-* 10000    students ~0.072s
-* 100000   students ~0.82s
-* 1000000  students ~7.040s 
-* 10000000 students ~80.783s
+Deque
+| File              | Time     | 
+|-------------------|----------|
+| Studentai1000     | Data 2   |
+| Studentai10000    | Data 5   | 
+| Studentai100000   | Data 5   | 
+| Studentai1000000  | Data 5   | 
+| Studentai10000000 | Data 5   | 

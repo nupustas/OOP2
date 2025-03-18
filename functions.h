@@ -233,6 +233,7 @@ string GenerateFile(int StudentCount)
     if(fd.good())
     {
         cout<<filename<<" already exists"<<endl;
+        return filename;
     }
     fd.close();
 
@@ -240,8 +241,9 @@ string GenerateFile(int StudentCount)
     ofstream fr(filename);
     if(!fr)
     {
-        std::cerr<<"Error creating file" <<filename<<endl;
+        cout<<"Error creating file" <<filename<<endl;
     }
+    srand(time(NULL));
 
     fr<<std::left<<setw(16)<<"Vardas Pavarde "<<std::left<<setw(20)<<"Pazymiai   "<<"Egzaminas"<<endl;
     for(int i=0; i<StudentCount; i++)

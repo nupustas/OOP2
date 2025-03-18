@@ -35,26 +35,27 @@ struct Stud
     char vm;
  };
 
-const string MNames[] = {
+const string MNames[25] = {
     "Andrius", "Dainius", "Jonas" , "Marius", "Orestas", "Povilas", 
     "Aidas",  "Tomas",  "Vejas", "Zygimantas",  "Vaidotas",
     "Linas", "Kestutis", "Vaidotas", "Martynas",   "Gintaras",
-     "Tomas", "Antanas", "Paulius",   "Jonas"
+     "Tomas", "Antanas", "Paulius",   "Jonas",  "Mantas", 
+     "Mindaugas", "Rokas", "Lukas", "Kazimieras"
 };
-const string MSurnames[] = {
+const string MSurnames[25] = {
     "Petrauskas", "Jankauskas", "Kazlauskas", "Zukauskas", "Kavaliauskas", "Stankevicius", "Bieliauskas", 
     "Budvytis", "Giedraitis",  "Rimkus",  "Valiukas", "Juknevicius", "Vaitkevicius", 
      "Vasiliauskas", "Navickas",  "Urbonas", "Grigonis", "Rutkauskas",  
     "Vaitkus", "Pakalnis", "Norkus", "Skripka", "Butkevicius", "Nedzinskas", "Mickevicius",  
 };
-const string FNames[] = {
+const string FNames[25] = {
     "Egle", "Indre", "Lina","Neringa","Sigute","Ugne","Laura","Viktorija",
     "Rasa","Gintare","Agne","Ieva", "Milda","Margarita","Aiste", "Vilma",
     "Ruta","Aiste","Gabija","Jurate","Jurgita", "Vaiva", "Ula", "Greta",
     "Kotryna"
 
 };
-const string FSurnames[] = {
+const string FSurnames[25] = {
 "Norkute","Petronyte","Seskinyte","Pakalnaite","Daugelaite","Simonaityte",
 "Giedre","Zukaite", "Norkute", "Kaminskaite", "Dapsyte", "Kucinskaite", 
 "Vaitkeviciute", "Vasiliauskaite", "Navickaite", "Urbonaite", "Grigoniene",
