@@ -44,7 +44,7 @@ Diskas: 512GB NVMe SSD
 | Studentai10000    |  0.0031s |  0.0013s |  0.0044s | 
 | Studentai100000   |  0.0521s |  0.0357s |  0.0471s | 
 | Studentai1000000  |  0.4716s |  0.6341s |  0.5915s | 
-| Studentai10000000 |  5.7443s |  9.6336s |  7.2021s |  
+| Studentai10000000 |  5.7443s |  9.6336s |  8.2021s |  
 
 ---------------------------------------------------------------------------------------------------
 1.4 Studentų skirstymas į dvi grupes
@@ -56,3 +56,16 @@ Diskas: 512GB NVMe SSD
 | Studentai100000   |  0.8640s |  0.4039s |  0.4635s | 
 | Studentai1000000  |  6.9530s |  4.5441s |  4.3977s | 
 | Studentai10000000 |  53.871s |  59.936s |  52.829s | 
+
+
+## Failo skirstymo į du, optimizaviams
+
+1. Strategija
+
+| Failas            | Vector   | List     | Deque    |        
+|-------------------|----------|----------|----------|    
+| Studentai1000     |  0.0470s |  0.0290s |  0.0653s |
+| Studentai10000    |  0.1720s |  0.1478s |  0.2804s | 
+| Studentai100000   |  1.0750s |  1.1539s |  1.1635s | 
+| Studentai1000000  |  11.453s |  10.541s |  13.398s | 
+| Studentai10000000 |  158.34s |  152.06s |  126.49s | 

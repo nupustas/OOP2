@@ -402,6 +402,8 @@ fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
 
     fr1.close();
     fr2.close();   
+
+    cout<<"skirstymas ir irasymas: "<<Kduration.count()+Vduration.count()+split_duration.count()<<endl;
 }
 
 template <typename Container>
