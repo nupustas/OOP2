@@ -8,11 +8,11 @@ This project is a C++ application that calculates the final grades for students 
 Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.  
 🖥 Testavimo sistemos parametrai:
 
-Procesorius: Intel Core i5-10300H
+* Procesorius: Intel Core i5-10300H
 
-Operatyvioji atmintis: 2×4GB DDR4 3200MHz
+* Operatyvioji atmintis: 2×4GB DDR4 3200MHz
 
-Diskas: 512GB NVMe SSD
+* Diskas: 512GB NVMe SSD
 
 1.1 Failo sukūrimas
 
@@ -58,7 +58,7 @@ Diskas: 512GB NVMe SSD
 | Studentai10000000 |  53.871s |  59.936s |  52.829s | 
 
 
-## Failo skirstymo į du, optimizaviams
+## Failo skirstymo į du, optimizaviams (pateiktas visos programos veikimo laikas)
 
 1. Strategija
 
@@ -91,3 +91,9 @@ Diskas: 512GB NVMe SSD
 | Studentai100000   |  0.7563s |  0.9305s |  0.7062s | 
 | Studentai1000000  |  6.9071s |  7.7752s |  7.1821s | 
 | Studentai10000000 |  77.919s |  85.833s |  95.431s | 
+
+## Išvados
+* List konteineris optimaliausias apdorojant mažus failus
+* Deque konteineris gan optimalus mažiem failam, tačiau didesniems yra pats blogiausias
+* Vector konteineris greičiausiai rūšiuoja, bei apdoroja didesnios apimties failus
+
