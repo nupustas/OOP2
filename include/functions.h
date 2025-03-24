@@ -2,13 +2,6 @@
 #define FUNCTIONS_H
 
 #include "manolib.h"
-#include <vector>
-#include <list>
-#include <deque>
-#include <string>
-#include <iostream>
-
-using namespace std;
 
 // Visko generavimas
 template <typename Container>
@@ -180,8 +173,8 @@ void Sorting(Container &grupe) {
     auto comparator = [&](const Stud &a, const Stud &b) {
         if (x == '1') return a.Vardas < b.Vardas;
         if (x == '2') return a.Pavarde < b.Pavarde;
-        if (x == '3') return a.galutinis > b.galutinis;
-        else return a.galutinis < b.galutinis;
+        if (x == '3') return a.galutinis < b.galutinis;
+        else return a.galutinis > b.galutinis;
     };
 
     // Use different sorting depending on the container type
@@ -327,81 +320,64 @@ Container SpeedTesting()
 }
 
 //Failo dalijimas i du (kietiakai, vargsiukai)
+
 template <typename Container>
-void SplitFile(Container grupe)
-{
+void SplitFile(Container& grupe) {
     auto start_split = std::chrono::high_resolution_clock::now();
 
-    Container vargsai;
-    Container kietiakai;
+    // padalina konteineri i 2
+    auto it = std::partition(grupe.begin(), grupe.end(), [](const auto& student) {
+        return student.galutinis < 5;
+    });
 
-    //vargsai.reserve(grupe.size()); 
-    //kietiakai.reserve(grupe.size());
-
-    for (auto& n : grupe)
-    {
-        if (n.galutinis < 5)
-            vargsai.push_back(n);
-        else
-            kietiakai.push_back(n);
-    }
-
-    //grupe.clear();
-    //grupe.shrink_to_fit();
-    //vargsai.shrink_to_fit();
-    //kietiakai.shrink_to_fit();
+    // sukuria konteineri vargsiukams is atskirtu elementu
+    Container vargsai(grupe.begin(), it);
+    grupe.erase(grupe.begin(), it); // istrina atskirtus elem is pradinio konteinerio
 
     auto end_split = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> split_duration = end_split - start_split;
-    //cout << "Dalijimas uztruko: "<<fixed<<setprecision(5)<<split_duration.count() << " s" << endl;
 
-    ofstream fr1("Vargsiukai.txt");
-    ofstream fr2("Kietiakai.txt");
+    std::ofstream fr1("Vargsiukai.txt");
+    std::ofstream fr2("Kietiakai.txt");
 
-    if (!fr1 || !fr2)
-    {
-        std::cerr << "Error opening output files!" << endl;
+    if (!fr1 || !fr2) {
+        std::cerr << "Error opening output files!" << std::endl;
         return;
     }
 
-auto startV = std::chrono::high_resolution_clock::now();
-    // Write headers
-    fr1 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
-        << setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << endl;
-    fr1 << "-----------------------------------------------------------" << endl;
+    auto startV = std::chrono::high_resolution_clock::now();
+    fr1 << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde"
+        << std::setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << std::endl;
+    fr1 << "-----------------------------------------------------------" << std::endl;
 
-    // Write student data
-    for (const auto& n : vargsai)
-    {
-        fr1 << std::left << setw(15) << n.Vardas << setw(18) << n.Pavarde << setw(7);
+    for (const auto& n : vargsai) {
+        fr1 << std::left << std::setw(15) << n.Vardas << std::setw(18) << n.Pavarde << std::setw(7);
         if (n.vm == 'a')
-            fr1 << fixed << setprecision(2) << n.galutinis << "            -" << endl;
+            fr1 << std::fixed << std::setprecision(2) << n.galutinis << "            -" << std::endl;
         else
-            fr1 << " -                " << fixed << setprecision(2) << n.galutinis << endl;
+            fr1 << " -                " << std::fixed << std::setprecision(2) << n.galutinis << std::endl;
     }
     auto endV = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> Vduration = endV - startV;
-    //cout << "Vargsu irasymo i faila: "<<fixed<<setprecision(5)<< Vduration.count() << " s" << endl;
 
     auto startK = std::chrono::high_resolution_clock::now();
-fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
-        << setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << endl;
-    fr2 << "-----------------------------------------------------------" << endl;
-    for (const auto& n : kietiakai)
-    {
-        fr2 << std::left << setw(15) << n.Vardas << setw(18) << n.Pavarde << setw(7);
+    fr2 << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde"
+        << std::setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << std::endl;
+    fr2 << "-----------------------------------------------------------" << std::endl;
+    for (const auto& n : grupe) {
+        fr2 << std::left << std::setw(15) << n.Vardas << std::setw(18) << n.Pavarde << std::setw(7);
         if (n.vm == 'a')
-            fr2 << fixed << setprecision(2) << n.galutinis << "            -" << endl;
+            fr2 << std::fixed << std::setprecision(2) << n.galutinis << "            -" << std::endl;
         else
-            fr2 << " -                " << fixed << setprecision(2) << n.galutinis << endl;
+            fr2 << " -                " << std::fixed << std::setprecision(2) << n.galutinis << std::endl;
     }
-
     auto endK = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> Kduration = endK - startK;
-    //cout << "Kietu irasymo i faila: "<<fixed<<setprecision(5)<< Kduration.count() << " s" << endl;
 
     fr1.close();
-    fr2.close();   
+    fr2.close();
+
+    std::cout << "Skirstymas ir irasymas: " << Kduration.count() + Vduration.count() + split_duration.count() << " s" << std::endl;
 }
 
 template <typename Container>
