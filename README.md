@@ -1,20 +1,55 @@
-# Student Grade Calculator
+## Studentų galutinio balo skaičiavimo programa
 
-This project is a C++ application that calculates the final grades for students based on their homework and exam scores.
+Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.
 
----------------------------------------------------------------------------------------------------
+## Projekto paleidimas naudojant CMake
+
+#### 1. Reikalingi įrankiai
+Prieš paleidžiant projektą, įsitikinkite, kad turite šiuos įrankius:
+- **CMake**: [Download CMake](https://cmake.org/download/) (minimum v3.10)
+- **A C++ compiler** (GCC, CLANG, MSVC)
+
+#### 2. Parsisiųskite projektą, jei jo dar neturite
+##### Projekto klonavimas iš git:
+```bash
+git clone https://github.com/nupustas/oop.vp
+```
+Paklonave projektą, atidarykite jo aplanką.
+
+##### Projekto kompiliavimas:
+```
+mkdir build
+cd build
+cmake ..
+```
+```
+cmake --build .
+```
+##### Projekto paleidimas:
+```
+cd debug
+MyProject.exe
+```
+## Projekto struktūra:
+
+- **`include/`**: Aplankalas, kuriame laikomi projekto header failai.
+- **`src/`**: Programos kodas, kuriame yra `.cpp` failai.
+- **`CMakeLists.txt`**: CMake instrukcijos kompiliavimui.
+- **`ReadME.md`**: Programos instrukcija.
+
 
 ## Skirtingų konteinerių testavimas
-Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.  
-🖥 Testavimo sistemos parametrai:
+#### Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.  
 
-* Procesorius: Intel Core i5-10300H
+### 🖥 Testavimo sistemos parametrai:
 
-* Operatyvioji atmintis: 2×4GB DDR4 3200MHz
+- **`Procesorius: Intel Core i5-10300H `**
 
-* Diskas: 512GB NVMe SSD
+- **`Operatyvioji atmintis: 2×4GB DDR4 3200MHz`**
 
-1.1 Failo sukūrimas
+- **`Diskas: 512GB NVMe SSD`**
+
+#### 1.1 Failo sukūrimas
 
 | Failas             | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -25,7 +60,7 @@ This project is a C++ application that calculates the final grades for students 
 | Studentai10000000 |  32.871s |  32.287s |  34.628s | 
 
 ---------------------------------------------------------------------------------------------------
-1.2 Failo skaitymas
+#### 1.2 Failo skaitymas
                                
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -36,7 +71,7 @@ This project is a C++ application that calculates the final grades for students 
 | Studentai10000000 |  20.571s |  18.528s |  20.576s | 
 
 ---------------------------------------------------------------------------------------------------
-1.3 Rušiavimas didėjimo tvarka
+#### 1.3 Rušiavimas didėjimo tvarka
                                
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -47,7 +82,7 @@ This project is a C++ application that calculates the final grades for students 
 | Studentai10000000 |  5.7443s |  9.6336s |  8.2021s |  
 
 ---------------------------------------------------------------------------------------------------
-1.4 Studentų skirstymas į dvi grupes
+#### 1.4 Studentų skirstymas į dvi grupes
                                
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -58,9 +93,9 @@ This project is a C++ application that calculates the final grades for students 
 | Studentai10000000 |  53.871s |  59.936s |  52.829s | 
 
 
-## Failo skirstymo į du, optimizaviams (pateiktas visos programos veikimo laikas)
+### Failo skirstymo į du, optimizaviams (pateiktas visos programos veikimo laikas)
 
-1. Strategija
+#### 1. Strategija
 
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -71,7 +106,7 @@ This project is a C++ application that calculates the final grades for students 
 | Studentai10000000 |  158.34s |  152.06s |  126.49s | 
 
 
-2. Strategija
+#### 2. Strategija
 
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -82,7 +117,7 @@ This project is a C++ application that calculates the final grades for students 
 | Studentai10000000 |  71.839s |  79.501s |  83.716s | 
 
 
-3. Strategija 
+#### 3. Strategija 
 
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
