@@ -1,11 +1,8 @@
 #include "manolib.h"
 #include "functions.h"
-#include <limits>
 
-// Choose which container to use by commenting/uncommenting
-
-//using Container = std::vector<Stud>;
-using Container = std::list<Stud>;
+using Container = std::vector<Stud>;
+//using Container = std::list<Stud>;
 //using Container = std::deque<Stud>;
 
 int main()

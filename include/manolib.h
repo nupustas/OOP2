@@ -2,12 +2,18 @@
 #define MANOLIB_H
 
 #include<vector>
+#include<list>
+#include<deque>
 #include<iomanip> 
 #include<iostream>
 #include<ctime>
 #include<algorithm>
 #include<fstream>
+#include<sstream>
 #include<chrono>
+#include<limits>
+#include<string>
+#include<type_traits>
 
 
 using std::cout;
@@ -23,6 +29,14 @@ using std::setprecision;
 using std::getline;
 using std::ifstream;
 using std::ofstream;
+using std::istringstream;
+using std::list;
+using std::deque;
+using std::cerr;
+using std::vector;
+using std::string;
+using std::setw;
+using std::is_same_v;
 
 
 struct Stud

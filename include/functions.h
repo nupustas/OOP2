@@ -2,13 +2,6 @@
 #define FUNCTIONS_H
 
 #include "manolib.h"
-#include <vector>
-#include <list>
-#include <deque>
-#include <string>
-#include <iostream>
-
-using namespace std;
 
 // Visko generavimas
 template <typename Container>
