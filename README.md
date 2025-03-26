@@ -6,6 +6,7 @@
 
 #### 1. Reikalingi įrankiai
 Prieš paleidžiant projektą, įsitikinkite, kad turite šiuos įrankius:
+
 - **CMake**: [Atsisiųsti CMake](https://cmake.org/download/) (minimum v3.10)
 - **C++ kompiliatorius** (GCC, CLANG, MSVC)
 
