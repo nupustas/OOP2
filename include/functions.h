@@ -297,8 +297,27 @@ Container SpeedTesting()
     Sorting(grupe);
     auto endSort = std::chrono::high_resolution_clock::now();
 
-    auto startSplit = std::chrono::high_resolution_clock::now(); // Timer for splitting
-    SplitFile(grupe);
+
+    cout<<"Kuria strategija norite naudotis?"<<endl;
+            cout<<"1 - bendras konteineris skaidomas i du naujus"<<endl;
+            cout<<"2 - skaidymas i viena nauja konteineri"<<endl;
+            cout<<"3- efektyviausia (naudoti tik vector)"<<endl;
+            int choices;
+            cin>>choices;
+            while(cin.fail() || (choices != 1 && choices != 2 && choices != 3))
+            {
+                cin.clear();
+                cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                cout << "Invalid input. Enter 1, 2 or 3: ";
+                cin >> choices;
+            }
+            auto startSplit = std::chrono::high_resolution_clock::now(); // Timer for splitting
+            if(choices==1)SplitFile(grupe);
+
+            else if(choices==2)SplitFile2(grupe);
+                
+            else SplitFile3(grupe);
+    
     auto endSplit = std::chrono::high_resolution_clock::now();
 
     // Calculate and display durations
@@ -317,7 +336,84 @@ Container SpeedTesting()
 
 //Failo dalijimas i du (kietiakai, vargsiukai)
 template <typename Container>
-void SplitFile(Container& grupe) {
+void SplitFile(Container grupe)
+{
+    auto start_split = std::chrono::high_resolution_clock::now();
+
+    Container vargsai;
+    Container kietiakai;
+
+
+    for (auto& n : grupe)
+    {
+        if (n.galutinis < 5)
+            vargsai.push_back(n);
+        else
+            kietiakai.push_back(n);
+    }
+
+    //grupe.clear();
+    //grupe.shrink_to_fit();
+    //vargsai.shrink_to_fit();
+    //kietiakai.shrink_to_fit();
+
+    auto end_split = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> split_duration = end_split - start_split;
+    //cout << "Dalijimas uztruko: "<<fixed<<setprecision(5)<<split_duration.count() << " s" << endl;
+
+    ofstream fr1("Vargsiukai.txt");
+    ofstream fr2("Kietiakai.txt");
+
+    if (!fr1 || !fr2)
+    {
+        std::cerr << "Error opening output files!" << endl;
+        return;
+    }
+
+auto startV = std::chrono::high_resolution_clock::now();
+    // Write headers
+    fr1 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
+        << setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << endl;
+    fr1 << "-----------------------------------------------------------" << endl;
+
+    // Write student data
+    for (const auto& n : vargsai)
+    {
+        fr1 << std::left << setw(15) << n.Vardas << setw(18) << n.Pavarde << setw(7);
+        if (n.vm == 'a')
+            fr1 << fixed << setprecision(2) << n.galutinis << "            -" << endl;
+        else
+            fr1 << " -                " << fixed << setprecision(2) << n.galutinis << endl;
+    }
+    auto endV = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> Vduration = endV - startV;
+    //cout << "Vargsu irasymo i faila: "<<fixed<<setprecision(5)<< Vduration.count() << " s" << endl;
+
+    auto startK = std::chrono::high_resolution_clock::now();
+fr2 << std::left << setw(15) << "Vardas" << setw(15) << "Pavarde"
+        << setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << endl;
+    fr2 << "-----------------------------------------------------------" << endl;
+    for (const auto& n : kietiakai)
+    {
+        fr2 << std::left << setw(15) << n.Vardas << setw(18) << n.Pavarde << setw(7);
+        if (n.vm == 'a')
+            fr2 << fixed << setprecision(2) << n.galutinis << "            -" << endl;
+        else
+            fr2 << " -                " << fixed << setprecision(2) << n.galutinis << endl;
+    }
+
+    auto endK = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> Kduration = endK - startK;
+    //cout << "Kietu irasymo i faila: "<<fixed<<setprecision(5)<< Kduration.count() << " s" << endl;
+
+    fr1.close();
+    fr2.close();   
+
+    cout<<"skirstymas ir irasymas: "<<Kduration.count()+Vduration.count()+split_duration.count()<<endl;
+}
+
+template <typename Container>
+void SplitFile2(Container& grupe) {
     auto start_split = std::chrono::high_resolution_clock::now();
 
     // padalina konteineri i 2
@@ -326,11 +422,8 @@ void SplitFile(Container& grupe) {
     });
 
     // sukuria konteineri vargsiukams is atskirtu elementu
-    Container vargsai;
-    vargsai.reserve(std::distance(grupe.begin(), it));
-    std::move(grupe.begin(), it, std::back_inserter(vargsai));
+    Container vargsai(grupe.begin(), it);
     grupe.erase(grupe.begin(), it); // istrina atskirtus elem is pradinio konteinerio
-    grupe.shrink_to_fit();
 
     auto end_split = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> split_duration = end_split - start_split;
@@ -377,6 +470,69 @@ void SplitFile(Container& grupe) {
 
     std::cout << "Skirstymas ir irasymas: " << Kduration.count() + Vduration.count() + split_duration.count() << " s" << std::endl;
 }
+//Failo dalijimas i du (kietiakai, vargsiukai)
+template <typename Container>
+void SplitFile3(Container& grupe) {
+    auto start_split = std::chrono::high_resolution_clock::now();
+
+    // padalina konteineri i 2
+    auto it = std::partition(grupe.begin(), grupe.end(), [](const auto& student) {
+        return student.galutinis < 5;
+    });
+
+    // sukuria konteineri vargsiukams is atskirtu elementu
+    Container vargsai;
+    //vargsai.reserve(std::distance(grupe.begin(), it));
+    std::move(grupe.begin(), it, std::back_inserter(vargsai));
+    grupe.erase(grupe.begin(), it); // istrina atskirtus elem is pradinio konteinerio
+    //grupe.shrink_to_fit();
+
+    auto end_split = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> split_duration = end_split - start_split;
+
+    std::ofstream fr1("Vargsiukai.txt");
+    std::ofstream fr2("Kietiakai.txt");
+
+    if (!fr1 || !fr2) {
+        std::cerr << "Error opening output files!" << std::endl;
+        return;
+    }
+
+    auto startV = std::chrono::high_resolution_clock::now();
+    fr1 << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde"
+        << std::setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << std::endl;
+    fr1 << "-----------------------------------------------------------" << std::endl;
+
+    for (const auto& n : vargsai) {
+        fr1 << std::left << std::setw(15) << n.Vardas << std::setw(18) << n.Pavarde << std::setw(7);
+        if (n.vm == 'a')
+            fr1 << std::fixed << std::setprecision(2) << n.galutinis << "            -" << std::endl;
+        else
+            fr1 << " -                " << std::fixed << std::setprecision(2) << n.galutinis << std::endl;
+    }
+    auto endV = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> Vduration = endV - startV;
+
+    auto startK = std::chrono::high_resolution_clock::now();
+    fr2 << std::left << std::setw(15) << "Vardas" << std::setw(15) << "Pavarde"
+        << std::setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << std::endl;
+    fr2 << "-----------------------------------------------------------" << std::endl;
+    for (const auto& n : grupe) {
+        fr2 << std::left << std::setw(15) << n.Vardas << std::setw(18) << n.Pavarde << std::setw(7);
+        if (n.vm == 'a')
+            fr2 << std::fixed << std::setprecision(2) << n.galutinis << "            -" << std::endl;
+        else
+            fr2 << " -                " << std::fixed << std::setprecision(2) << n.galutinis << std::endl;
+    }
+    auto endK = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> Kduration = endK - startK;
+
+    fr1.close();
+    fr2.close();
+
+    std::cout << "Skirstymas ir irasymas: " << Kduration.count() + Vduration.count() + split_duration.count() << " s" << std::endl;
+}
+
 
 template <typename Container>
 void FinalScore(Container& grupe)
