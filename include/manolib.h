@@ -14,6 +14,7 @@
 #include<limits>
 #include<string>
 #include<type_traits>
+#include<exception>
 
 
 using std::cout;

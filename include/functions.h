@@ -15,7 +15,6 @@ Container GenerateEverything() {
     cout << "How many homework scores do you want to generate? ";
     int x;
     cin >> x;
-    srand(time(NULL));
 
     for (int i = 0; i < n; i++) {
         Stud laik;
@@ -55,7 +54,6 @@ Container GenerateScores() {
         cout << "How many homework scores do you want to generate? ";
         int n;
         cin >> n;
-        srand(time(NULL));
 
         for (int i = 0; i < n; i++) {
             laik.paz.push_back(rand() % 10);
@@ -239,7 +237,6 @@ string GenerateFile(int StudentCount)
     {
         cout<<"Error creating file" <<filename<<endl;
     }
-    srand(time(NULL));
 
     fr<<std::left<<setw(16)<<"Vardas Pavarde "<<std::left<<setw(20)<<"Pazymiai   "<<"Egzaminas"<<endl;
     for(int i=0; i<StudentCount; i++)
@@ -331,8 +328,11 @@ void SplitFile(Container& grupe) {
     });
 
     // sukuria konteineri vargsiukams is atskirtu elementu
-    Container vargsai(grupe.begin(), it);
+    Container vargsai;
+    vargsai.reserve(std::distance(grupe.begin(), it));
+    std::move(grupe.begin(), it, std::back_inserter(vargsai));
     grupe.erase(grupe.begin(), it); // istrina atskirtus elem is pradinio konteinerio
+    grupe.shrink_to_fit();
 
     auto end_split = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> split_duration = end_split - start_split;
