@@ -2,9 +2,9 @@
 #include "functions.h"
 #include <exception>
 
-using Container = std::vector<Stud>;
+//using Container = std::vector<Stud>;
 //using Container = std::deque<Stud>;
-//using Container = std::list<Stud>;
+using Container = std::list<Stud>;
 
 int main()
 {   
@@ -58,7 +58,7 @@ int main()
             }
         } 
         else if (a == '5') 
-        {
+        {   
             grupe = SpeedTesting<Container>();
             return 0;
         }
