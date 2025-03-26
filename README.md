@@ -48,19 +48,8 @@ MyProject.exe
 - **`Operatyvioji atmintis: 2×4GB DDR4 3200MHz`**
 
 - **`Diskas: 512GB NVMe SSD`**
-
-#### 1.1 Failo sukūrimas
-
-| Failas             | Vector   | List     | Deque    |        
-|-------------------|----------|----------|----------|    
-| Studentai1000     |  0.0216s |  0.0055s |  0.0062s |
-| Studentai10000    |  0.2120s |  0.0645s |  0.0587s | 
-| Studentai100000   |  1.7440s |  0.4373s |  0.4781s | 
-| Studentai1000000  |  10.653s |  3.7508s |  3.8066s | 
-| Studentai10000000 |  32.871s |  32.287s |  34.628s | 
-
 ---------------------------------------------------------------------------------------------------
-#### 1.2 Failo skaitymas
+#### 1.1 Failo skaitymas
                                
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -71,7 +60,7 @@ MyProject.exe
 | Studentai10000000 |  20.571s |  18.528s |  20.576s | 
 
 ---------------------------------------------------------------------------------------------------
-#### 1.3 Rušiavimas didėjimo tvarka
+#### 1.2 Rušiavimas didėjimo tvarka
                                
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    
@@ -82,7 +71,7 @@ MyProject.exe
 | Studentai10000000 |  5.7443s |  9.6336s |  8.2021s |  
 
 ---------------------------------------------------------------------------------------------------
-#### 1.4 Studentų skirstymas į dvi grupes
+#### 1.3 Studentų skirstymas į dvi grupes
                                
 | Failas            | Vector   | List     | Deque    |        
 |-------------------|----------|----------|----------|    

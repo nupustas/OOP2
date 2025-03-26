@@ -167,18 +167,17 @@ void Sorting(Container &grupe) {
         cin >> x;
     }
     auto chrono_start = std::chrono::high_resolution_clock::now();
-    // Lambda for sorting
+    
     auto comparator = [&](const Stud &a, const Stud &b) {
         if (x == '1') return a.Vardas < b.Vardas;
         if (x == '2') return a.Pavarde < b.Pavarde;
         if (x == '3') return a.galutinis < b.galutinis;
         else return a.galutinis > b.galutinis;
     };
-
-    // Use different sorting depending on the container type
+    // constexpr apskaiciuoja kompiliavimo metu, o ne runtime metu
     if constexpr (is_same_v<Container, list<Stud>>) {
-        grupe.sort(comparator);  // Use list's built-in sort
-    } else {
+        grupe.sort(comparator);  // listo sortas
+            } else {
         sort(grupe.begin(), grupe.end(), comparator);  // Use std::sort for vector & deque
     }
     auto chrono_end = std::chrono::high_resolution_clock::now();
@@ -317,7 +316,6 @@ Container SpeedTesting()
 }
 
 //Failo dalijimas i du (kietiakai, vargsiukai)
-
 template <typename Container>
 void SplitFile(Container& grupe) {
     auto start_split = std::chrono::high_resolution_clock::now();
