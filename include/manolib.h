@@ -40,15 +40,35 @@ using std::setw;
 using std::is_same_v;
 
 
-struct Stud
-{
-    string Vardas, Pavarde;
-    vector <int> paz;
-    int pazcount;
-    double galutinis;
-    int egz;
-    char vm;
- };
+class Stud {
+    private:
+        string Vardas, Pavarde;
+        vector<int> paz;
+        int egz;
+        char vm;
+        double galutinis;
+    
+    public:
+        
+        Stud() : egz(0), vm('a'), galutinis(0.0) {}
+    
+        
+        void setVardas(const string& v) { Vardas = v; }
+        void setPavarde(const string& p) { Pavarde = p; }
+        void setEgz(int e) { egz = e; }
+        void setVm(char v) { vm = v; }
+        void setGalutinis(double g) { galutinis = g; }
+        void addPaz(int grade) { paz.push_back(grade); }
+    
+        
+        string getVardas() const { return Vardas; }
+        string getPavarde() const { return Pavarde; }
+        int getEgz() const { return egz; }
+        char getVm() const { return vm; }
+        double getGalutinis() const { return galutinis; }
+        vector<int> getPaz() const { return paz; }
+    
+    };
 
 const string MNames[25] = {
     "Andrius", "Dainius", "Jonas" , "Marius", "Orestas", "Povilas", 
