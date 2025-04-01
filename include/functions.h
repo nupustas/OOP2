@@ -9,28 +9,38 @@ Container GenerateEverything() {
     Container grupe;
     cout << "Selected '3-Generate everything' " << endl;
     cout << endl;
+    int n, x;
     cout << "How many students do you want to generate? ";
-    int n;
-    cin >> n;
+    while (!(cin >> n) || n < 1) {
+        cout << "Invalid input. Please enter a positive number: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
     cout << "How many homework scores do you want to generate? ";
-    int x;
-    cin >> x;
+    while (!(cin >> x) || x < 1) {
+        cout << "Invalid input. Please enter a positive number: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
 
     for (int i = 0; i < n; i++) {
         Stud laik;
         int gender = rand() % 2;
         if (gender == 0) {
-            laik.Vardas = FNames[rand() % 25];
-            laik.Pavarde = FSurnames[rand() % 25];
+            laik.setVardas(FNames[rand() % 25]);
+            laik.setPavarde(FSurnames[rand() % 25]);
+            
         } else {
-            laik.Vardas = MNames[rand() % 25];
-            laik.Pavarde = MSurnames[rand() % 25];
+            laik.setVardas(MNames[rand() % 25]);
+            laik.setPavarde(MSurnames[rand() % 25]);
         }
 
         for (int j = 0; j < x; j++) {
-            laik.paz.push_back(rand() % 11);
+            laik.addPaz(rand() % 10);
+            
         }
-        laik.egz = rand() % 11;
+        laik.setEgz(rand() % 10);
 
         grupe.push_back(laik);
     }
