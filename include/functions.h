@@ -14,14 +14,14 @@ Container GenerateEverything() {
     while (!(cin >> n) || n < 1) {
         cout << "Invalid input. Please enter a positive number: ";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 
     cout << "How many homework scores do you want to generate? ";
     while (!(cin >> x) || x < 1) {
         cout << "Invalid input. Please enter a positive number: ";
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
 
     for (int i = 0; i < n; i++) {
@@ -69,9 +69,9 @@ Container GenerateScores() {
         cin >> n;
 
         for (int i = 0; i < n; i++) {
-            laik.addPaz(rand() % 10)
+            laik.addPaz((rand() % 10));
         }
-        laik.SetEgz = rand() % 10;
+        laik.setEgz((rand() % 10));
 
         grupe.push_back(laik);
 
@@ -100,7 +100,7 @@ Container ManualInput() {
         int paz, egz;
         cout << "Input name: ";
         cin >> Vardas;
-        laik.SetVardas(Vardaas);
+        laik.setVardas(Vardas);
         cout << "Input surname: ";
         cin >> Pavarde;
         laik.setPavarde(Pavarde);
@@ -114,8 +114,10 @@ Container ManualInput() {
 
         cout << "Enter exam score: ";
         cin >> egz;
-        while (egz < 0 || egz > 10) {
-            cout << "Invalid input. Enter exam score (0-10): ";
+        while (cin.fail() || egz < 0 || egz > 10) {
+            cout << "Invalid input. Enter a number between 0 and 10: ";
+            cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             cin >> egz;
         }
         laik.setEgz(egz);
@@ -152,7 +154,7 @@ Container ReadFile(string filename) {
     while (getline(fd, line)) {
         istringstream iss(line);
         Stud laik;
-        String vardas, pavarde;
+        string vardas, pavarde;
         iss >> vardas >> pavarde;
         laik.setVardas(vardas);
         laik.setPavarde(pavarde);
@@ -162,8 +164,8 @@ Container ReadFile(string filename) {
             laik.addPaz(num);
         }
 
-        vector<int> pazymiai = getPaz();
-        if (!laik.paz.empty()) {
+        vector<int> pazymiai = laik.getPaz();
+        if (!pazymiai.empty()) {
             laik.setEgz(pazymiai.back());
             laik.removeLastPaz(); 
         }
@@ -193,10 +195,10 @@ void Sorting(Container &grupe) {
     auto chrono_start = std::chrono::high_resolution_clock::now();
     
     auto comparator = [&](const Stud &a, const Stud &b) {
-        if (x == '1') return a.getVardas < b.getVardas;
-        if (x == '2') return a.getPavarde < b.getPavarde;
-        if (x == '3') return a.getGalutinis < b.getGalutinis;
-        else return a.getGalutinis > b.getGalutinis;
+        if (x == '1') return a.getVardas() < b.getVardas();
+        if (x == '2') return a.getPavarde() < b.getPavarde();
+        if (x == '3') return a.getGalutinis() < b.getGalutinis();
+        else return a.getGalutinis() > b.getGalutinis();
     };
     // constexpr apskaiciuoja kompiliavimo metu, o ne runtime metu
     if constexpr (is_same_v<Container, list<Stud>>) {
@@ -218,11 +220,11 @@ void OutputToTerminal(Container &grupe) {
          << "Galutinis (Med.)" << endl;
     cout << "-----------------------------------------------------------" << endl;
     for (const auto &n : grupe) {
-        cout << left << setw(15) << n.getVardas << setw(18) << n.getPavarde << setw(7);
-        if (n.vm == 'a')
-            cout << fixed << setprecision(2) << n.getGalutinis << "            -" << endl;
+        cout << left << setw(15) << n.getVardas() << setw(18) << n.getPavarde() << setw(7);
+        if (n.getVm() == 'a')
+            cout << fixed << setprecision(2) << n.getGalutinis() << "            -" << endl;
         else
-            cout << " -                " << fixed << setprecision(2) << n.getGalutinis << endl;
+            cout << " -                " << fixed << setprecision(2) << n.getGalutinis() << endl;
     }
 }
 
@@ -235,9 +237,9 @@ void OutputToFile(Container& grupe)
     out<<"-----------------------------------------------------------"<<endl;
 for(auto n :grupe)
   {
-    out<<std::left<<setw(15)<<n.getVardas<<setw(18)<<n.getPavarde<<setw(7);
-    if(n.vm == 'a') out<<std::fixed<<std::setprecision(2)<<n.getGalutinis<<"            -"<<endl;
-    else out<<" -                "<<std::fixed<<std::setprecision(2)<<n.getGalutinis<<endl;
+    out<<std::left<<setw(15)<<n.getVardas()<<setw(18)<<n.getPavarde()<<setw(7);
+    if(n.getVm() == 'a') out<<std::fixed<<std::setprecision(2)<<n.getGalutinis()<<"            -"<<endl;
+    else out<<" -                "<<std::fixed<<std::setprecision(2)<<n.getGalutinis()<<endl;
   }
 out.close();
 
@@ -321,8 +323,8 @@ Container SpeedTesting()
     Sorting(grupe);
     auto endSort = std::chrono::high_resolution_clock::now();
 
+    auto startSplit = std::chrono::high_resolution_clock::now();
      SplitFile(grupe);
-    
     auto endSplit = std::chrono::high_resolution_clock::now();
 
     // Calculate and display durations
@@ -345,8 +347,8 @@ void SplitFile(Container& grupe) {
     auto start_split = std::chrono::high_resolution_clock::now();
 
     // padalina konteineri i 2
-    auto it = std::partition(grupe.begin(), grupe.end(), [](const auto& student) {
-        return student.getGalutinis < 5;
+    auto it = std::partition(grupe.begin(), grupe.end(), [](const auto student) {
+        return student.getGalutinis() < 5;
     });
 
     // sukuria konteineri vargsiukams is atskirtu elementu
@@ -373,11 +375,11 @@ void SplitFile(Container& grupe) {
     fr1 << "-----------------------------------------------------------" << std::endl;
 
     for (const auto& n : vargsai) {
-        fr1 << std::left << std::setw(15) << n.getVardas << std::setw(18) << n.getPavarde << std::setw(7);
-        if (n.vm == 'a')
-            fr1 << std::fixed << std::setprecision(2) << n.getGalutinis << "            -" << std::endl;
+        fr1 << std::left << std::setw(15) << n.getVardas() << std::setw(18) << n.getPavarde() << std::setw(7);
+        if (n.getVm() == 'a')
+            fr1 << std::fixed << std::setprecision(2) << n.getGalutinis() << "            -" << std::endl;
         else
-            fr1 << " -                " << std::fixed << std::setprecision(2) << n.getGalutinis << std::endl;
+            fr1 << " -                " << std::fixed << std::setprecision(2) << n.getGalutinis() << std::endl;
     }
     auto endV = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> Vduration = endV - startV;
@@ -387,11 +389,11 @@ void SplitFile(Container& grupe) {
         << std::setw(15) << "Galutinis (Vid.)" << " / " << "Galutinis (Med.)" << std::endl;
     fr2 << "-----------------------------------------------------------" << std::endl;
     for (const auto& n : grupe) {
-        fr2 << std::left << std::setw(15) << n.getVardas << std::setw(18) << n.getPavarde << std::setw(7);
-        if (n.vm == 'a')
-            fr2 << std::fixed << std::setprecision(2) << n.getGalutinis << "            -" << std::endl;
+        fr2 << std::left << std::setw(15) << n.getVardas() << std::setw(18) << n.getPavarde() << std::setw(7);
+        if (n.getVm() == 'a')
+            fr2 << std::fixed << std::setprecision(2) << n.getGalutinis() << "            -" << std::endl;
         else
-            fr2 << " -                " << std::fixed << std::setprecision(2) << n.getGalutinis << std::endl;
+            fr2 << " -                " << std::fixed << std::setprecision(2) << n.getGalutinis() << std::endl;
     }
     auto endK = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> Kduration = endK - startK;
@@ -421,17 +423,17 @@ void FinalScore(Container& grupe)
         sort(paz.begin(), paz.end());
         n.setVm(am);
         int suma=0;
-            for(auto n: n.paz)
+            for(auto n: paz)
             {
             suma=suma+n;}
             if(am=='a'){
-                n.setGalutinis= 0.4*(suma/n.paz.size())+0.6*n.getEgz;
+                n.setGalutinis(0.4*(suma/paz.size())+0.6*n.getEgz());
             }
-            else if (n.paz.size()%2==0){
-                n.setGalutinis=0.4*(n.paz[n.paz.size()/2] + n.paz[n.paz.size()/2-1])/2 +0.6*n.getEgz;
+            else if (paz.size()%2==0){
+                n.setGalutinis(0.4*(paz[paz.size()/2] + paz[paz.size()/2-1])/2 +0.6*n.getEgz());
             }
             else{
-                n.setGalutinis=0.4*n.paz[n.paz.size()/2] +0.6*n.getEgz;
+                n.setGalutinis(0.4*paz[paz.size()/2] +0.6*n.getEgz());
             }
         }
 }

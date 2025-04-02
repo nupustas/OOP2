@@ -1,6 +1,7 @@
 #include "manolib.h"
 #include "functions.h"
 #include <exception>
+#include<type_traits>
 
 using Container = std::vector<Stud>;
 //using Container = std::deque<Stud>;
@@ -8,7 +9,8 @@ using Container = std::vector<Stud>;
 
 int main()
 {   
-    srand(time(NULL));
+    srand(static_cast<unsigned int>(time(0)));
+
     try 
     {
         Container grupe;
