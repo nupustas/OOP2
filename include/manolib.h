@@ -49,16 +49,13 @@ class Stud {
         double galutinis;
     
     public:
-        
-        Stud() : egz(0), vm('a'), galutinis(0.0) {}
     
-        
         void setVardas(const string& v) { Vardas = v; }
         void setPavarde(const string& p) { Pavarde = p; }
         void setEgz(int e) { egz = e; }
         void setVm(char v) { vm = v; }
         void setGalutinis(double g) { galutinis = g; }
-        void addPaz(int grade) { paz.push_back(grade); }
+        void addPaz(int pazymys) { paz.push_back(pazymys); }
     
         
         string getVardas() const { return Vardas; }
@@ -67,6 +64,7 @@ class Stud {
         char getVm() const { return vm; }
         double getGalutinis() const { return galutinis; }
         vector<int> getPaz() const { return paz; }
+        void removeLastPaz() { paz.pop_back(); }
     
     };
 
