@@ -1,7 +1,6 @@
 #include "manolib.h"
 #include "functions.h"
-#include <exception>
-#include<type_traits>
+
 
 using Container = std::vector<Stud>;
 //using Container = std::deque<Stud>;

@@ -24,12 +24,12 @@ cd build
 cmake ..
 ```
 ```
-cmake --build .
+cmake --build . --config Release
 ```
 ##### Projekto paleidimas:
 ```
-cd debug
-MyProject.exe
+cd release
+OOP.exe
 ```
 ## Projekto struktūra:
 
@@ -62,21 +62,21 @@ MyProject.exe
                                
 | Failas            | Laikas   | .exe dydis |      
 |-------------------|----------|------------|
-| Studentai100000   |  1.2681s | 1 366 016B |  
-| Studentai1000000  |  10.801s | 1 366 016B |  
+| Studentai100000   |  1.2681s |  382 976 B |  
+| Studentai1000000  |  11.383s |  382 976 B |  
 
 ---------------------------------------------------------------------------------------------------
 #### 1.2 -O2
                                
 | Failas            | Laikas   | .exe dydis |      
 |-------------------|----------|------------|
-| Studentai100000   |  1.0658s | 1 400 832B |  
-| Studentai1000000  |  10.555s | 1 400 832B |  
+| Studentai100000   |  1.0493s |  406 528 B |  
+| Studentai1000000  |  10.555s |  406 528 B |  
 
 ---------------------------------------------------------------------------------------------------
 #### 1.3 -O3
                                
 | Failas            | Laikas   | .exe dydis |      
 |-------------------|----------|------------|
-| Studentai100000   |  6.3394s | 1 435 648B |  
-| Studentai1000000  | 62.9744s | 1 435 648B |  
+| Studentai100000   |  1.0029s |  437 248 B |  
+| Studentai1000000  |  9.3880s |  437 248 B |  
