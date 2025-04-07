@@ -49,8 +49,29 @@ class Stud {
         char vm;
         double galutinis;
     
-    public:
+        public:
+
+        Stud() {
+            Vardas = "";
+            Pavarde = "";
+            egz = 0;
+            vm = ' ';
+            galutinis = 0.0;
+        }
     
+        Stud(const string& v, const string& p, const vector<int>& pazymiai, int e, char vmod, double gal) {
+            Vardas = v;
+            Pavarde = p;
+            paz = pazymiai;
+            egz = e;
+            vm = vmod;
+            galutinis = gal;
+        }
+    
+        ~Stud() {
+            paz.clear();
+        }
+ 
         void setVardas(const string& v) { Vardas = v; }
         void setPavarde(const string& p) { Pavarde = p; }
         void setEgz(int e) { egz = e; }
@@ -58,7 +79,7 @@ class Stud {
         void setGalutinis(double g) { galutinis = g; }
         void addPaz(int pazymys) { paz.push_back(pazymys); }
     
-        
+
         string getVardas() const { return Vardas; }
         string getPavarde() const { return Pavarde; }
         int getEgz() const { return egz; }
