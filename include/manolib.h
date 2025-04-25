@@ -50,7 +50,7 @@ class Stud {
         double galutinis;
     
         public:
-
+        // Default constructor
         Stud() {
             Vardas = "";
             Pavarde = "";
@@ -58,7 +58,7 @@ class Stud {
             vm = ' ';
             galutinis = 0.0;
         }
-    
+        // Constructor with parameters
         Stud(const string& v, const string& p, const vector<int>& pazymiai, int e, char vmod, double gal) {
             Vardas = v;
             Pavarde = p;
@@ -67,11 +67,96 @@ class Stud {
             vm = vmod;
             galutinis = gal;
         }
-    
+        // Destructor 
         ~Stud() {
             paz.clear();
         }
- 
+        // Copy constructor
+        Stud(const Stud& other) : Vardas(other.Vardas), Pavarde(other.Pavarde), paz(other.paz),
+        egz(other.egz), vm(other.vm), galutinis(other.galutinis) {}
+
+        // Copy assignment operator
+    Stud& operator=(const Stud& other) {
+        if (this != &other) {
+            Vardas = other.Vardas;
+            Pavarde = other.Pavarde;
+            paz = other.paz;
+            egz = other.egz;
+            vm = other.vm;
+            galutinis = other.galutinis;
+        }
+        return *this;
+    }   
+
+    // Move constructor
+    Stud(Stud&& other) noexcept
+        : Vardas(std::move(other.Vardas)), Pavarde(std::move(other.Pavarde)),
+          paz(std::move(other.paz)), egz(other.egz), vm(other.vm), galutinis(other.galutinis) {
+        other.egz = 0;
+        other.vm = ' ';
+        other.galutinis = 0.0;
+    }
+    // Move assignment operator
+    Stud& operator=(Stud&& other) noexcept {
+        if (this != &other) {
+            Vardas = std::move(other.Vardas);
+            Pavarde = std::move(other.Pavarde);
+            paz = std::move(other.paz);
+            egz = other.egz;
+            vm = other.vm;
+            galutinis = other.galutinis;    
+
+            other.egz = 0;
+            other.vm = ' ';
+            other.galutinis = 0.0;
+        }
+        return *this;
+    }
+
+        // Input operator
+    friend std::istream& operator>>(std::istream& in, Stud& s) {
+        std::cout << "Įveskite vardą: ";
+        in >> s.Vardas;
+        std::cout << "Įveskite pavardę: ";
+        in >> s.Pavarde;
+
+        std::cout << "Įveskite pažymių kiekį: ";
+        int kiekis;
+        in >> kiekis;
+
+        s.paz.clear();
+        std::cout << "Įveskite pažymius: ";
+        for (int i = 0; i < kiekis; ++i) {
+            int pazymys;
+            in >> pazymys;
+            s.paz.push_back(pazymys);
+        }
+
+        std::cout << "Įveskite egzamino rezultatą: ";
+        in >> s.egz;
+
+        std::cout << "Įveskite vertinimo metodą (a/m): ";
+        in >> s.vm;
+
+        std::cout << "Įveskite galutinį rezultatą: ";
+        in >> s.galutinis;
+
+        return in;
+    }
+
+    // Output operator
+    friend std::ostream& operator<<(std::ostream& out, const Stud& s) {
+        out << std::left << std::setw(15) << s.Vardas
+            << std::setw(18) << s.Pavarde;
+
+        if (s.vm == 'a')
+            out << std::fixed << std::setprecision(2) << std::setw(7) << s.galutinis << "            -";
+        else
+            out << " -                " << std::fixed << std::setprecision(2) << s.galutinis;
+
+        return out;
+    }
+
         void setVardas(const string& v) { Vardas = v; }
         void setPavarde(const string& p) { Pavarde = p; }
         void setEgz(int e) { egz = e; }
@@ -87,7 +172,7 @@ class Stud {
         double getGalutinis() const { return galutinis; }
         vector<int> getPaz() const { return paz; }
         void removeLastPaz() { paz.pop_back(); }
-    
+
     };
 
 const string MNames[25] = {
