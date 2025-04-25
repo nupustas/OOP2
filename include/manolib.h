@@ -115,12 +115,12 @@ class Stud {
 
         // Input operator
     friend std::istream& operator>>(std::istream& in, Stud& s) {
-        std::cout << "Įveskite vardą: ";
+        std::cout << "Iveskite varda: ";
         in >> s.Vardas;
-        std::cout << "Įveskite pavardę: ";
+        std::cout << "Iveskite pavarde: ";
         in >> s.Pavarde;
 
-        std::cout << "Įveskite pažymių kiekį: ";
+        std::cout << "Iveskite pazymiu kieki: ";
         int kiekis;
         in >> kiekis;
 

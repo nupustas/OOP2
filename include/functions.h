@@ -3,6 +3,53 @@
 
 #include "manolib.h"
 
+// Klasės testavimas 
+void TestStud() {
+    cout << "Student klases testavimas:" <<endl;
+    // TEST COPY CONSTRUCTOR
+    cout << "Sukuriamas student1" <<endl;
+    Stud student1("Jonas", "Jonaitis", {10, 9, 8,8,10,9}, 8, 'a', 9.0);
+
+    cout << "TEST COPY CONSTRUCTOR" << endl;
+    Stud student2 = student1;  // Use the copy constructor
+
+    cout << "Original student: " << student1 << endl;
+    cout << "Copied student: " << student2 << endl;
+
+    // TEST COPY ASSIGNMENT OPERATOR
+    cout << "TEST COPY ASSIGNMENT OPERATOR" << endl;
+    Stud student3;
+    student3 = student1;  // Use the copy assignment operator
+
+    cout << "Assigned student: " << student3 << endl;
+
+    // TEST MOVE CONSTRUCTOR
+    cout << "TEST MOVE CONSTRUCTOR" << endl;
+    Stud student4 = std::move(student1);  // Use the move constructor
+
+    cout << "Moved student (after move): " << student4 << endl;
+    cout << "Original student : " << student1 << endl; 
+
+    // TEST MOVE ASSIGNMENT OPERATOR
+    cout << "TEST MOVE ASSIGNMENT OPERATOR" << endl;
+    Stud student5;
+    student5 = std::move(student2);  // Use the move assignment operator
+
+    cout << "Moved-assigned student: " << student5 << endl;
+    cout << "Original student (after move assignment): " << student2 << endl;  // Should be in a valid but unspecified state
+
+    // TEST INPUT OPERATOR 
+    cout << "\n--- TEST INPUT OPERATOR ---" << endl;
+    Stud student6;
+    cin >> student6;  // Use the input operator
+
+    cout << "Entered student: " << student6 << endl;
+
+    // TEST OUTPUT OPERATOR
+    cout << "\n--- TEST OUTPUT OPERATOR ---" << endl;
+    cout << "Final output of student: " << student6 << endl;
+}
+
 // Visko generavimas
 template <typename Container>
 Container GenerateEverything() {

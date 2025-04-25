@@ -21,13 +21,14 @@ int main()
         cout << "3 - Generate everything" << endl;
         cout << "4 - Read from file" << endl;
         cout << "5 - Performance test" << endl;
+        cout << "6 - Class tests" << endl;
 
         cin >> a;
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        while (a < '1' || a > '5')  
+        while (a < '1' || a > '6')  
         {
-            cout << "Invalid input. Enter 1, 2, 3, 4, or 5: ";
+            cout << "Invalid input. Enter 1, 2, 3, 4, 5 or 6: ";
             cin >> a;
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
@@ -61,6 +62,11 @@ int main()
         else if (a == '5') 
         {   
             grupe = SpeedTesting<Container>();
+            return 0;
+        }
+        else if (a == '6') 
+        {   
+            TestStud();  // Run the test function
             return 0;
         }
 
