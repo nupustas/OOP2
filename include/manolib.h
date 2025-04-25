@@ -147,9 +147,9 @@ class Stud {
             << std::setw(18) << s.Pavarde;
 
         if (s.vm == 'a')
-            out << std::fixed << std::setprecision(2) << std::setw(7) << s.galutinis << "            -";
+            out << std::fixed << std::setprecision(2) << std::setw(7) << s.galutinis << "            -"<<endl;
         else
-            out << " -                " << std::fixed << std::setprecision(2) << s.galutinis;
+            out << " -                " << std::fixed << std::setprecision(2) << s.galutinis<<endl;;
 
         return out;
     }
