@@ -125,21 +125,18 @@ class Stud {
         in >> kiekis;
 
         s.paz.clear();
-        std::cout << "Įveskite pažymius: ";
+        std::cout << "Iveskite pazymius: ";
         for (int i = 0; i < kiekis; ++i) {
             int pazymys;
             in >> pazymys;
             s.paz.push_back(pazymys);
         }
 
-        std::cout << "Įveskite egzamino rezultatą: ";
+        std::cout << "Iveskite egzamino rezultata: ";
         in >> s.egz;
 
-        std::cout << "Įveskite vertinimo metodą (a/m): ";
+        std::cout << "Iveskite vertinimo metoda (a/m): ";
         in >> s.vm;
-
-        std::cout << "Įveskite galutinį rezultatą: ";
-        in >> s.galutinis;
 
         return in;
     }

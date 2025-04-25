@@ -91,47 +91,29 @@ Container GenerateScores() {
 template <typename Container>
 Container ManualInput() {
     Container grupe;
-    cout << "Selected 1-Input everything manually" << endl;
-    cout << endl;
+    std::cout << "Manual student input selected.\n" << std::endl;
 
     while (true) {
         Stud laik;
-        string Vardas, Pavarde;
-        int paz, egz;
-        cout << "Input name: ";
-        cin >> Vardas;
-        laik.setVardas(Vardas);
-        cout << "Input surname: ";
-        cin >> Pavarde;
-        laik.setPavarde(Pavarde);
 
-        cout << "Input your hw scores 1-10. After your last one enter 11 " << endl;
-        cin >> paz;
-        while (paz >= 0 && paz <= 10) {
-            laik.addPaz(paz);
-            cin >> paz;
-        }
-
-        cout << "Enter exam score: ";
-        cin >> egz;
-        while (cin.fail() || egz < 0 || egz > 10) {
-            cout << "Invalid input. Enter a number between 0 and 10: ";
-            cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            cin >> egz;
-        }
-        laik.setEgz(egz);
+        // Naudojamas >> klasės operatorius
+        std::cin >> laik;  
+        
         grupe.push_back(laik);
 
-        cout << "Enter more students? (y/n) ";
-        char x;
-        cin >> x;
-        while (x != 'y' && x != 'n') {
-            cout << "Invalid input. Enter y or n" << endl;
-            cin >> x;
+        char more;
+        std::cout << "Add another student? (y/n): ";
+        std::cin >> more;
+        while (more != 'y' && more != 'n') {
+            std::cout << "Invalid input. Enter y or n: ";
+            std::cin >> more;
         }
-        if (x == 'n') break;
+        if (more == 'n') break;
+
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear leftover input
+        std::cout << std::endl;
     }
+
     return grupe;
 }
 
@@ -220,11 +202,8 @@ void OutputToTerminal(Container &grupe) {
          << "Galutinis (Med.)" << endl;
     cout << "-----------------------------------------------------------" << endl;
     for (const auto &n : grupe) {
-        cout << left << setw(15) << n.getVardas() << setw(18) << n.getPavarde() << setw(7);
-        if (n.getVm() == 'a')
-            cout << fixed << setprecision(2) << n.getGalutinis() << "            -" << endl;
-        else
-            cout << " -                " << fixed << setprecision(2) << n.getGalutinis() << endl;
+        // Output naudojant << klasės operatoriu
+        std::cout << n;
     }
 }
 
