@@ -4,14 +4,14 @@
 
 # v1.2
 ## 1.2 versijoje pridėti metodai:
-| Metodas                     | Paaiškinimas                                                  |      
-|-------------------          |--------------                                                 |
-| Copy konstruktorius         | Sukuria naują objektą kopijuodamas esamo objekto duomenis     | 
-| Copy asignment operatorius  | Nukopijuoja vieno objekto duomenis į jau esamą kitą objektą   |
-| Move konstruktorius         | Perkelia duomenis iš kito objekto, atiduodamas jo turinį      | 
-| Move asignment operatorius  | Perkelia duomenis į jau esamą objektą, atlaisvindamas šaltinį |
-| Įvesties operatorius '>>'   | Leidžia įvesti objekto duomenis iš konsolės ar kito srauto    |
-| Išvesties operatorius '<<'  | Leidžia išvesti objekto duomenis į konsolę                    |
+| Metodas                       | Paaiškinimas                                                    |      
+|-------------------            |--------------                                                   |
+| Copy konstruktorius           | Sukuria naują objektą kopijuodamas esamo objekto duomenis       | 
+| Copy asignment operatorius    | Nukopijuoja vieno objekto duomenis į jau esamą kitą objektą     |
+| Move konstruktorius           | Perkelia duomenis iš kito objekto, atiduodamas jo turinį        | 
+| Move asignment operatorius    | Perkelia duomenis į jau esamą objektą, atlaisvindamas šaltinį   |
+| Įvesties operatorius '>>'     | Leidžia įvesti objekto duomenis iš konsolės ar kito srauto      |
+| Išvesties operatorius '<<'    | Leidžia išvesti objekto duomenis į konsolę                      |
 
 
 
