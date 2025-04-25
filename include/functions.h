@@ -2,6 +2,7 @@
 #define FUNCTIONS_H
 
 #include "manolib.h"
+#include "student.h"
 
 // Klasės testavimas 
 void TestStud() {

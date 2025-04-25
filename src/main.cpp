@@ -1,5 +1,6 @@
 #include "manolib.h"
 #include "functions.h"
+#include "student.h"
 
 
 using Container = std::vector<Stud>;
