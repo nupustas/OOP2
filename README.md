@@ -2,6 +2,10 @@
 
 Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.
 
+# v1.3
+Visi 1.2 versijos metodai veikia
+
+
 # v1.2
 ## 1.2 versijoje pridėti metodai:
 | Metodas                       | Paaiškinimas                                                    |      

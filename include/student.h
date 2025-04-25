@@ -1,84 +1,66 @@
+// Stud.h
 #pragma once
-#include "functions.h"
+#include "human.h"
 #include "manolib.h"
 
-class Stud {
-    private:
-        string Vardas, Pavarde;
-        vector<int> paz;
-        int egz;
-        char vm;
-        double galutinis;
-    
-        public:
-        // Default constructor
-        Stud() {
-            Vardas = "";
-            Pavarde = "";
-            egz = 0;
-            vm = ' ';
-            galutinis = 0.0;
-        }
-        // Constructor with parameters
-        Stud(const string& v, const string& p, const vector<int>& pazymiai, int e, char vmod, double gal) {
-            Vardas = v;
-            Pavarde = p;
-            paz = pazymiai;
-            egz = e;
-            vm = vmod;
-            galutinis = gal;
-        }
-        // Destructor 
-        ~Stud() {
-            paz.clear();
-        }
-        // Copy constructor
-        Stud(const Stud& other) : Vardas(other.Vardas), Pavarde(other.Pavarde), paz(other.paz),
-        egz(other.egz), vm(other.vm), galutinis(other.galutinis) {}
 
-        // Copy assignment operator
+class Stud : public Zmogus {
+private:
+    std::vector<int> paz;
+    int egz;
+    char vm;
+    double galutinis;
+
+public:
+    // Constructors
+    Stud() : Zmogus(), egz(0), vm(' '), galutinis(0.0) {}
+    Stud(const std::string& v, const std::string& p, const std::vector<int>& pazymiai, int e, char vmod, double gal)
+        : Zmogus(v, p), paz(pazymiai), egz(e), vm(vmod), galutinis(gal) {}
+
+    // Destructor
+    ~Stud() { paz.clear(); }
+
+    // Copy constructor
+    Stud(const Stud& other)
+        : Zmogus(other.Vardas, other.Pavarde), paz(other.paz), egz(other.egz), vm(other.vm), galutinis(other.galutinis) {}
+
+    // Copy assignment
     Stud& operator=(const Stud& other) {
-        if (this == &other) 
+        if (this == &other) return *this;
+        Vardas = other.Vardas;
+        Pavarde = other.Pavarde;
+        paz = other.paz;
+        egz = other.egz;
+        vm = other.vm;
+        galutinis = other.galutinis;
         return *this;
-
-            Vardas = other.Vardas;
-            Pavarde = other.Pavarde;
-            paz = other.paz;
-            egz = other.egz;
-            vm = other.vm;
-            galutinis = other.galutinis;
-        return *this;
-    }   
+    }
 
     // Move constructor
-    Stud(Stud&& other)
-        : Vardas(std::move(other.Vardas)), Pavarde(std::move(other.Pavarde)),
-          paz(std::move(other.paz)), egz(other.egz), vm(other.vm), galutinis(other.galutinis) 
-    {
+    Stud(Stud&& other) 
+        : Zmogus(std::move(other.Vardas), std::move(other.Pavarde)), paz(std::move(other.paz)),
+          egz(other.egz), vm(other.vm), galutinis(other.galutinis) {
         other.egz = 0;
         other.vm = ' ';
         other.galutinis = 0.0;
     }
-    // Move assignment operator
-    Stud& operator=(Stud&& other) {
-        if (this == &other) 
-            return *this;
-            
-            Vardas = std::move(other.Vardas);
-            Pavarde = std::move(other.Pavarde);
-            paz = std::move(other.paz);
-            egz = other.egz;
-            vm = other.vm;
-            galutinis = other.galutinis;    
 
-            other.egz = 0;
-            other.vm = ' ';
-            other.galutinis = 0.0;
-    
+    // Move assignment
+    Stud& operator=(Stud&& other)  {
+        if (this == &other) return *this;
+        Vardas = std::move(other.Vardas);
+        Pavarde = std::move(other.Pavarde);
+        paz = std::move(other.paz);
+        egz = other.egz;
+        vm = other.vm;
+        galutinis = other.galutinis;
+        other.egz = 0;
+        other.vm = ' ';
+        other.galutinis = 0.0;
         return *this;
     }
 
-        // Input operator
+    // Input operator
     friend std::istream& operator>>(std::istream& in, Stud& s) {
         std::cout << "Iveskite varda: ";
         in >> s.Vardas;
@@ -102,7 +84,8 @@ class Stud {
 
         std::cout << "Iveskite vertinimo metoda (a/m): ";
         in >> s.vm;
-        s.FinalScore(); 
+
+        s.FinalScore();
         return in;
     }
 
@@ -112,43 +95,39 @@ class Stud {
             << std::setw(18) << s.Pavarde;
 
         if (s.vm == 'a')
-            out << std::fixed << std::setprecision(2) << std::setw(7) << s.galutinis << "            -"<<endl;
+            out << std::fixed << std::setprecision(2) << std::setw(7) << s.galutinis << "            -" << std::endl;
         else
-            out << " -                " << std::fixed << std::setprecision(2) << s.galutinis<<endl;;
+            out << " -                " << std::fixed << std::setprecision(2) << s.galutinis << std::endl;
 
         return out;
     }
 
-        void setVardas(const string& v) { Vardas = v; }
-        void setPavarde(const string& p) { Pavarde = p; }
-        void setEgz(int e) { egz = e; }
-        void setVm(char v) { vm = v; }
-        void setGalutinis(double g) { galutinis = g; }
-        void addPaz(int pazymys) { paz.push_back(pazymys); }
-    
+    // getters & setters
+    void setEgz(int e) { egz = e; }
+    void setVm(char v) { vm = v; }
+    void setGalutinis(double g) { galutinis = g; }
+    void addPaz(int pazymys) { paz.push_back(pazymys); }
 
-        string getVardas() const { return Vardas; }
-        string getPavarde() const { return Pavarde; }
-        int getEgz() const { return egz; }
-        char getVm() const { return vm; }
-        double getGalutinis() const { return galutinis; }
-        vector<int> getPaz() const { return paz; }
-        void removeLastPaz() { paz.pop_back(); }
+    int getEgz() const { return egz; }
+    char getVm() const { return vm; }
+    double getGalutinis() const { return galutinis; }
+    std::vector<int> getPaz() const { return paz; }
+    void removeLastPaz() { paz.pop_back(); }
 
-        void FinalScore(); 
-     
-    };
-
-    void Stud::FinalScore() 
-    {
+    // Score calculation
+    void FinalScore() {
+        if (paz.empty()) {
+            galutinis = 0.0;
+            return;
+        }
         if (vm == 'a') {
             double sum = 0.0;
-            for (int i = 0; i < paz.size(); ++i) {
-                sum += paz[i];
-            }
+            for (int pazymys : paz) sum += pazymys;
             galutinis = 0.4 * (sum / paz.size()) + 0.6 * egz;
         } else if (vm == 'm') {
-            galutinis = 0.4 * (paz[paz.size() / 2]) + 0.6 * egz;
+            std::sort(paz.begin(), paz.end());
+            int medianas = paz[paz.size() / 2];
+            galutinis = 0.4 * medianas + 0.6 * egz;
         }
     }
-    
+};
