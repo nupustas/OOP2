@@ -130,4 +130,8 @@ public:
             galutinis = 0.4 * medianas + 0.6 * egz;
         }
     }
+
+    void print() const override {
+        std::cout << Vardas << " " << Pavarde << " | Galutinis: " << galutinis << std::endl;
+    }
 };

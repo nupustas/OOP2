@@ -16,4 +16,6 @@ public:
 
     void setVardas(const string& v) { Vardas = v; }
     void setPavarde(const string& p) { Pavarde = p; }
+
+    virtual void print() const = 0;
 };
