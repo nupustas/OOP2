@@ -39,8 +39,7 @@ OOP.exe
 - **`ReadME.md`**: Programos instrukcija.
 
 
-## Struktūros ir klasės palyginimas
-#### Šiose lentelėse pateikiami struktūros ir klasės.  
+## Testavimas
 
 ### 🖥 Testavimo sistemos parametrai:
 
@@ -49,6 +48,19 @@ OOP.exe
 - **`Operatyvioji atmintis: 2×4GB DDR4 3200MHz`**
 
 - **`Diskas: 512GB NVMe SSD`**
+
+#### Klasės ir struktūros palyginimas
+---------------------------------------------------------------------------------------------------
+| Failas             |  Class   |  Struct   |      
+|------------------- |--------- |-----------|
+| Studentai1000      |  0.1928s |  0.0338s  |  
+| Studentai10000     |  0.3036s |  0.1033s  |  
+| Studentai100000    |  1.0431s |  0.8703s  |  
+| Studentai1000000   |  10.623s |  6.2181s  |  
+| Studentai10000000  | 101.966s |  71.839s  | 
+
+
+#### Klasės optimizavimo flags palyginimas
 ---------------------------------------------------------------------------------------------------
 #### 1 Be optimizavimo
                                
