@@ -132,6 +132,6 @@ public:
     }
 
     void print() const override {
-        std::cout << Vardas << " " << Pavarde << " | Galutinis: " << galutinis << std::endl;
+        cout << *this;
     }
 };
