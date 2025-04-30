@@ -12,7 +12,7 @@ void TestStud() {
     Stud student1("Jonas", "Jonaitis", {10, 9, 8,8,10,9}, 8, 'a', 9.0);
 
     cout << "\n TEST COPY CONSTRUCTOR" << endl;
-    Stud student2 = student1;  // Use the copy constructor
+    Stud student2(student1);  // Use the copy constructor
 
     cout << "Original student: \n " << student1 ;
     cout << "Copied student: \n " << student2 << endl;
@@ -26,7 +26,7 @@ void TestStud() {
 
     // TEST MOVE CONSTRUCTOR
     cout << "TEST MOVE CONSTRUCTOR" << endl;
-    Stud student4 = std::move(student1);  // Use the move constructor
+    Stud student4(std::move(student1));  // Use the move constructor
 
     cout << "Moved student: \n " << student4;
     cout << "Original student: \n " << student1 << endl; 
