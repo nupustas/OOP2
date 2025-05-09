@@ -12,7 +12,7 @@ void TestStud() {
     Stud student1("Jonas", "Jonaitis", {10, 9, 8,8,10,9}, 8, 'a', 9.0);
 
     cout << "\n TEST COPY CONSTRUCTOR" << endl;
-    Stud student2(student1);  // Use the copy constructor
+    Stud student2(student1);  
 
     cout << "Original student: \n " << student1 ;
     cout << "Copied student: \n " << student2 << endl;
@@ -20,13 +20,13 @@ void TestStud() {
     // TEST COPY ASSIGNMENT OPERATOR
     cout << "\n TEST COPY ASSIGNMENT OPERATOR" << endl;
     Stud student3;
-    student3 = student1;  // Use the copy assignment operator
+    student3 = student1;  
 
     cout << "Assigned student:\n  " << student3 << endl;
 
     // TEST MOVE CONSTRUCTOR
     cout << "TEST MOVE CONSTRUCTOR" << endl;
-    Stud student4(std::move(student1));  // Use the move constructor
+    Stud student4(std::move(student1));  
 
     cout << "Moved student: \n " << student4;
     cout << "Original student: \n " << student1 << endl; 
@@ -34,7 +34,7 @@ void TestStud() {
     // TEST MOVE ASSIGNMENT OPERATOR
     cout << "\n TEST MOVE ASSIGNMENT OPERATOR" << endl;
     Stud student5;
-    student5 = std::move(student2);  // Use the move assignment operator
+    student5 = std::move(student2);  
 
     cout << "Moved-assigned student: \n " << student5 << endl;
     cout << "Original student: \n " << student2 << endl; 
@@ -42,7 +42,7 @@ void TestStud() {
     // TEST INPUT OPERATOR 
     cout << "\n TEST INPUT OPERATOR" << endl;
     Stud student6;
-    cin >> student6;  // Use the input operator
+    cin >> student6;  
 
     cout << "Entered student: " << student6 << endl;
 
