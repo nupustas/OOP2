@@ -1,0 +1,49 @@
+\chapter{Studentų galutinio balo skaičiavimo programa}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Studentų galutinio balo skaičiavimo programa@{Studentų galutinio balo skaičiavimo programa}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Projekto paleidimas naudojant CMake}{Projekto paleidimas naudojant CMake}}\label{md__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{1. Reikalingi įrankiai}{1. Reikalingi įrankiai}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Prieš paleidžiant projektą, įsitikinkite, kad turite šiuos įrankius\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CMake}}\+: \href{https://cmake.org/download/}{\texttt{ Atsisiųsti CMake}} (minimum v3.\+10)
+\item {\bfseries{C++ kompiliatorius}} (GCC, CLANG, MSVC)
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{2. Parsisiųskite projektą, jei jo dar neturite}{2. Parsisiųskite projektą, jei jo dar neturite}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsubsection{\texorpdfstring{Projekto klonavimas iš git\+:}{Projekto klonavimas iš git\+:}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/nupustas/oop.vp}
+
+\end{DoxyCode}
+ Paklonave projektą, atidarykite jo aplanką.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsubsection{\texorpdfstring{Projekto kompiliavimas\+:}{Projekto kompiliavimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{cmake\ ..}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/build\ .\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsubsubsection{\texorpdfstring{Projekto paleidimas\+:}{Projekto paleidimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ release}
+\DoxyCodeLine{OOP.exe}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Projekto struktūra\+:}{Projekto struktūra\+:}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily include/}}}\+: Aplankalas, kuriame laikomi projekto header failai.
+\item {\bfseries{{\ttfamily src/}}}\+: Pagrindinis programos kodas.
+\item {\bfseries{{\ttfamily CMake\+Lists.\+txt}}}\+: CMake instrukcijos kompiliavimui.
+\item {\bfseries{{\ttfamily \doxylink{_r_e_a_d_m_e_8md}{Read\+ME.\+md}}}}\+: Programos instrukcija. 
+\end{DoxyItemize}

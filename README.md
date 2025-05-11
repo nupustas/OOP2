@@ -2,25 +2,6 @@
 
 Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.
 
-# v1.5
-Pridėta bazinė klasė "Zmogus", Stud klasė - jos išvestinė
-
-Visi 1.2 versijos metodai veikia
-
-
-# v1.2
-## 1.2 versijoje pridėti metodai:
-| Metodas                       | Paaiškinimas                                                    |      
-|-------------------            |--------------                                                   |
-| Copy konstruktorius           | Sukuria naują objektą kopijuodamas esamo objekto duomenis       | 
-| Copy asignment operatorius    | Nukopijuoja vieno objekto duomenis į jau esamą kitą objektą     |
-| Move konstruktorius           | Perkelia duomenis iš kito objekto, atiduodamas jo turinį        | 
-| Move asignment operatorius    | Perkelia duomenis į jau esamą objektą, atlaisvindamas šaltinį   |
-| Įvesties operatorius '>>'     | Leidžia įvesti objekto duomenis iš konsolės ar kito srauto      |
-| Išvesties operatorius '<<'    | Leidžia išvesti objekto duomenis į konsolę                      |
-
-
-
 ## Projekto paleidimas naudojant CMake
 
 #### 1. Reikalingi įrankiai

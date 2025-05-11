@@ -1,0 +1,340 @@
+\doxysection{Stud Class Reference}
+\hypertarget{class_stud}{}\label{class_stud}\index{Stud@{Stud}}
+
+
+{\ttfamily \#include $<$student.\+h$>$}
+
+
+
+Inheritance diagram for Stud\+:
+% FIG 0
+
+
+Collaboration diagram for Stud\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stud_a97585839898d45dc9fc815d5b36e2b69}{Stud}} ()
+\item 
+\mbox{\hyperlink{class_stud_a6e16964de60326f7a598a0b47903f574}{Stud}} (const std\+::string \&v, const std\+::string \&p, const std\+::vector$<$ int $>$ \&pazymiai, int e, char vmod, double gal)
+\item 
+\mbox{\hyperlink{class_stud_aa1c38d670d1f269ebd48588c40ad58db}{\texorpdfstring{$\sim$}{\string~}\+Stud}} ()
+\item 
+\mbox{\hyperlink{class_stud_ad473232271f7e160f811c6ae206d326c}{Stud}} (const \mbox{\hyperlink{class_stud}{Stud}} \&other)
+\item 
+\mbox{\hyperlink{class_stud}{Stud}} \& \mbox{\hyperlink{class_stud_a311ba01abe5e734694bd281a9653226f}{operator=}} (const \mbox{\hyperlink{class_stud}{Stud}} \&other)
+\item 
+\mbox{\hyperlink{class_stud_ac62c75899e911e4f1d55e1047564225c}{Stud}} (\mbox{\hyperlink{class_stud}{Stud}} \&\&other)
+\item 
+\mbox{\hyperlink{class_stud}{Stud}} \& \mbox{\hyperlink{class_stud_afd1e9be92f8d351aa99b4c09a332ea3a}{operator=}} (\mbox{\hyperlink{class_stud}{Stud}} \&\&other)
+\item 
+void \mbox{\hyperlink{class_stud_a4d3c5d9554efdc1f68d66958375e71e0}{set\+Egz}} (int e)
+\item 
+void \mbox{\hyperlink{class_stud_a2f2961b1c7a9cc5252ab3ce153980e12}{set\+Vm}} (char v)
+\item 
+void \mbox{\hyperlink{class_stud_ae2a1a428d2ba892f734e29c0e45c11c5}{set\+Galutinis}} (double g)
+\item 
+void \mbox{\hyperlink{class_stud_acbfb081c993f6482c59cb57d449c4c5e}{add\+Paz}} (int pazymys)
+\item 
+int \mbox{\hyperlink{class_stud_a25998973a74b359a72a95d49beae0c08}{get\+Egz}} () const
+\item 
+char \mbox{\hyperlink{class_stud_aef03c2e2f603dd42886d7d6dbefe14b6}{get\+Vm}} () const
+\item 
+double \mbox{\hyperlink{class_stud_a45c7d38ccc4203365b448101344ba4e2}{get\+Galutinis}} () const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_stud_aa6575230afb3ea980563b2cb039bd4c9}{get\+Paz}} () const
+\item 
+void \mbox{\hyperlink{class_stud_ac8b2e8ca576f42a8446fac6d745947aa}{remove\+Last\+Paz}} ()
+\item 
+void \mbox{\hyperlink{class_stud_a07f94d74e9e563756d78605ac8093a9a}{Final\+Score}} ()
+\item 
+void \mbox{\hyperlink{class_stud_a2e343213dc95664555965f08648527c2}{print}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_zmogus}{Zmogus}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_zmogus_aa7a8ba4d3c4778f9b35d59eef3e72574}{Zmogus}} ()
+\item 
+\mbox{\hyperlink{class_zmogus_a6ca61a3bcea221478551dd04419d2433}{Zmogus}} (const string \&v, const string \&p)
+\item 
+virtual \mbox{\hyperlink{class_zmogus_a6183937c7da8254430a6c99cfa89fe69}{\texorpdfstring{$\sim$}{\string~}\+Zmogus}} ()=default
+\item 
+string \mbox{\hyperlink{class_zmogus_aaea44664c236e2fadf022f3821862499}{get\+Vardas}} () const
+\item 
+string \mbox{\hyperlink{class_zmogus_a11ee9ac120fbb7d6a4e1f4da3a602b63}{get\+Pavarde}} () const
+\item 
+void \mbox{\hyperlink{class_zmogus_a2158d2752cd52e970ac4c809446e9d8b}{set\+Vardas}} (const string \&v)
+\item 
+void \mbox{\hyperlink{class_zmogus_ac34eb9eb78f1c75080df7230ca61f2d2}{set\+Pavarde}} (const string \&p)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{class_stud_ab0ae2d598da52d7298daa3083d28b576}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_stud}{Stud}} \&s)
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_stud_a9072c21de23b6a0596457f5a87a24780}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_stud}{Stud}} \&s)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_zmogus}{Zmogus}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_zmogus_ad752feab373733e70e2101724e8d1d9d}{Vardas}}
+\item 
+string \mbox{\hyperlink{class_zmogus_a2300d6db4227967c96dd83a555fa7b86}{Pavarde}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00007}{7}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stud_a97585839898d45dc9fc815d5b36e2b69}\index{Stud@{Stud}!Stud@{Stud}}
+\index{Stud@{Stud}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{Stud()}{Stud()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_stud_a97585839898d45dc9fc815d5b36e2b69} 
+Stud\+::\+Stud (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00016}{16}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\Hypertarget{class_stud_a6e16964de60326f7a598a0b47903f574}\index{Stud@{Stud}!Stud@{Stud}}
+\index{Stud@{Stud}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{Stud()}{Stud()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_stud_a6e16964de60326f7a598a0b47903f574} 
+Stud\+::\+Stud (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{v}{, }\item[{const std\+::string \&}]{p}{, }\item[{const std\+::vector$<$ int $>$ \&}]{pazymiai}{, }\item[{int}]{e}{, }\item[{char}]{vmod}{, }\item[{double}]{gal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00017}{17}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 4
+\Hypertarget{class_stud_aa1c38d670d1f269ebd48588c40ad58db}\index{Stud@{Stud}!````~Stud@{\texorpdfstring{$\sim$}{\string~}Stud}}
+\index{````~Stud@{\texorpdfstring{$\sim$}{\string~}Stud}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Stud()}{\string~Stud()}}
+{\footnotesize\ttfamily \label{class_stud_aa1c38d670d1f269ebd48588c40ad58db} 
+Stud\+::\texorpdfstring{$\sim$}{\string~}\+Stud (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00021}{21}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+\Hypertarget{class_stud_ad473232271f7e160f811c6ae206d326c}\index{Stud@{Stud}!Stud@{Stud}}
+\index{Stud@{Stud}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{Stud()}{Stud()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_stud_ad473232271f7e160f811c6ae206d326c} 
+Stud\+::\+Stud (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stud}{Stud}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00024}{24}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+\Hypertarget{class_stud_ac62c75899e911e4f1d55e1047564225c}\index{Stud@{Stud}!Stud@{Stud}}
+\index{Stud@{Stud}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{Stud()}{Stud()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_stud_ac62c75899e911e4f1d55e1047564225c} 
+Stud\+::\+Stud (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stud}{Stud}} \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00040}{40}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 6
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stud_acbfb081c993f6482c59cb57d449c4c5e}\index{Stud@{Stud}!addPaz@{addPaz}}
+\index{addPaz@{addPaz}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{addPaz()}{addPaz()}}
+{\footnotesize\ttfamily \label{class_stud_acbfb081c993f6482c59cb57d449c4c5e} 
+void Stud\+::add\+Paz (\begin{DoxyParamCaption}\item[{int}]{pazymys}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00109}{109}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 7
+\Hypertarget{class_stud_a07f94d74e9e563756d78605ac8093a9a}\index{Stud@{Stud}!FinalScore@{FinalScore}}
+\index{FinalScore@{FinalScore}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{FinalScore()}{FinalScore()}}
+{\footnotesize\ttfamily \label{class_stud_a07f94d74e9e563756d78605ac8093a9a} 
+void Stud\+::\+Final\+Score (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00118}{118}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 8
+\Hypertarget{class_stud_a25998973a74b359a72a95d49beae0c08}\index{Stud@{Stud}!getEgz@{getEgz}}
+\index{getEgz@{getEgz}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{getEgz()}{getEgz()}}
+{\footnotesize\ttfamily \label{class_stud_a25998973a74b359a72a95d49beae0c08} 
+int Stud\+::get\+Egz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00111}{111}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 9
+\Hypertarget{class_stud_a45c7d38ccc4203365b448101344ba4e2}\index{Stud@{Stud}!getGalutinis@{getGalutinis}}
+\index{getGalutinis@{getGalutinis}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{getGalutinis()}{getGalutinis()}}
+{\footnotesize\ttfamily \label{class_stud_a45c7d38ccc4203365b448101344ba4e2} 
+double Stud\+::get\+Galutinis (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00113}{113}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 10
+\Hypertarget{class_stud_aa6575230afb3ea980563b2cb039bd4c9}\index{Stud@{Stud}!getPaz@{getPaz}}
+\index{getPaz@{getPaz}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{getPaz()}{getPaz()}}
+{\footnotesize\ttfamily \label{class_stud_aa6575230afb3ea980563b2cb039bd4c9} 
+std\+::vector$<$ int $>$ Stud\+::get\+Paz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00114}{114}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 11
+\Hypertarget{class_stud_aef03c2e2f603dd42886d7d6dbefe14b6}\index{Stud@{Stud}!getVm@{getVm}}
+\index{getVm@{getVm}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{getVm()}{getVm()}}
+{\footnotesize\ttfamily \label{class_stud_aef03c2e2f603dd42886d7d6dbefe14b6} 
+char Stud\+::get\+Vm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00112}{112}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 12
+\Hypertarget{class_stud_a311ba01abe5e734694bd281a9653226f}\index{Stud@{Stud}!operator=@{operator=}}
+\index{operator=@{operator=}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_stud_a311ba01abe5e734694bd281a9653226f} 
+\mbox{\hyperlink{class_stud}{Stud}} \& Stud\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_stud}{Stud}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00028}{28}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 13
+\Hypertarget{class_stud_afd1e9be92f8d351aa99b4c09a332ea3a}\index{Stud@{Stud}!operator=@{operator=}}
+\index{operator=@{operator=}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_stud_afd1e9be92f8d351aa99b4c09a332ea3a} 
+\mbox{\hyperlink{class_stud}{Stud}} \& Stud\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_stud}{Stud}} \&\&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00049}{49}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the call graph for this function\+:
+% FIG 14
+\Hypertarget{class_stud_a2e343213dc95664555965f08648527c2}\index{Stud@{Stud}!print@{print}}
+\index{print@{print}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_stud_a2e343213dc95664555965f08648527c2} 
+void Stud\+::print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_zmogus_aa52869cc6a869223fedcb9f7676534fc}{Zmogus}}.
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00134}{134}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+\Hypertarget{class_stud_ac8b2e8ca576f42a8446fac6d745947aa}\index{Stud@{Stud}!removeLastPaz@{removeLastPaz}}
+\index{removeLastPaz@{removeLastPaz}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{removeLastPaz()}{removeLastPaz()}}
+{\footnotesize\ttfamily \label{class_stud_ac8b2e8ca576f42a8446fac6d745947aa} 
+void Stud\+::remove\+Last\+Paz (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00115}{115}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 15
+\Hypertarget{class_stud_a4d3c5d9554efdc1f68d66958375e71e0}\index{Stud@{Stud}!setEgz@{setEgz}}
+\index{setEgz@{setEgz}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{setEgz()}{setEgz()}}
+{\footnotesize\ttfamily \label{class_stud_a4d3c5d9554efdc1f68d66958375e71e0} 
+void Stud\+::set\+Egz (\begin{DoxyParamCaption}\item[{int}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00106}{106}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+Here is the caller graph for this function\+:
+% FIG 16
+\Hypertarget{class_stud_ae2a1a428d2ba892f734e29c0e45c11c5}\index{Stud@{Stud}!setGalutinis@{setGalutinis}}
+\index{setGalutinis@{setGalutinis}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{setGalutinis()}{setGalutinis()}}
+{\footnotesize\ttfamily \label{class_stud_ae2a1a428d2ba892f734e29c0e45c11c5} 
+void Stud\+::set\+Galutinis (\begin{DoxyParamCaption}\item[{double}]{g}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00108}{108}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+\Hypertarget{class_stud_a2f2961b1c7a9cc5252ab3ce153980e12}\index{Stud@{Stud}!setVm@{setVm}}
+\index{setVm@{setVm}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{setVm()}{setVm()}}
+{\footnotesize\ttfamily \label{class_stud_a2f2961b1c7a9cc5252ab3ce153980e12} 
+void Stud\+::set\+Vm (\begin{DoxyParamCaption}\item[{char}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00107}{107}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_stud_a9072c21de23b6a0596457f5a87a24780}\index{Stud@{Stud}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_stud_a9072c21de23b6a0596457f5a87a24780} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{, }\item[{const \mbox{\hyperlink{class_stud}{Stud}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00093}{93}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+\Hypertarget{class_stud_ab0ae2d598da52d7298daa3083d28b576}\index{Stud@{Stud}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Stud@{Stud}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{class_stud_ab0ae2d598da52d7298daa3083d28b576} 
+std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in}{, }\item[{\mbox{\hyperlink{class_stud}{Stud}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line \mbox{\hyperlink{student_8h_source_l00064}{64}} of file \mbox{\hyperlink{student_8h_source}{student.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{student_8h}{student.\+h}}\end{DoxyCompactItemize}
