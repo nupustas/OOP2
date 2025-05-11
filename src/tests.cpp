@@ -1,9 +1,9 @@
-#define CONFIG_CATCH_MAIN
-
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
 #include "student.h"
 #include "human.h"
 #include "manolib.h"
-#include "catch.hpp"
+
 
 TEST_CASE("Studentu klases penkiu pirstu taisykles testas")
 {
