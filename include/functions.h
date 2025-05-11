@@ -17,21 +17,21 @@ void TestStud() {
     cout << "Original student: \n " << student1 ;
     cout << "Copied student: \n " << student2 << endl;
 
-    // TEST COPY ASSIGNMENT OPERATOR
+    //COPY ASSIGNMENT OPERATOR
     cout << "\n TEST COPY ASSIGNMENT OPERATOR" << endl;
     Stud student3;
     student3 = student1;  
 
     cout << "Assigned student:\n  " << student3 << endl;
 
-    // TEST MOVE CONSTRUCTOR
+    //MOVE CONSTRUCTOR
     cout << "TEST MOVE CONSTRUCTOR" << endl;
     Stud student4(std::move(student1));  
 
     cout << "Moved student: \n " << student4;
     cout << "Original student: \n " << student1 << endl; 
 
-    // TEST MOVE ASSIGNMENT OPERATOR
+    //MOVE ASSIGNMENT OPERATOR
     cout << "\n TEST MOVE ASSIGNMENT OPERATOR" << endl;
     Stud student5;
     student5 = std::move(student2);  
@@ -39,14 +39,14 @@ void TestStud() {
     cout << "Moved-assigned student: \n " << student5 << endl;
     cout << "Original student: \n " << student2 << endl; 
 
-    // TEST INPUT OPERATOR 
+    //INPUT OPERATOR 
     cout << "\n TEST INPUT OPERATOR" << endl;
     Stud student6;
     cin >> student6;  
 
     cout << "Entered student: " << student6 << endl;
 
-    // TEST OUTPUT OPERATOR
+    //OUTPUT OPERATOR
     cout << "\n TEST OUTPUT OPERATOR" << endl;
     cout << "Final output of student:\n  " << student6 << endl;
 }

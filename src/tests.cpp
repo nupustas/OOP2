@@ -3,6 +3,7 @@
 #include "student.h"
 #include "human.h"
 #include "manolib.h"
+#include "functions.h"
 
 
 TEST_CASE("Studentu klases penkiu pirstu taisykles testas")
@@ -60,5 +61,21 @@ TEST_CASE("Studentu klases penkiu pirstu taisykles testas")
         REQUIRE(student6.getPavarde() == "Petraitis");
         REQUIRE(student6.getEgz() == 8);
         REQUIRE(student6.getVm() == 'a');
+    }
+
+    
+}
+TEST_CASE("Kitu programos funkciju testai")
+{
+    Stud student7("Petras", "Petraitis", {10, 9, 8}, 7, 'a', 0.0);
+    Stud student8("Petras", "Petraitis", {7, 6, 5}, 7, 'm', 0.0);
+    
+    SECTION("FinalScore() testas")
+    {
+        student7.FinalScore();
+        REQUIRE(student7.getGalutinis() == Approx(7.8));
+        
+        student8.FinalScore();
+        REQUIRE(student8.getGalutinis() == Approx(6.6));
     }
 }
