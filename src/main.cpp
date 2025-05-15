@@ -1,6 +1,7 @@
 #include "manolib.h"
 #include "functions.h"
 #include "student.h"
+#include "vector.h"
 
 
 using Container = std::vector<Stud>;
@@ -23,11 +24,12 @@ int main()
         cout << "4 - Read from file" << endl;
         cout << "5 - Performance test" << endl;
         cout << "6 - Class tests" << endl;
+        cout << "7 - Vektor class tests" << endl;
 
         cin >> a;
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        while (a < '1' || a > '6')  
+        while (a < '1' || a > '7')  
         {
             cout << "Invalid input. Enter 1, 2, 3, 4, 5 or 6: ";
             cin >> a;
@@ -70,7 +72,20 @@ int main()
             TestStud();  // Run the test function
             return 0;
         }
+        else if (a == '7') 
+        {   
+            Vektor <int> test(4,25);
+            Vektor <int> test2(4, 69);
 
+            test.swap(test2);
+
+            for(int i = 0; i < test.size(); i++)
+            {
+                cout << test[i] << " ";
+            }
+           
+            return 0;
+        }
         if (grupe.empty())  
         {
             throw std::runtime_error("Error: No data to process.");

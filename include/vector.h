@@ -10,7 +10,7 @@ private:
 
 void resize(size_t n)
 {
-    T* temp = new T[n];
+    V* temp = new V[n];
     for(size_t i=0; i<dydis; i++)
     {
         temp[i] = duom[i];
@@ -23,13 +23,46 @@ public:
 
 //Konstruktoriai
 Vektor(): duom(nullptr), dydis(0), talpa(0) {}
-
-//Destruktorius
+//inicilizavimas su talpaa
+Vektor(int d): dydis(0), talpa(d) {
+    duom = new V[d];
+}
+Vektor(int d, const V& value): dydis(d), talpa(d) {
+    duom = new V[d];
+    for (size_t i = 0; i < d; ++i) {
+        duom[i] = value;
+    }
+}
 ~Vektor() {
     delete[] duom;
 }
 
-//Vektoriaus funkciju realizacija
+size_t size() const {return dydis;}
+size_t max_size() const {return std::numeric_limits<size_t>::max();}
+size_t capacity() const {return talpa;}
+bool empty() const {return dydis ==0;}
+void reserve(size_t n) {
+    if (n > talpa) {
+        resize(n);
+    }
+}
+
+void swap(Vektor<V>& other){
+    std::swap(duom, other.duom);
+    std::swap(dydis, other.dydis);
+    std::swap(talpa, other.talpa);
+}
+void shrink_to_fit() {
+    if (cap > sz) {
+        V* temp = new V[dydis];
+        for (size_t i = 0; i < dydis; ++i) {
+            temp[i] = duom[i];
+        }
+        delete[] duom;
+        duom = temp;
+        talpa = dydis;}}
+
+//Vektoriaus funkciju realizacijos
 void push_back(const V& value) {
     if (dydis == talpa) {
         size_t new_talpa;
@@ -42,15 +75,35 @@ void push_back(const V& value) {
     }
     duom[dydis++] = value;
 }
+void pop_back() {
+    if (dydis == 0) {
+        throw std::out_of_range("Cannot pop_back from empty vector");
+    }
+    --dydis;}
+
+V* begin() {return duom;}
+V* end() {return duom+dydis;}
+V* clear()
+{
+    delete[] duom;
+    duom = nullptr;
+    dydis = 0;
+    talpa = 0;
+    return duom;
+}
+
+
+//
+V& operator[](size_t index) {
+    if (index >= dydis) throw std::out_of_range("Index out of range");
+    return duom[index];
+}
+
 
 //setteriai
-void setDydis(size_t d) { dydis = d; }
-void setTalpa(size_t t) { talpa = t; }
-void setDuom(V* d) { duom = d; }
+
 
 //getteriai
-size_t getDydis() const { return dydis; }
-size_t getTalpa() const { return talpa; }
-V* getDuom() const { return duom; }
+
 
 };
