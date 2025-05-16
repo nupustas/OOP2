@@ -33,10 +33,10 @@ using size_type = size_t;
 //Konstruktoriai
 Vektor(): duom(nullptr), dydis(0), talpa(0) {}
 //inicilizavimas su talpaa
-Vektor(int d): dydis(0), talpa(d) {
+Vektor(size_t d): dydis(0), talpa(d) {
     duom = new V[d];
 }
-Vektor(int d, const V& value): dydis(d), talpa(d) {
+Vektor(size_t d, const V& value): dydis(d), talpa(d) {
     duom = new V[d];
     for (size_t i = 0; i < d; ++i) {
         duom[i] = value;
@@ -113,6 +113,8 @@ void pop_back() {
 
 V* begin() {return duom;}
 V* end() {return duom+dydis;}
+V& front() { return duom[0]; }
+V& back() { return duom[dydis - 1]; }
 V* clear()
 {
     delete[] duom;
@@ -170,7 +172,13 @@ Vektor<V>& operator=(Vektor<V>&& other) noexcept {
     }
     return *this;
 }
-
+bool operator==(const Vektor<V>& other) const {
+    if (dydis != other.dydis) return false;
+    for (size_t i = 0; i < dydis; ++i) {
+        if (!(duom[i] == other.duom[i])) return false;
+    }
+    return true;
+}
 //setteriai
 
 
