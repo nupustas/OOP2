@@ -20,6 +20,15 @@ void resize(size_t n)
     talpa = n;
 }
 public:
+// Standard typedefs required by STL compatibility
+using value_type = V;
+using reference = V&;
+using const_reference = const V&;
+using iterator = V*;
+using const_iterator = const V*;
+using size_type = size_t;
+
+
 
 //Konstruktoriai
 Vektor(): duom(nullptr), dydis(0), talpa(0) {}
@@ -46,14 +55,35 @@ void reserve(size_t n) {
         resize(n);
     }
 }
+void erase(size_t index) {
+    if (index >= dydis) throw std::out_of_range("Index out of range");
+    for (size_t i = index; i < dydis - 1; ++i) {
+        duom[i] = duom[i + 1];
+    }
+    --dydis;
+}
+iterator erase(iterator first, iterator last) {
+    if (first < duom || last > duom + dydis || first > last)
+        throw std::out_of_range("Invalid iterator range");
 
+    size_t start = first - duom;
+    size_t end = last - duom;
+    size_t range = end - start;
+
+    for (size_t i = end; i < dydis; ++i) {
+        duom[i - range] = duom[i];
+    }
+
+    dydis -= range;
+    return duom + start;
+}
 void swap(Vektor<V>& other){
     std::swap(duom, other.duom);
     std::swap(dydis, other.dydis);
     std::swap(talpa, other.talpa);
 }
 void shrink_to_fit() {
-    if (cap > sz) {
+    if (talpa > dydis) {
         V* temp = new V[dydis];
         for (size_t i = 0; i < dydis; ++i) {
             temp[i] = duom[i];
@@ -98,7 +128,48 @@ V& operator[](size_t index) {
     if (index >= dydis) throw std::out_of_range("Index out of range");
     return duom[index];
 }
+// Copy constructor
+Vektor(const Vektor<V>& other) : dydis(other.dydis), talpa(other.talpa) {
+    duom = new V[talpa];
+    for (size_t i = 0; i < dydis; ++i) {
+        duom[i] = other.duom[i];
+    }
+}
+// Copy assignment operator
+Vektor<V>& operator=(const Vektor<V>& other) {
+    if (this != &other) {
+        delete[] duom;
+        dydis = other.dydis;
+        talpa = other.talpa;
+        duom = new V[dydis];
+        for (size_t i = 0; i < dydis; ++i) {
+            duom[i] = other.duom[i];
+        }
+    }
+    return *this;
+}
+// Move constructor
+Vektor(Vektor<V>&& other) noexcept 
+    : duom(other.duom), dydis(other.dydis), talpa(other.talpa) {
+    other.duom = nullptr;
+    other.dydis = 0;
+    other.talpa = 0;
+}
 
+// Move assignment operator
+Vektor<V>& operator=(Vektor<V>&& other) noexcept {
+    if (this != &other) {
+        delete[] duom;
+        duom = other.duom;
+        dydis = other.dydis;
+        talpa = other.talpa;
+
+        other.duom = nullptr;
+        other.dydis = 0;
+        other.talpa = 0;
+    }
+    return *this;
+}
 
 //setteriai
 

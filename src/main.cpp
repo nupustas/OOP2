@@ -4,7 +4,7 @@
 #include "vector.h"
 
 
-using Container = std::vector<Stud>;
+using Container = Vektor<Stud>;
 //using Container = std::deque<Stud>;
 //using Container = std::list<Stud>;
 
@@ -15,7 +15,7 @@ int main()
     try 
     {
         Container grupe;
-        cout << "Using container: " << typeid(Container).name() << endl;
+        //cout << "Using container: " << typeid(Container).name() << endl;
         char a;
 
         cout << "1 - Input everything manually" << endl;
@@ -77,13 +77,14 @@ int main()
             Vektor <int> test(4,25);
             Vektor <int> test2(4, 69);
 
-            test.swap(test2);
+      
 
             for(int i = 0; i < test.size(); i++)
             {
                 cout << test[i] << " ";
             }
            
+
             return 0;
         }
         if (grupe.empty())  
