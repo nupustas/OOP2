@@ -79,7 +79,7 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 - **`Diskas: 512GB NVMe SSD`**
 ----------------------------------------------------------------------------------------
 #### Originalus Vector vs Vektor klasė
-##### Užpildymas naudojant push_back() funkciją
+- **Užpildymas naudojant push_back() funkciją**
 | Dydis       | Vector       | Klasė      |     
 |-------------|----------    |----------  |
 | 10000       |  0.00010 s   |  0.00006 s |
@@ -89,10 +89,14 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 | 100000000   |  0.50926 s   |  0.39100 s | 
 | 1000000000  |  9.06876 s   |  6.91821 s | 
 
-##### Programos spartos analizė
+-  **Programos spartos analizė**
 | Failas            | Vector     | Klasė      |      
 |-------------------|----------  |----------  |
 | Studentai10000    |  0.17188 s |  0.13205 s | 
 | Studentai100000   |  1.03871 s |  1.09587 s | 
 | Studentai1000000  |  9.88531 s |  10.2013 s | 
 | Studentai10000000 |  100.456 s |  110.858 s | 
+
+#### Testų analizė
+* Užpildant konteinerį naudojant push_back() funkciją, vektoriaus klasė yra spartesnė
+* Naudojant programoje, klasė yra šiek tiek pranašesnė apdorojant mažus studentų kiekius, tačiau kai studentų daug originalus vektorius vistiek veikia sparčiau.
