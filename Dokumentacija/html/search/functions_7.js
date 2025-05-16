@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['setegz_0',['setEgz',['../class_stud.html#a4d3c5d9554efdc1f68d66958375e71e0',1,'Stud']]],
-  ['setgalutinis_1',['setGalutinis',['../class_stud.html#ae2a1a428d2ba892f734e29c0e45c11c5',1,'Stud']]],
-  ['setpavarde_2',['setPavarde',['../class_zmogus.html#ac34eb9eb78f1c75080df7230ca61f2d2',1,'Zmogus']]],
-  ['setvardas_3',['setVardas',['../class_zmogus.html#a2158d2752cd52e970ac4c809446e9d8b',1,'Zmogus']]],
-  ['setvm_4',['setVm',['../class_stud.html#a2f2961b1c7a9cc5252ab3ce153980e12',1,'Stud']]],
-  ['sorting_5',['Sorting',['../functions_8h.html#a9a8228525c154b5f1eceb473572afe08',1,'functions.h']]],
-  ['speedtesting_6',['SpeedTesting',['../functions_8h.html#a9bf76230fb2862461fb6032819fdb096',1,'functions.h']]],
-  ['splitfile_7',['SplitFile',['../functions_8h.html#a9a0110ef3a6607021645e91e87b150ce',1,'functions.h']]],
-  ['stud_8',['Stud',['../class_stud.html#a97585839898d45dc9fc815d5b36e2b69',1,'Stud::Stud()'],['../class_stud.html#a6e16964de60326f7a598a0b47903f574',1,'Stud::Stud(const std::string &amp;v, const std::string &amp;p, const std::vector&lt; int &gt; &amp;pazymiai, int e, char vmod, double gal)'],['../class_stud.html#ad473232271f7e160f811c6ae206d326c',1,'Stud::Stud(const Stud &amp;other)'],['../class_stud.html#ac62c75899e911e4f1d55e1047564225c',1,'Stud::Stud(Stud &amp;&amp;other)']]]
+  ['operator_3d_0',['operator=',['../class_stud.html#a311ba01abe5e734694bd281a9653226f',1,'Stud::operator=(const Stud &amp;other)'],['../class_stud.html#afd1e9be92f8d351aa99b4c09a332ea3a',1,'Stud::operator=(Stud &amp;&amp;other)'],['../class_vektor.html#a6a9803f7a09ebf1f6e3724d3275007bf',1,'Vektor::operator=(const Vektor&lt; V &gt; &amp;other)'],['../class_vektor.html#a4669f56e978065a8cc8046df4dd0d21b',1,'Vektor::operator=(Vektor&lt; V &gt; &amp;&amp;other) noexcept']]],
+  ['operator_3d_3d_1',['operator==',['../class_vektor.html#a67d3505b8ac1268e5740feffa000380b',1,'Vektor']]],
+  ['operator_5b_5d_2',['operator[]',['../class_vektor.html#ac928e3c873e1e28659e0769dff4a5f11',1,'Vektor']]],
+  ['outputtofile_3',['OutputToFile',['../functions_8h.html#afeeefbd9055158b13997f50d7b851b95',1,'functions.h']]],
+  ['outputtoterminal_4',['OutputToTerminal',['../functions_8h.html#ab29d065e680921bf8f5dff9d3fad63a8',1,'functions.h']]]
 ];

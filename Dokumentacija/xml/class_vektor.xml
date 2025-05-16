@@ -1,0 +1,631 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_vektor" kind="class" language="C++" prot="public">
+    <compoundname>Vektor</compoundname>
+    <includes refid="vector_8h" local="no">vector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename V</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_vektor_1a8d759015bcf357f66a44a3fb07767cc7" prot="public" static="no">
+        <type>V</type>
+        <definition>using Vektor&lt; V &gt;::value_type =  V</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>Vektor::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="24" column="1" bodyfile="include/vector.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422" prot="public" static="no">
+        <type>V &amp;</type>
+        <definition>using Vektor&lt; V &gt;::reference =  V&amp;</definition>
+        <argsstring></argsstring>
+        <name>reference</name>
+        <qualifiedname>Vektor::reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="25" column="1" bodyfile="include/vector.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_vektor_1ad454706115806fe05ec64b01240b3d23" prot="public" static="no">
+        <type>const V &amp;</type>
+        <definition>using Vektor&lt; V &gt;::const_reference =  const V&amp;</definition>
+        <argsstring></argsstring>
+        <name>const_reference</name>
+        <qualifiedname>Vektor::const_reference</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="26" column="1" bodyfile="include/vector.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_vektor_1a2c33bbc07b22977de729ab7bef761124" prot="public" static="no">
+        <type>V *</type>
+        <definition>using Vektor&lt; V &gt;::iterator =  V*</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <qualifiedname>Vektor::iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="27" column="1" bodyfile="include/vector.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df" prot="public" static="no">
+        <type>const V *</type>
+        <definition>using Vektor&lt; V &gt;::const_iterator =  const V*</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <qualifiedname>Vektor::const_iterator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="28" column="1" bodyfile="include/vector.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_vektor_1aa973b8be4fcff1b278587f73851e6412" prot="public" static="no">
+        <type>size_t</type>
+        <definition>using Vektor&lt; V &gt;::size_type =  size_t</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <qualifiedname>Vektor::size_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="29" column="1" bodyfile="include/vector.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_vektor_1a0cbaea569c2feee1ebcb5623bf96d823" prot="private" static="no" mutable="no">
+        <type>V *</type>
+        <definition>V* Vektor&lt; V &gt;::duom</definition>
+        <argsstring></argsstring>
+        <name>duom</name>
+        <qualifiedname>Vektor::duom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="7" column="7" bodyfile="include/vector.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vektor_1a02a2c5c7255ae27f9edf6098cb46fe8b" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Vektor&lt; V &gt;::dydis</definition>
+        <argsstring></argsstring>
+        <name>dydis</name>
+        <qualifiedname>Vektor::dydis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="8" column="12" bodyfile="include/vector.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_vektor_1aece4b3dbbe7dc377d36c0b55315cb253" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Vektor&lt; V &gt;::talpa</definition>
+        <argsstring></argsstring>
+        <name>talpa</name>
+        <qualifiedname>Vektor::talpa</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="9" column="12" bodyfile="include/vector.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_vektor_1aee6c3f475bae547a786fa3aa528c29f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::resize</definition>
+        <argsstring>(size_t n)</argsstring>
+        <name>resize</name>
+        <qualifiedname>Vektor::resize</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="11" column="6" bodyfile="include/vector.h" bodystart="11" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_vektor_1a032e83f770f3a43e03226c869b0da317" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vektor&lt; V &gt;::Vektor</definition>
+        <argsstring>()</argsstring>
+        <name>Vektor</name>
+        <qualifiedname>Vektor::Vektor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="34" column="1" bodyfile="include/vector.h" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vektor&lt; V &gt;::Vektor</definition>
+        <argsstring>(size_t d)</argsstring>
+        <name>Vektor</name>
+        <qualifiedname>Vektor::Vektor</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="36" column="1" bodyfile="include/vector.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a67b8f571c724876f2c973b983c3c7a69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vektor&lt; V &gt;::Vektor</definition>
+        <argsstring>(size_t d, const V &amp;value)</argsstring>
+        <name>Vektor</name>
+        <qualifiedname>Vektor::Vektor</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const V &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="39" column="1" bodyfile="include/vector.h" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1af8393162c7248fad4ae83acb11fa2ee2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vektor&lt; V &gt;::~Vektor</definition>
+        <argsstring>()</argsstring>
+        <name>~Vektor</name>
+        <qualifiedname>Vektor::~Vektor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="45" column="1" bodyfile="include/vector.h" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Vektor&lt; V &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>Vektor::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="49" column="8" bodyfile="include/vector.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Vektor&lt; V &gt;::max_size</definition>
+        <argsstring>() const</argsstring>
+        <name>max_size</name>
+        <qualifiedname>Vektor::max_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="50" column="8" bodyfile="include/vector.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a776eab835626a981955ec020cef5001c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Vektor&lt; V &gt;::capacity</definition>
+        <argsstring>() const</argsstring>
+        <name>capacity</name>
+        <qualifiedname>Vektor::capacity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="51" column="8" bodyfile="include/vector.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a68f21ad21b36b39f8e398c7efdb70085" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Vektor&lt; V &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>Vektor::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="52" column="6" bodyfile="include/vector.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1ae2eaebca369760c7e0757965e111464a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::reserve</definition>
+        <argsstring>(size_t n)</argsstring>
+        <name>reserve</name>
+        <qualifiedname>Vektor::reserve</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="53" column="6" bodyfile="include/vector.h" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::erase</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>erase</name>
+        <qualifiedname>Vektor::erase</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="58" column="6" bodyfile="include/vector.h" bodystart="58" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a3723a74869b85d1e3db007abab6d669f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V *</type>
+        <definition>V * Vektor&lt; V &gt;::erase</definition>
+        <argsstring>(V *first, V *last)</argsstring>
+        <name>erase</name>
+        <qualifiedname>Vektor::erase</qualifiedname>
+        <param>
+          <type>V *</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>V *</type>
+          <declname>last</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="65" column="3" bodyfile="include/vector.h" bodystart="65" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::swap</definition>
+        <argsstring>(Vektor&lt; V &gt; &amp;other)</argsstring>
+        <name>swap</name>
+        <qualifiedname>Vektor::swap</qualifiedname>
+        <param>
+          <type><ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="80" column="6" bodyfile="include/vector.h" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1aeb4dcc6a639c7622777995808c3262a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::shrink_to_fit</definition>
+        <argsstring>()</argsstring>
+        <name>shrink_to_fit</name>
+        <qualifiedname>Vektor::shrink_to_fit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="85" column="6" bodyfile="include/vector.h" bodystart="85" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a9aa67f181dc9c7a210c46d11df876539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::push_back</definition>
+        <argsstring>(const V &amp;value)</argsstring>
+        <name>push_back</name>
+        <qualifiedname>Vektor::push_back</qualifiedname>
+        <param>
+          <type>const V &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="96" column="6" bodyfile="include/vector.h" bodystart="96" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1acdd650cea26a2d95119a5710fda9b5d8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vektor&lt; V &gt;::pop_back</definition>
+        <argsstring>()</argsstring>
+        <name>pop_back</name>
+        <qualifiedname>Vektor::pop_back</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="108" column="6" bodyfile="include/vector.h" bodystart="108" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V *</type>
+        <definition>V * Vektor&lt; V &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>Vektor::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="114" column="3" bodyfile="include/vector.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V *</type>
+        <definition>V * Vektor&lt; V &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>Vektor::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="115" column="3" bodyfile="include/vector.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a16c88c1da1b91a25f954aa59cbed811f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V &amp;</type>
+        <definition>V &amp; Vektor&lt; V &gt;::front</definition>
+        <argsstring>()</argsstring>
+        <name>front</name>
+        <qualifiedname>Vektor::front</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="116" column="3" bodyfile="include/vector.h" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a75342fa6b213f629e153e5084225d065" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V &amp;</type>
+        <definition>V &amp; Vektor&lt; V &gt;::back</definition>
+        <argsstring>()</argsstring>
+        <name>back</name>
+        <qualifiedname>Vektor::back</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="117" column="3" bodyfile="include/vector.h" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V *</type>
+        <definition>V * Vektor&lt; V &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>Vektor::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="118" column="3" bodyfile="include/vector.h" bodystart="118" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1ac928e3c873e1e28659e0769dff4a5f11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>V &amp;</type>
+        <definition>V &amp; Vektor&lt; V &gt;::operator[]</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Vektor::operator[]</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="129" column="3" bodyfile="include/vector.h" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vektor&lt; V &gt;::Vektor</definition>
+        <argsstring>(const Vektor&lt; V &gt; &amp;other)</argsstring>
+        <name>Vektor</name>
+        <qualifiedname>Vektor::Vektor</qualifiedname>
+        <param>
+          <type>const <ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="134" column="1" bodyfile="include/vector.h" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;</type>
+        <definition>Vektor&lt; V &gt; &amp; Vektor&lt; V &gt;::operator=</definition>
+        <argsstring>(const Vektor&lt; V &gt; &amp;other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Vektor::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="141" column="8" bodyfile="include/vector.h" bodystart="141" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a28bf10b82fb39256290f3fb322441d55" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>Vektor&lt; V &gt;::Vektor</definition>
+        <argsstring>(Vektor&lt; V &gt; &amp;&amp;other) noexcept</argsstring>
+        <name>Vektor</name>
+        <qualifiedname>Vektor::Vektor</qualifiedname>
+        <param>
+          <type><ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="154" column="1" bodyfile="include/vector.h" bodystart="154" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a4669f56e978065a8cc8046df4dd0d21b" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;</type>
+        <definition>Vektor&lt; V &gt; &amp; Vektor&lt; V &gt;::operator=</definition>
+        <argsstring>(Vektor&lt; V &gt; &amp;&amp;other) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Vektor::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="162" column="8" bodyfile="include/vector.h" bodystart="162" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_vektor_1a67d3505b8ac1268e5740feffa000380b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Vektor&lt; V &gt;::operator==</definition>
+        <argsstring>(const Vektor&lt; V &gt; &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>Vektor::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="class_vektor" kindref="compound">Vektor</ref>&lt; V &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/vector.h" line="175" column="6" bodyfile="include/vector.h" bodystart="175" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/vector.h" line="5" column="1" bodyfile="include/vector.h" bodystart="5" bodyend="188"/>
+    <listofallmembers>
+      <member refid="class_vektor_1a75342fa6b213f629e153e5084225d065" prot="public" virt="non-virtual"><scope>Vektor</scope><name>back</name></member>
+      <member refid="class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4" prot="public" virt="non-virtual"><scope>Vektor</scope><name>begin</name></member>
+      <member refid="class_vektor_1a776eab835626a981955ec020cef5001c" prot="public" virt="non-virtual"><scope>Vektor</scope><name>capacity</name></member>
+      <member refid="class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a" prot="public" virt="non-virtual"><scope>Vektor</scope><name>clear</name></member>
+      <member refid="class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df" prot="public" virt="non-virtual"><scope>Vektor</scope><name>const_iterator</name></member>
+      <member refid="class_vektor_1ad454706115806fe05ec64b01240b3d23" prot="public" virt="non-virtual"><scope>Vektor</scope><name>const_reference</name></member>
+      <member refid="class_vektor_1a0cbaea569c2feee1ebcb5623bf96d823" prot="private" virt="non-virtual"><scope>Vektor</scope><name>duom</name></member>
+      <member refid="class_vektor_1a02a2c5c7255ae27f9edf6098cb46fe8b" prot="private" virt="non-virtual"><scope>Vektor</scope><name>dydis</name></member>
+      <member refid="class_vektor_1a68f21ad21b36b39f8e398c7efdb70085" prot="public" virt="non-virtual"><scope>Vektor</scope><name>empty</name></member>
+      <member refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" prot="public" virt="non-virtual"><scope>Vektor</scope><name>end</name></member>
+      <member refid="class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1" prot="public" virt="non-virtual"><scope>Vektor</scope><name>erase</name></member>
+      <member refid="class_vektor_1a3723a74869b85d1e3db007abab6d669f" prot="public" virt="non-virtual"><scope>Vektor</scope><name>erase</name></member>
+      <member refid="class_vektor_1a16c88c1da1b91a25f954aa59cbed811f" prot="public" virt="non-virtual"><scope>Vektor</scope><name>front</name></member>
+      <member refid="class_vektor_1a2c33bbc07b22977de729ab7bef761124" prot="public" virt="non-virtual"><scope>Vektor</scope><name>iterator</name></member>
+      <member refid="class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7" prot="public" virt="non-virtual"><scope>Vektor</scope><name>max_size</name></member>
+      <member refid="class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf" prot="public" virt="non-virtual"><scope>Vektor</scope><name>operator=</name></member>
+      <member refid="class_vektor_1a4669f56e978065a8cc8046df4dd0d21b" prot="public" virt="non-virtual"><scope>Vektor</scope><name>operator=</name></member>
+      <member refid="class_vektor_1a67d3505b8ac1268e5740feffa000380b" prot="public" virt="non-virtual"><scope>Vektor</scope><name>operator==</name></member>
+      <member refid="class_vektor_1ac928e3c873e1e28659e0769dff4a5f11" prot="public" virt="non-virtual"><scope>Vektor</scope><name>operator[]</name></member>
+      <member refid="class_vektor_1acdd650cea26a2d95119a5710fda9b5d8" prot="public" virt="non-virtual"><scope>Vektor</scope><name>pop_back</name></member>
+      <member refid="class_vektor_1a9aa67f181dc9c7a210c46d11df876539" prot="public" virt="non-virtual"><scope>Vektor</scope><name>push_back</name></member>
+      <member refid="class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422" prot="public" virt="non-virtual"><scope>Vektor</scope><name>reference</name></member>
+      <member refid="class_vektor_1ae2eaebca369760c7e0757965e111464a" prot="public" virt="non-virtual"><scope>Vektor</scope><name>reserve</name></member>
+      <member refid="class_vektor_1aee6c3f475bae547a786fa3aa528c29f9" prot="private" virt="non-virtual"><scope>Vektor</scope><name>resize</name></member>
+      <member refid="class_vektor_1aeb4dcc6a639c7622777995808c3262a8" prot="public" virt="non-virtual"><scope>Vektor</scope><name>shrink_to_fit</name></member>
+      <member refid="class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0" prot="public" virt="non-virtual"><scope>Vektor</scope><name>size</name></member>
+      <member refid="class_vektor_1aa973b8be4fcff1b278587f73851e6412" prot="public" virt="non-virtual"><scope>Vektor</scope><name>size_type</name></member>
+      <member refid="class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486" prot="public" virt="non-virtual"><scope>Vektor</scope><name>swap</name></member>
+      <member refid="class_vektor_1aece4b3dbbe7dc377d36c0b55315cb253" prot="private" virt="non-virtual"><scope>Vektor</scope><name>talpa</name></member>
+      <member refid="class_vektor_1a8d759015bcf357f66a44a3fb07767cc7" prot="public" virt="non-virtual"><scope>Vektor</scope><name>value_type</name></member>
+      <member refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" prot="public" virt="non-virtual"><scope>Vektor</scope><name>Vektor</name></member>
+      <member refid="class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91" prot="public" virt="non-virtual"><scope>Vektor</scope><name>Vektor</name></member>
+      <member refid="class_vektor_1a67b8f571c724876f2c973b983c3c7a69" prot="public" virt="non-virtual"><scope>Vektor</scope><name>Vektor</name></member>
+      <member refid="class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb" prot="public" virt="non-virtual"><scope>Vektor</scope><name>Vektor</name></member>
+      <member refid="class_vektor_1a28bf10b82fb39256290f3fb322441d55" prot="public" virt="non-virtual"><scope>Vektor</scope><name>Vektor</name></member>
+      <member refid="class_vektor_1af8393162c7248fad4ae83acb11fa2ee2" prot="public" virt="non-virtual"><scope>Vektor</scope><name>~Vektor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

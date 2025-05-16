@@ -1,0 +1,194 @@
+\doxysection{vector.\+h}
+\hypertarget{vector_8h_source}{}\label{vector_8h_source}\index{include/vector.h@{include/vector.h}}
+\mbox{\hyperlink{vector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{manolib_8h}{manolib.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00004}00004\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ V>}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00005}\mbox{\hyperlink{class_vektor}{00005}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor}}\{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00006}00006\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00007}00007\ \ \ \ \ V*\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00008}00008\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ dydis;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00009}00009\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ talpa;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00011}00011\ \textcolor{keywordtype}{void}\ resize(\textcolor{keywordtype}{size\_t}\ n)}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00013}00013\ \ \ \ \ V*\ temp\ =\ \textcolor{keyword}{new}\ V[n];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00014}00014\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=0;\ i<dydis;\ i++)}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00016}00016\ \ \ \ \ \ \ \ \ temp[i]\ =\ duom[i];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00017}00017\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{delete}[]\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00019}00019\ \ \ \ \ duom\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00020}00020\ \ \ \ \ talpa\ =\ n;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00022}00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00023}00023\ \textcolor{comment}{//\ Standard\ typedefs\ required\ by\ STL\ compatibility}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00024}\mbox{\hyperlink{class_vektor_a8d759015bcf357f66a44a3fb07767cc7}{00024}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_vektor_a8d759015bcf357f66a44a3fb07767cc7}{value\_type}}\ =\ V;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00025}\mbox{\hyperlink{class_vektor_ae82bfd92dc55bb8d22f70e6f2b39a422}{00025}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_vektor_ae82bfd92dc55bb8d22f70e6f2b39a422}{reference}}\ =\ V\&;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00026}\mbox{\hyperlink{class_vektor_ad454706115806fe05ec64b01240b3d23}{00026}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_vektor_ad454706115806fe05ec64b01240b3d23}{const\_reference}}\ =\ \textcolor{keyword}{const}\ V\&;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00027}\mbox{\hyperlink{class_vektor_a2c33bbc07b22977de729ab7bef761124}{00027}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_vektor_a2c33bbc07b22977de729ab7bef761124}{iterator}}\ =\ V*;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00028}\mbox{\hyperlink{class_vektor_a47611cfc39bdb6d9fcb1eca8d78772df}{00028}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_vektor_a47611cfc39bdb6d9fcb1eca8d78772df}{const\_iterator}}\ =\ \textcolor{keyword}{const}\ V*;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00029}\mbox{\hyperlink{class_vektor_aa973b8be4fcff1b278587f73851e6412}{00029}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_vektor_aa973b8be4fcff1b278587f73851e6412}{size\_type}}\ =\ size\_t;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00033}00033\ \textcolor{comment}{//Konstruktoriai}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00034}\mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{00034}}\ \mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor}}():\ duom(nullptr),\ dydis(0),\ talpa(0)\ \{\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00035}00035\ \textcolor{comment}{//inicilizavimas\ su\ talpaa}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00036}\mbox{\hyperlink{class_vektor_a250e2be3ab4d9deddbc7d3da4ca06d91}{00036}}\ \mbox{\hyperlink{class_vektor_a250e2be3ab4d9deddbc7d3da4ca06d91}{Vektor}}(\textcolor{keywordtype}{size\_t}\ d):\ dydis(0),\ talpa(d)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00037}00037\ \ \ \ \ duom\ =\ \textcolor{keyword}{new}\ V[d];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00039}\mbox{\hyperlink{class_vektor_a67b8f571c724876f2c973b983c3c7a69}{00039}}\ \mbox{\hyperlink{class_vektor_a67b8f571c724876f2c973b983c3c7a69}{Vektor}}(\textcolor{keywordtype}{size\_t}\ d,\ \textcolor{keyword}{const}\ V\&\ value):\ dydis(d),\ talpa(d)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00040}00040\ \ \ \ \ duom\ =\ \textcolor{keyword}{new}\ V[d];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ d;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ duom[i]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00045}\mbox{\hyperlink{class_vektor_af8393162c7248fad4ae83acb11fa2ee2}{00045}}\ \mbox{\hyperlink{class_vektor_af8393162c7248fad4ae83acb11fa2ee2}{\string~Vektor}}()\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{delete}[]\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00049}\mbox{\hyperlink{class_vektor_ac2fbba41a1816fcdf6e3a7492719cdf0}{00049}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_vektor_ac2fbba41a1816fcdf6e3a7492719cdf0}{size}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ dydis;\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00050}\mbox{\hyperlink{class_vektor_ad05848675e93846df5d5bfb17ccdf4e7}{00050}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_vektor_ad05848675e93846df5d5bfb17ccdf4e7}{max\_size}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ std::numeric\_limits<size\_t>::max();\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00051}\mbox{\hyperlink{class_vektor_a776eab835626a981955ec020cef5001c}{00051}}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_vektor_a776eab835626a981955ec020cef5001c}{capacity}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ talpa;\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00052}\mbox{\hyperlink{class_vektor_a68f21ad21b36b39f8e398c7efdb70085}{00052}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vektor_a68f21ad21b36b39f8e398c7efdb70085}{empty}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ dydis\ ==0;\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00053}\mbox{\hyperlink{class_vektor_ae2eaebca369760c7e0757965e111464a}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vektor_ae2eaebca369760c7e0757965e111464a}{reserve}}(\textcolor{keywordtype}{size\_t}\ n)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (n\ >\ talpa)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ resize(n);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00058}\mbox{\hyperlink{class_vektor_a2cc9152c8ab906eb1c294ffd1c3c14e1}{00058}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vektor_a2cc9152c8ab906eb1c294ffd1c3c14e1}{erase}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ dydis)\ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ index;\ i\ <\ dydis\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ duom[i]\ =\ duom[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00063}00063\ \ \ \ \ -\/-\/dydis;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00064}00064\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00065}\mbox{\hyperlink{class_vektor_a3723a74869b85d1e3db007abab6d669f}{00065}}\ V*\ \mbox{\hyperlink{class_vektor_a3723a74869b85d1e3db007abab6d669f}{erase}}(V*\ first,\ V*\ last)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (first\ <\ duom\ ||\ last\ >\ duom\ +\ dydis\ ||\ first\ >\ last)}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Invalid\ iterator\ range"{}});}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ start\ =\ first\ -\/\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_vektor_a8b3ccfae217c6a8d113ee0f29f1da347}{end}}\ =\ last\ -\/\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ range\ =\ \mbox{\hyperlink{class_vektor_a8b3ccfae217c6a8d113ee0f29f1da347}{end}}\ -\/\ start;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ \mbox{\hyperlink{class_vektor_a8b3ccfae217c6a8d113ee0f29f1da347}{end}};\ i\ <\ dydis;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00074}00074\ \ \ \ \ \ \ \ \ duom[i\ -\/\ range]\ =\ duom[i];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00077}00077\ \ \ \ \ dydis\ -\/=\ range;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ duom\ +\ start;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00080}\mbox{\hyperlink{class_vektor_ac2cc3de61fa2ccbc9b1c06839e3b7486}{00080}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vektor_ac2cc3de61fa2ccbc9b1c06839e3b7486}{swap}}(\mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\ other)\{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00081}00081\ \ \ \ \ std::swap(duom,\ other.duom);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00082}00082\ \ \ \ \ std::swap(dydis,\ other.dydis);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00083}00083\ \ \ \ \ std::swap(talpa,\ other.talpa);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00085}\mbox{\hyperlink{class_vektor_aeb4dcc6a639c7622777995808c3262a8}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vektor_aeb4dcc6a639c7622777995808c3262a8}{shrink\_to\_fit}}()\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (talpa\ >\ dydis)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00087}00087\ \ \ \ \ \ \ \ \ V*\ temp\ =\ \textcolor{keyword}{new}\ V[dydis];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dydis;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ temp[i]\ =\ duom[i];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ duom\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00093}00093\ \ \ \ \ \ \ \ \ talpa\ =\ dydis;\}\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00095}00095\ \textcolor{comment}{//Vektoriaus\ funkciju\ realizacijos}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00096}\mbox{\hyperlink{class_vektor_a9aa67f181dc9c7a210c46d11df876539}{00096}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vektor_a9aa67f181dc9c7a210c46d11df876539}{push\_back}}(\textcolor{keyword}{const}\ V\&\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{if}\ (dydis\ ==\ talpa)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ new\_talpa;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (talpa\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ new\_talpa\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00101}00101\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ new\_talpa\ =\ talpa\ *\ 2;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ resize(new\_talpa);}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00106}00106\ \ \ \ \ duom[dydis++]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00108}\mbox{\hyperlink{class_vektor_acdd650cea26a2d95119a5710fda9b5d8}{00108}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_vektor_acdd650cea26a2d95119a5710fda9b5d8}{pop\_back}}()\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{if}\ (dydis\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Cannot\ pop\_back\ from\ empty\ vector"{}});}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00112}00112\ \ \ \ \ -\/-\/dydis;\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00114}\mbox{\hyperlink{class_vektor_a2d303cdf34fba1f0b9be04924819dfd4}{00114}}\ V*\ \mbox{\hyperlink{class_vektor_a2d303cdf34fba1f0b9be04924819dfd4}{begin}}()\ \{\textcolor{keywordflow}{return}\ duom;\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00115}\mbox{\hyperlink{class_vektor_a8b3ccfae217c6a8d113ee0f29f1da347}{00115}}\ V*\ \mbox{\hyperlink{class_vektor_a8b3ccfae217c6a8d113ee0f29f1da347}{end}}()\ \{\textcolor{keywordflow}{return}\ duom+dydis;\}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00116}\mbox{\hyperlink{class_vektor_a16c88c1da1b91a25f954aa59cbed811f}{00116}}\ V\&\ \mbox{\hyperlink{class_vektor_a16c88c1da1b91a25f954aa59cbed811f}{front}}()\ \{\ \textcolor{keywordflow}{return}\ duom[0];\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00117}\mbox{\hyperlink{class_vektor_a75342fa6b213f629e153e5084225d065}{00117}}\ V\&\ \mbox{\hyperlink{class_vektor_a75342fa6b213f629e153e5084225d065}{back}}()\ \{\ \textcolor{keywordflow}{return}\ duom[dydis\ -\/\ 1];\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00118}\mbox{\hyperlink{class_vektor_a930fa80a1421a1556cd69fcc14bdce2a}{00118}}\ V*\ \mbox{\hyperlink{class_vektor_a930fa80a1421a1556cd69fcc14bdce2a}{clear}}()}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00119}00119\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00120}00120\ \ \ \ \ \textcolor{keyword}{delete}[]\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00121}00121\ \ \ \ \ duom\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00122}00122\ \ \ \ \ dydis\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00123}00123\ \ \ \ \ talpa\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{return}\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00125}00125\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00128}00128\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00129}\mbox{\hyperlink{class_vektor_ac928e3c873e1e28659e0769dff4a5f11}{00129}}\ V\&\ \mbox{\hyperlink{class_vektor_ac928e3c873e1e28659e0769dff4a5f11}{operator[]}}(\textcolor{keywordtype}{size\_t}\ index)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ dydis)\ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Index\ out\ of\ range"{}});}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00131}00131\ \ \ \ \ \textcolor{keywordflow}{return}\ duom[index];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00132}00132\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00133}00133\ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00134}\mbox{\hyperlink{class_vektor_abe0174bf5ed4d30b63d9310fc48e8deb}{00134}}\ \mbox{\hyperlink{class_vektor_abe0174bf5ed4d30b63d9310fc48e8deb}{Vektor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\ other)\ :\ dydis(other.dydis),\ talpa(other.talpa)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00135}00135\ \ \ \ \ duom\ =\ \textcolor{keyword}{new}\ V[talpa];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dydis;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00137}00137\ \ \ \ \ \ \ \ \ duom[i]\ =\ other.duom[i];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00138}00138\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00139}00139\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00140}00140\ \textcolor{comment}{//\ Copy\ assignment\ operator}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00141}\mbox{\hyperlink{class_vektor_a6a9803f7a09ebf1f6e3724d3275007bf}{00141}}\ \mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\ \mbox{\hyperlink{class_vektor_a6a9803f7a09ebf1f6e3724d3275007bf}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\ other)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00144}00144\ \ \ \ \ \ \ \ \ dydis\ =\ other.dydis;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00145}00145\ \ \ \ \ \ \ \ \ talpa\ =\ other.talpa;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00146}00146\ \ \ \ \ \ \ \ \ duom\ =\ \textcolor{keyword}{new}\ V[dydis];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dydis;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ duom[i]\ =\ other.duom[i];}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00149}00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00152}00152\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00153}00153\ \textcolor{comment}{//\ Move\ constructor}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00154}\mbox{\hyperlink{class_vektor_a28bf10b82fb39256290f3fb322441d55}{00154}}\ \mbox{\hyperlink{class_vektor_a28bf10b82fb39256290f3fb322441d55}{Vektor}}(\mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\&\ other)\ noexcept\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00155}00155\ \ \ \ \ :\ duom(other.duom),\ dydis(other.dydis),\ talpa(other.talpa)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00156}00156\ \ \ \ \ other.duom\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00157}00157\ \ \ \ \ other.dydis\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00158}00158\ \ \ \ \ other.talpa\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00161}00161\ \textcolor{comment}{//\ Move\ assignment\ operator}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00162}\mbox{\hyperlink{class_vektor_a4669f56e978065a8cc8046df4dd0d21b}{00162}}\ \mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\ \mbox{\hyperlink{class_vektor_a4669f56e978065a8cc8046df4dd0d21b}{operator=}}(\mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\&\ other)\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00164}00164\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00165}00165\ \ \ \ \ \ \ \ \ duom\ =\ other.duom;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00166}00166\ \ \ \ \ \ \ \ \ dydis\ =\ other.dydis;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00167}00167\ \ \ \ \ \ \ \ \ talpa\ =\ other.talpa;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00169}00169\ \ \ \ \ \ \ \ \ other.duom\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00170}00170\ \ \ \ \ \ \ \ \ other.dydis\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00171}00171\ \ \ \ \ \ \ \ \ other.talpa\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00172}00172\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00173}00173\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00174}00174\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00175}\mbox{\hyperlink{class_vektor_a67d3505b8ac1268e5740feffa000380b}{00175}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_vektor_a67d3505b8ac1268e5740feffa000380b}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_vektor_a032e83f770f3a43e03226c869b0da317}{Vektor<V>}}\&\ other)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00176}00176\ \ \ \ \ \textcolor{keywordflow}{if}\ (dydis\ !=\ other.dydis)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00177}00177\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ dydis;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(duom[i]\ ==\ other.duom[i]))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00180}00180\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00181}00181\ \}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00182}00182\ \textcolor{comment}{//setteriai}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00185}00185\ \textcolor{comment}{//getteriai}}
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{vector_8h_source_l00188}00188\ \};}
+
+\end{DoxyCode}

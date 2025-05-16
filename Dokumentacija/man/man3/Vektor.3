@@ -1,0 +1,260 @@
+.TH "Vektor< V >" 3 "Studentų galutinio balo skaičiuoklė" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Vektor< V >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <vector\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBvalue_type\fP = V"
+.br
+.ti -1c
+.RI "using \fBreference\fP = V&"
+.br
+.ti -1c
+.RI "using \fBconst_reference\fP = const V&"
+.br
+.ti -1c
+.RI "using \fBiterator\fP = V*"
+.br
+.ti -1c
+.RI "using \fBconst_iterator\fP = const V*"
+.br
+.ti -1c
+.RI "using \fBsize_type\fP = size_t"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVektor\fP ()"
+.br
+.ti -1c
+.RI "\fBVektor\fP (size_t d)"
+.br
+.ti -1c
+.RI "\fBVektor\fP (size_t d, const V &value)"
+.br
+.ti -1c
+.RI "\fB~Vektor\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBmax_size\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBcapacity\fP () const"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "void \fBreserve\fP (size_t n)"
+.br
+.ti -1c
+.RI "void \fBerase\fP (size_t index)"
+.br
+.ti -1c
+.RI "V * \fBerase\fP (V *first, V *last)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBVektor\fP< V > &other)"
+.br
+.ti -1c
+.RI "void \fBshrink_to_fit\fP ()"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (const V &value)"
+.br
+.ti -1c
+.RI "void \fBpop_back\fP ()"
+.br
+.ti -1c
+.RI "V * \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "V * \fBend\fP ()"
+.br
+.ti -1c
+.RI "V & \fBfront\fP ()"
+.br
+.ti -1c
+.RI "V & \fBback\fP ()"
+.br
+.ti -1c
+.RI "V * \fBclear\fP ()"
+.br
+.ti -1c
+.RI "V & \fBoperator[]\fP (size_t index)"
+.br
+.ti -1c
+.RI "\fBVektor\fP (const \fBVektor\fP< V > &other)"
+.br
+.ti -1c
+.RI "\fBVektor\fP< V > & \fBoperator=\fP (const \fBVektor\fP< V > &other)"
+.br
+.ti -1c
+.RI "\fBVektor\fP (\fBVektor\fP< V > &&other) noexcept"
+.br
+.ti -1c
+.RI "\fBVektor\fP< V > & \fBoperator=\fP (\fBVektor\fP< V > &&other) noexcept"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBVektor\fP< V > &other) const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename V>
+.br
+class Vektor< V >"
+.PP
+Definition at line \fB5\fP of file \fBvector\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename V> using \fBVektor\fP< V >::const_iterator = const V*"
+
+.PP
+Definition at line \fB28\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> using \fBVektor\fP< V >::const_reference = const V&"
+
+.PP
+Definition at line \fB26\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> using \fBVektor\fP< V >::iterator = V*"
+
+.PP
+Definition at line \fB27\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> using \fBVektor\fP< V >::reference = V&"
+
+.PP
+Definition at line \fB25\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> using \fBVektor\fP< V >::size_type = size_t"
+
+.PP
+Definition at line \fB29\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> using \fBVektor\fP< V >::value_type = V"
+
+.PP
+Definition at line \fB24\fP of file \fBvector\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename V> \fBVektor\fP< V >\fB::Vektor\fP ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB34\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V >\fB::Vektor\fP (size_t d)\fR [inline]\fP"
+
+.PP
+Definition at line \fB36\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V >\fB::Vektor\fP (size_t d, const V & value)\fR [inline]\fP"
+
+.PP
+Definition at line \fB39\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V >::~\fBVektor\fP ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB45\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V >\fB::Vektor\fP (const \fBVektor\fP< V > & other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB134\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V >\fB::Vektor\fP (\fBVektor\fP< V > && other)\fR [inline]\fP, \fR [noexcept]\fP"
+
+.PP
+Definition at line \fB154\fP of file \fBvector\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename V> V & \fBVektor\fP< V >::back ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB117\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> V * \fBVektor\fP< V >::begin ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB114\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> size_t \fBVektor\fP< V >::capacity () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB51\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> V * \fBVektor\fP< V >::clear ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB118\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> bool \fBVektor\fP< V >::empty () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB52\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> V * \fBVektor\fP< V >::end ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB115\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> void \fBVektor\fP< V >::erase (size_t index)\fR [inline]\fP"
+
+.PP
+Definition at line \fB58\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> V * \fBVektor\fP< V >::erase (V * first, V * last)\fR [inline]\fP"
+
+.PP
+Definition at line \fB65\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> V & \fBVektor\fP< V >::front ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB116\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> size_t \fBVektor\fP< V >::max_size () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB50\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V > & \fBVektor\fP< V >::operator= (const \fBVektor\fP< V > & other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB141\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> \fBVektor\fP< V > & \fBVektor\fP< V >::operator= (\fBVektor\fP< V > && other)\fR [inline]\fP, \fR [noexcept]\fP"
+
+.PP
+Definition at line \fB162\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> bool \fBVektor\fP< V >::operator== (const \fBVektor\fP< V > & other) const\fR [inline]\fP"
+
+.PP
+Definition at line \fB175\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> V & \fBVektor\fP< V >::operator[] (size_t index)\fR [inline]\fP"
+
+.PP
+Definition at line \fB129\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> void \fBVektor\fP< V >::pop_back ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB108\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> void \fBVektor\fP< V >::push_back (const V & value)\fR [inline]\fP"
+
+.PP
+Definition at line \fB96\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> void \fBVektor\fP< V >::reserve (size_t n)\fR [inline]\fP"
+
+.PP
+Definition at line \fB53\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> void \fBVektor\fP< V >::shrink_to_fit ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB85\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> size_t \fBVektor\fP< V >::size () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB49\fP of file \fBvector\&.h\fP\&.
+.SS "template<typename V> void \fBVektor\fP< V >::swap (\fBVektor\fP< V > & other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB80\fP of file \fBvector\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Studentų galutinio balo skaičiuoklė from the source code\&.

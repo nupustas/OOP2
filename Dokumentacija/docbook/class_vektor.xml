@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_vektor" xml:lang="en-US">
+<title>Vektor&lt; V &gt; Class Template Reference</title>
+<indexterm><primary>Vektor&lt; V &gt;</primary></indexterm>
+<para>
+<computeroutput>#include &lt;vector.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_vektor_1a8d759015bcf357f66a44a3fb07767cc7">value_type</link> = V</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422">reference</link> = V&amp;</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_vektor_1ad454706115806fe05ec64b01240b3d23">const_reference</link> = const V&amp;</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_vektor_1a2c33bbc07b22977de729ab7bef761124">iterator</link> = V*</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df">const_iterator</link> = const V*</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_vektor_1aa973b8be4fcff1b278587f73851e6412">size_type</link> = size_t</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91">Vektor</link> (size_t d)</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor_1a67b8f571c724876f2c973b983c3c7a69">Vektor</link> (size_t d, const V &amp;value)</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor_1af8393162c7248fad4ae83acb11fa2ee2">~Vektor</link> ()</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0">size</link> () const</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7">max_size</link> () const</para>
+</listitem>
+            <listitem><para>size_t <link linkend="_class_vektor_1a776eab835626a981955ec020cef5001c">capacity</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_vektor_1a68f21ad21b36b39f8e398c7efdb70085">empty</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_vektor_1ae2eaebca369760c7e0757965e111464a">reserve</link> (size_t n)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1">erase</link> (size_t index)</para>
+</listitem>
+            <listitem><para>V * <link linkend="_class_vektor_1a3723a74869b85d1e3db007abab6d669f">erase</link> (V *first, V *last)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486">swap</link> (<link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;other)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_vektor_1aeb4dcc6a639c7622777995808c3262a8">shrink_to_fit</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">push_back</link> (const V &amp;value)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_vektor_1acdd650cea26a2d95119a5710fda9b5d8">pop_back</link> ()</para>
+</listitem>
+            <listitem><para>V * <link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link> ()</para>
+</listitem>
+            <listitem><para>V * <link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link> ()</para>
+</listitem>
+            <listitem><para>V &amp; <link linkend="_class_vektor_1a16c88c1da1b91a25f954aa59cbed811f">front</link> ()</para>
+</listitem>
+            <listitem><para>V &amp; <link linkend="_class_vektor_1a75342fa6b213f629e153e5084225d065">back</link> ()</para>
+</listitem>
+            <listitem><para>V * <link linkend="_class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a">clear</link> ()</para>
+</listitem>
+            <listitem><para>V &amp; <link linkend="_class_vektor_1ac928e3c873e1e28659e0769dff4a5f11">operator[]</link> (size_t index)</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb">Vektor</link> (const <link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;other)</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; <link linkend="_class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf">operator=</link> (const <link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;other)</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor_1a28bf10b82fb39256290f3fb322441d55">Vektor</link> (<link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;&amp;other) noexcept</para>
+</listitem>
+            <listitem><para><link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; <link linkend="_class_vektor_1a4669f56e978065a8cc8046df4dd0d21b">operator=</link> (<link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;&amp;other) noexcept</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_vektor_1a67d3505b8ac1268e5740feffa000380b">operator==</link> (const <link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;other) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename V&gt;<?linebreak?>class Vektor&lt; V &gt;</title></simplesect>
+<para>
+Definition at line <link linkend="_vector_8h_source_1l00005">5</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df"/><section>
+    <title>const_iterator</title>
+<indexterm><primary>const_iterator</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>const_iterator</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>using <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::const_iterator = const V*</computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00028">28</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ad454706115806fe05ec64b01240b3d23"/><section>
+    <title>const_reference</title>
+<indexterm><primary>const_reference</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>const_reference</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>using <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::const_reference = const V&amp;</computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00026">26</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a2c33bbc07b22977de729ab7bef761124"/><section>
+    <title>iterator</title>
+<indexterm><primary>iterator</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>iterator</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>using <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::iterator = V*</computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00027">27</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422"/><section>
+    <title>reference</title>
+<indexterm><primary>reference</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>reference</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>using <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::reference = V&amp;</computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00025">25</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1aa973b8be4fcff1b278587f73851e6412"/><section>
+    <title>size_type</title>
+<indexterm><primary>size_type</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>size_type</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>using <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::size_type = size_t</computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00029">29</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a8d759015bcf357f66a44a3fb07767cc7"/><section>
+    <title>value_type</title>
+<indexterm><primary>value_type</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>value_type</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>using <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::value_type = V</computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00024">24</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_vektor_1a032e83f770f3a43e03226c869b0da317"/><section>
+    <title>Vektor()<computeroutput>[1/5]</computeroutput></title>
+<indexterm><primary>Vektor</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>Vektor</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt;<link linkend="_class_vektor">::Vektor</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00034">34</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91"/><section>
+    <title>Vektor()<computeroutput>[2/5]</computeroutput></title>
+<indexterm><primary>Vektor</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>Vektor</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt;<link linkend="_class_vektor">::Vektor</link> (size_t d)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00036">36</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a67b8f571c724876f2c973b983c3c7a69"/><section>
+    <title>Vektor()<computeroutput>[3/5]</computeroutput></title>
+<indexterm><primary>Vektor</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>Vektor</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt;<link linkend="_class_vektor">::Vektor</link> (size_t d, const V &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00039">39</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1af8393162c7248fad4ae83acb11fa2ee2"/><section>
+    <title>~Vektor()</title>
+<indexterm><primary>~Vektor</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>~Vektor</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt;::~<link linkend="_class_vektor">Vektor</link> ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00045">45</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb"/><section>
+    <title>Vektor()<computeroutput>[4/5]</computeroutput></title>
+<indexterm><primary>Vektor</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>Vektor</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt;<link linkend="_class_vektor">::Vektor</link> (const <link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00134">134</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a28bf10b82fb39256290f3fb322441d55"/><section>
+    <title>Vektor()<computeroutput>[5/5]</computeroutput></title>
+<indexterm><primary>Vektor</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>Vektor</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt;<link linkend="_class_vektor">::Vektor</link> (<link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00154">154</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_vektor_1a75342fa6b213f629e153e5084225d065"/><section>
+    <title>back()</title>
+<indexterm><primary>back</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>back</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V &amp; <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::back ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00117">117</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4"/><section>
+    <title>begin()</title>
+<indexterm><primary>begin</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>begin</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V * <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::begin ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00114">114</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a776eab835626a981955ec020cef5001c"/><section>
+    <title>capacity()</title>
+<indexterm><primary>capacity</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>capacity</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::capacity ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00051">51</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a"/><section>
+    <title>clear()</title>
+<indexterm><primary>clear</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>clear</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V * <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::clear ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00118">118</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a68f21ad21b36b39f8e398c7efdb70085"/><section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>empty</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>bool <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::empty ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00052">52</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347"/><section>
+    <title>end()</title>
+<indexterm><primary>end</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>end</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V * <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::end ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00115">115</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1"/><section>
+    <title>erase()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>erase</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>erase</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>void <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::erase (size_t index)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00058">58</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a3723a74869b85d1e3db007abab6d669f"/><section>
+    <title>erase()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>erase</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>erase</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V * <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::erase (V * first, V * last)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00065">65</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a16c88c1da1b91a25f954aa59cbed811f"/><section>
+    <title>front()</title>
+<indexterm><primary>front</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>front</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V &amp; <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::front ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00116">116</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7"/><section>
+    <title>max_size()</title>
+<indexterm><primary>max_size</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>max_size</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::max_size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00050">50</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::operator= (const <link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00141">141</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a4669f56e978065a8cc8046df4dd0d21b"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>operator=</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput><link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::operator= (<link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp;&amp; other)<computeroutput>[inline]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00162">162</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a67d3505b8ac1268e5740feffa000380b"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>operator==</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>bool <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::operator== (const <link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; other) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00175">175</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ac928e3c873e1e28659e0769dff4a5f11"/><section>
+    <title>operator[]()</title>
+<indexterm><primary>operator[]</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>operator[]</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>V &amp; <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::operator[] (size_t index)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00129">129</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1acdd650cea26a2d95119a5710fda9b5d8"/><section>
+    <title>pop_back()</title>
+<indexterm><primary>pop_back</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>pop_back</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>void <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::pop_back ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00108">108</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539"/><section>
+    <title>push_back()</title>
+<indexterm><primary>push_back</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>push_back</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>void <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::push_back (const V &amp; value)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00096">96</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ae2eaebca369760c7e0757965e111464a"/><section>
+    <title>reserve()</title>
+<indexterm><primary>reserve</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>reserve</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>void <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::reserve (size_t n)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00053">53</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1aeb4dcc6a639c7622777995808c3262a8"/><section>
+    <title>shrink_to_fit()</title>
+<indexterm><primary>shrink_to_fit</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>shrink_to_fit</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>void <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::shrink_to_fit ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00085">85</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0"/><section>
+    <title>size()</title>
+<indexterm><primary>size</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>size</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>size_t <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::size ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00049">49</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<anchor xml:id="_class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486"/><section>
+    <title>swap()</title>
+<indexterm><primary>swap</primary><secondary>Vektor&lt; V &gt;</secondary></indexterm>
+<indexterm><primary>Vektor&lt; V &gt;</primary><secondary>swap</secondary></indexterm>
+<computeroutput>template&lt;typename V&gt; </computeroutput><para><computeroutput>void <link linkend="_class_vektor">Vektor</link>&lt; V &gt;::swap (<link linkend="_class_vektor">Vektor</link>&lt; V &gt; &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_vector_8h_source_1l00080">80</link> of file <link linkend="_vector_8h_source">vector.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/<link linkend="_vector_8h">vector.h</link></section>
+</section>

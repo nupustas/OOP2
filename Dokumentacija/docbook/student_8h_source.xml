@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_student_8h_source" xml:lang="en-US">
+<title>student.h</title>
+<indexterm><primary>include/student.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_student_8h_source_1l00001"/>00001 <emphasis role="comment">//&#32;Stud.h</emphasis>
+<anchor xml:id="_student_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_student_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_human_8h">human.h</link>&quot;</emphasis>
+<anchor xml:id="_student_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_manolib_8h">manolib.h</link>&quot;</emphasis>
+<anchor xml:id="_student_8h_source_1l00005"/>00005 
+<anchor xml:id="_student_8h_source_1l00006"/>00006 
+<anchor xml:id="_student_8h_source_1l00007"/><link linkend="_class_stud">00007</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link>&#32;{
+<anchor xml:id="_student_8h_source_1l00008"/>00008 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_student_8h_source_1l00009"/>00009 &#32;&#32;&#32;&#32;std::vector&lt;int&gt;&#32;paz;
+<anchor xml:id="_student_8h_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;egz;
+<anchor xml:id="_student_8h_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;vm;
+<anchor xml:id="_student_8h_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;galutinis;
+<anchor xml:id="_student_8h_source_1l00013"/>00013 
+<anchor xml:id="_student_8h_source_1l00014"/>00014 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_student_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Constructors</emphasis>
+<anchor xml:id="_student_8h_source_1l00016"/><link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">00016</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>()&#32;:&#32;<link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link>(),&#32;egz(0),&#32;vm(<emphasis role="stringliteral">&apos;&#32;&apos;</emphasis>),&#32;galutinis(0.0)&#32;{}
+<anchor xml:id="_student_8h_source_1l00017"/><link linkend="_class_stud_1a6e16964de60326f7a598a0b47903f574">00017</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1a6e16964de60326f7a598a0b47903f574">Stud</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;v,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;p,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;int&gt;&amp;&#32;pazymiai,&#32;<emphasis role="keywordtype">int</emphasis>&#32;e,&#32;<emphasis role="keywordtype">char</emphasis>&#32;vmod,&#32;<emphasis role="keywordtype">double</emphasis>&#32;gal)
+<anchor xml:id="_student_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link>(v,&#32;p),&#32;paz(pazymiai),&#32;egz(e),&#32;vm(vmod),&#32;galutinis(gal)&#32;{}
+<anchor xml:id="_student_8h_source_1l00019"/>00019 
+<anchor xml:id="_student_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Destructor</emphasis>
+<anchor xml:id="_student_8h_source_1l00021"/><link linkend="_class_stud_1aa1c38d670d1f269ebd48588c40ad58db">00021</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1aa1c38d670d1f269ebd48588c40ad58db">~Stud</link>()&#32;{&#32;paz.clear();&#32;}
+<anchor xml:id="_student_8h_source_1l00022"/>00022 
+<anchor xml:id="_student_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Copy&#32;constructor</emphasis>
+<anchor xml:id="_student_8h_source_1l00024"/><link linkend="_class_stud_1ad473232271f7e160f811c6ae206d326c">00024</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1ad473232271f7e160f811c6ae206d326c">Stud</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&#32;other)
+<anchor xml:id="_student_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link>(other.<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>,&#32;other.<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>),&#32;paz(other.paz),&#32;egz(other.egz),&#32;vm(other.vm),&#32;galutinis(other.galutinis)&#32;{}
+<anchor xml:id="_student_8h_source_1l00026"/>00026 
+<anchor xml:id="_student_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Copy&#32;assignment</emphasis>
+<anchor xml:id="_student_8h_source_1l00028"/><link linkend="_class_stud_1a311ba01abe5e734694bd281a9653226f">00028</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&#32;<link linkend="_class_stud_1a311ba01abe5e734694bd281a9653226f">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&#32;other)&#32;{
+<anchor xml:id="_student_8h_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">this</emphasis>&#32;==&#32;&amp;other)&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_student_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>&#32;=&#32;other.<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>;
+<anchor xml:id="_student_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>&#32;=&#32;other.<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>;
+<anchor xml:id="_student_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paz&#32;=&#32;other.paz;
+<anchor xml:id="_student_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;egz&#32;=&#32;other.egz;
+<anchor xml:id="_student_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vm&#32;=&#32;other.vm;
+<anchor xml:id="_student_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;galutinis&#32;=&#32;other.galutinis;
+<anchor xml:id="_student_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_student_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00038"/>00038 
+<anchor xml:id="_student_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Move&#32;constructor</emphasis>
+<anchor xml:id="_student_8h_source_1l00040"/><link linkend="_class_stud_1ac62c75899e911e4f1d55e1047564225c">00040</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1ac62c75899e911e4f1d55e1047564225c">Stud</link>(<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&amp;&#32;other)&#32;
+<anchor xml:id="_student_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;<link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link>(std::move(other.<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>),&#32;std::move(other.<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>)),&#32;paz(std::move(other.paz)),
+<anchor xml:id="_student_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;egz(other.egz),&#32;vm(other.vm),&#32;galutinis(other.galutinis)&#32;{
+<anchor xml:id="_student_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.egz&#32;=&#32;0;
+<anchor xml:id="_student_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.vm&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.galutinis&#32;=&#32;0.0;
+<anchor xml:id="_student_8h_source_1l00046"/>00046 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00047"/>00047 
+<anchor xml:id="_student_8h_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Move&#32;assignment</emphasis>
+<anchor xml:id="_student_8h_source_1l00049"/><link linkend="_class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a">00049</link> &#32;&#32;&#32;&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&#32;<link linkend="_class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a">operator=</link>(<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&amp;&#32;other)&#32;&#32;{
+<anchor xml:id="_student_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">this</emphasis>&#32;==&#32;&amp;other)&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_student_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>&#32;=&#32;std::move(other.Vardas);
+<anchor xml:id="_student_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>&#32;=&#32;std::move(other.Pavarde);
+<anchor xml:id="_student_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;paz&#32;=&#32;std::move(other.paz);
+<anchor xml:id="_student_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;egz&#32;=&#32;other.egz;
+<anchor xml:id="_student_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vm&#32;=&#32;other.vm;
+<anchor xml:id="_student_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;galutinis&#32;=&#32;other.galutinis;
+<anchor xml:id="_student_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.egz&#32;=&#32;0;
+<anchor xml:id="_student_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.vm&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.galutinis&#32;=&#32;0.0;
+<anchor xml:id="_student_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_student_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00062"/>00062 
+<anchor xml:id="_student_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Input&#32;operator</emphasis>
+<anchor xml:id="_student_8h_source_1l00064"/><link linkend="_class_stud_1ab0ae2d598da52d7298daa3083d28b576">00064</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::istream&amp;&#32;<link linkend="_class_stud_1ab0ae2d598da52d7298daa3083d28b576">operator&gt;&gt;</link>(std::istream&amp;&#32;in,&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&#32;s)&#32;{
+<anchor xml:id="_student_8h_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;varda:&#32;&quot;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in&#32;&gt;&gt;&#32;s.<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>;
+<anchor xml:id="_student_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;pavarde:&#32;&quot;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in&#32;&gt;&gt;&#32;s.<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>;
+<anchor xml:id="_student_8h_source_1l00069"/>00069 
+<anchor xml:id="_student_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;pazymiu&#32;kieki:&#32;&quot;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;kiekis;
+<anchor xml:id="_student_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in&#32;&gt;&gt;&#32;kiekis;
+<anchor xml:id="_student_8h_source_1l00073"/>00073 
+<anchor xml:id="_student_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.paz.clear();
+<anchor xml:id="_student_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;pazymius:&#32;&quot;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;kiekis;&#32;++i)&#32;{
+<anchor xml:id="_student_8h_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pazymys;
+<anchor xml:id="_student_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in&#32;&gt;&gt;&#32;pazymys;
+<anchor xml:id="_student_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.paz.push_back(pazymys);
+<anchor xml:id="_student_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00081"/>00081 
+<anchor xml:id="_student_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;egzamino&#32;rezultata:&#32;&quot;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in&#32;&gt;&gt;&#32;s.egz;
+<anchor xml:id="_student_8h_source_1l00084"/>00084 
+<anchor xml:id="_student_8h_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;vertinimo&#32;metoda&#32;(a/m):&#32;&quot;</emphasis>;
+<anchor xml:id="_student_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in&#32;&gt;&gt;&#32;s.vm;
+<anchor xml:id="_student_8h_source_1l00087"/>00087 
+<anchor xml:id="_student_8h_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s.<link linkend="_class_stud_1a07f94d74e9e563756d78605ac8093a9a">FinalScore</link>();
+<anchor xml:id="_student_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;in;
+<anchor xml:id="_student_8h_source_1l00090"/>00090 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00091"/>00091 
+<anchor xml:id="_student_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Output&#32;operator</emphasis>
+<anchor xml:id="_student_8h_source_1l00093"/><link linkend="_class_stud_1a9072c21de23b6a0596457f5a87a24780">00093</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_class_stud_1a9072c21de23b6a0596457f5a87a24780">operator&lt;&lt;</link>(std::ostream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link>&amp;&#32;s)&#32;{
+<anchor xml:id="_student_8h_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;std::left&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;s.<link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link>
+<anchor xml:id="_student_8h_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;std::setw(18)&#32;&lt;&lt;&#32;s.<link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link>;
+<anchor xml:id="_student_8h_source_1l00096"/>00096 
+<anchor xml:id="_student_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(s.vm&#32;==&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>)
+<anchor xml:id="_student_8h_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;std::fixed&#32;&lt;&lt;&#32;std::setprecision(2)&#32;&lt;&lt;&#32;std::setw(7)&#32;&lt;&lt;&#32;s.galutinis&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_student_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_student_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;std::fixed&#32;&lt;&lt;&#32;std::setprecision(2)&#32;&lt;&lt;&#32;s.galutinis&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_student_8h_source_1l00101"/>00101 
+<anchor xml:id="_student_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+<anchor xml:id="_student_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00104"/>00104 
+<anchor xml:id="_student_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;getters&#32;&amp;&#32;setters</emphasis>
+<anchor xml:id="_student_8h_source_1l00106"/><link linkend="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0">00106</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0">setEgz</link>(<emphasis role="keywordtype">int</emphasis>&#32;e)&#32;{&#32;egz&#32;=&#32;e;&#32;}
+<anchor xml:id="_student_8h_source_1l00107"/><link linkend="_class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12">00107</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12">setVm</link>(<emphasis role="keywordtype">char</emphasis>&#32;v)&#32;{&#32;vm&#32;=&#32;v;&#32;}
+<anchor xml:id="_student_8h_source_1l00108"/><link linkend="_class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5">00108</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5">setGalutinis</link>(<emphasis role="keywordtype">double</emphasis>&#32;g)&#32;{&#32;galutinis&#32;=&#32;g;&#32;}
+<anchor xml:id="_student_8h_source_1l00109"/><link linkend="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e">00109</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e">addPaz</link>(<emphasis role="keywordtype">int</emphasis>&#32;pazymys)&#32;{&#32;paz.push_back(pazymys);&#32;}
+<anchor xml:id="_student_8h_source_1l00110"/>00110 
+<anchor xml:id="_student_8h_source_1l00111"/><link linkend="_class_stud_1a25998973a74b359a72a95d49beae0c08">00111</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_stud_1a25998973a74b359a72a95d49beae0c08">getEgz</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;egz;&#32;}
+<anchor xml:id="_student_8h_source_1l00112"/><link linkend="_class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6">00112</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6">getVm</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;vm;&#32;}
+<anchor xml:id="_student_8h_source_1l00113"/><link linkend="_class_stud_1a45c7d38ccc4203365b448101344ba4e2">00113</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_class_stud_1a45c7d38ccc4203365b448101344ba4e2">getGalutinis</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;galutinis;&#32;}
+<anchor xml:id="_student_8h_source_1l00114"/><link linkend="_class_stud_1aa6575230afb3ea980563b2cb039bd4c9">00114</link> &#32;&#32;&#32;&#32;std::vector&lt;int&gt;&#32;<link linkend="_class_stud_1aa6575230afb3ea980563b2cb039bd4c9">getPaz</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;paz;&#32;}
+<anchor xml:id="_student_8h_source_1l00115"/><link linkend="_class_stud_1ac8b2e8ca576f42a8446fac6d745947aa">00115</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1ac8b2e8ca576f42a8446fac6d745947aa">removeLastPaz</link>()&#32;{&#32;paz.pop_back();&#32;}
+<anchor xml:id="_student_8h_source_1l00116"/>00116 
+<anchor xml:id="_student_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Score&#32;calculation</emphasis>
+<anchor xml:id="_student_8h_source_1l00118"/><link linkend="_class_stud_1a07f94d74e9e563756d78605ac8093a9a">00118</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1a07f94d74e9e563756d78605ac8093a9a">FinalScore</link>()&#32;{
+<anchor xml:id="_student_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(paz.empty())&#32;{
+<anchor xml:id="_student_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;galutinis&#32;=&#32;0.0;
+<anchor xml:id="_student_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_student_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(vm&#32;==&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>)&#32;{
+<anchor xml:id="_student_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;sum&#32;=&#32;0.0;
+<anchor xml:id="_student_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;pazymys&#32;:&#32;paz)&#32;sum&#32;+=&#32;pazymys;
+<anchor xml:id="_student_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;galutinis&#32;=&#32;0.4&#32;*&#32;(sum&#32;/&#32;paz.size())&#32;+&#32;0.6&#32;*&#32;egz;
+<anchor xml:id="_student_8h_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(vm&#32;==&#32;<emphasis role="charliteral">&apos;m&apos;</emphasis>)&#32;{
+<anchor xml:id="_student_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::sort(paz.begin(),&#32;paz.end());
+<anchor xml:id="_student_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;medianas&#32;=&#32;paz[paz.size()&#32;/&#32;2];
+<anchor xml:id="_student_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;galutinis&#32;=&#32;0.4&#32;*&#32;medianas&#32;+&#32;0.6&#32;*&#32;egz;
+<anchor xml:id="_student_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00133"/>00133 
+<anchor xml:id="_student_8h_source_1l00134"/><link linkend="_class_stud_1a2e343213dc95664555965f08648527c2">00134</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_stud_1a2e343213dc95664555965f08648527c2">print</link>()<emphasis role="keyword">&#32;const&#32;override&#32;</emphasis>{
+<anchor xml:id="_student_8h_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_student_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_student_8h_source_1l00137"/>00137 };
+</programlisting></section>

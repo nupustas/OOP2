@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>Studentų<sp/>galutinio<sp/>balo<sp/>skaičiavimo<sp/>programa</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Šis<sp/>projektas<sp/>yra<sp/>C++<sp/>programa,<sp/>kuri<sp/>apskaičiuoja<sp/>galutinį<sp/>studento<sp/>balą<sp/>pagal<sp/>jų<sp/>namų<sp/>darbų,<sp/>bei<sp/>egzamino<sp/>įvertinimus.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Projekto<sp/>paleidimas<sp/>naudojant<sp/>CMake</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>1.<sp/>Reikalingi<sp/>įrankiai</highlight></codeline>
+<codeline><highlight class="normal">Prieš<sp/>paleidžiant<sp/>projektą,<sp/>įsitikinkite,<sp/>kad<sp/>turite<sp/>šiuos<sp/>įrankius:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**CMake**:<sp/>[Atsisiųsti<sp/>CMake](https://cmake.org/download/)<sp/>(minimum<sp/>v3.10)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**C++<sp/>kompiliatorius**<sp/>(GCC,<sp/>CLANG,<sp/>MSVC)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>2.<sp/>Parsisiųskite<sp/>projektą,<sp/>jei<sp/>jo<sp/>dar<sp/>neturite</highlight></codeline>
+<codeline><highlight class="normal">#####<sp/>Projekto<sp/>klonavimas<sp/>iš<sp/>git:</highlight></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/nupustas/oop.vp</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Paklonave<sp/>projektą,<sp/>atidarykite<sp/>jo<sp/>aplanką.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#####<sp/>Projekto<sp/>kompiliavimas:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>--build<sp/>.<sp/>--config<sp/>Release</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">#####<sp/>Projekto<sp/>paleidimas:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>release</highlight></codeline>
+<codeline><highlight class="normal">OOP.exe</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Projekto<sp/>struktūra:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**`include/`**:<sp/>Aplankalas,<sp/>kuriame<sp/>laikomi<sp/>projekto<sp/>header<sp/>failai.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**`src/`**:<sp/>Pagrindinis<sp/>programos<sp/>kodas.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**`CMakeLists.txt`**:<sp/>CMake<sp/>instrukcijos<sp/>kompiliavimui.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**`ReadME.md`**:<sp/>Programos<sp/>instrukcija.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>V3.0</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Vector<sp/>klasės<sp/>funkcijų<sp/>pavyzdžiai</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>1.<sp/>```void<sp/>erase(size_t<sp/>index)```</highlight></codeline>
+<codeline><highlight class="normal">Ši<sp/>funkcija<sp/>pašalina<sp/>vieną<sp/>konteinerio<sp/>elementą,<sp/>kurio<sp/>index<sp/>yra<sp/>paduotas.</highlight></codeline>
+<codeline><highlight class="normal">######<sp/>Veikimas:</highlight></codeline>
+<codeline><highlight class="normal">Iš<sp/>pradžių<sp/>patikrinama<sp/>ar<sp/>paduotas<sp/>**index**<sp/>nėra<sp/>didesnis<sp/>nei<sp/>esamo<sp/>konteinerio<sp/>dydis,<sp/>jei<sp/>ne,<sp/>visi<sp/>elementai<sp/>esantys<sp/>dešinėje<sp/>index&apos;o<sp/>pastumiami<sp/>į<sp/>kairę<sp/>ir<sp/>pakeičiamas<sp/>konteinerio<sp/>dydis.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>2.<sp/>```V*<sp/>erase(V*<sp/>first,<sp/>V*<sp/>last)```</highlight></codeline>
+<codeline><highlight class="normal">Ši<sp/>funkcija,<sp/>pašalina<sp/>konteinerio<sp/>elementus<sp/>nuo<sp/>į<sp/>ja<sp/>paduotų<sp/>index:<sp/>nuo<sp/>**<sp/>V*<sp/>first<sp/>**<sp/>iki<sp/>**<sp/>V*<sp/>last<sp/>**<sp/></highlight></codeline>
+<codeline><highlight class="normal">######<sp/>Veikimas:</highlight></codeline>
+<codeline><highlight class="normal">Patikrinama<sp/>ar<sp/>first<sp/>nėra<sp/>mažesnis<sp/>už<sp/>masyvo<sp/>pradžią,<sp/>ar<sp/>last<sp/>nėra<sp/>didesnis<sp/>už<sp/>masyvo<sp/>pabaigą,<sp/>ir<sp/>ar<sp/>first<sp/>&lt;<sp/>last.<sp/>Tada<sp/>pointeriai<sp/>first<sp/>ir<sp/>last<sp/>paverčiami<sp/>į<sp/>index&apos;us,<sp/>ir<sp/>elementai<sp/>kurie<sp/>yra<sp/>už<sp/>&apos;last&apos;<sp/>yra<sp/>pastumiami<sp/>į<sp/>kairę.<sp/>Pakeičiamas<sp/>konteinerio<sp/>&apos;dydis&apos;<sp/>ir<sp/>grąžinamas<sp/>pirmo<sp/>elemento<sp/>po<sp/>ištrintų<sp/>iteratorius.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>3.<sp/>```V&amp;<sp/>operator[](size_t<sp/>index)```</highlight></codeline>
+<codeline><highlight class="normal">Operatorius<sp/>[],<sp/>leidžia<sp/>prieti<sp/>prie<sp/>norimo<sp/>elemento<sp/>konteineryje.<sp/>Norint<sp/>pasiekti<sp/>bet<sp/>kokį<sp/>elementą<sp/>konteineryje,<sp/>naudojamas<sp/>šis<sp/>operatorius<sp/>per<sp/>norimo<sp/>elemento<sp/>index&apos;ą.<sp/>```Pvz.:<sp/>Vector[i]```</highlight></codeline>
+<codeline><highlight class="normal">######<sp/>Veikimas:</highlight></codeline>
+<codeline><highlight class="normal">Patikrinama<sp/>ar<sp/>index<sp/>nėra<sp/>didesnis<sp/>už<sp/>konteinerio<sp/>dydį,<sp/>jei<sp/>ne<sp/>grąžinamas<sp/>duomenų<sp/>masyvo<sp/>elementas.<sp/>```return<sp/>duom[index];```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>4.<sp/>```bool<sp/>operator==(const<sp/>Vektor&lt;V&gt;&amp;<sp/>other)```</highlight></codeline>
+<codeline><highlight class="normal">Operatorius<sp/>==,<sp/>šis<sp/>leidžia<sp/>patikrinti<sp/>ar<sp/>du<sp/>konteineriai<sp/>yra<sp/>lygūs.</highlight></codeline>
+<codeline><highlight class="normal">######<sp/>Veikimas:</highlight></codeline>
+<codeline><highlight class="normal">Visų<sp/>pirmą<sp/>patikrinama<sp/>ar<sp/>konteinerių<sp/>dydis<sp/>lygus,<sp/>jei<sp/>ne<sp/>iškart<sp/>grąžinama<sp/>**false**<sp/>reikšmė.<sp/>Jei<sp/>konteinerių<sp/>dydis<sp/>toks<sp/>pat,<sp/>tuomet<sp/>tikrinama<sp/>ar<sp/>kiekvinas<sp/>konteinerių<sp/>elementas<sp/>lygus.<sp/>Jei<sp/>visi<sp/>elementai<sp/>lygūs,<sp/>grąžinama<sp/>**true**<sp/>reikšmė.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>5.<sp/>```void<sp/>pop_back()```</highlight></codeline>
+<codeline><highlight class="normal">Ši<sp/>funkcija<sp/>leidžia<sp/>pašalinti<sp/>konteinerio<sp/>paskutinį<sp/>elementą.</highlight></codeline>
+<codeline><highlight class="normal">######<sp/>Veikimas:</highlight></codeline>
+<codeline><highlight class="normal">Patikrinama<sp/>ar<sp/>konteineris<sp/>nėra<sp/>tusčias,<sp/>jei<sp/>ne,<sp/>tuomet<sp/>jo<sp/>dydis<sp/>yra<sp/>pamažinamas<sp/>vienu.<sp/></highlight></codeline>
+<codeline><highlight class="normal">```--dydis;```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Testavimas</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Šiose<sp/>lentelėse<sp/>pateikiami<sp/>skirtingų<sp/>C++<sp/>konteinerių<sp/>(vector,<sp/>list,<sp/>deque)<sp/>testavimo<sp/>rezultatai.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>🖥<sp/>Testavimo<sp/>sistemos<sp/>parametrai:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**`Procesorius:<sp/>Intel<sp/>Core<sp/>i5-10300H<sp/>`**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**`Operatyvioji<sp/>atmintis:<sp/>2×4GB<sp/>DDR4<sp/>3200MHz`**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**`Diskas:<sp/>512GB<sp/>NVMe<sp/>SSD`**</highlight></codeline>
+<codeline><highlight class="normal">----------------------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Originalus<sp/>Vector<sp/>vs<sp/>Vektor<sp/>klasė</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Užpildymas<sp/>naudojant<sp/>push_back()<sp/>funkciją**</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Dydis<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Vector<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Klasė<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">|-------------|----------<sp/><sp/><sp/><sp/>|----------<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>10000<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>0.00010<sp/>s<sp/><sp/><sp/>|<sp/><sp/>0.00006<sp/>s<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>100000<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>0.00101<sp/>s<sp/><sp/><sp/>|<sp/><sp/>0.00051<sp/>s<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1000000<sp/><sp/><sp/><sp/><sp/>|<sp/><sp/>0.00414<sp/>s<sp/><sp/><sp/>|<sp/><sp/>0.00477<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>10000000<sp/><sp/><sp/><sp/>|<sp/><sp/>0.04605<sp/>s<sp/><sp/><sp/>|<sp/><sp/>0.04761<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>100000000<sp/><sp/><sp/>|<sp/><sp/>0.50926<sp/>s<sp/><sp/><sp/>|<sp/><sp/>0.39100<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>1000000000<sp/><sp/>|<sp/><sp/>9.06876<sp/>s<sp/><sp/><sp/>|<sp/><sp/>6.91821<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>**Programos<sp/>spartos<sp/>analizė**</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Failas<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Vector<sp/><sp/><sp/><sp/><sp/>|<sp/>Klasė<sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">|-------------------|----------<sp/><sp/>|----------<sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Studentai10000<sp/><sp/><sp/><sp/>|<sp/><sp/>0.17188<sp/>s<sp/>|<sp/><sp/>0.13205<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Studentai100000<sp/><sp/><sp/>|<sp/><sp/>1.03871<sp/>s<sp/>|<sp/><sp/>1.09587<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Studentai1000000<sp/><sp/>|<sp/><sp/>9.88531<sp/>s<sp/>|<sp/><sp/>10.2013<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Studentai10000000<sp/>|<sp/><sp/>100.456<sp/>s<sp/>|<sp/><sp/>110.858<sp/>s<sp/>|<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Testų<sp/>analizė</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Užpildant<sp/>konteinerį<sp/>naudojant<sp/>push_back()<sp/>funkciją,<sp/>vektoriaus<sp/>klasė<sp/>yra<sp/>spartesnė</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Naudojant<sp/>programoje,<sp/>klasė<sp/>yra<sp/>šiek<sp/>tiek<sp/>pranašesnė<sp/>apdorojant<sp/>mažus<sp/>studentų<sp/>kiekius,<sp/>tačiau<sp/>kai<sp/>studentų<sp/>daug<sp/>originalus<sp/>vektorius<sp/>vistiek<sp/>veikia<sp/>sparčiau.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

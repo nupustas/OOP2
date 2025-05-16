@@ -24,10 +24,23 @@
 */
 var NAVTREE =
 [
-  [ "oop2", "index.html", [
+  [ "Studentų galutinio balo skaičiuoklė", "index.html", [
     [ "Studentų galutinio balo skaičiavimo programa", "md__r_e_a_d_m_e.html", [
       [ "Projekto paleidimas naudojant CMake", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Projekto struktūra:", "md__r_e_a_d_m_e.html#autotoc_md7", null ]
+      [ "Projekto struktūra:", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
+      [ "V3.0", "md__r_e_a_d_m_e.html#autotoc_md8", [
+        [ "Vector klasės funkcijų pavyzdžiai", "md__r_e_a_d_m_e.html#autotoc_md9", [
+          [ "void erase(size_t index)", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
+          [ "V* erase(V* first, V* last)", "md__r_e_a_d_m_e.html#autotoc_md12", null ],
+          [ "V& operator[](size_t index)", "md__r_e_a_d_m_e.html#autotoc_md14", null ],
+          [ "bool operator==(const Vektor<V>& other)", "md__r_e_a_d_m_e.html#autotoc_md16", null ],
+          [ "void pop_back()", "md__r_e_a_d_m_e.html#autotoc_md18", null ]
+        ] ]
+      ] ],
+      [ "Testavimas", "md__r_e_a_d_m_e.html#autotoc_md20", [
+        [ "🖥 Testavimo sistemos parametrai:", "md__r_e_a_d_m_e.html#autotoc_md22", null ]
+      ] ],
+      [ "Diskas: 512GB NVMe SSD", "md__r_e_a_d_m_e.html#autotoc_md23", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -37,6 +50,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Typedefs", "functions_type.html", null ],
         [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],

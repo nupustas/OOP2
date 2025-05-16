@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_manolib_8h" xml:lang="en-US">
+<title>include/manolib.h File Reference</title>
+<indexterm><primary>include/manolib.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;vector&gt;<?linebreak?>#include &lt;list&gt;<?linebreak?>#include &lt;deque&gt;<?linebreak?>#include &lt;iomanip&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;ctime&gt;<?linebreak?>#include &lt;algorithm&gt;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;chrono&gt;<?linebreak?>#include &lt;limits&gt;<?linebreak?>#include &lt;ios&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;type_traits&gt;<?linebreak?>#include &lt;exception&gt;<?linebreak?></programlisting><simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const string <link linkend="_manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218">MNames</link> [25]</para>
+</listitem>
+            <listitem><para>const string <link linkend="_manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4">MSurnames</link> [25]</para>
+</listitem>
+            <listitem><para>const string <link linkend="_manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c">FNames</link> [25]</para>
+</listitem>
+            <listitem><para>const string <link linkend="_manolib_8h_1a37c58b97b44c547d55c3443deb10132c">FSurnames</link> [25]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c"/><section>
+    <title>FNames</title>
+<indexterm><primary>FNames</primary><secondary>manolib.h</secondary></indexterm>
+<indexterm><primary>manolib.h</primary><secondary>FNames</secondary></indexterm>
+<para><computeroutput>const string FNames[25]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Egle&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Indre&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Lina&quot;</emphasis>,<emphasis role="stringliteral">&quot;Neringa&quot;</emphasis>,<emphasis role="stringliteral">&quot;Sigute&quot;</emphasis>,<emphasis role="stringliteral">&quot;Ugne&quot;</emphasis>,<emphasis role="stringliteral">&quot;Laura&quot;</emphasis>,<emphasis role="stringliteral">&quot;Viktorija&quot;</emphasis>,
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Rasa&quot;</emphasis>,<emphasis role="stringliteral">&quot;Gintare&quot;</emphasis>,<emphasis role="stringliteral">&quot;Agne&quot;</emphasis>,<emphasis role="stringliteral">&quot;Ieva&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Milda&quot;</emphasis>,<emphasis role="stringliteral">&quot;Margarita&quot;</emphasis>,<emphasis role="stringliteral">&quot;Aiste&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vilma&quot;</emphasis>,
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Ruta&quot;</emphasis>,<emphasis role="stringliteral">&quot;Aiste&quot;</emphasis>,<emphasis role="stringliteral">&quot;Gabija&quot;</emphasis>,<emphasis role="stringliteral">&quot;Jurate&quot;</emphasis>,<emphasis role="stringliteral">&quot;Jurgita&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaiva&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Ula&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Greta&quot;</emphasis>,
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Kotryna&quot;</emphasis>
+
+}
+</programlisting><para>
+Definition at line <link linkend="_manolib_8h_source_1l00057">57</link> of file <link linkend="_manolib_8h_source">manolib.h</link>.</para>
+</section>
+<anchor xml:id="_manolib_8h_1a37c58b97b44c547d55c3443deb10132c"/><section>
+    <title>FSurnames</title>
+<indexterm><primary>FSurnames</primary><secondary>manolib.h</secondary></indexterm>
+<indexterm><primary>manolib.h</primary><secondary>FSurnames</secondary></indexterm>
+<para><computeroutput>const string FSurnames[25]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+<emphasis role="stringliteral">&quot;Norkute&quot;</emphasis>,<emphasis role="stringliteral">&quot;Petronyte&quot;</emphasis>,<emphasis role="stringliteral">&quot;Seskinyte&quot;</emphasis>,<emphasis role="stringliteral">&quot;Pakalnaite&quot;</emphasis>,<emphasis role="stringliteral">&quot;Daugelaite&quot;</emphasis>,<emphasis role="stringliteral">&quot;Simonaityte&quot;</emphasis>,
+<emphasis role="stringliteral">&quot;Giedre&quot;</emphasis>,<emphasis role="stringliteral">&quot;Zukaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Norkute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kaminskaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Dapsyte&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kucinskaite&quot;</emphasis>,&#32;
+<emphasis role="stringliteral">&quot;Vaitkeviciute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vasiliauskaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Navickaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Urbonaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Grigoniene&quot;</emphasis>,
+&#32;<emphasis role="stringliteral">&quot;Rutkauskaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaitkute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Pakalnyte&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Norkute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Skripkaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Butkeviciute&quot;</emphasis>,
+<emphasis role="stringliteral">&quot;Mickeviciute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Brazaite&quot;</emphasis>
+}
+</programlisting><para>
+Definition at line <link linkend="_manolib_8h_source_1l00064">64</link> of file <link linkend="_manolib_8h_source">manolib.h</link>.</para>
+</section>
+<anchor xml:id="_manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218"/><section>
+    <title>MNames</title>
+<indexterm><primary>MNames</primary><secondary>manolib.h</secondary></indexterm>
+<indexterm><primary>manolib.h</primary><secondary>MNames</secondary></indexterm>
+<para><computeroutput>const string MNames[25]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Andrius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Dainius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jonas&quot;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;Marius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Orestas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Povilas&quot;</emphasis>,&#32;
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Aidas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Tomas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Vejas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Zygimantas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Vaidotas&quot;</emphasis>,
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Linas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kestutis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaidotas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Martynas&quot;</emphasis>,&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Gintaras&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Tomas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Antanas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Paulius&quot;</emphasis>,&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Jonas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Mantas&quot;</emphasis>,&#32;
+&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Mindaugas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Rokas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Lukas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kazimieras&quot;</emphasis>
+}
+</programlisting><para>
+Definition at line <link linkend="_manolib_8h_source_1l00044">44</link> of file <link linkend="_manolib_8h_source">manolib.h</link>.</para>
+</section>
+<anchor xml:id="_manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4"/><section>
+    <title>MSurnames</title>
+<indexterm><primary>MSurnames</primary><secondary>manolib.h</secondary></indexterm>
+<indexterm><primary>manolib.h</primary><secondary>MSurnames</secondary></indexterm>
+<para><computeroutput>const string MSurnames[25]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Petrauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jankauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kazlauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Zukauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kavaliauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Stankevicius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Bieliauskas&quot;</emphasis>,&#32;
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Budvytis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Giedraitis&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Rimkus&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Valiukas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Juknevicius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaitkevicius&quot;</emphasis>,&#32;
+&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Vasiliauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Navickas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Urbonas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Grigonis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Rutkauskas&quot;</emphasis>,&#32;&#32;
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Vaitkus&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Pakalnis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Norkus&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Skripka&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Butkevicius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Nedzinskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Mickevicius&quot;</emphasis>,&#32;&#32;
+}
+</programlisting><para>
+Definition at line <link linkend="_manolib_8h_source_1l00051">51</link> of file <link linkend="_manolib_8h_source">manolib.h</link>.</para>
+</section>
+</section>
+</section>

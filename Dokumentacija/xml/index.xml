@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="class_stud" kind="class"><name>Stud</name>
+    <member refid="class_stud_1ad2c3e28e56dddd477c73b7f4024d2e62" kind="variable"><name>paz</name></member>
+    <member refid="class_stud_1a888ec71dda6c6b3f9390d2141dc7ef17" kind="variable"><name>egz</name></member>
+    <member refid="class_stud_1a52d0e1c089bbcba44db3b32c74421f24" kind="variable"><name>vm</name></member>
+    <member refid="class_stud_1ad7a4cc0da0bd429aadefce0da69330cf" kind="variable"><name>galutinis</name></member>
+    <member refid="class_stud_1a97585839898d45dc9fc815d5b36e2b69" kind="function"><name>Stud</name></member>
+    <member refid="class_stud_1a6e16964de60326f7a598a0b47903f574" kind="function"><name>Stud</name></member>
+    <member refid="class_stud_1aa1c38d670d1f269ebd48588c40ad58db" kind="function"><name>~Stud</name></member>
+    <member refid="class_stud_1ad473232271f7e160f811c6ae206d326c" kind="function"><name>Stud</name></member>
+    <member refid="class_stud_1a311ba01abe5e734694bd281a9653226f" kind="function"><name>operator=</name></member>
+    <member refid="class_stud_1ac62c75899e911e4f1d55e1047564225c" kind="function"><name>Stud</name></member>
+    <member refid="class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a" kind="function"><name>operator=</name></member>
+    <member refid="class_stud_1a4d3c5d9554efdc1f68d66958375e71e0" kind="function"><name>setEgz</name></member>
+    <member refid="class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12" kind="function"><name>setVm</name></member>
+    <member refid="class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5" kind="function"><name>setGalutinis</name></member>
+    <member refid="class_stud_1acbfb081c993f6482c59cb57d449c4c5e" kind="function"><name>addPaz</name></member>
+    <member refid="class_stud_1a25998973a74b359a72a95d49beae0c08" kind="function"><name>getEgz</name></member>
+    <member refid="class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6" kind="function"><name>getVm</name></member>
+    <member refid="class_stud_1a45c7d38ccc4203365b448101344ba4e2" kind="function"><name>getGalutinis</name></member>
+    <member refid="class_stud_1aa6575230afb3ea980563b2cb039bd4c9" kind="function"><name>getPaz</name></member>
+    <member refid="class_stud_1ac8b2e8ca576f42a8446fac6d745947aa" kind="function"><name>removeLastPaz</name></member>
+    <member refid="class_stud_1a07f94d74e9e563756d78605ac8093a9a" kind="function"><name>FinalScore</name></member>
+    <member refid="class_stud_1a2e343213dc95664555965f08648527c2" kind="function"><name>print</name></member>
+    <member refid="class_stud_1ab0ae2d598da52d7298daa3083d28b576" kind="friend"><name>operator&gt;&gt;</name></member>
+    <member refid="class_stud_1a9072c21de23b6a0596457f5a87a24780" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="class_vektor" kind="class"><name>Vektor</name>
+    <member refid="class_vektor_1a8d759015bcf357f66a44a3fb07767cc7" kind="typedef"><name>value_type</name></member>
+    <member refid="class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422" kind="typedef"><name>reference</name></member>
+    <member refid="class_vektor_1ad454706115806fe05ec64b01240b3d23" kind="typedef"><name>const_reference</name></member>
+    <member refid="class_vektor_1a2c33bbc07b22977de729ab7bef761124" kind="typedef"><name>iterator</name></member>
+    <member refid="class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df" kind="typedef"><name>const_iterator</name></member>
+    <member refid="class_vektor_1aa973b8be4fcff1b278587f73851e6412" kind="typedef"><name>size_type</name></member>
+    <member refid="class_vektor_1a0cbaea569c2feee1ebcb5623bf96d823" kind="variable"><name>duom</name></member>
+    <member refid="class_vektor_1a02a2c5c7255ae27f9edf6098cb46fe8b" kind="variable"><name>dydis</name></member>
+    <member refid="class_vektor_1aece4b3dbbe7dc377d36c0b55315cb253" kind="variable"><name>talpa</name></member>
+    <member refid="class_vektor_1aee6c3f475bae547a786fa3aa528c29f9" kind="function"><name>resize</name></member>
+    <member refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kind="function"><name>Vektor</name></member>
+    <member refid="class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91" kind="function"><name>Vektor</name></member>
+    <member refid="class_vektor_1a67b8f571c724876f2c973b983c3c7a69" kind="function"><name>Vektor</name></member>
+    <member refid="class_vektor_1af8393162c7248fad4ae83acb11fa2ee2" kind="function"><name>~Vektor</name></member>
+    <member refid="class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0" kind="function"><name>size</name></member>
+    <member refid="class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7" kind="function"><name>max_size</name></member>
+    <member refid="class_vektor_1a776eab835626a981955ec020cef5001c" kind="function"><name>capacity</name></member>
+    <member refid="class_vektor_1a68f21ad21b36b39f8e398c7efdb70085" kind="function"><name>empty</name></member>
+    <member refid="class_vektor_1ae2eaebca369760c7e0757965e111464a" kind="function"><name>reserve</name></member>
+    <member refid="class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1" kind="function"><name>erase</name></member>
+    <member refid="class_vektor_1a3723a74869b85d1e3db007abab6d669f" kind="function"><name>erase</name></member>
+    <member refid="class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486" kind="function"><name>swap</name></member>
+    <member refid="class_vektor_1aeb4dcc6a639c7622777995808c3262a8" kind="function"><name>shrink_to_fit</name></member>
+    <member refid="class_vektor_1a9aa67f181dc9c7a210c46d11df876539" kind="function"><name>push_back</name></member>
+    <member refid="class_vektor_1acdd650cea26a2d95119a5710fda9b5d8" kind="function"><name>pop_back</name></member>
+    <member refid="class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4" kind="function"><name>begin</name></member>
+    <member refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" kind="function"><name>end</name></member>
+    <member refid="class_vektor_1a16c88c1da1b91a25f954aa59cbed811f" kind="function"><name>front</name></member>
+    <member refid="class_vektor_1a75342fa6b213f629e153e5084225d065" kind="function"><name>back</name></member>
+    <member refid="class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a" kind="function"><name>clear</name></member>
+    <member refid="class_vektor_1ac928e3c873e1e28659e0769dff4a5f11" kind="function"><name>operator[]</name></member>
+    <member refid="class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb" kind="function"><name>Vektor</name></member>
+    <member refid="class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf" kind="function"><name>operator=</name></member>
+    <member refid="class_vektor_1a28bf10b82fb39256290f3fb322441d55" kind="function"><name>Vektor</name></member>
+    <member refid="class_vektor_1a4669f56e978065a8cc8046df4dd0d21b" kind="function"><name>operator=</name></member>
+    <member refid="class_vektor_1a67d3505b8ac1268e5740feffa000380b" kind="function"><name>operator==</name></member>
+  </compound>
+  <compound refid="class_zmogus" kind="class"><name>Zmogus</name>
+    <member refid="class_zmogus_1ad752feab373733e70e2101724e8d1d9d" kind="variable"><name>Vardas</name></member>
+    <member refid="class_zmogus_1a2300d6db4227967c96dd83a555fa7b86" kind="variable"><name>Pavarde</name></member>
+    <member refid="class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574" kind="function"><name>Zmogus</name></member>
+    <member refid="class_zmogus_1a6ca61a3bcea221478551dd04419d2433" kind="function"><name>Zmogus</name></member>
+    <member refid="class_zmogus_1a6183937c7da8254430a6c99cfa89fe69" kind="function"><name>~Zmogus</name></member>
+    <member refid="class_zmogus_1aaea44664c236e2fadf022f3821862499" kind="function"><name>getVardas</name></member>
+    <member refid="class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63" kind="function"><name>getPavarde</name></member>
+    <member refid="class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b" kind="function"><name>setVardas</name></member>
+    <member refid="class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2" kind="function"><name>setPavarde</name></member>
+    <member refid="class_zmogus_1aa52869cc6a869223fedcb9f7676534fc" kind="function"><name>print</name></member>
+  </compound>
+  <compound refid="functions_8h" kind="file"><name>functions.h</name>
+    <member refid="functions_8h_1a5995a575e504d5fa072267b51ab96704" kind="function"><name>TestStud</name></member>
+    <member refid="functions_8h_1aafc88307915ae13fe05939c131f8b6bc" kind="function"><name>GenerateEverything</name></member>
+    <member refid="functions_8h_1a9c06d4f93ec8894d08362db40e310362" kind="function"><name>GenerateScores</name></member>
+    <member refid="functions_8h_1a25802cd098c0d98a92595d549bc40fec" kind="function"><name>ManualInput</name></member>
+    <member refid="functions_8h_1ac1be372811ceda50183db8795ddaf219" kind="function"><name>ReadFile</name></member>
+    <member refid="functions_8h_1a9a8228525c154b5f1eceb473572afe08" kind="function"><name>Sorting</name></member>
+    <member refid="functions_8h_1ab29d065e680921bf8f5dff9d3fad63a8" kind="function"><name>OutputToTerminal</name></member>
+    <member refid="functions_8h_1afeeefbd9055158b13997f50d7b851b95" kind="function"><name>OutputToFile</name></member>
+    <member refid="functions_8h_1a0d5828f70790f70e2a562f3faa1cd0e0" kind="function"><name>GenerateFile</name></member>
+    <member refid="functions_8h_1a9bf76230fb2862461fb6032819fdb096" kind="function"><name>SpeedTesting</name></member>
+    <member refid="functions_8h_1a9a0110ef3a6607021645e91e87b150ce" kind="function"><name>SplitFile</name></member>
+    <member refid="functions_8h_1a3a1d305f378b3efa8cf1e99379ac50d3" kind="function"><name>FinalScore</name></member>
+  </compound>
+  <compound refid="human_8h" kind="file"><name>human.h</name>
+  </compound>
+  <compound refid="manolib_8h" kind="file"><name>manolib.h</name>
+    <member refid="manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218" kind="variable"><name>MNames</name></member>
+    <member refid="manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4" kind="variable"><name>MSurnames</name></member>
+    <member refid="manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c" kind="variable"><name>FNames</name></member>
+    <member refid="manolib_8h_1a37c58b97b44c547d55c3443deb10132c" kind="variable"><name>FSurnames</name></member>
+  </compound>
+  <compound refid="student_8h" kind="file"><name>student.h</name>
+  </compound>
+  <compound refid="vector_8h" kind="file"><name>vector.h</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3" kind="typedef"><name>Container</name></member>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="tests_8cpp" kind="file"><name>tests.cpp</name>
+    <member refid="tests_8cpp_1a656eb5868e824d59f489f910db438420" kind="define"><name>CATCH_CONFIG_MAIN</name></member>
+    <member refid="tests_8cpp_1aecce09c376d8f167628ba794c11455c3" kind="function"><name>TEST_CASE</name></member>
+    <member refid="tests_8cpp_1aab1e5ab76078e26f729c144be96ddf12" kind="function"><name>TEST_CASE</name></member>
+    <member refid="tests_8cpp_1ab3bc665735702c0bd2f80f1656468587" kind="function"><name>TEST_CASE</name></member>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

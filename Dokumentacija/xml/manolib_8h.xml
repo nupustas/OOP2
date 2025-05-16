@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="manolib_8h" kind="file" language="C++">
+    <compoundname>manolib.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">list</includes>
+    <includes local="no">deque</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">ios</includes>
+    <includes local="no">string</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">exception</includes>
+    <includedby refid="functions_8h" local="yes">include/functions.h</includedby>
+    <includedby refid="human_8h" local="yes">include/human.h</includedby>
+    <includedby refid="student_8h" local="yes">include/student.h</includedby>
+    <includedby refid="vector_8h" local="yes">include/vector.h</includedby>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="tests_8cpp" local="yes">src/tests.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>include/manolib.h</label>
+        <link refid="manolib_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>algorithm</label>
+      </node>
+      <node id="11">
+        <label>chrono</label>
+      </node>
+      <node id="7">
+        <label>ctime</label>
+      </node>
+      <node id="4">
+        <label>deque</label>
+      </node>
+      <node id="16">
+        <label>exception</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="5">
+        <label>iomanip</label>
+      </node>
+      <node id="13">
+        <label>ios</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="14">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>type_traits</label>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/functions.h</label>
+        <link refid="functions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/human.h</label>
+        <link refid="human_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/manolib.h</label>
+        <link refid="manolib_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>include/student.h</label>
+        <link refid="student_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>include/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/tests.cpp</label>
+        <link refid="tests_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MNames[25]</definition>
+        <argsstring>[25]</argsstring>
+        <name>MNames</name>
+        <initializer>= {
+    &quot;Andrius&quot;, &quot;Dainius&quot;, &quot;Jonas&quot; , &quot;Marius&quot;, &quot;Orestas&quot;, &quot;Povilas&quot;, 
+    &quot;Aidas&quot;,  &quot;Tomas&quot;,  &quot;Vejas&quot;, &quot;Zygimantas&quot;,  &quot;Vaidotas&quot;,
+    &quot;Linas&quot;, &quot;Kestutis&quot;, &quot;Vaidotas&quot;, &quot;Martynas&quot;,   &quot;Gintaras&quot;,
+     &quot;Tomas&quot;, &quot;Antanas&quot;, &quot;Paulius&quot;,   &quot;Jonas&quot;,  &quot;Mantas&quot;, 
+     &quot;Mindaugas&quot;, &quot;Rokas&quot;, &quot;Lukas&quot;, &quot;Kazimieras&quot;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/manolib.h" line="44" column="14" bodyfile="include/manolib.h" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="variable" id="manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string MSurnames[25]</definition>
+        <argsstring>[25]</argsstring>
+        <name>MSurnames</name>
+        <initializer>= {
+    &quot;Petrauskas&quot;, &quot;Jankauskas&quot;, &quot;Kazlauskas&quot;, &quot;Zukauskas&quot;, &quot;Kavaliauskas&quot;, &quot;Stankevicius&quot;, &quot;Bieliauskas&quot;, 
+    &quot;Budvytis&quot;, &quot;Giedraitis&quot;,  &quot;Rimkus&quot;,  &quot;Valiukas&quot;, &quot;Juknevicius&quot;, &quot;Vaitkevicius&quot;, 
+     &quot;Vasiliauskas&quot;, &quot;Navickas&quot;,  &quot;Urbonas&quot;, &quot;Grigonis&quot;, &quot;Rutkauskas&quot;,  
+    &quot;Vaitkus&quot;, &quot;Pakalnis&quot;, &quot;Norkus&quot;, &quot;Skripka&quot;, &quot;Butkevicius&quot;, &quot;Nedzinskas&quot;, &quot;Mickevicius&quot;,  
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/manolib.h" line="51" column="14" bodyfile="include/manolib.h" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="variable" id="manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string FNames[25]</definition>
+        <argsstring>[25]</argsstring>
+        <name>FNames</name>
+        <initializer>= {
+    &quot;Egle&quot;, &quot;Indre&quot;, &quot;Lina&quot;,&quot;Neringa&quot;,&quot;Sigute&quot;,&quot;Ugne&quot;,&quot;Laura&quot;,&quot;Viktorija&quot;,
+    &quot;Rasa&quot;,&quot;Gintare&quot;,&quot;Agne&quot;,&quot;Ieva&quot;, &quot;Milda&quot;,&quot;Margarita&quot;,&quot;Aiste&quot;, &quot;Vilma&quot;,
+    &quot;Ruta&quot;,&quot;Aiste&quot;,&quot;Gabija&quot;,&quot;Jurate&quot;,&quot;Jurgita&quot;, &quot;Vaiva&quot;, &quot;Ula&quot;, &quot;Greta&quot;,
+    &quot;Kotryna&quot;
+
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/manolib.h" line="57" column="14" bodyfile="include/manolib.h" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="variable" id="manolib_8h_1a37c58b97b44c547d55c3443deb10132c" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string FSurnames[25]</definition>
+        <argsstring>[25]</argsstring>
+        <name>FSurnames</name>
+        <initializer>= {
+&quot;Norkute&quot;,&quot;Petronyte&quot;,&quot;Seskinyte&quot;,&quot;Pakalnaite&quot;,&quot;Daugelaite&quot;,&quot;Simonaityte&quot;,
+&quot;Giedre&quot;,&quot;Zukaite&quot;, &quot;Norkute&quot;, &quot;Kaminskaite&quot;, &quot;Dapsyte&quot;, &quot;Kucinskaite&quot;, 
+&quot;Vaitkeviciute&quot;, &quot;Vasiliauskaite&quot;, &quot;Navickaite&quot;, &quot;Urbonaite&quot;, &quot;Grigoniene&quot;,
+ &quot;Rutkauskaite&quot;, &quot;Vaitkute&quot;, &quot;Pakalnyte&quot;, &quot;Norkute&quot;, &quot;Skripkaite&quot;, &quot;Butkeviciute&quot;,
+&quot;Mickeviciute&quot;, &quot;Brazaite&quot;
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/manolib.h" line="64" column="14" bodyfile="include/manolib.h" bodystart="64" bodyend="70"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MANOLIB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MANOLIB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;deque&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;iomanip&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;ios&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include&lt;exception&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::cout;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::cin;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::endl;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::vector;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::string;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::setw;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::sort;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::left;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::fixed;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::setprecision;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::getline;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::ifstream;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::ofstream;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::istringstream;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::list;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::deque;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::cerr;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::vector;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::string;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::setw;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::is_same_v;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218" kindref="member">MNames</ref>[25]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Andrius&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Dainius&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Jonas&quot;</highlight><highlight class="normal"><sp/>,<sp/></highlight><highlight class="stringliteral">&quot;Marius&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Orestas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Povilas&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Aidas&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Tomas&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Vejas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Zygimantas&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Vaidotas&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Linas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kestutis&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vaidotas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Martynas&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Gintaras&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Tomas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Antanas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Paulius&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Jonas&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Mantas&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Mindaugas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Rokas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lukas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kazimieras&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51" refid="manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4" kindref="member">MSurnames</ref>[25]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Petrauskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Jankauskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kazlauskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Zukauskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kavaliauskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Stankevicius&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Bieliauskas&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Budvytis&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Giedraitis&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Rimkus&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Valiukas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Juknevicius&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vaitkevicius&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Vasiliauskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Navickas&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="stringliteral">&quot;Urbonas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Grigonis&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Rutkauskas&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Vaitkus&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Pakalnis&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Norkus&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Skripka&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Butkevicius&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Nedzinskas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Mickevicius&quot;</highlight><highlight class="normal">,<sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57" refid="manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c" kindref="member">FNames</ref>[25]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Egle&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Indre&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Lina&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Neringa&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Sigute&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Ugne&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Laura&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Viktorija&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Rasa&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Gintare&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Agne&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Ieva&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Milda&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Margarita&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Aiste&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vilma&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Ruta&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Aiste&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Gabija&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Jurate&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Jurgita&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vaiva&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Ula&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Greta&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Kotryna&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64" refid="manolib_8h_1a37c58b97b44c547d55c3443deb10132c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="manolib_8h_1a37c58b97b44c547d55c3443deb10132c" kindref="member">FSurnames</ref>[25]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;Norkute&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Petronyte&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Seskinyte&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Pakalnaite&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Daugelaite&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Simonaityte&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;Giedre&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Zukaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Norkute&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kaminskaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Dapsyte&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Kucinskaite&quot;</highlight><highlight class="normal">,<sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;Vaitkeviciute&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vasiliauskaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Navickaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Urbonaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Grigoniene&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;Rutkauskaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Vaitkute&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Pakalnyte&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Norkute&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Skripkaite&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Butkeviciute&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;Mickeviciute&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Brazaite&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/manolib.h"/>
+  </compounddef>
+</doxygen>

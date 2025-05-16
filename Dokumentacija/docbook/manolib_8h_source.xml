@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_manolib_8h_source" xml:lang="en-US">
+<title>manolib.h</title>
+<indexterm><primary>include/manolib.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_manolib_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;MANOLIB_H</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;MANOLIB_H</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00003"/>00003 
+<anchor xml:id="_manolib_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&lt;vector&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&lt;list&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&lt;deque&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&lt;iomanip&gt;</emphasis>&#32;
+<anchor xml:id="_manolib_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#include&lt;iostream&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&lt;ctime&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#include&lt;algorithm&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#include&lt;fstream&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&lt;sstream&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&lt;chrono&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&lt;limits&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&lt;ios&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&lt;string&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&lt;type_traits&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&lt;exception&gt;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00019"/>00019 
+<anchor xml:id="_manolib_8h_source_1l00020"/>00020 
+<anchor xml:id="_manolib_8h_source_1l00021"/>00021 <emphasis role="keyword">using&#32;</emphasis>std::cout;
+<anchor xml:id="_manolib_8h_source_1l00022"/>00022 <emphasis role="keyword">using&#32;</emphasis>std::cin;
+<anchor xml:id="_manolib_8h_source_1l00023"/>00023 <emphasis role="keyword">using&#32;</emphasis>std::endl;
+<anchor xml:id="_manolib_8h_source_1l00024"/>00024 <emphasis role="keyword">using&#32;</emphasis>std::vector;
+<anchor xml:id="_manolib_8h_source_1l00025"/>00025 <emphasis role="keyword">using&#32;</emphasis>std::string;
+<anchor xml:id="_manolib_8h_source_1l00026"/>00026 <emphasis role="keyword">using&#32;</emphasis>std::setw;
+<anchor xml:id="_manolib_8h_source_1l00027"/>00027 <emphasis role="keyword">using&#32;</emphasis>std::sort;
+<anchor xml:id="_manolib_8h_source_1l00028"/>00028 <emphasis role="keyword">using&#32;</emphasis>std::left;
+<anchor xml:id="_manolib_8h_source_1l00029"/>00029 <emphasis role="keyword">using&#32;</emphasis>std::fixed;
+<anchor xml:id="_manolib_8h_source_1l00030"/>00030 <emphasis role="keyword">using&#32;</emphasis>std::setprecision;
+<anchor xml:id="_manolib_8h_source_1l00031"/>00031 <emphasis role="keyword">using&#32;</emphasis>std::getline;
+<anchor xml:id="_manolib_8h_source_1l00032"/>00032 <emphasis role="keyword">using&#32;</emphasis>std::ifstream;
+<anchor xml:id="_manolib_8h_source_1l00033"/>00033 <emphasis role="keyword">using&#32;</emphasis>std::ofstream;
+<anchor xml:id="_manolib_8h_source_1l00034"/>00034 <emphasis role="keyword">using&#32;</emphasis>std::istringstream;
+<anchor xml:id="_manolib_8h_source_1l00035"/>00035 <emphasis role="keyword">using&#32;</emphasis>std::list;
+<anchor xml:id="_manolib_8h_source_1l00036"/>00036 <emphasis role="keyword">using&#32;</emphasis>std::deque;
+<anchor xml:id="_manolib_8h_source_1l00037"/>00037 <emphasis role="keyword">using&#32;</emphasis>std::cerr;
+<anchor xml:id="_manolib_8h_source_1l00038"/>00038 <emphasis role="keyword">using&#32;</emphasis>std::vector;
+<anchor xml:id="_manolib_8h_source_1l00039"/>00039 <emphasis role="keyword">using&#32;</emphasis>std::string;
+<anchor xml:id="_manolib_8h_source_1l00040"/>00040 <emphasis role="keyword">using&#32;</emphasis>std::setw;
+<anchor xml:id="_manolib_8h_source_1l00041"/>00041 <emphasis role="keyword">using&#32;</emphasis>std::is_same_v;
+<anchor xml:id="_manolib_8h_source_1l00042"/>00042 
+<anchor xml:id="_manolib_8h_source_1l00043"/>00043 
+<anchor xml:id="_manolib_8h_source_1l00044"/><link linkend="_manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218">00044</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218">MNames</link>[25]&#32;=&#32;{
+<anchor xml:id="_manolib_8h_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Andrius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Dainius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jonas&quot;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;Marius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Orestas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Povilas&quot;</emphasis>,&#32;
+<anchor xml:id="_manolib_8h_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Aidas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Tomas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Vejas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Zygimantas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Vaidotas&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Linas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kestutis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaidotas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Martynas&quot;</emphasis>,&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Gintaras&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Tomas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Antanas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Paulius&quot;</emphasis>,&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Jonas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Mantas&quot;</emphasis>,&#32;
+<anchor xml:id="_manolib_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Mindaugas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Rokas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Lukas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kazimieras&quot;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00050"/>00050 };
+<anchor xml:id="_manolib_8h_source_1l00051"/><link linkend="_manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4">00051</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4">MSurnames</link>[25]&#32;=&#32;{
+<anchor xml:id="_manolib_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Petrauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jankauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kazlauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Zukauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kavaliauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Stankevicius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Bieliauskas&quot;</emphasis>,&#32;
+<anchor xml:id="_manolib_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Budvytis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Giedraitis&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Rimkus&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Valiukas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Juknevicius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaitkevicius&quot;</emphasis>,&#32;
+<anchor xml:id="_manolib_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Vasiliauskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Navickas&quot;</emphasis>,&#32;&#32;<emphasis role="stringliteral">&quot;Urbonas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Grigonis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Rutkauskas&quot;</emphasis>,&#32;&#32;
+<anchor xml:id="_manolib_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Vaitkus&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Pakalnis&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Norkus&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Skripka&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Butkevicius&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Nedzinskas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Mickevicius&quot;</emphasis>,&#32;&#32;
+<anchor xml:id="_manolib_8h_source_1l00056"/>00056 };
+<anchor xml:id="_manolib_8h_source_1l00057"/><link linkend="_manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c">00057</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c">FNames</link>[25]&#32;=&#32;{
+<anchor xml:id="_manolib_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Egle&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Indre&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Lina&quot;</emphasis>,<emphasis role="stringliteral">&quot;Neringa&quot;</emphasis>,<emphasis role="stringliteral">&quot;Sigute&quot;</emphasis>,<emphasis role="stringliteral">&quot;Ugne&quot;</emphasis>,<emphasis role="stringliteral">&quot;Laura&quot;</emphasis>,<emphasis role="stringliteral">&quot;Viktorija&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Rasa&quot;</emphasis>,<emphasis role="stringliteral">&quot;Gintare&quot;</emphasis>,<emphasis role="stringliteral">&quot;Agne&quot;</emphasis>,<emphasis role="stringliteral">&quot;Ieva&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Milda&quot;</emphasis>,<emphasis role="stringliteral">&quot;Margarita&quot;</emphasis>,<emphasis role="stringliteral">&quot;Aiste&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vilma&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Ruta&quot;</emphasis>,<emphasis role="stringliteral">&quot;Aiste&quot;</emphasis>,<emphasis role="stringliteral">&quot;Gabija&quot;</emphasis>,<emphasis role="stringliteral">&quot;Jurate&quot;</emphasis>,<emphasis role="stringliteral">&quot;Jurgita&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaiva&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Ula&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Greta&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Kotryna&quot;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00062"/>00062 
+<anchor xml:id="_manolib_8h_source_1l00063"/>00063 };
+<anchor xml:id="_manolib_8h_source_1l00064"/><link linkend="_manolib_8h_1a37c58b97b44c547d55c3443deb10132c">00064</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_manolib_8h_1a37c58b97b44c547d55c3443deb10132c">FSurnames</link>[25]&#32;=&#32;{
+<anchor xml:id="_manolib_8h_source_1l00065"/>00065 <emphasis role="stringliteral">&quot;Norkute&quot;</emphasis>,<emphasis role="stringliteral">&quot;Petronyte&quot;</emphasis>,<emphasis role="stringliteral">&quot;Seskinyte&quot;</emphasis>,<emphasis role="stringliteral">&quot;Pakalnaite&quot;</emphasis>,<emphasis role="stringliteral">&quot;Daugelaite&quot;</emphasis>,<emphasis role="stringliteral">&quot;Simonaityte&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00066"/>00066 <emphasis role="stringliteral">&quot;Giedre&quot;</emphasis>,<emphasis role="stringliteral">&quot;Zukaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Norkute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kaminskaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Dapsyte&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Kucinskaite&quot;</emphasis>,&#32;
+<anchor xml:id="_manolib_8h_source_1l00067"/>00067 <emphasis role="stringliteral">&quot;Vaitkeviciute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vasiliauskaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Navickaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Urbonaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Grigoniene&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00068"/>00068 &#32;<emphasis role="stringliteral">&quot;Rutkauskaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Vaitkute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Pakalnyte&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Norkute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Skripkaite&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Butkeviciute&quot;</emphasis>,
+<anchor xml:id="_manolib_8h_source_1l00069"/>00069 <emphasis role="stringliteral">&quot;Mickeviciute&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Brazaite&quot;</emphasis>
+<anchor xml:id="_manolib_8h_source_1l00070"/>00070 };
+<anchor xml:id="_manolib_8h_source_1l00071"/>00071 
+<anchor xml:id="_manolib_8h_source_1l00072"/>00072 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

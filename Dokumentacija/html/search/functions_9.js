@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['zmogus_0',['Zmogus',['../class_zmogus.html#aa7a8ba4d3c4778f9b35d59eef3e72574',1,'Zmogus::Zmogus()'],['../class_zmogus.html#a6ca61a3bcea221478551dd04419d2433',1,'Zmogus::Zmogus(const string &amp;v, const string &amp;p)']]]
+  ['readfile_0',['ReadFile',['../functions_8h.html#ac1be372811ceda50183db8795ddaf219',1,'functions.h']]],
+  ['removelastpaz_1',['removeLastPaz',['../class_stud.html#ac8b2e8ca576f42a8446fac6d745947aa',1,'Stud']]],
+  ['reserve_2',['reserve',['../class_vektor.html#ae2eaebca369760c7e0757965e111464a',1,'Vektor']]]
 ];

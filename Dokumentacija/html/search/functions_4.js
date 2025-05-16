@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../class_stud.html#a311ba01abe5e734694bd281a9653226f',1,'Stud::operator=(const Stud &amp;other)'],['../class_stud.html#afd1e9be92f8d351aa99b4c09a332ea3a',1,'Stud::operator=(Stud &amp;&amp;other)']]],
-  ['outputtofile_1',['OutputToFile',['../functions_8h.html#afeeefbd9055158b13997f50d7b851b95',1,'functions.h']]],
-  ['outputtoterminal_2',['OutputToTerminal',['../functions_8h.html#ab29d065e680921bf8f5dff9d3fad63a8',1,'functions.h']]]
+  ['finalscore_0',['FinalScore',['../class_stud.html#a07f94d74e9e563756d78605ac8093a9a',1,'Stud::FinalScore()'],['../functions_8h.html#a3a1d305f378b3efa8cf1e99379ac50d3',1,'FinalScore():&#160;functions.h']]],
+  ['front_1',['front',['../class_vektor.html#a16c88c1da1b91a25f954aa59cbed811f',1,'Vektor']]]
 ];

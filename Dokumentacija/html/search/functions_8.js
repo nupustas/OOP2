@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['test_5fcase_0',['TEST_CASE',['../tests_8cpp.html#aecce09c376d8f167628ba794c11455c3',1,'TEST_CASE(&quot;Studentu klases penkiu pirstu taisykles testas&quot;):&#160;tests.cpp'],['../tests_8cpp.html#aab1e5ab76078e26f729c144be96ddf12',1,'TEST_CASE(&quot;Kitu programos funkciju testai&quot;):&#160;tests.cpp']]],
-  ['teststud_1',['TestStud',['../functions_8h.html#a5995a575e504d5fa072267b51ab96704',1,'functions.h']]]
+  ['pop_5fback_0',['pop_back',['../class_vektor.html#acdd650cea26a2d95119a5710fda9b5d8',1,'Vektor']]],
+  ['print_1',['print',['../class_zmogus.html#aa52869cc6a869223fedcb9f7676534fc',1,'Zmogus::print()'],['../class_stud.html#a2e343213dc95664555965f08648527c2',1,'Stud::print()']]],
+  ['push_5fback_2',['push_back',['../class_vektor.html#a9aa67f181dc9c7a210c46d11df876539',1,'Vektor']]]
 ];

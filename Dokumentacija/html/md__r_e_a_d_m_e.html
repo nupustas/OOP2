@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>oop2: Studentų galutinio balo skaičiavimo programa</title>
+<title>Studentų galutinio balo skaičiuoklė: Studentų galutinio balo skaičiavimo programa</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">oop2
+   <div id="projectname">Studentų galutinio balo skaičiuoklė
    </div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
@@ -138,7 +138,94 @@ Projekto struktūra:</h1>
 <li><b><code>include/</code></b>: Aplankalas, kuriame laikomi projekto header failai.</li>
 <li><b><code>src/</code></b>: Pagrindinis programos kodas.</li>
 <li><b><code>CMakeLists.txt</code></b>: CMake instrukcijos kompiliavimui.</li>
-<li><b><code><a class="el" href="_r_e_a_d_m_e_8md.html">ReadME.md</a></code></b>: Programos instrukcija. </li>
+<li><b><code><a class="el" href="_r_e_a_d_m_e_8md.html">ReadME.md</a></code></b>: Programos instrukcija.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md8"></a>
+V3.0</h1>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Vector klasės funkcijų pavyzdžiai</h2>
+<h3><a class="anchor" id="autotoc_md10"></a>
+1. <code>void erase(size_t index)</code></h3>
+<p>Ši funkcija pašalina vieną konteinerio elementą, kurio index yra paduotas. </p>
+<h5><a class="anchor" id="autotoc_md11"></a>
+Veikimas:</h5>
+<p>Iš pradžių patikrinama ar paduotas <b>index</b> nėra didesnis nei esamo konteinerio dydis, jei ne, visi elementai esantys dešinėje index'o pastumiami į kairę ir pakeičiamas konteinerio dydis.</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+2. <code>V* erase(V* first, V* last)</code></h3>
+<p>Ši funkcija, pašalina konteinerio elementus nuo į ja paduotų index: nuo ** V* first ** iki ** V* last ** </p>
+<h5><a class="anchor" id="autotoc_md13"></a>
+Veikimas:</h5>
+<p>Patikrinama ar first nėra mažesnis už masyvo pradžią, ar last nėra didesnis už masyvo pabaigą, ir ar first &lt; last. Tada pointeriai first ir last paverčiami į index'us, ir elementai kurie yra už 'last' yra pastumiami į kairę. Pakeičiamas konteinerio 'dydis' ir grąžinamas pirmo elemento po ištrintų iteratorius. <br  />
+</p>
+<h3><a class="anchor" id="autotoc_md14"></a>
+3. <code>V&amp; operator[](size_t index)</code></h3>
+<p>Operatorius [], leidžia prieti prie norimo elemento konteineryje. Norint pasiekti bet kokį elementą konteineryje, naudojamas šis operatorius per norimo elemento index'ą. <code>Pvz.: Vector[i]</code> </p>
+<h5><a class="anchor" id="autotoc_md15"></a>
+Veikimas:</h5>
+<p>Patikrinama ar index nėra didesnis už konteinerio dydį, jei ne grąžinamas duomenų masyvo elementas. <code>return duom[index];</code></p>
+<h3><a class="anchor" id="autotoc_md16"></a>
+4. <code>bool operator==(const Vektor&lt;V&gt;&amp; other)</code></h3>
+<p>Operatorius ==, šis leidžia patikrinti ar du konteineriai yra lygūs. </p>
+<h5><a class="anchor" id="autotoc_md17"></a>
+Veikimas:</h5>
+<p>Visų pirmą patikrinama ar konteinerių dydis lygus, jei ne iškart grąžinama <b>false</b> reikšmė. Jei konteinerių dydis toks pat, tuomet tikrinama ar kiekvinas konteinerių elementas lygus. Jei visi elementai lygūs, grąžinama <b>true</b> reikšmė.</p>
+<h3><a class="anchor" id="autotoc_md18"></a>
+5. <code>void pop_back()</code></h3>
+<p>Ši funkcija leidžia pašalinti konteinerio paskutinį elementą. </p>
+<h5><a class="anchor" id="autotoc_md19"></a>
+Veikimas:</h5>
+<p>Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažinamas vienu. </p><div class="fragment"><div class="line">--dydis;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
+Testavimas</h1>
+<h3><a class="anchor" id="autotoc_md21"></a>
+Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.</h3>
+<h2><a class="anchor" id="autotoc_md22"></a>
+🖥 Testavimo sistemos parametrai:</h2>
+<ul>
+<li><b><code>Procesorius: Intel Core i5-10300H</code></b></li>
+<li><b><code>Operatyvioji atmintis: 2×4GB DDR4 3200MHz</code></b></li>
+</ul>
+<h1><a class="anchor" id="autotoc_md23"></a>
+- <b><code>Diskas: 512GB NVMe SSD</code></b></h1>
+<h3><a class="anchor" id="autotoc_md24"></a>
+Originalus Vector vs Vektor klasė</h3>
+<ul>
+<li><b>Užpildymas naudojant push_back() funkciją</b> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Dydis   </th><th class="markdownTableHeadNone">Vector   </th><th class="markdownTableHeadNone">Klasė    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">10000   </td><td class="markdownTableBodyNone">0.00010 s   </td><td class="markdownTableBodyNone">0.00006 s    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">100000   </td><td class="markdownTableBodyNone">0.00101 s   </td><td class="markdownTableBodyNone">0.00051 s    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1000000   </td><td class="markdownTableBodyNone">0.00414 s   </td><td class="markdownTableBodyNone">0.00477 s    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">10000000   </td><td class="markdownTableBodyNone">0.04605 s   </td><td class="markdownTableBodyNone">0.04761 s    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">100000000   </td><td class="markdownTableBodyNone">0.50926 s   </td><td class="markdownTableBodyNone">0.39100 s    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">1000000000   </td><td class="markdownTableBodyNone">9.06876 s   </td><td class="markdownTableBodyNone">6.91821 s   </td></tr>
+</table>
+</li>
+<li><b>Programos spartos analizė</b> <table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Failas   </th><th class="markdownTableHeadNone">Vector   </th><th class="markdownTableHeadNone">Klasė    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Studentai10000   </td><td class="markdownTableBodyNone">0.17188 s   </td><td class="markdownTableBodyNone">0.13205 s    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Studentai100000   </td><td class="markdownTableBodyNone">1.03871 s   </td><td class="markdownTableBodyNone">1.09587 s    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Studentai1000000   </td><td class="markdownTableBodyNone">9.88531 s   </td><td class="markdownTableBodyNone">10.2013 s    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Studentai10000000   </td><td class="markdownTableBodyNone">100.456 s   </td><td class="markdownTableBodyNone">110.858 s   </td></tr>
+</table>
+</li>
+</ul>
+<h3><a class="anchor" id="autotoc_md25"></a>
+Testų analizė</h3>
+<ul>
+<li>Užpildant konteinerį naudojant push_back() funkciją, vektoriaus klasė yra spartesnė</li>
+<li>Naudojant programoje, klasė yra šiek tiek pranašesnė apdorojant mažus studentų kiekius, tačiau kai studentų daug originalus vektorius vistiek veikia sparčiau. </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

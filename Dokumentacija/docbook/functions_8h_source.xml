@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_functions_8h_source" xml:lang="en-US">
+<title>functions.h</title>
+<indexterm><primary>include/functions.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_functions_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;FUNCTIONS_H</emphasis>
+<anchor xml:id="_functions_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;FUNCTIONS_H</emphasis>
+<anchor xml:id="_functions_8h_source_1l00003"/>00003 
+<anchor xml:id="_functions_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_manolib_8h">manolib.h</link>&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_student_8h">student.h</link>&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00006"/>00006 
+<anchor xml:id="_functions_8h_source_1l00007"/>00007 <emphasis role="comment">//&#32;Klasės&#32;testavimas&#32;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00008"/><link linkend="_functions_8h_1a5995a575e504d5fa072267b51ab96704">00008</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_functions_8h_1a5995a575e504d5fa072267b51ab96704">TestStud</link>()&#32;{
+<anchor xml:id="_functions_8h_source_1l00009"/>00009 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Student&#32;klases&#32;testavimas:&quot;</emphasis>&#32;&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TEST&#32;COPY&#32;CONSTRUCTOR</emphasis>
+<anchor xml:id="_functions_8h_source_1l00011"/>00011 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Sukuriamas&#32;student1&quot;</emphasis>&#32;&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;student1(<emphasis role="stringliteral">&quot;Jonas&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;Jonaitis&quot;</emphasis>,&#32;{10,&#32;9,&#32;8,8,10,9},&#32;8,&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>,&#32;9.0);
+<anchor xml:id="_functions_8h_source_1l00013"/>00013 
+<anchor xml:id="_functions_8h_source_1l00014"/>00014 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&#32;TEST&#32;COPY&#32;CONSTRUCTOR&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;student2(student1);&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00016"/>00016 
+<anchor xml:id="_functions_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Original&#32;student:&#32;\n&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student1&#32;;
+<anchor xml:id="_functions_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Copied&#32;student:&#32;\n&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student2&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00019"/>00019 
+<anchor xml:id="_functions_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="comment">//COPY&#32;ASSIGNMENT&#32;OPERATOR</emphasis>
+<anchor xml:id="_functions_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&#32;TEST&#32;COPY&#32;ASSIGNMENT&#32;OPERATOR&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;student3;
+<anchor xml:id="_functions_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;student3&#32;=&#32;student1;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00024"/>00024 
+<anchor xml:id="_functions_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Assigned&#32;student:\n&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student3&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00026"/>00026 
+<anchor xml:id="_functions_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="comment">//MOVE&#32;CONSTRUCTOR</emphasis>
+<anchor xml:id="_functions_8h_source_1l00028"/>00028 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;TEST&#32;MOVE&#32;CONSTRUCTOR&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;student4(std::move(student1));&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00030"/>00030 
+<anchor xml:id="_functions_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Moved&#32;student:&#32;\n&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student4;
+<anchor xml:id="_functions_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Original&#32;student:&#32;\n&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student1&#32;&lt;&lt;&#32;endl;&#32;
+<anchor xml:id="_functions_8h_source_1l00033"/>00033 
+<anchor xml:id="_functions_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="comment">//MOVE&#32;ASSIGNMENT&#32;OPERATOR</emphasis>
+<anchor xml:id="_functions_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&#32;TEST&#32;MOVE&#32;ASSIGNMENT&#32;OPERATOR&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;student5;
+<anchor xml:id="_functions_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;student5&#32;=&#32;std::move(student2);&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00038"/>00038 
+<anchor xml:id="_functions_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Moved-assigned&#32;student:&#32;\n&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student5&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Original&#32;student:&#32;\n&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student2&#32;&lt;&lt;&#32;endl;&#32;
+<anchor xml:id="_functions_8h_source_1l00041"/>00041 
+<anchor xml:id="_functions_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="comment">//INPUT&#32;OPERATOR&#32;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&#32;TEST&#32;INPUT&#32;OPERATOR&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;student6;
+<anchor xml:id="_functions_8h_source_1l00045"/>00045 &#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;student6;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00046"/>00046 
+<anchor xml:id="_functions_8h_source_1l00047"/>00047 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Entered&#32;student:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student6&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00048"/>00048 
+<anchor xml:id="_functions_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="comment">//OUTPUT&#32;OPERATOR</emphasis>
+<anchor xml:id="_functions_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&#32;TEST&#32;OUTPUT&#32;OPERATOR&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Final&#32;output&#32;of&#32;student:\n&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;student6&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00052"/>00052 }
+<anchor xml:id="_functions_8h_source_1l00053"/>00053 
+<anchor xml:id="_functions_8h_source_1l00054"/>00054 <emphasis role="comment">//&#32;Visko&#32;generavimas</emphasis>
+<anchor xml:id="_functions_8h_source_1l00055"/>00055 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00056"/><link linkend="_functions_8h_1aafc88307915ae13fe05939c131f8b6bc">00056</link> <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;<link linkend="_functions_8h_1aafc88307915ae13fe05939c131f8b6bc">GenerateEverything</link>()&#32;{
+<anchor xml:id="_functions_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Selected&#32;&apos;3-Generate&#32;everything&apos;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;n,&#32;x;
+<anchor xml:id="_functions_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;How&#32;many&#32;students&#32;do&#32;you&#32;want&#32;to&#32;generate?&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!(cin&#32;&gt;&gt;&#32;n)&#32;||&#32;n&#32;&lt;&#32;1)&#32;{
+<anchor xml:id="_functions_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Invalid&#32;input.&#32;Please&#32;enter&#32;a&#32;positive&#32;number:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin.clear();
+<anchor xml:id="_functions_8h_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>);
+<anchor xml:id="_functions_8h_source_1l00066"/>00066 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00067"/>00067 
+<anchor xml:id="_functions_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;How&#32;many&#32;homework&#32;scores&#32;do&#32;you&#32;want&#32;to&#32;generate?&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!(cin&#32;&gt;&gt;&#32;x)&#32;||&#32;x&#32;&lt;&#32;1)&#32;{
+<anchor xml:id="_functions_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Invalid&#32;input.&#32;Please&#32;enter&#32;a&#32;positive&#32;number:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin.clear();
+<anchor xml:id="_functions_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>);
+<anchor xml:id="_functions_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00074"/>00074 
+<anchor xml:id="_functions_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n;&#32;i++)&#32;{
+<anchor xml:id="_functions_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;laik;
+<anchor xml:id="_functions_8h_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;gender&#32;=&#32;rand()&#32;%&#32;2;
+<anchor xml:id="_functions_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(gender&#32;==&#32;0)&#32;{
+<anchor xml:id="_functions_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b">setVardas</link>(<link linkend="_manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c">FNames</link>[rand()&#32;%&#32;25]);
+<anchor xml:id="_functions_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2">setPavarde</link>(<link linkend="_manolib_8h_1a37c58b97b44c547d55c3443deb10132c">FSurnames</link>[rand()&#32;%&#32;25]);
+<anchor xml:id="_functions_8h_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_functions_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b">setVardas</link>(<link linkend="_manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218">MNames</link>[rand()&#32;%&#32;25]);
+<anchor xml:id="_functions_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2">setPavarde</link>(<link linkend="_manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4">MSurnames</link>[rand()&#32;%&#32;25]);
+<anchor xml:id="_functions_8h_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00086"/>00086 
+<anchor xml:id="_functions_8h_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;x;&#32;j++)&#32;{
+<anchor xml:id="_functions_8h_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e">addPaz</link>(rand()&#32;%&#32;10);
+<anchor xml:id="_functions_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0">setEgz</link>(rand()&#32;%&#32;10);
+<anchor xml:id="_functions_8h_source_1l00092"/>00092 
+<anchor xml:id="_functions_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;grupe.<link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">push_back</link>(laik);
+<anchor xml:id="_functions_8h_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00095"/>00095 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00096"/>00096 }
+<anchor xml:id="_functions_8h_source_1l00097"/>00097 
+<anchor xml:id="_functions_8h_source_1l00098"/>00098 <emphasis role="comment">//&#32;Vardo&#32;ivedimas,&#32;pazymiu&#32;generavimas</emphasis>
+<anchor xml:id="_functions_8h_source_1l00099"/>00099 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00100"/><link linkend="_functions_8h_1a9c06d4f93ec8894d08362db40e310362">00100</link> <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;<link linkend="_functions_8h_1a9c06d4f93ec8894d08362db40e310362">GenerateScores</link>()&#32;{
+<anchor xml:id="_functions_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Selected&#32;2-Input&#32;names,&#32;generate&#32;scores&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00104"/>00104 
+<anchor xml:id="_functions_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<emphasis role="keyword">true</emphasis>)&#32;{
+<anchor xml:id="_functions_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;laik;
+<anchor xml:id="_functions_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;Vardas,&#32;Pavarde;
+<anchor xml:id="_functions_8h_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Input&#32;name:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;Vardas;
+<anchor xml:id="_functions_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b">setVardas</link>(Vardas);
+<anchor xml:id="_functions_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Input&#32;surname:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;Pavarde;
+<anchor xml:id="_functions_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2">setPavarde</link>(Pavarde);
+<anchor xml:id="_functions_8h_source_1l00114"/>00114 
+<anchor xml:id="_functions_8h_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;How&#32;many&#32;homework&#32;scores&#32;do&#32;you&#32;want&#32;to&#32;generate?&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;n;
+<anchor xml:id="_functions_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;n;
+<anchor xml:id="_functions_8h_source_1l00118"/>00118 
+<anchor xml:id="_functions_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;n;&#32;i++)&#32;{
+<anchor xml:id="_functions_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e">addPaz</link>((rand()&#32;%&#32;10));
+<anchor xml:id="_functions_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0">setEgz</link>((rand()&#32;%&#32;10));
+<anchor xml:id="_functions_8h_source_1l00123"/>00123 
+<anchor xml:id="_functions_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;grupe.<link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">push_back</link>(laik);
+<anchor xml:id="_functions_8h_source_1l00125"/>00125 
+<anchor xml:id="_functions_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Enter&#32;more&#32;students?&#32;(y/n)&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;x;
+<anchor xml:id="_functions_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;x;
+<anchor xml:id="_functions_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(x&#32;!=&#32;<emphasis role="charliteral">&apos;y&apos;</emphasis>&#32;&amp;&amp;&#32;x&#32;!=&#32;<emphasis role="charliteral">&apos;n&apos;</emphasis>)&#32;{
+<anchor xml:id="_functions_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Invalid&#32;input.&#32;Enter&#32;y&#32;or&#32;n&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;x;
+<anchor xml:id="_functions_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;<emphasis role="charliteral">&apos;n&apos;</emphasis>)&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00134"/>00134 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00136"/>00136 }
+<anchor xml:id="_functions_8h_source_1l00137"/>00137 
+<anchor xml:id="_functions_8h_source_1l00138"/>00138 <emphasis role="comment">//&#32;Visko&#32;ivedimas&#32;ranka</emphasis>
+<anchor xml:id="_functions_8h_source_1l00139"/>00139 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00140"/><link linkend="_functions_8h_1a25802cd098c0d98a92595d549bc40fec">00140</link> <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;<link linkend="_functions_8h_1a25802cd098c0d98a92595d549bc40fec">ManualInput</link>()&#32;{
+<anchor xml:id="_functions_8h_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Manual&#32;student&#32;input&#32;selected.\n&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00143"/>00143 
+<anchor xml:id="_functions_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<emphasis role="keyword">true</emphasis>)&#32;{
+<anchor xml:id="_functions_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;laik;
+<anchor xml:id="_functions_8h_source_1l00146"/>00146 
+<anchor xml:id="_functions_8h_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Naudojamas&#32;&gt;&gt;&#32;klasės&#32;operatorius</emphasis>
+<anchor xml:id="_functions_8h_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin&#32;&gt;&gt;&#32;laik;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;grupe.<link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">push_back</link>(laik);
+<anchor xml:id="_functions_8h_source_1l00151"/>00151 
+<anchor xml:id="_functions_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;more;
+<anchor xml:id="_functions_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Add&#32;another&#32;student?&#32;(y/n):&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin&#32;&gt;&gt;&#32;more;
+<anchor xml:id="_functions_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(more&#32;!=&#32;<emphasis role="charliteral">&apos;y&apos;</emphasis>&#32;&amp;&amp;&#32;more&#32;!=&#32;<emphasis role="charliteral">&apos;n&apos;</emphasis>)&#32;{
+<anchor xml:id="_functions_8h_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Invalid&#32;input.&#32;Enter&#32;y&#32;or&#32;n:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin&#32;&gt;&gt;&#32;more;
+<anchor xml:id="_functions_8h_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(more&#32;==&#32;<emphasis role="charliteral">&apos;n&apos;</emphasis>)&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00160"/>00160 
+<anchor xml:id="_functions_8h_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>);&#32;<emphasis role="comment">//&#32;Clear&#32;leftover&#32;input</emphasis>
+<anchor xml:id="_functions_8h_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00163"/>00163 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00164"/>00164 
+<anchor xml:id="_functions_8h_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00166"/>00166 }
+<anchor xml:id="_functions_8h_source_1l00167"/>00167 
+<anchor xml:id="_functions_8h_source_1l00168"/>00168 <emphasis role="comment">//Skaitymas&#32;is&#32;failo</emphasis>
+<anchor xml:id="_functions_8h_source_1l00169"/>00169 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00170"/><link linkend="_functions_8h_1ac1be372811ceda50183db8795ddaf219">00170</link> <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;<link linkend="_functions_8h_1ac1be372811ceda50183db8795ddaf219">ReadFile</link>(<emphasis role="keywordtype">string</emphasis>&#32;filename)&#32;{
+<anchor xml:id="_functions_8h_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00172"/>00172 
+<anchor xml:id="_functions_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;ifstream&#32;fd(filename);
+<anchor xml:id="_functions_8h_source_1l00174"/>00174 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!fd)&#32;{
+<anchor xml:id="_functions_8h_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;File&#32;not&#32;found!&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Enter&#32;existing&#32;file&#32;name:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;filename;
+<anchor xml:id="_functions_8h_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fd.open(filename);
+<anchor xml:id="_functions_8h_source_1l00179"/>00179 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00180"/>00180 
+<anchor xml:id="_functions_8h_source_1l00181"/>00181 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;line;
+<anchor xml:id="_functions_8h_source_1l00182"/>00182 &#32;&#32;&#32;&#32;getline(fd,&#32;line);&#32;<emphasis role="comment">//&#32;Skip&#32;first&#32;line</emphasis>
+<anchor xml:id="_functions_8h_source_1l00183"/>00183 
+<anchor xml:id="_functions_8h_source_1l00184"/>00184 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(getline(fd,&#32;line))&#32;{
+<anchor xml:id="_functions_8h_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;istringstream&#32;iss(line);
+<anchor xml:id="_functions_8h_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_stud">Stud</link>&#32;laik;
+<anchor xml:id="_functions_8h_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;vardas,&#32;pavarde;
+<anchor xml:id="_functions_8h_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;iss&#32;&gt;&gt;&#32;vardas&#32;&gt;&gt;&#32;pavarde;
+<anchor xml:id="_functions_8h_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b">setVardas</link>(vardas);
+<anchor xml:id="_functions_8h_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2">setPavarde</link>(pavarde);
+<anchor xml:id="_functions_8h_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;num;
+<anchor xml:id="_functions_8h_source_1l00192"/>00192 
+<anchor xml:id="_functions_8h_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(iss&#32;&gt;&gt;&#32;num)&#32;{
+<anchor xml:id="_functions_8h_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e">addPaz</link>(num);
+<anchor xml:id="_functions_8h_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00196"/>00196 
+<anchor xml:id="_functions_8h_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&lt;int&gt;&#32;pazymiai&#32;=&#32;laik.<link linkend="_class_stud_1aa6575230afb3ea980563b2cb039bd4c9">getPaz</link>();
+<anchor xml:id="_functions_8h_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!pazymiai.empty())&#32;{
+<anchor xml:id="_functions_8h_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0">setEgz</link>(pazymiai.back());
+<anchor xml:id="_functions_8h_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;laik.<link linkend="_class_stud_1ac8b2e8ca576f42a8446fac6d745947aa">removeLastPaz</link>();&#32;
+<anchor xml:id="_functions_8h_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00202"/>00202 
+<anchor xml:id="_functions_8h_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;grupe.<link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">push_back</link>(laik);
+<anchor xml:id="_functions_8h_source_1l00204"/>00204 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00205"/>00205 
+<anchor xml:id="_functions_8h_source_1l00206"/>00206 &#32;&#32;&#32;&#32;fd.close();
+<anchor xml:id="_functions_8h_source_1l00207"/>00207 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00208"/>00208 }
+<anchor xml:id="_functions_8h_source_1l00209"/>00209 
+<anchor xml:id="_functions_8h_source_1l00210"/>00210 <emphasis role="comment">//Rusiavimas</emphasis>
+<anchor xml:id="_functions_8h_source_1l00211"/>00211 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00212"/><link linkend="_functions_8h_1a9a8228525c154b5f1eceb473572afe08">00212</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_functions_8h_1a9a8228525c154b5f1eceb473572afe08">Sorting</link>(<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;&amp;grupe)&#32;{
+<anchor xml:id="_functions_8h_source_1l00213"/>00213 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;How&#32;do&#32;you&#32;want&#32;to&#32;sort&#32;the&#32;students?&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00214"/>00214 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;1&#32;-&#32;By&#32;name&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00215"/>00215 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;2&#32;-&#32;By&#32;surname&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00216"/>00216 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;3&#32;-&#32;By&#32;final&#32;score&#32;descending&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00217"/>00217 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;4&#32;-&#32;By&#32;final&#32;score&#32;ascending&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00218"/>00218 
+<anchor xml:id="_functions_8h_source_1l00219"/>00219 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;x=&#32;<emphasis role="charliteral">&apos;3&apos;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00220"/>00220 &#32;&#32;&#32;&#32;<emphasis role="comment">//cin&#32;&gt;&gt;&#32;x;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00221"/>00221 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(x&#32;!=&#32;<emphasis role="charliteral">&apos;1&apos;</emphasis>&#32;&amp;&amp;&#32;x&#32;!=&#32;<emphasis role="charliteral">&apos;2&apos;</emphasis>&#32;&amp;&amp;&#32;x&#32;!=&#32;<emphasis role="charliteral">&apos;3&apos;</emphasis>&#32;&amp;&amp;&#32;x&#32;!=&#32;<emphasis role="charliteral">&apos;4&apos;</emphasis>)&#32;{
+<anchor xml:id="_functions_8h_source_1l00222"/>00222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Invalid&#32;input.&#32;Enter&#32;1,&#32;2,&#32;3,&#32;or&#32;4:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00223"/>00223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;x;
+<anchor xml:id="_functions_8h_source_1l00224"/>00224 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00225"/>00225 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;chrono_start&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00226"/>00226 &#32;&#32;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00227"/>00227 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;comparator&#32;=&#32;[&amp;](<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_stud">Stud</link>&#32;&amp;a,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_stud">Stud</link>&#32;&amp;b)&#32;{
+<anchor xml:id="_functions_8h_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;<emphasis role="charliteral">&apos;1&apos;</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>&#32;a.<link linkend="_class_zmogus_1aaea44664c236e2fadf022f3821862499">getVardas</link>()&#32;&lt;&#32;b.getVardas();
+<anchor xml:id="_functions_8h_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;<emphasis role="charliteral">&apos;2&apos;</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>&#32;a.<link linkend="_class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63">getPavarde</link>()&#32;&lt;&#32;b.getPavarde();
+<anchor xml:id="_functions_8h_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;==&#32;<emphasis role="charliteral">&apos;3&apos;</emphasis>)&#32;<emphasis role="keywordflow">return</emphasis>&#32;a.<link linkend="_class_stud_1a45c7d38ccc4203365b448101344ba4e2">getGalutinis</link>()&#32;&lt;&#32;b.getGalutinis();
+<anchor xml:id="_functions_8h_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">return</emphasis>&#32;a.<link linkend="_class_stud_1a45c7d38ccc4203365b448101344ba4e2">getGalutinis</link>()&#32;&gt;&#32;b.getGalutinis();
+<anchor xml:id="_functions_8h_source_1l00232"/>00232 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_functions_8h_source_1l00233"/>00233 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;constexpr&#32;apskaiciuoja&#32;kompiliavimo&#32;metu,&#32;o&#32;ne&#32;runtime&#32;metu</emphasis>
+<anchor xml:id="_functions_8h_source_1l00234"/>00234 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;<emphasis role="keyword">constexpr</emphasis>&#32;(is_same_v&lt;Container,&#32;list&lt;Stud&gt;&gt;)&#32;{
+<anchor xml:id="_functions_8h_source_1l00235"/>00235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;grupe.sort(comparator);&#32;&#32;<emphasis role="comment">//&#32;listo&#32;sortas</emphasis>
+<anchor xml:id="_functions_8h_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_functions_8h_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sort(grupe.<link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link>(),&#32;grupe.<link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link>(),&#32;comparator);&#32;&#32;<emphasis role="comment">//&#32;std::sort&#32;vectoriui&#32;ir&#32;deque</emphasis>
+<anchor xml:id="_functions_8h_source_1l00238"/>00238 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00239"/>00239 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;chrono_end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00240"/>00240 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;duration&#32;=&#32;chrono_end&#32;-&#32;chrono_start;
+<anchor xml:id="_functions_8h_source_1l00241"/>00241 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;SORTING&#32;TOOK:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;fixed&#32;&lt;&lt;&#32;setprecision(5)&#32;&lt;&lt;&#32;duration.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00242"/>00242 }
+<anchor xml:id="_functions_8h_source_1l00243"/>00243 
+<anchor xml:id="_functions_8h_source_1l00244"/>00244 <emphasis role="comment">//&#32;Templated&#32;function&#32;to&#32;output&#32;results</emphasis>
+<anchor xml:id="_functions_8h_source_1l00245"/>00245 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00246"/><link linkend="_functions_8h_1ab29d065e680921bf8f5dff9d3fad63a8">00246</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_functions_8h_1ab29d065e680921bf8f5dff9d3fad63a8">OutputToTerminal</link>(<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;&amp;grupe)&#32;{
+<anchor xml:id="_functions_8h_source_1l00247"/>00247 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;left&#32;&lt;&lt;&#32;setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Vardas&quot;</emphasis>&#32;&lt;&lt;&#32;setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Pavarde&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Galutinis&#32;(Vid.)&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;/&#32;&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Galutinis&#32;(Med.)&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00251"/>00251 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;-----------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00252"/>00252 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;n&#32;:&#32;grupe)&#32;{
+<anchor xml:id="_functions_8h_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Output&#32;naudojant&#32;&lt;&lt;&#32;klasės&#32;operatoriu</emphasis>
+<anchor xml:id="_functions_8h_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;n;
+<anchor xml:id="_functions_8h_source_1l00255"/>00255 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00256"/>00256 }
+<anchor xml:id="_functions_8h_source_1l00257"/>00257 
+<anchor xml:id="_functions_8h_source_1l00258"/>00258 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00259"/><link linkend="_functions_8h_1afeeefbd9055158b13997f50d7b851b95">00259</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_functions_8h_1afeeefbd9055158b13997f50d7b851b95">OutputToFile</link>(<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&amp;&#32;grupe)
+<anchor xml:id="_functions_8h_source_1l00260"/>00260 {
+<anchor xml:id="_functions_8h_source_1l00261"/>00261 &#32;&#32;&#32;&#32;ofstream&#32;out(<emphasis role="stringliteral">&quot;rezultatai.txt&quot;</emphasis>);
+<anchor xml:id="_functions_8h_source_1l00262"/>00262 &#32;&#32;&#32;&#32;out&lt;&lt;std::left&lt;&lt;setw(15)&lt;&lt;<emphasis role="stringliteral">&quot;Vardas&quot;</emphasis>&lt;&lt;setw(15)&lt;&lt;<emphasis role="stringliteral">&quot;Pavarde&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&lt;&lt;setw(15)&lt;&lt;<emphasis role="stringliteral">&quot;Galutinis&#32;(Vid.)&quot;</emphasis>&lt;&lt;<emphasis role="stringliteral">&quot;&#32;/&#32;&quot;</emphasis>&lt;&lt;<emphasis role="stringliteral">&quot;Galutinis&#32;(Med.)&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00264"/>00264 &#32;&#32;&#32;&#32;out&lt;&lt;<emphasis role="stringliteral">&quot;-----------------------------------------------------------&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00265"/>00265 <emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">auto</emphasis>&#32;n&#32;:grupe)
+<anchor xml:id="_functions_8h_source_1l00266"/>00266 &#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00267"/>00267 &#32;&#32;&#32;&#32;out&lt;&lt;std::left&lt;&lt;setw(15)&lt;&lt;n.getVardas()&lt;&lt;setw(18)&lt;&lt;n.getPavarde()&lt;&lt;setw(7);
+<anchor xml:id="_functions_8h_source_1l00268"/>00268 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(n.getVm()&#32;==&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>)&#32;out&lt;&lt;std::fixed&lt;&lt;std::setprecision(2)&lt;&lt;n.getGalutinis()&lt;&lt;<emphasis role="stringliteral">&quot;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00269"/>00269 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;out&lt;&lt;<emphasis role="stringliteral">&quot;&#32;-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;</emphasis>&lt;&lt;std::fixed&lt;&lt;std::setprecision(2)&lt;&lt;n.getGalutinis()&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00270"/>00270 &#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00271"/>00271 out.close();
+<anchor xml:id="_functions_8h_source_1l00272"/>00272 
+<anchor xml:id="_functions_8h_source_1l00273"/>00273 }
+<anchor xml:id="_functions_8h_source_1l00274"/>00274 
+<anchor xml:id="_functions_8h_source_1l00275"/><link linkend="_functions_8h_1a0d5828f70790f70e2a562f3faa1cd0e0">00275</link> <emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_functions_8h_1a0d5828f70790f70e2a562f3faa1cd0e0">GenerateFile</link>(<emphasis role="keywordtype">int</emphasis>&#32;StudentCount)
+<anchor xml:id="_functions_8h_source_1l00276"/>00276 {
+<anchor xml:id="_functions_8h_source_1l00277"/>00277 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;filename&#32;=&#32;<emphasis role="stringliteral">&quot;Studentai&quot;</emphasis>+std::to_string(StudentCount)+<emphasis role="stringliteral">&quot;.txt&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00278"/>00278 &#32;&#32;&#32;&#32;ifstream&#32;fd(filename);
+<anchor xml:id="_functions_8h_source_1l00279"/>00279 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(fd.good())
+<anchor xml:id="_functions_8h_source_1l00280"/>00280 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;filename&lt;&lt;<emphasis role="stringliteral">&quot;&#32;already&#32;exists&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;filename;
+<anchor xml:id="_functions_8h_source_1l00283"/>00283 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00284"/>00284 &#32;&#32;&#32;&#32;fd.close();
+<anchor xml:id="_functions_8h_source_1l00285"/>00285 
+<anchor xml:id="_functions_8h_source_1l00286"/>00286 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;start&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00287"/>00287 &#32;&#32;&#32;&#32;ofstream&#32;fr(filename);
+<anchor xml:id="_functions_8h_source_1l00288"/>00288 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!fr)
+<anchor xml:id="_functions_8h_source_1l00289"/>00289 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;<emphasis role="stringliteral">&quot;Error&#32;creating&#32;file&quot;</emphasis>&#32;&lt;&lt;filename&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00291"/>00291 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00292"/>00292 
+<anchor xml:id="_functions_8h_source_1l00293"/>00293 &#32;&#32;&#32;&#32;fr&lt;&lt;std::left&lt;&lt;setw(16)&lt;&lt;<emphasis role="stringliteral">&quot;Vardas&#32;Pavarde&#32;&quot;</emphasis>&lt;&lt;std::left&lt;&lt;setw(20)&lt;&lt;<emphasis role="stringliteral">&quot;Pazymiai&#32;&#32;&#32;&quot;</emphasis>&lt;&lt;<emphasis role="stringliteral">&quot;Egzaminas&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00294"/>00294 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&lt;StudentCount;&#32;i++)
+<anchor xml:id="_functions_8h_source_1l00295"/>00295 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(rand()%2==0)
+<anchor xml:id="_functions_8h_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr&lt;&lt;<link linkend="_manolib_8h_1aa3c78cb0a93b3f6d83a90d81ab944218">MNames</link>[rand()%25]&lt;&lt;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&lt;&lt;<link linkend="_manolib_8h_1a6dde80c68493ffda156a8ed6983ab9b4">MSurnames</link>[rand()%25]&lt;&lt;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_functions_8h_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr&lt;&lt;<link linkend="_manolib_8h_1a82e55d4bc400ad38fd6bfae2272bf44c">FNames</link>[rand()%25]&lt;&lt;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&lt;&lt;<link linkend="_manolib_8h_1a37c58b97b44c547d55c3443deb10132c">FSurnames</link>[rand()%25]&lt;&lt;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&lt;10;&#32;j++)
+<anchor xml:id="_functions_8h_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr&lt;&lt;rand()%10&lt;&lt;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00308"/>00308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr&lt;&lt;rand()%10&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00309"/>00309 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00310"/>00310 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;end&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00311"/>00311 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;duration&#32;=&#32;end&#32;-&#32;start;
+<anchor xml:id="_functions_8h_source_1l00312"/>00312 &#32;&#32;&#32;&#32;cout&lt;&lt;filename&#32;&lt;&lt;<emphasis role="stringliteral">&quot;&#32;sukurtas&#32;per&#32;&quot;</emphasis>&lt;&lt;fixed&lt;&lt;setprecision(5)&lt;&lt;duration.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00313"/>00313 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;filename;
+<anchor xml:id="_functions_8h_source_1l00314"/>00314 }
+<anchor xml:id="_functions_8h_source_1l00315"/>00315 
+<anchor xml:id="_functions_8h_source_1l00316"/>00316 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00317"/><link linkend="_functions_8h_1a9bf76230fb2862461fb6032819fdb096">00317</link> <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;<link linkend="_functions_8h_1a9bf76230fb2862461fb6032819fdb096">SpeedTesting</link>()
+<anchor xml:id="_functions_8h_source_1l00318"/>00318 {
+<anchor xml:id="_functions_8h_source_1l00319"/>00319 &#32;&#32;&#32;&#32;<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00320"/>00320 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;filename;
+<anchor xml:id="_functions_8h_source_1l00321"/>00321 
+<anchor xml:id="_functions_8h_source_1l00322"/>00322 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Ar&#32;norite&#32;generuoti&#32;faila?&#32;(y/n):&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00323"/>00323 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;choice;
+<anchor xml:id="_functions_8h_source_1l00324"/>00324 &#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;choice;
+<anchor xml:id="_functions_8h_source_1l00325"/>00325 
+<anchor xml:id="_functions_8h_source_1l00326"/>00326 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(choice&#32;==&#32;<emphasis role="charliteral">&apos;y&apos;</emphasis>&#32;||&#32;choice&#32;==&#32;<emphasis role="charliteral">&apos;Y&apos;</emphasis>)
+<anchor xml:id="_functions_8h_source_1l00327"/>00327 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;StudentCount;
+<anchor xml:id="_functions_8h_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Enter&#32;the&#32;number&#32;of&#32;students:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;StudentCount;
+<anchor xml:id="_functions_8h_source_1l00331"/>00331 
+<anchor xml:id="_functions_8h_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;filename&#32;=&#32;<link linkend="_functions_8h_1a0d5828f70790f70e2a562f3faa1cd0e0">GenerateFile</link>(StudentCount);&#32;
+<anchor xml:id="_functions_8h_source_1l00333"/>00333 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00334"/>00334 
+<anchor xml:id="_functions_8h_source_1l00335"/>00335 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(filename.empty())&#32;<emphasis role="comment">//&#32;If&#32;filename&#32;is&#32;still&#32;empty,&#32;ask&#32;for&#32;input</emphasis>
+<anchor xml:id="_functions_8h_source_1l00336"/>00336 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00337"/>00337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Iveskite&#32;testo&#32;faila:&#32;&quot;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&#32;&gt;&gt;&#32;filename;
+<anchor xml:id="_functions_8h_source_1l00339"/>00339 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00340"/>00340 
+<anchor xml:id="_functions_8h_source_1l00341"/>00341 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Chosen&#32;file:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;filename&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00342"/>00342 
+<anchor xml:id="_functions_8h_source_1l00343"/>00343 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;startRead&#32;=&#32;std::chrono::high_resolution_clock::now();&#32;<emphasis role="comment">//&#32;Timer&#32;for&#32;file&#32;reading</emphasis>
+<anchor xml:id="_functions_8h_source_1l00344"/>00344 &#32;&#32;&#32;&#32;grupe&#32;=&#32;<link linkend="_functions_8h_1ac1be372811ceda50183db8795ddaf219">ReadFile&lt;Container&gt;</link>(filename);
+<anchor xml:id="_functions_8h_source_1l00345"/>00345 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;endRead&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00346"/>00346 
+<anchor xml:id="_functions_8h_source_1l00347"/>00347 &#32;&#32;&#32;&#32;<link linkend="_functions_8h_1a3a1d305f378b3efa8cf1e99379ac50d3">FinalScore</link>(grupe);
+<anchor xml:id="_functions_8h_source_1l00348"/>00348 
+<anchor xml:id="_functions_8h_source_1l00349"/>00349 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;startSort&#32;=&#32;std::chrono::high_resolution_clock::now();&#32;<emphasis role="comment">//&#32;Timer&#32;for&#32;sorting</emphasis>
+<anchor xml:id="_functions_8h_source_1l00350"/>00350 &#32;&#32;&#32;&#32;<link linkend="_functions_8h_1a9a8228525c154b5f1eceb473572afe08">Sorting</link>(grupe);
+<anchor xml:id="_functions_8h_source_1l00351"/>00351 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;endSort&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00352"/>00352 
+<anchor xml:id="_functions_8h_source_1l00353"/>00353 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;startSplit&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;<link linkend="_functions_8h_1a9a0110ef3a6607021645e91e87b150ce">SplitFile</link>(grupe);
+<anchor xml:id="_functions_8h_source_1l00355"/>00355 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;endSplit&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00356"/>00356 
+<anchor xml:id="_functions_8h_source_1l00357"/>00357 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculate&#32;and&#32;display&#32;durations</emphasis>
+<anchor xml:id="_functions_8h_source_1l00358"/>00358 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;durationRead&#32;=&#32;endRead&#32;-&#32;startRead;
+<anchor xml:id="_functions_8h_source_1l00359"/>00359 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;durationSort&#32;=&#32;endSort&#32;-&#32;startSort;
+<anchor xml:id="_functions_8h_source_1l00360"/>00360 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;durationSplit&#32;=&#32;endSplit&#32;-&#32;startSplit;
+<anchor xml:id="_functions_8h_source_1l00361"/>00361 
+<anchor xml:id="_functions_8h_source_1l00362"/>00362 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;filename&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;failo&#32;nuskaitymo&#32;laikas:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;fixed&#32;&lt;&lt;&#32;setprecision(5)&#32;&lt;&lt;&#32;durationRead.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00363"/>00363 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;filename&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;failo&#32;rusiavimas:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;fixed&#32;&lt;&lt;&#32;setprecision(5)&#32;&lt;&lt;&#32;durationSort.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00364"/>00364 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;filename&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;failo&#32;paskirstymo&#32;ir&#32;irasymo&#32;laikas:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;fixed&#32;&lt;&lt;&#32;setprecision(5)&#32;&lt;&lt;&#32;durationSplit.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00365"/>00365 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;filename&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;is&#32;viso&#32;uztruko:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;fixed&#32;&lt;&lt;&#32;setprecision(5)&#32;
+<anchor xml:id="_functions_8h_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;(durationRead.count()&#32;+&#32;durationSort.count()&#32;+&#32;durationSplit.count())&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_functions_8h_source_1l00367"/>00367 
+<anchor xml:id="_functions_8h_source_1l00368"/>00368 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;grupe;
+<anchor xml:id="_functions_8h_source_1l00369"/>00369 }
+<anchor xml:id="_functions_8h_source_1l00370"/>00370 
+<anchor xml:id="_functions_8h_source_1l00371"/>00371 <emphasis role="comment">//Failo&#32;dalijimas&#32;i&#32;du&#32;(kietiakai,&#32;vargsiukai)</emphasis>
+<anchor xml:id="_functions_8h_source_1l00372"/>00372 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00373"/><link linkend="_functions_8h_1a9a0110ef3a6607021645e91e87b150ce">00373</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_functions_8h_1a9a0110ef3a6607021645e91e87b150ce">SplitFile</link>(<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&amp;&#32;grupe)&#32;{
+<anchor xml:id="_functions_8h_source_1l00374"/>00374 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;start_split&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00375"/>00375 
+<anchor xml:id="_functions_8h_source_1l00376"/>00376 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;padalina&#32;konteineri&#32;i&#32;2</emphasis>
+<anchor xml:id="_functions_8h_source_1l00377"/>00377 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;std::partition(grupe.<link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link>(),&#32;grupe.<link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link>(),&#32;[](<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;student)&#32;{
+<anchor xml:id="_functions_8h_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;student.getGalutinis()&#32;&lt;&#32;5;
+<anchor xml:id="_functions_8h_source_1l00379"/>00379 &#32;&#32;&#32;&#32;});
+<anchor xml:id="_functions_8h_source_1l00380"/>00380 
+<anchor xml:id="_functions_8h_source_1l00381"/>00381 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;sukuria&#32;konteineri&#32;vargsiukams&#32;is&#32;atskirtu&#32;elementu</emphasis>
+<anchor xml:id="_functions_8h_source_1l00382"/>00382 &#32;&#32;&#32;&#32;<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&#32;vargsai;
+<anchor xml:id="_functions_8h_source_1l00383"/>00383 &#32;&#32;&#32;&#32;vargsai.<link linkend="_class_vektor_1ae2eaebca369760c7e0757965e111464a">reserve</link>(std::distance(grupe.<link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link>(),&#32;it));
+<anchor xml:id="_functions_8h_source_1l00384"/>00384 &#32;&#32;&#32;&#32;std::move(grupe.<link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link>(),&#32;it,&#32;std::back_inserter(vargsai));
+<anchor xml:id="_functions_8h_source_1l00385"/>00385 &#32;&#32;&#32;&#32;grupe.<link linkend="_class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1">erase</link>(grupe.<link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link>(),&#32;it);&#32;<emphasis role="comment">//&#32;istrina&#32;atskirtus&#32;elem&#32;is&#32;pradinio&#32;konteinerio</emphasis>
+<anchor xml:id="_functions_8h_source_1l00386"/>00386 &#32;&#32;&#32;&#32;grupe.<link linkend="_class_vektor_1aeb4dcc6a639c7622777995808c3262a8">shrink_to_fit</link>();
+<anchor xml:id="_functions_8h_source_1l00387"/>00387 
+<anchor xml:id="_functions_8h_source_1l00388"/>00388 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;end_split&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00389"/>00389 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;split_duration&#32;=&#32;end_split&#32;-&#32;start_split;
+<anchor xml:id="_functions_8h_source_1l00390"/>00390 
+<anchor xml:id="_functions_8h_source_1l00391"/>00391 &#32;&#32;&#32;&#32;std::ofstream&#32;fr1(<emphasis role="stringliteral">&quot;Vargsiukai.txt&quot;</emphasis>);
+<anchor xml:id="_functions_8h_source_1l00392"/>00392 &#32;&#32;&#32;&#32;std::ofstream&#32;fr2(<emphasis role="stringliteral">&quot;Kietiakai.txt&quot;</emphasis>);
+<anchor xml:id="_functions_8h_source_1l00393"/>00393 
+<anchor xml:id="_functions_8h_source_1l00394"/>00394 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!fr1&#32;||&#32;!fr2)&#32;{
+<anchor xml:id="_functions_8h_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;opening&#32;output&#32;files!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00396"/>00396 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00397"/>00397 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00398"/>00398 
+<anchor xml:id="_functions_8h_source_1l00399"/>00399 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;startV&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00400"/>00400 &#32;&#32;&#32;&#32;fr1&#32;&lt;&lt;&#32;std::left&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Vardas&quot;</emphasis>&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Pavarde&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Galutinis&#32;(Vid.)&quot;</emphasis>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;/&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Galutinis&#32;(Med.)&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00402"/>00402 &#32;&#32;&#32;&#32;fr1&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;-----------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00403"/>00403 
+<anchor xml:id="_functions_8h_source_1l00404"/>00404 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&amp;&#32;n&#32;:&#32;vargsai)&#32;{
+<anchor xml:id="_functions_8h_source_1l00405"/>00405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr1&#32;&lt;&lt;&#32;std::left&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;n.getVardas()&#32;&lt;&lt;&#32;std::setw(18)&#32;&lt;&lt;&#32;n.getPavarde()&#32;&lt;&lt;&#32;std::setw(7);
+<anchor xml:id="_functions_8h_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(n.getVm()&#32;==&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>)
+<anchor xml:id="_functions_8h_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr1&#32;&lt;&lt;&#32;std::fixed&#32;&lt;&lt;&#32;std::setprecision(2)&#32;&lt;&lt;&#32;n.getGalutinis()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_functions_8h_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr1&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;std::fixed&#32;&lt;&lt;&#32;std::setprecision(2)&#32;&lt;&lt;&#32;n.getGalutinis()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00410"/>00410 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00411"/>00411 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;endV&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00412"/>00412 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;Vduration&#32;=&#32;endV&#32;-&#32;startV;
+<anchor xml:id="_functions_8h_source_1l00413"/>00413 
+<anchor xml:id="_functions_8h_source_1l00414"/>00414 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;startK&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00415"/>00415 &#32;&#32;&#32;&#32;fr2&#32;&lt;&lt;&#32;std::left&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Vardas&quot;</emphasis>&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Pavarde&quot;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Galutinis&#32;(Vid.)&quot;</emphasis>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;/&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Galutinis&#32;(Med.)&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00417"/>00417 &#32;&#32;&#32;&#32;fr2&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;-----------------------------------------------------------&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00418"/>00418 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&amp;&#32;n&#32;:&#32;grupe)&#32;{
+<anchor xml:id="_functions_8h_source_1l00419"/>00419 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr2&#32;&lt;&lt;&#32;std::left&#32;&lt;&lt;&#32;std::setw(15)&#32;&lt;&lt;&#32;n.getVardas()&#32;&lt;&lt;&#32;std::setw(18)&#32;&lt;&lt;&#32;n.getPavarde()&#32;&lt;&lt;&#32;std::setw(7);
+<anchor xml:id="_functions_8h_source_1l00420"/>00420 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(n.getVm()&#32;==&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>)
+<anchor xml:id="_functions_8h_source_1l00421"/>00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr2&#32;&lt;&lt;&#32;std::fixed&#32;&lt;&lt;&#32;std::setprecision(2)&#32;&lt;&lt;&#32;n.getGalutinis()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_functions_8h_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;fr2&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;-&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;std::fixed&#32;&lt;&lt;&#32;std::setprecision(2)&#32;&lt;&lt;&#32;n.getGalutinis()&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00424"/>00424 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00425"/>00425 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;endK&#32;=&#32;std::chrono::high_resolution_clock::now();
+<anchor xml:id="_functions_8h_source_1l00426"/>00426 &#32;&#32;&#32;&#32;std::chrono::duration&lt;double&gt;&#32;Kduration&#32;=&#32;endK&#32;-&#32;startK;
+<anchor xml:id="_functions_8h_source_1l00427"/>00427 
+<anchor xml:id="_functions_8h_source_1l00428"/>00428 &#32;&#32;&#32;&#32;fr1.close();
+<anchor xml:id="_functions_8h_source_1l00429"/>00429 &#32;&#32;&#32;&#32;fr2.close();
+<anchor xml:id="_functions_8h_source_1l00430"/>00430 
+<anchor xml:id="_functions_8h_source_1l00431"/>00431 &#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Skirstymas&#32;ir&#32;irasymas:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Kduration.count()&#32;+&#32;Vduration.count()&#32;+&#32;split_duration.count()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;s&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+<anchor xml:id="_functions_8h_source_1l00432"/>00432 }
+<anchor xml:id="_functions_8h_source_1l00433"/>00433 
+<anchor xml:id="_functions_8h_source_1l00434"/>00434 
+<anchor xml:id="_functions_8h_source_1l00435"/>00435 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;Container&gt;
+<anchor xml:id="_functions_8h_source_1l00436"/><link linkend="_functions_8h_1a3a1d305f378b3efa8cf1e99379ac50d3">00436</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_functions_8h_1a3a1d305f378b3efa8cf1e99379ac50d3">FinalScore</link>(<link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link>&amp;&#32;grupe)
+<anchor xml:id="_functions_8h_source_1l00437"/>00437 {
+<anchor xml:id="_functions_8h_source_1l00438"/>00438 &#32;&#32;&#32;&#32;cout&lt;&lt;<emphasis role="stringliteral">&quot;Calculate&#32;final&#32;scores&#32;using&#32;average&#32;or&#32;median?&#32;(a/m)&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00439"/>00439 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;am&#32;=&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>;
+<anchor xml:id="_functions_8h_source_1l00440"/>00440 &#32;&#32;&#32;&#32;<emphasis role="comment">//cin&gt;&gt;am;</emphasis>
+<anchor xml:id="_functions_8h_source_1l00441"/>00441 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(am!=&#32;<emphasis role="charliteral">&apos;a&apos;</emphasis>&#32;&amp;&amp;&#32;am!=&#32;<emphasis role="charliteral">&apos;m&apos;</emphasis>)&#32;
+<anchor xml:id="_functions_8h_source_1l00442"/>00442 &#32;&#32;&#32;&#32;{&#32;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00443"/>00443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&lt;&lt;<emphasis role="stringliteral">&quot;Invalid&#32;input.&#32;Enter&#32;a&#32;or&#32;m&quot;</emphasis>&lt;&lt;endl;
+<anchor xml:id="_functions_8h_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cin&gt;&gt;am;
+<anchor xml:id="_functions_8h_source_1l00445"/>00445 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00446"/>00446 
+<anchor xml:id="_functions_8h_source_1l00447"/>00447 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">auto</emphasis>&#32;&amp;n&#32;:grupe)
+<anchor xml:id="_functions_8h_source_1l00448"/>00448 &#32;&#32;&#32;&#32;{&#32;&#32;&#32;
+<anchor xml:id="_functions_8h_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&lt;int&gt;&#32;paz&#32;=&#32;n.getPaz();
+<anchor xml:id="_functions_8h_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;sort(paz.begin(),&#32;paz.end());
+<anchor xml:id="_functions_8h_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;n.setVm(am);
+<anchor xml:id="_functions_8h_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;suma=0;
+<anchor xml:id="_functions_8h_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">auto</emphasis>&#32;n:&#32;paz)
+<anchor xml:id="_functions_8h_source_1l00454"/>00454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_functions_8h_source_1l00455"/>00455 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;suma=suma+n;}
+<anchor xml:id="_functions_8h_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(am==<emphasis role="charliteral">&apos;a&apos;</emphasis>){
+<anchor xml:id="_functions_8h_source_1l00457"/>00457 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;n.setGalutinis(0.4*(suma/paz.size())+0.6*n.getEgz());
+<anchor xml:id="_functions_8h_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00459"/>00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(paz.size()%2==0){
+<anchor xml:id="_functions_8h_source_1l00460"/>00460 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;n.setGalutinis(0.4*(paz[paz.size()/2]&#32;+&#32;paz[paz.size()/2-1])/2&#32;+0.6*n.getEgz());
+<anchor xml:id="_functions_8h_source_1l00461"/>00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00462"/>00462 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_functions_8h_source_1l00463"/>00463 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;n.setGalutinis(0.4*paz[paz.size()/2]&#32;+0.6*n.getEgz());
+<anchor xml:id="_functions_8h_source_1l00464"/>00464 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00465"/>00465 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_functions_8h_source_1l00466"/>00466 }
+<anchor xml:id="_functions_8h_source_1l00467"/>00467 
+<anchor xml:id="_functions_8h_source_1l00468"/>00468 <emphasis role="preprocessor">#endif&#32;</emphasis>
+</programlisting></section>

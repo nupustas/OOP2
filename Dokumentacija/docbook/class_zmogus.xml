@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_zmogus" xml:lang="en-US">
+<title>Zmogus Class Reference</title>
+<indexterm><primary>Zmogus</primary></indexterm>
+<para>
+<computeroutput>#include &lt;human.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Zmogus:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_zmogus.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_zmogus_1a6ca61a3bcea221478551dd04419d2433">Zmogus</link> (const string &amp;v, const string &amp;p)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_zmogus_1a6183937c7da8254430a6c99cfa89fe69">~Zmogus</link> ()=default</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_zmogus_1aaea44664c236e2fadf022f3821862499">getVardas</link> () const</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63">getPavarde</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b">setVardas</link> (const string &amp;v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2">setPavarde</link> (const string &amp;p)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_zmogus_1aa52869cc6a869223fedcb9f7676534fc">print</link> () const =0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>string <link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_human_8h_source_1l00004">4</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574"/><section>
+    <title>Zmogus()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Zmogus</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>Zmogus</secondary></indexterm>
+<para><computeroutput>Zmogus::Zmogus ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00009">9</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1a6ca61a3bcea221478551dd04419d2433"/><section>
+    <title>Zmogus()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Zmogus</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>Zmogus</secondary></indexterm>
+<para><computeroutput>Zmogus::Zmogus (const string &amp; v, const string &amp; p)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00010">10</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1a6183937c7da8254430a6c99cfa89fe69"/><section>
+    <title>~Zmogus()</title>
+<indexterm><primary>~Zmogus</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>~Zmogus</secondary></indexterm>
+<para><computeroutput>virtual Zmogus::~Zmogus ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63"/><section>
+    <title>getPavarde()</title>
+<indexterm><primary>getPavarde</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>getPavarde</secondary></indexterm>
+<para><computeroutput>string Zmogus::getPavarde ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00015">15</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1aaea44664c236e2fadf022f3821862499"/><section>
+    <title>getVardas()</title>
+<indexterm><primary>getVardas</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>getVardas</secondary></indexterm>
+<para><computeroutput>string Zmogus::getVardas ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00014">14</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1aa52869cc6a869223fedcb9f7676534fc"/><section>
+    <title>print()</title>
+<indexterm><primary>print</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>print</secondary></indexterm>
+<para><computeroutput>virtual void Zmogus::print ( ) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_stud_1a2e343213dc95664555965f08648527c2">Stud</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2"/><section>
+    <title>setPavarde()</title>
+<indexterm><primary>setPavarde</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>setPavarde</secondary></indexterm>
+<para><computeroutput>void Zmogus::setPavarde (const string &amp; p)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00018">18</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b"/><section>
+    <title>setVardas()</title>
+<indexterm><primary>setVardas</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>setVardas</secondary></indexterm>
+<para><computeroutput>void Zmogus::setVardas (const string &amp; v)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00017">17</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86"/><section>
+    <title>Pavarde</title>
+<indexterm><primary>Pavarde</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>Pavarde</secondary></indexterm>
+<para><computeroutput>string Zmogus::Pavarde<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00006">6</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<anchor xml:id="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d"/><section>
+    <title>Vardas</title>
+<indexterm><primary>Vardas</primary><secondary>Zmogus</secondary></indexterm>
+<indexterm><primary>Zmogus</primary><secondary>Vardas</secondary></indexterm>
+<para><computeroutput>string Zmogus::Vardas<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_human_8h_source_1l00006">6</link> of file <link linkend="_human_8h_source">human.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/<link linkend="_human_8h">human.h</link></section>
+</section>

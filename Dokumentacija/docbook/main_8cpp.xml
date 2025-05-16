@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8cpp" xml:lang="en-US">
+<title>src/main.cpp File Reference</title>
+<indexterm><primary>src/main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;manolib.h&quot;<?linebreak?>#include &quot;functions.h&quot;<?linebreak?>#include &quot;student.h&quot;<?linebreak?>#include &quot;vector.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link> = <link linkend="_class_vektor">Vektor</link>&lt;<link linkend="_class_stud">Stud</link>&gt;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3"/><section>
+    <title>Container</title>
+<indexterm><primary>Container</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>Container</secondary></indexterm>
+<para><computeroutput>using <link linkend="_main_8cpp_1a78c70a8a9c9b3c7ccc29d6682f26a2c3">Container</link> = <link linkend="_class_vektor">Vektor</link>&lt;<link linkend="_class_stud">Stud</link>&gt;</computeroutput></para><para>
+Definition at line <link linkend="_main_8cpp_source_1l00007">7</link> of file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+Definition at line <link linkend="_main_8cpp_source_1l00011">11</link> of file <link linkend="_main_8cpp_source">main.cpp</link>.</para>
+</section>
+</section>
+</section>

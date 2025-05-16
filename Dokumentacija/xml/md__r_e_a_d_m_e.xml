@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md__r_e_a_d_m_e</compoundname>
+    <title>Studentų galutinio balo skaičiavimo programa</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__r_e_a_d_m_e_1autotoc_md0"/></para>
+<para>Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.</para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md1">
+<title>Projekto paleidimas naudojant CMake</title><sect2 id="md__r_e_a_d_m_e_1autotoc_md2_1s2"><sect3 id="md__r_e_a_d_m_e_1autotoc_md2">
+<title>1. Reikalingi įrankiai</title><para>Prieš paleidžiant projektą, įsitikinkite, kad turite šiuos įrankius:</para>
+<para><itemizedlist>
+<listitem><para><bold>CMake</bold>: <ulink url="https://cmake.org/download/">Atsisiųsti CMake</ulink> (minimum v3.10)</para>
+</listitem><listitem><para><bold>C++ kompiliatorius</bold> (GCC, CLANG, MSVC)</para>
+</listitem></itemizedlist>
+</para>
+</sect3></sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md3_1s2"><sect3 id="md__r_e_a_d_m_e_1autotoc_md3">
+<title>2. Parsisiųskite projektą, jei jo dar neturite</title><sect4 id="md__r_e_a_d_m_e_1autotoc_md4">
+<title>Projekto klonavimas iš git:</title><para><programlisting filename=".bash"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/nupustas/oop.vp</highlight></codeline>
+</programlisting> Paklonave projektą, atidarykite jo aplanką.</para>
+</sect4>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md5">
+<title>Projekto kompiliavimas:</title><para><programlisting><codeline><highlight class="normal">mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>..</highlight></codeline>
+</programlisting> <programlisting><codeline><highlight class="normal">cmake<sp/>--build<sp/>.<sp/>--config<sp/>Release</highlight></codeline>
+</programlisting> </para>
+</sect4>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md6">
+<title>Projekto paleidimas:</title><para><programlisting><codeline><highlight class="normal">cd<sp/>release</highlight></codeline>
+<codeline><highlight class="normal">OOP.exe</highlight></codeline>
+</programlisting> </para>
+</sect4>
+</sect3></sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md7">
+<title>Projekto struktūra:</title><para><itemizedlist>
+<listitem><para><bold><computeroutput>include/</computeroutput></bold>: Aplankalas, kuriame laikomi projekto header failai.</para>
+</listitem><listitem><para><bold><computeroutput>src/</computeroutput></bold>: Pagrindinis programos kodas.</para>
+</listitem><listitem><para><bold><computeroutput>CMakeLists.txt</computeroutput></bold>: CMake instrukcijos kompiliavimui.</para>
+</listitem><listitem><para><bold><computeroutput><ref refid="_r_e_a_d_m_e_8md" kindref="compound">ReadME.md</ref></computeroutput></bold>: Programos instrukcija.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md8">
+<title>V3.0</title><sect2 id="md__r_e_a_d_m_e_1autotoc_md9">
+<title>Vector klasės funkcijų pavyzdžiai</title><sect3 id="md__r_e_a_d_m_e_1autotoc_md10">
+<title>1. <computeroutput>void erase(size_t index)</computeroutput></title><para>Ši funkcija pašalina vieną konteinerio elementą, kurio index yra paduotas. </para>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md11_1s4"><sect5 id="md__r_e_a_d_m_e_1autotoc_md11">
+<title>Veikimas:</title><para>Iš pradžių patikrinama ar paduotas <bold>index</bold> nėra didesnis nei esamo konteinerio dydis, jei ne, visi elementai esantys dešinėje index&apos;o pastumiami į kairę ir pakeičiamas konteinerio dydis.</para>
+</sect5></sect4>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md12">
+<title>2. <computeroutput>V* erase(V* first, V* last)</computeroutput></title><para>Ši funkcija, pašalina konteinerio elementus nuo į ja paduotų index: nuo ** V* first ** iki ** V* last ** </para>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md13_1s4"><sect5 id="md__r_e_a_d_m_e_1autotoc_md13">
+<title>Veikimas:</title><para>Patikrinama ar first nėra mažesnis už masyvo pradžią, ar last nėra didesnis už masyvo pabaigą, ir ar first &lt; last. Tada pointeriai first ir last paverčiami į index&apos;us, ir elementai kurie yra už &apos;last&apos; yra pastumiami į kairę. Pakeičiamas konteinerio &apos;dydis&apos; ir grąžinamas pirmo elemento po ištrintų iteratorius. <linebreak/>
+</para>
+</sect5></sect4>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md14">
+<title>3. <computeroutput>V&amp; operator[](size_t index)</computeroutput></title><para>Operatorius [], leidžia prieti prie norimo elemento konteineryje. Norint pasiekti bet kokį elementą konteineryje, naudojamas šis operatorius per norimo elemento index&apos;ą. <computeroutput>Pvz.: Vector[i]</computeroutput> </para>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md15_1s4"><sect5 id="md__r_e_a_d_m_e_1autotoc_md15">
+<title>Veikimas:</title><para>Patikrinama ar index nėra didesnis už konteinerio dydį, jei ne grąžinamas duomenų masyvo elementas. <computeroutput>return duom[index];</computeroutput></para>
+</sect5></sect4>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md16">
+<title>4. <computeroutput>bool operator==(const Vektor&lt;V&gt;&amp; other)</computeroutput></title><para>Operatorius ==, šis leidžia patikrinti ar du konteineriai yra lygūs. </para>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md17_1s4"><sect5 id="md__r_e_a_d_m_e_1autotoc_md17">
+<title>Veikimas:</title><para>Visų pirmą patikrinama ar konteinerių dydis lygus, jei ne iškart grąžinama <bold>false</bold> reikšmė. Jei konteinerių dydis toks pat, tuomet tikrinama ar kiekvinas konteinerių elementas lygus. Jei visi elementai lygūs, grąžinama <bold>true</bold> reikšmė.</para>
+</sect5></sect4>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md18">
+<title>5. <computeroutput>void pop_back()</computeroutput></title><para>Ši funkcija leidžia pašalinti konteinerio paskutinį elementą. </para>
+<sect4 id="md__r_e_a_d_m_e_1autotoc_md19_1s4"><sect5 id="md__r_e_a_d_m_e_1autotoc_md19">
+<title>Veikimas:</title><para>Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažinamas vienu. <programlisting><codeline><highlight class="normal">--dydis;</highlight></codeline>
+</programlisting></para>
+</sect5></sect4>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md20">
+<title>Testavimas</title><sect2 id="md__r_e_a_d_m_e_1autotoc_md21_1s2"><sect3 id="md__r_e_a_d_m_e_1autotoc_md21">
+<title>Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.</title></sect3></sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md22">
+<title>🖥 Testavimo sistemos parametrai:</title><para><itemizedlist>
+<listitem><para><bold><computeroutput>Procesorius: Intel Core i5-10300H</computeroutput></bold></para>
+</listitem><listitem><para><bold><computeroutput>Operatyvioji atmintis: 2×4GB DDR4 3200MHz</computeroutput></bold></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md23">
+<title>- <bold><computeroutput>Diskas: 512GB NVMe SSD</computeroutput></bold></title><sect2 id="md__r_e_a_d_m_e_1autotoc_md24_1s2"><sect3 id="md__r_e_a_d_m_e_1autotoc_md24">
+<title>Originalus Vector vs Vektor klasė</title><para><itemizedlist>
+<listitem><para><bold>Užpildymas naudojant push_back() funkciją</bold> <table rows="7" cols="3"><row>
+<entry thead="yes"><para>Dydis   </para>
+</entry><entry thead="yes"><para>Vector   </para>
+</entry><entry thead="yes"><para>Klasė    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>10000   </para>
+</entry><entry thead="no"><para>0.00010 s   </para>
+</entry><entry thead="no"><para>0.00006 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>100000   </para>
+</entry><entry thead="no"><para>0.00101 s   </para>
+</entry><entry thead="no"><para>0.00051 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1000000   </para>
+</entry><entry thead="no"><para>0.00414 s   </para>
+</entry><entry thead="no"><para>0.00477 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>10000000   </para>
+</entry><entry thead="no"><para>0.04605 s   </para>
+</entry><entry thead="no"><para>0.04761 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>100000000   </para>
+</entry><entry thead="no"><para>0.50926 s   </para>
+</entry><entry thead="no"><para>0.39100 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>1000000000   </para>
+</entry><entry thead="no"><para>9.06876 s   </para>
+</entry><entry thead="no"><para>6.91821 s   </para>
+</entry></row>
+</table>
+</para>
+</listitem><listitem><para><bold>Programos spartos analizė</bold> <table rows="5" cols="3"><row>
+<entry thead="yes"><para>Failas   </para>
+</entry><entry thead="yes"><para>Vector   </para>
+</entry><entry thead="yes"><para>Klasė    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Studentai10000   </para>
+</entry><entry thead="no"><para>0.17188 s   </para>
+</entry><entry thead="no"><para>0.13205 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Studentai100000   </para>
+</entry><entry thead="no"><para>1.03871 s   </para>
+</entry><entry thead="no"><para>1.09587 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Studentai1000000   </para>
+</entry><entry thead="no"><para>9.88531 s   </para>
+</entry><entry thead="no"><para>10.2013 s    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>Studentai10000000   </para>
+</entry><entry thead="no"><para>100.456 s   </para>
+</entry><entry thead="no"><para>110.858 s   </para>
+</entry></row>
+</table>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect3></sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md25_1s2"><sect3 id="md__r_e_a_d_m_e_1autotoc_md25">
+<title>Testų analizė</title><para><itemizedlist>
+<listitem><para>Užpildant konteinerį naudojant push_back() funkciją, vektoriaus klasė yra spartesnė</para>
+</listitem><listitem><para>Naudojant programoje, klasė yra šiek tiek pranašesnė apdorojant mažus studentų kiekius, tačiau kai studentų daug originalus vektorius vistiek veikia sparčiau. </para>
+</listitem></itemizedlist>
+</para>
+</sect3></sect2>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_stud" xml:lang="en-US">
+<title>Stud Class Reference</title>
+<indexterm><primary>Stud</primary></indexterm>
+<para>
+<computeroutput>#include &lt;student.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for Stud:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_stud.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_stud_1a97585839898d45dc9fc815d5b36e2b69">Stud</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_stud_1a6e16964de60326f7a598a0b47903f574">Stud</link> (const std::string &amp;v, const std::string &amp;p, const std::vector&lt; int &gt; &amp;pazymiai, int e, char vmod, double gal)</para>
+</listitem>
+            <listitem><para><link linkend="_class_stud_1aa1c38d670d1f269ebd48588c40ad58db">~Stud</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_stud_1ad473232271f7e160f811c6ae206d326c">Stud</link> (const <link linkend="_class_stud">Stud</link> &amp;other)</para>
+</listitem>
+            <listitem><para><link linkend="_class_stud">Stud</link> &amp; <link linkend="_class_stud_1a311ba01abe5e734694bd281a9653226f">operator=</link> (const <link linkend="_class_stud">Stud</link> &amp;other)</para>
+</listitem>
+            <listitem><para><link linkend="_class_stud_1ac62c75899e911e4f1d55e1047564225c">Stud</link> (<link linkend="_class_stud">Stud</link> &amp;&amp;other)</para>
+</listitem>
+            <listitem><para><link linkend="_class_stud">Stud</link> &amp; <link linkend="_class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a">operator=</link> (<link linkend="_class_stud">Stud</link> &amp;&amp;other)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0">setEgz</link> (int e)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12">setVm</link> (char v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5">setGalutinis</link> (double g)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e">addPaz</link> (int pazymys)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_stud_1a25998973a74b359a72a95d49beae0c08">getEgz</link> () const</para>
+</listitem>
+            <listitem><para>char <link linkend="_class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6">getVm</link> () const</para>
+</listitem>
+            <listitem><para>double <link linkend="_class_stud_1a45c7d38ccc4203365b448101344ba4e2">getGalutinis</link> () const</para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_class_stud_1aa6575230afb3ea980563b2cb039bd4c9">getPaz</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1ac8b2e8ca576f42a8446fac6d745947aa">removeLastPaz</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1a07f94d74e9e563756d78605ac8093a9a">FinalScore</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_stud_1a2e343213dc95664555965f08648527c2">print</link> () const override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_class_zmogus">Zmogus</link>        <itemizedlist>
+            <listitem><para><link linkend="_class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_zmogus_1a6ca61a3bcea221478551dd04419d2433">Zmogus</link> (const string &amp;v, const string &amp;p)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_zmogus_1a6183937c7da8254430a6c99cfa89fe69">~Zmogus</link> ()=default</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_zmogus_1aaea44664c236e2fadf022f3821862499">getVardas</link> () const</para>
+</listitem>
+            <listitem><para>string <link linkend="_class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63">getPavarde</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b">setVardas</link> (const string &amp;v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2">setPavarde</link> (const string &amp;p)</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>std::istream &amp; <link linkend="_class_stud_1ab0ae2d598da52d7298daa3083d28b576">operator&gt;&gt;</link> (std::istream &amp;in, <link linkend="_class_stud">Stud</link> &amp;s)</para>
+</listitem>
+            <listitem><para>std::ostream &amp; <link linkend="_class_stud_1a9072c21de23b6a0596457f5a87a24780">operator&lt;&lt;</link> (std::ostream &amp;out, const <link linkend="_class_stud">Stud</link> &amp;s)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_class_zmogus">Zmogus</link>        <itemizedlist>
+            <listitem><para>string <link linkend="_class_zmogus_1ad752feab373733e70e2101724e8d1d9d">Vardas</link></para>
+</listitem>
+            <listitem><para>string <link linkend="_class_zmogus_1a2300d6db4227967c96dd83a555fa7b86">Pavarde</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_student_8h_source_1l00007">7</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_stud_1a97585839898d45dc9fc815d5b36e2b69"/><section>
+    <title>Stud()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<para><computeroutput>Stud::Stud ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00016">16</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a6e16964de60326f7a598a0b47903f574"/><section>
+    <title>Stud()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<para><computeroutput>Stud::Stud (const std::string &amp; v, const std::string &amp; p, const std::vector&lt; int &gt; &amp; pazymiai, int e, char vmod, double gal)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00017">17</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1aa1c38d670d1f269ebd48588c40ad58db"/><section>
+    <title>~Stud()</title>
+<indexterm><primary>~Stud</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>~Stud</secondary></indexterm>
+<para><computeroutput>Stud::~Stud ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00021">21</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1ad473232271f7e160f811c6ae206d326c"/><section>
+    <title>Stud()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<para><computeroutput>Stud::Stud (const <link linkend="_class_stud">Stud</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00024">24</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1ac62c75899e911e4f1d55e1047564225c"/><section>
+    <title>Stud()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>Stud</secondary></indexterm>
+<para><computeroutput>Stud::Stud (<link linkend="_class_stud">Stud</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00040">40</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_stud_1acbfb081c993f6482c59cb57d449c4c5e"/><section>
+    <title>addPaz()</title>
+<indexterm><primary>addPaz</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>addPaz</secondary></indexterm>
+<para><computeroutput>void Stud::addPaz (int pazymys)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00109">109</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a07f94d74e9e563756d78605ac8093a9a"/><section>
+    <title>FinalScore()</title>
+<indexterm><primary>FinalScore</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>FinalScore</secondary></indexterm>
+<para><computeroutput>void Stud::FinalScore ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00118">118</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a25998973a74b359a72a95d49beae0c08"/><section>
+    <title>getEgz()</title>
+<indexterm><primary>getEgz</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>getEgz</secondary></indexterm>
+<para><computeroutput>int Stud::getEgz ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00111">111</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a45c7d38ccc4203365b448101344ba4e2"/><section>
+    <title>getGalutinis()</title>
+<indexterm><primary>getGalutinis</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>getGalutinis</secondary></indexterm>
+<para><computeroutput>double Stud::getGalutinis ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00113">113</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1aa6575230afb3ea980563b2cb039bd4c9"/><section>
+    <title>getPaz()</title>
+<indexterm><primary>getPaz</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>getPaz</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; Stud::getPaz ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00114">114</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6"/><section>
+    <title>getVm()</title>
+<indexterm><primary>getVm</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>getVm</secondary></indexterm>
+<para><computeroutput>char Stud::getVm ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00112">112</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a311ba01abe5e734694bd281a9653226f"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_stud">Stud</link> &amp; Stud::operator= (const <link linkend="_class_stud">Stud</link> &amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00028">28</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_stud">Stud</link> &amp; Stud::operator= (<link linkend="_class_stud">Stud</link> &amp;&amp; other)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00049">49</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a2e343213dc95664555965f08648527c2"/><section>
+    <title>print()</title>
+<indexterm><primary>print</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>print</secondary></indexterm>
+<para><computeroutput>void Stud::print ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_class_zmogus_1aa52869cc6a869223fedcb9f7676534fc">Zmogus</link>.</para>
+<para>
+Definition at line <link linkend="_student_8h_source_1l00134">134</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1ac8b2e8ca576f42a8446fac6d745947aa"/><section>
+    <title>removeLastPaz()</title>
+<indexterm><primary>removeLastPaz</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>removeLastPaz</secondary></indexterm>
+<para><computeroutput>void Stud::removeLastPaz ( )<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00115">115</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a4d3c5d9554efdc1f68d66958375e71e0"/><section>
+    <title>setEgz()</title>
+<indexterm><primary>setEgz</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>setEgz</secondary></indexterm>
+<para><computeroutput>void Stud::setEgz (int e)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00106">106</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5"/><section>
+    <title>setGalutinis()</title>
+<indexterm><primary>setGalutinis</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>setGalutinis</secondary></indexterm>
+<para><computeroutput>void Stud::setGalutinis (double g)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00108">108</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12"/><section>
+    <title>setVm()</title>
+<indexterm><primary>setVm</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>setVm</secondary></indexterm>
+<para><computeroutput>void Stud::setVm (char v)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00107">107</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Symbol Documentation</title>
+<anchor xml:id="_class_stud_1a9072c21de23b6a0596457f5a87a24780"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; out, const <link linkend="_class_stud">Stud</link> &amp; s)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00093">93</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<anchor xml:id="_class_stud_1ab0ae2d598da52d7298daa3083d28b576"/><section>
+    <title>operator&gt;&gt;</title>
+<indexterm><primary>operator&gt;&gt;</primary><secondary>Stud</secondary></indexterm>
+<indexterm><primary>Stud</primary><secondary>operator&gt;&gt;</secondary></indexterm>
+<para><computeroutput>std::istream &amp; operator&gt;&gt; (std::istream &amp; in, <link linkend="_class_stud">Stud</link> &amp; s)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_student_8h_source_1l00064">64</link> of file <link linkend="_student_8h_source">student.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+include/<link linkend="_student_8h">student.h</link></section>
+</section>
