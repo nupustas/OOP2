@@ -74,14 +74,20 @@ int main()
         }
         else if (a == '7') 
         {   
-            Vektor <int> test(4,25);
+            Vektor <int> test;
             Vektor <int> test2(4, 69);
+            test.push_back(1);
+            test.push_back(2);
+            test.push_back(3);
+            test.erase(1);
+            test.erase(0);
+           
 
-      
 
-            for(int i = 0; i < test.size(); i++)
+            for(int i = 0; i < 2; i++)
             {
                 cout << test[i] << " ";
+
             }
            
 

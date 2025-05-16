@@ -62,7 +62,7 @@ void erase(size_t index) {
     }
     --dydis;
 }
-iterator erase(iterator first, iterator last) {
+V* erase(V* first, V* last) {
     if (first < duom || last > duom + dydis || first > last)
         throw std::out_of_range("Invalid iterator range");
 
