@@ -4,10 +4,9 @@
 #include "vector.h"
 
 
-//using Container = Vektor<Stud>;
-using Container = std::vector<Stud>;
-//using Container = std::deque<Stud>;
-//using Container = std::list<Stud>;
+using Container = Vektor<Stud>;
+//using Container = std::vector<Stud>;
+
 
 int main()
 {   
