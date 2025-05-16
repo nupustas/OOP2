@@ -216,8 +216,8 @@ void Sorting(Container &grupe) {
     cout << "3 - By final score descending" << endl;
     cout << "4 - By final score ascending" << endl;
 
-    char x;
-    cin >> x;
+    char x= '3';
+    //cin >> x;
     while (x != '1' && x != '2' && x != '3' && x != '4') {
         cout << "Invalid input. Enter 1, 2, 3, or 4: ";
         cin >> x;
@@ -436,8 +436,8 @@ template <typename Container>
 void FinalScore(Container& grupe)
 {
     cout<<"Calculate final scores using average or median? (a/m)"<<endl;
-    char am;
-    cin>>am;
+    char am = 'a';
+    //cin>>am;
     while(am!= 'a' && am!= 'm') 
     {   
         cout<<"Invalid input. Enter a or m"<<endl;

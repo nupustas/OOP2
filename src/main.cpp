@@ -4,7 +4,8 @@
 #include "vector.h"
 
 
-using Container = Vektor<Stud>;
+//using Container = Vektor<Stud>;
+using Container = std::vector<Stud>;
 //using Container = std::deque<Stud>;
 //using Container = std::list<Stud>;
 
@@ -74,23 +75,23 @@ int main()
         }
         else if (a == '7') 
         {   
-            Vektor <int> test;
-            Vektor <int> test2(4, 69);
-            test.push_back(1);
-            test.push_back(2);
-            test.push_back(3);
-            test.erase(1);
-            test.erase(0);
-           
+            std::vector<int> og;
+            Vektor <int> klase;
+            size_t sz = 100000; // 100000, 1000000, 10000000, 100000000
+            cin>>sz;
+            cout<< "Size: " << sz << endl;
+            auto start_split = std::chrono::high_resolution_clock::now();
+            for (int i = 1; i <= sz; ++i) og.push_back(i);
+            auto end_split = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> split_duration = end_split - start_split;
+            cout<< "OG vector: " << fixed << setprecision(5) << split_duration.count() << " s" << endl;
 
 
-            for(int i = 0; i < 2; i++)
-            {
-                cout << test[i] << " ";
-
-            }
-           
-
+            auto start = std::chrono::high_resolution_clock::now();
+            for (int i = 1; i <= sz; ++i) klase.push_back(i);
+            auto end = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> duration = end - start;
+            cout<< "Vektor class: " << fixed << setprecision(5) << duration.count() << " s" << endl;
             return 0;
         }
         if (grupe.empty())  
