@@ -1,9 +1,16 @@
 ## Studentų galutinio balo skaičiavimo programa
 
 Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.
+# Projekto paleidijmas
+
+## Naudojant setup.exe
+* Parsisiųskite **setup.exe** failą iš github repozitorijos
+* Paleiskite **setup.exe** failą
+* Sekite ekrane rodomas diegimo instrukcijas
+* Įdiegę **setup.exe** darbalaukyje atsiras nuoroda paleisti programą.
+* Projektas bus įdiegtas čia: C:\Program Files (x86)\VU\Vejas-Prastienis
 
 ## Projekto paleidimas naudojant CMake
-
 #### 1. Reikalingi įrankiai
 Prieš paleidžiant projektą, įsitikinkite, kad turite šiuos įrankius:
 
