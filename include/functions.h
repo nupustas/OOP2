@@ -332,9 +332,10 @@ Container SpeedTesting()
         filename = GenerateFile(StudentCount); 
     }
 
-    if (filename.empty()) // If filename is still empty, ask for input
+    if (filename.empty()) 
     {
         cout << "Iveskite testo faila: ";
+        cout << "studentai10000.txt arba studentai100000.txt" << endl;
         cin >> filename;
     }
 

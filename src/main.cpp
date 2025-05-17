@@ -63,6 +63,11 @@ int main()
         else if (a == '5') 
         {   
             grupe = SpeedTesting<Container>();
+            cout << "Speed test completed." << endl;
+            cout << "Press any key to continue..." << endl;
+            int x;
+            cin >> x; // Wait for user input
+
             return 0;
         }
         else if (a == '6') 
