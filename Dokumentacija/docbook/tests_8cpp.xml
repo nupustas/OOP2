@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_tests_8cpp" xml:lang="en-US">
+<title>src/tests.cpp File Reference</title>
+<indexterm><primary>src/tests.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;catch.hpp&quot;<?linebreak?>#include &quot;student.h&quot;<?linebreak?>#include &quot;human.h&quot;<?linebreak?>#include &quot;manolib.h&quot;<?linebreak?>#include &quot;functions.h&quot;<?linebreak?>#include &quot;vector.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_tests_8cpp_1a656eb5868e824d59f489f910db438420">CATCH_CONFIG_MAIN</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_tests_8cpp_1aecce09c376d8f167628ba794c11455c3">TEST_CASE</link> (&quot;Studentu klases penkiu pirstu taisykles testas&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_tests_8cpp_1aab1e5ab76078e26f729c144be96ddf12">TEST_CASE</link> (&quot;Kitu programos funkciju testai&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_tests_8cpp_1ab3bc665735702c0bd2f80f1656468587">TEST_CASE</link> (&quot;Vektoriaus klasės testai&quot;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_tests_8cpp_1a656eb5868e824d59f489f910db438420"/><section>
+    <title>CATCH_CONFIG_MAIN</title>
+<indexterm><primary>CATCH_CONFIG_MAIN</primary><secondary>tests.cpp</secondary></indexterm>
+<indexterm><primary>tests.cpp</primary><secondary>CATCH_CONFIG_MAIN</secondary></indexterm>
+<para><computeroutput>#define CATCH_CONFIG_MAIN</computeroutput></para><para>
+Definition at line <link linkend="_tests_8cpp_source_1l00001">1</link> of file <link linkend="_tests_8cpp_source">tests.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_tests_8cpp_1aab1e5ab76078e26f729c144be96ddf12"/><section>
+    <title>TEST_CASE()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>TEST_CASE</primary><secondary>tests.cpp</secondary></indexterm>
+<indexterm><primary>tests.cpp</primary><secondary>TEST_CASE</secondary></indexterm>
+<para><computeroutput>TEST_CASE (&quot;Kitu programos funkciju testai&quot; )</computeroutput></para><para>
+Definition at line <link linkend="_tests_8cpp_source_1l00069">69</link> of file <link linkend="_tests_8cpp_source">tests.cpp</link>.</para>
+</section>
+<anchor xml:id="_tests_8cpp_1aecce09c376d8f167628ba794c11455c3"/><section>
+    <title>TEST_CASE()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>TEST_CASE</primary><secondary>tests.cpp</secondary></indexterm>
+<indexterm><primary>tests.cpp</primary><secondary>TEST_CASE</secondary></indexterm>
+<para><computeroutput>TEST_CASE (&quot;Studentu klases penkiu pirstu taisykles testas&quot; )</computeroutput></para><para>
+Definition at line <link linkend="_tests_8cpp_source_1l00010">10</link> of file <link linkend="_tests_8cpp_source">tests.cpp</link>.</para>
+</section>
+<anchor xml:id="_tests_8cpp_1ab3bc665735702c0bd2f80f1656468587"/><section>
+    <title>TEST_CASE()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>TEST_CASE</primary><secondary>tests.cpp</secondary></indexterm>
+<indexterm><primary>tests.cpp</primary><secondary>TEST_CASE</secondary></indexterm>
+<para><computeroutput>TEST_CASE (&quot;Vektoriaus klasės testai&quot; )</computeroutput></para><para>
+Definition at line <link linkend="_tests_8cpp_source_1l00083">83</link> of file <link linkend="_tests_8cpp_source">tests.cpp</link>.</para>
+</section>
+</section>
+</section>

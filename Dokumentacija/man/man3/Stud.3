@@ -1,0 +1,212 @@
+.TH "Stud" 3 "Studentų galutinio balo skaičiuoklė" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Stud
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <student\&.h>\fP
+.PP
+Inherits \fBZmogus\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStud\fP ()"
+.br
+.ti -1c
+.RI "\fBStud\fP (const std::string &v, const std::string &p, const std::vector< int > &pazymiai, int e, char vmod, double gal)"
+.br
+.ti -1c
+.RI "\fB~Stud\fP ()"
+.br
+.ti -1c
+.RI "\fBStud\fP (const \fBStud\fP &other)"
+.br
+.ti -1c
+.RI "\fBStud\fP & \fBoperator=\fP (const \fBStud\fP &other)"
+.br
+.ti -1c
+.RI "\fBStud\fP (\fBStud\fP &&other)"
+.br
+.ti -1c
+.RI "\fBStud\fP & \fBoperator=\fP (\fBStud\fP &&other)"
+.br
+.ti -1c
+.RI "void \fBsetEgz\fP (int e)"
+.br
+.ti -1c
+.RI "void \fBsetVm\fP (char v)"
+.br
+.ti -1c
+.RI "void \fBsetGalutinis\fP (double g)"
+.br
+.ti -1c
+.RI "void \fBaddPaz\fP (int pazymys)"
+.br
+.ti -1c
+.RI "int \fBgetEgz\fP () const"
+.br
+.ti -1c
+.RI "char \fBgetVm\fP () const"
+.br
+.ti -1c
+.RI "double \fBgetGalutinis\fP () const"
+.br
+.ti -1c
+.RI "std::vector< int > \fBgetPaz\fP () const"
+.br
+.ti -1c
+.RI "void \fBremoveLastPaz\fP ()"
+.br
+.ti -1c
+.RI "void \fBFinalScore\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP () const override"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBZmogus\fP
+.in +1c
+.ti -1c
+.RI "\fBZmogus\fP ()"
+.br
+.ti -1c
+.RI "\fBZmogus\fP (const string &v, const string &p)"
+.br
+.ti -1c
+.RI "virtual \fB~Zmogus\fP ()=default"
+.br
+.ti -1c
+.RI "string \fBgetVardas\fP () const"
+.br
+.ti -1c
+.RI "string \fBgetPavarde\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetVardas\fP (const string &v)"
+.br
+.ti -1c
+.RI "void \fBsetPavarde\fP (const string &p)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::istream & \fBoperator>>\fP (std::istream &in, \fBStud\fP &s)"
+.br
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBStud\fP &s)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Attributes inherited from \fBZmogus\fP
+.in +1c
+.ti -1c
+.RI "string \fBVardas\fP"
+.br
+.ti -1c
+.RI "string \fBPavarde\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB7\fP of file \fBstudent\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Stud::Stud ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB16\fP of file \fBstudent\&.h\fP\&.
+.SS "Stud::Stud (const std::string & v, const std::string & p, const std::vector< int > & pazymiai, int e, char vmod, double gal)\fR [inline]\fP"
+
+.PP
+Definition at line \fB17\fP of file \fBstudent\&.h\fP\&.
+.SS "Stud::~Stud ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB21\fP of file \fBstudent\&.h\fP\&.
+.SS "Stud::Stud (const \fBStud\fP & other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB24\fP of file \fBstudent\&.h\fP\&.
+.SS "Stud::Stud (\fBStud\fP && other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB40\fP of file \fBstudent\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Stud::addPaz (int pazymys)\fR [inline]\fP"
+
+.PP
+Definition at line \fB109\fP of file \fBstudent\&.h\fP\&.
+.SS "void Stud::FinalScore ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB118\fP of file \fBstudent\&.h\fP\&.
+.SS "int Stud::getEgz () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB111\fP of file \fBstudent\&.h\fP\&.
+.SS "double Stud::getGalutinis () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB113\fP of file \fBstudent\&.h\fP\&.
+.SS "std::vector< int > Stud::getPaz () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB114\fP of file \fBstudent\&.h\fP\&.
+.SS "char Stud::getVm () const\fR [inline]\fP"
+
+.PP
+Definition at line \fB112\fP of file \fBstudent\&.h\fP\&.
+.SS "\fBStud\fP & Stud::operator= (const \fBStud\fP & other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB28\fP of file \fBstudent\&.h\fP\&.
+.SS "\fBStud\fP & Stud::operator= (\fBStud\fP && other)\fR [inline]\fP"
+
+.PP
+Definition at line \fB49\fP of file \fBstudent\&.h\fP\&.
+.SS "void Stud::print () const\fR [inline]\fP, \fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBZmogus\fP\&.
+.PP
+Definition at line \fB134\fP of file \fBstudent\&.h\fP\&.
+.SS "void Stud::removeLastPaz ()\fR [inline]\fP"
+
+.PP
+Definition at line \fB115\fP of file \fBstudent\&.h\fP\&.
+.SS "void Stud::setEgz (int e)\fR [inline]\fP"
+
+.PP
+Definition at line \fB106\fP of file \fBstudent\&.h\fP\&.
+.SS "void Stud::setGalutinis (double g)\fR [inline]\fP"
+
+.PP
+Definition at line \fB108\fP of file \fBstudent\&.h\fP\&.
+.SS "void Stud::setVm (char v)\fR [inline]\fP"
+
+.PP
+Definition at line \fB107\fP of file \fBstudent\&.h\fP\&.
+.SH "Friends And Related Symbol Documentation"
+.PP 
+.SS "std::ostream & operator<< (std::ostream & out, const \fBStud\fP & s)\fR [friend]\fP"
+
+.PP
+Definition at line \fB93\fP of file \fBstudent\&.h\fP\&.
+.SS "std::istream & operator>> (std::istream & in, \fBStud\fP & s)\fR [friend]\fP"
+
+.PP
+Definition at line \fB64\fP of file \fBstudent\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Studentų galutinio balo skaičiuoklė from the source code\&.

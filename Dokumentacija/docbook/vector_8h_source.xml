@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vector_8h_source" xml:lang="en-US">
+<title>vector.h</title>
+<indexterm><primary>include/vector.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_vector_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+<anchor xml:id="_vector_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_manolib_8h">manolib.h</link>&quot;</emphasis>
+<anchor xml:id="_vector_8h_source_1l00003"/>00003 
+<anchor xml:id="_vector_8h_source_1l00004"/>00004 <emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;V&gt;
+<anchor xml:id="_vector_8h_source_1l00005"/><link linkend="_class_vektor">00005</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor</link>{
+<anchor xml:id="_vector_8h_source_1l00006"/>00006 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_vector_8h_source_1l00007"/>00007 &#32;&#32;&#32;&#32;V*&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00008"/>00008 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;dydis;
+<anchor xml:id="_vector_8h_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;talpa;
+<anchor xml:id="_vector_8h_source_1l00010"/>00010 
+<anchor xml:id="_vector_8h_source_1l00011"/>00011 <emphasis role="keywordtype">void</emphasis>&#32;resize(<emphasis role="keywordtype">size_t</emphasis>&#32;n)
+<anchor xml:id="_vector_8h_source_1l00012"/>00012 {
+<anchor xml:id="_vector_8h_source_1l00013"/>00013 &#32;&#32;&#32;&#32;V*&#32;temp&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;V[n];
+<anchor xml:id="_vector_8h_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">size_t</emphasis>&#32;i=0;&#32;i&lt;dydis;&#32;i++)
+<anchor xml:id="_vector_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_vector_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp[i]&#32;=&#32;duom[i];
+<anchor xml:id="_vector_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00019"/>00019 &#32;&#32;&#32;&#32;duom&#32;=&#32;temp;
+<anchor xml:id="_vector_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;talpa&#32;=&#32;n;
+<anchor xml:id="_vector_8h_source_1l00021"/>00021 }
+<anchor xml:id="_vector_8h_source_1l00022"/>00022 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_vector_8h_source_1l00023"/>00023 <emphasis role="comment">//&#32;Standard&#32;typedefs&#32;required&#32;by&#32;STL&#32;compatibility</emphasis>
+<anchor xml:id="_vector_8h_source_1l00024"/><link linkend="_class_vektor_1a8d759015bcf357f66a44a3fb07767cc7">00024</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_class_vektor_1a8d759015bcf357f66a44a3fb07767cc7">value_type</link>&#32;=&#32;V;
+<anchor xml:id="_vector_8h_source_1l00025"/><link linkend="_class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422">00025</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422">reference</link>&#32;=&#32;V&amp;;
+<anchor xml:id="_vector_8h_source_1l00026"/><link linkend="_class_vektor_1ad454706115806fe05ec64b01240b3d23">00026</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_class_vektor_1ad454706115806fe05ec64b01240b3d23">const_reference</link>&#32;=&#32;<emphasis role="keyword">const</emphasis>&#32;V&amp;;
+<anchor xml:id="_vector_8h_source_1l00027"/><link linkend="_class_vektor_1a2c33bbc07b22977de729ab7bef761124">00027</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_class_vektor_1a2c33bbc07b22977de729ab7bef761124">iterator</link>&#32;=&#32;V*;
+<anchor xml:id="_vector_8h_source_1l00028"/><link linkend="_class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df">00028</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df">const_iterator</link>&#32;=&#32;<emphasis role="keyword">const</emphasis>&#32;V*;
+<anchor xml:id="_vector_8h_source_1l00029"/><link linkend="_class_vektor_1aa973b8be4fcff1b278587f73851e6412">00029</link> <emphasis role="keyword">using&#32;</emphasis><link linkend="_class_vektor_1aa973b8be4fcff1b278587f73851e6412">size_type</link>&#32;=&#32;size_t;
+<anchor xml:id="_vector_8h_source_1l00030"/>00030 
+<anchor xml:id="_vector_8h_source_1l00031"/>00031 
+<anchor xml:id="_vector_8h_source_1l00032"/>00032 
+<anchor xml:id="_vector_8h_source_1l00033"/>00033 <emphasis role="comment">//Konstruktoriai</emphasis>
+<anchor xml:id="_vector_8h_source_1l00034"/><link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">00034</link> <link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor</link>():&#32;duom(nullptr),&#32;dydis(0),&#32;talpa(0)&#32;{}
+<anchor xml:id="_vector_8h_source_1l00035"/>00035 <emphasis role="comment">//inicilizavimas&#32;su&#32;talpaa</emphasis>
+<anchor xml:id="_vector_8h_source_1l00036"/><link linkend="_class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91">00036</link> <link linkend="_class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91">Vektor</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;d):&#32;dydis(0),&#32;talpa(d)&#32;{
+<anchor xml:id="_vector_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;duom&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;V[d];
+<anchor xml:id="_vector_8h_source_1l00038"/>00038 }
+<anchor xml:id="_vector_8h_source_1l00039"/><link linkend="_class_vektor_1a67b8f571c724876f2c973b983c3c7a69">00039</link> <link linkend="_class_vektor_1a67b8f571c724876f2c973b983c3c7a69">Vektor</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;d,&#32;<emphasis role="keyword">const</emphasis>&#32;V&amp;&#32;value):&#32;dydis(d),&#32;talpa(d)&#32;{
+<anchor xml:id="_vector_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;duom&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;V[d];
+<anchor xml:id="_vector_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;d;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom[i]&#32;=&#32;value;
+<anchor xml:id="_vector_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00044"/>00044 }
+<anchor xml:id="_vector_8h_source_1l00045"/><link linkend="_class_vektor_1af8393162c7248fad4ae83acb11fa2ee2">00045</link> <link linkend="_class_vektor_1af8393162c7248fad4ae83acb11fa2ee2">~Vektor</link>()&#32;{
+<anchor xml:id="_vector_8h_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00047"/>00047 }
+<anchor xml:id="_vector_8h_source_1l00048"/>00048 
+<anchor xml:id="_vector_8h_source_1l00049"/><link linkend="_class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0">00049</link> <emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0">size</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;dydis;}
+<anchor xml:id="_vector_8h_source_1l00050"/><link linkend="_class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7">00050</link> <emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7">max_size</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;std::numeric_limits&lt;size_t&gt;::max();}
+<anchor xml:id="_vector_8h_source_1l00051"/><link linkend="_class_vektor_1a776eab835626a981955ec020cef5001c">00051</link> <emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_vektor_1a776eab835626a981955ec020cef5001c">capacity</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;talpa;}
+<anchor xml:id="_vector_8h_source_1l00052"/><link linkend="_class_vektor_1a68f21ad21b36b39f8e398c7efdb70085">00052</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_vektor_1a68f21ad21b36b39f8e398c7efdb70085">empty</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;dydis&#32;==0;}
+<anchor xml:id="_vector_8h_source_1l00053"/><link linkend="_class_vektor_1ae2eaebca369760c7e0757965e111464a">00053</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_vektor_1ae2eaebca369760c7e0757965e111464a">reserve</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;n)&#32;{
+<anchor xml:id="_vector_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(n&#32;&gt;&#32;talpa)&#32;{
+<anchor xml:id="_vector_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;resize(n);
+<anchor xml:id="_vector_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00057"/>00057 }
+<anchor xml:id="_vector_8h_source_1l00058"/><link linkend="_class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1">00058</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1">erase</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;index)&#32;{
+<anchor xml:id="_vector_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(index&#32;&gt;=&#32;dydis)&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Index&#32;out&#32;of&#32;range&quot;</emphasis>);
+<anchor xml:id="_vector_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;index;&#32;i&#32;&lt;&#32;dydis&#32;-&#32;1;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom[i]&#32;=&#32;duom[i&#32;+&#32;1];
+<anchor xml:id="_vector_8h_source_1l00062"/>00062 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;--dydis;
+<anchor xml:id="_vector_8h_source_1l00064"/>00064 }
+<anchor xml:id="_vector_8h_source_1l00065"/><link linkend="_class_vektor_1a3723a74869b85d1e3db007abab6d669f">00065</link> V*&#32;<link linkend="_class_vektor_1a3723a74869b85d1e3db007abab6d669f">erase</link>(V*&#32;first,&#32;V*&#32;last)&#32;{
+<anchor xml:id="_vector_8h_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(first&#32;&lt;&#32;duom&#32;||&#32;last&#32;&gt;&#32;duom&#32;+&#32;dydis&#32;||&#32;first&#32;&gt;&#32;last)
+<anchor xml:id="_vector_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Invalid&#32;iterator&#32;range&quot;</emphasis>);
+<anchor xml:id="_vector_8h_source_1l00068"/>00068 
+<anchor xml:id="_vector_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;start&#32;=&#32;first&#32;-&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link>&#32;=&#32;last&#32;-&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;range&#32;=&#32;<link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link>&#32;-&#32;start;
+<anchor xml:id="_vector_8h_source_1l00072"/>00072 
+<anchor xml:id="_vector_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;<link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link>;&#32;i&#32;&lt;&#32;dydis;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom[i&#32;-&#32;range]&#32;=&#32;duom[i];
+<anchor xml:id="_vector_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00076"/>00076 
+<anchor xml:id="_vector_8h_source_1l00077"/>00077 &#32;&#32;&#32;&#32;dydis&#32;-=&#32;range;
+<anchor xml:id="_vector_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;duom&#32;+&#32;start;
+<anchor xml:id="_vector_8h_source_1l00079"/>00079 }
+<anchor xml:id="_vector_8h_source_1l00080"/><link linkend="_class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486">00080</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486">swap</link>(<link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&#32;other){
+<anchor xml:id="_vector_8h_source_1l00081"/>00081 &#32;&#32;&#32;&#32;std::swap(duom,&#32;other.duom);
+<anchor xml:id="_vector_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;std::swap(dydis,&#32;other.dydis);
+<anchor xml:id="_vector_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;std::swap(talpa,&#32;other.talpa);
+<anchor xml:id="_vector_8h_source_1l00084"/>00084 }
+<anchor xml:id="_vector_8h_source_1l00085"/><link linkend="_class_vektor_1aeb4dcc6a639c7622777995808c3262a8">00085</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_vektor_1aeb4dcc6a639c7622777995808c3262a8">shrink_to_fit</link>()&#32;{
+<anchor xml:id="_vector_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(talpa&#32;&gt;&#32;dydis)&#32;{
+<anchor xml:id="_vector_8h_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;V*&#32;temp&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;V[dydis];
+<anchor xml:id="_vector_8h_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;dydis;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp[i]&#32;=&#32;duom[i];
+<anchor xml:id="_vector_8h_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom&#32;=&#32;temp;
+<anchor xml:id="_vector_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;talpa&#32;=&#32;dydis;}}
+<anchor xml:id="_vector_8h_source_1l00094"/>00094 
+<anchor xml:id="_vector_8h_source_1l00095"/>00095 <emphasis role="comment">//Vektoriaus&#32;funkciju&#32;realizacijos</emphasis>
+<anchor xml:id="_vector_8h_source_1l00096"/><link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">00096</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_vektor_1a9aa67f181dc9c7a210c46d11df876539">push_back</link>(<emphasis role="keyword">const</emphasis>&#32;V&amp;&#32;value)&#32;{
+<anchor xml:id="_vector_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dydis&#32;==&#32;talpa)&#32;{
+<anchor xml:id="_vector_8h_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;new_talpa;
+<anchor xml:id="_vector_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(talpa&#32;==&#32;0)&#32;{
+<anchor xml:id="_vector_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_talpa&#32;=&#32;1;
+<anchor xml:id="_vector_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_vector_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;new_talpa&#32;=&#32;talpa&#32;*&#32;2;
+<anchor xml:id="_vector_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;resize(new_talpa);
+<anchor xml:id="_vector_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;duom[dydis++]&#32;=&#32;value;
+<anchor xml:id="_vector_8h_source_1l00107"/>00107 }
+<anchor xml:id="_vector_8h_source_1l00108"/><link linkend="_class_vektor_1acdd650cea26a2d95119a5710fda9b5d8">00108</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_vektor_1acdd650cea26a2d95119a5710fda9b5d8">pop_back</link>()&#32;{
+<anchor xml:id="_vector_8h_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dydis&#32;==&#32;0)&#32;{
+<anchor xml:id="_vector_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Cannot&#32;pop_back&#32;from&#32;empty&#32;vector&quot;</emphasis>);
+<anchor xml:id="_vector_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;--dydis;}
+<anchor xml:id="_vector_8h_source_1l00113"/>00113 
+<anchor xml:id="_vector_8h_source_1l00114"/><link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">00114</link> V*&#32;<link linkend="_class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4">begin</link>()&#32;{<emphasis role="keywordflow">return</emphasis>&#32;duom;}
+<anchor xml:id="_vector_8h_source_1l00115"/><link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">00115</link> V*&#32;<link linkend="_class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347">end</link>()&#32;{<emphasis role="keywordflow">return</emphasis>&#32;duom+dydis;}
+<anchor xml:id="_vector_8h_source_1l00116"/><link linkend="_class_vektor_1a16c88c1da1b91a25f954aa59cbed811f">00116</link> V&amp;&#32;<link linkend="_class_vektor_1a16c88c1da1b91a25f954aa59cbed811f">front</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;duom[0];&#32;}
+<anchor xml:id="_vector_8h_source_1l00117"/><link linkend="_class_vektor_1a75342fa6b213f629e153e5084225d065">00117</link> V&amp;&#32;<link linkend="_class_vektor_1a75342fa6b213f629e153e5084225d065">back</link>()&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;duom[dydis&#32;-&#32;1];&#32;}
+<anchor xml:id="_vector_8h_source_1l00118"/><link linkend="_class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a">00118</link> V*&#32;<link linkend="_class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a">clear</link>()
+<anchor xml:id="_vector_8h_source_1l00119"/>00119 {
+<anchor xml:id="_vector_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;duom&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;dydis&#32;=&#32;0;
+<anchor xml:id="_vector_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;talpa&#32;=&#32;0;
+<anchor xml:id="_vector_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00125"/>00125 }
+<anchor xml:id="_vector_8h_source_1l00126"/>00126 
+<anchor xml:id="_vector_8h_source_1l00127"/>00127 
+<anchor xml:id="_vector_8h_source_1l00128"/>00128 <emphasis role="comment">//</emphasis>
+<anchor xml:id="_vector_8h_source_1l00129"/><link linkend="_class_vektor_1ac928e3c873e1e28659e0769dff4a5f11">00129</link> V&amp;&#32;<link linkend="_class_vektor_1ac928e3c873e1e28659e0769dff4a5f11">operator[]</link>(<emphasis role="keywordtype">size_t</emphasis>&#32;index)&#32;{
+<anchor xml:id="_vector_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(index&#32;&gt;=&#32;dydis)&#32;<emphasis role="keywordflow">throw</emphasis>&#32;std::out_of_range(<emphasis role="stringliteral">&quot;Index&#32;out&#32;of&#32;range&quot;</emphasis>);
+<anchor xml:id="_vector_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;duom[index];
+<anchor xml:id="_vector_8h_source_1l00132"/>00132 }
+<anchor xml:id="_vector_8h_source_1l00133"/>00133 <emphasis role="comment">//&#32;Copy&#32;constructor</emphasis>
+<anchor xml:id="_vector_8h_source_1l00134"/><link linkend="_class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb">00134</link> <link linkend="_class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb">Vektor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&#32;other)&#32;:&#32;dydis(other.dydis),&#32;talpa(other.talpa)&#32;{
+<anchor xml:id="_vector_8h_source_1l00135"/>00135 &#32;&#32;&#32;&#32;duom&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;V[talpa];
+<anchor xml:id="_vector_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;dydis;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom[i]&#32;=&#32;other.duom[i];
+<anchor xml:id="_vector_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00139"/>00139 }
+<anchor xml:id="_vector_8h_source_1l00140"/>00140 <emphasis role="comment">//&#32;Copy&#32;assignment&#32;operator</emphasis>
+<anchor xml:id="_vector_8h_source_1l00141"/><link linkend="_class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf">00141</link> <link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&#32;<link linkend="_class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&#32;other)&#32;{
+<anchor xml:id="_vector_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">this</emphasis>&#32;!=&#32;&amp;other)&#32;{
+<anchor xml:id="_vector_8h_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dydis&#32;=&#32;other.dydis;
+<anchor xml:id="_vector_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;talpa&#32;=&#32;other.talpa;
+<anchor xml:id="_vector_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;V[dydis];
+<anchor xml:id="_vector_8h_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;dydis;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom[i]&#32;=&#32;other.duom[i];
+<anchor xml:id="_vector_8h_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00152"/>00152 }
+<anchor xml:id="_vector_8h_source_1l00153"/>00153 <emphasis role="comment">//&#32;Move&#32;constructor</emphasis>
+<anchor xml:id="_vector_8h_source_1l00154"/><link linkend="_class_vektor_1a28bf10b82fb39256290f3fb322441d55">00154</link> <link linkend="_class_vektor_1a28bf10b82fb39256290f3fb322441d55">Vektor</link>(<link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&amp;&#32;other)&#32;noexcept&#32;
+<anchor xml:id="_vector_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;:&#32;duom(other.duom),&#32;dydis(other.dydis),&#32;talpa(other.talpa)&#32;{
+<anchor xml:id="_vector_8h_source_1l00156"/>00156 &#32;&#32;&#32;&#32;other.duom&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00157"/>00157 &#32;&#32;&#32;&#32;other.dydis&#32;=&#32;0;
+<anchor xml:id="_vector_8h_source_1l00158"/>00158 &#32;&#32;&#32;&#32;other.talpa&#32;=&#32;0;
+<anchor xml:id="_vector_8h_source_1l00159"/>00159 }
+<anchor xml:id="_vector_8h_source_1l00160"/>00160 
+<anchor xml:id="_vector_8h_source_1l00161"/>00161 <emphasis role="comment">//&#32;Move&#32;assignment&#32;operator</emphasis>
+<anchor xml:id="_vector_8h_source_1l00162"/><link linkend="_class_vektor_1a4669f56e978065a8cc8046df4dd0d21b">00162</link> <link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&#32;<link linkend="_class_vektor_1a4669f56e978065a8cc8046df4dd0d21b">operator=</link>(<link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&amp;&#32;other)&#32;<emphasis role="keyword">noexcept</emphasis>&#32;{
+<anchor xml:id="_vector_8h_source_1l00163"/>00163 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keyword">this</emphasis>&#32;!=&#32;&amp;other)&#32;{
+<anchor xml:id="_vector_8h_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;duom;
+<anchor xml:id="_vector_8h_source_1l00165"/>00165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;duom&#32;=&#32;other.duom;
+<anchor xml:id="_vector_8h_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dydis&#32;=&#32;other.dydis;
+<anchor xml:id="_vector_8h_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;talpa&#32;=&#32;other.talpa;
+<anchor xml:id="_vector_8h_source_1l00168"/>00168 
+<anchor xml:id="_vector_8h_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.duom&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.dydis&#32;=&#32;0;
+<anchor xml:id="_vector_8h_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;other.talpa&#32;=&#32;0;
+<anchor xml:id="_vector_8h_source_1l00172"/>00172 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00174"/>00174 }
+<anchor xml:id="_vector_8h_source_1l00175"/><link linkend="_class_vektor_1a67d3505b8ac1268e5740feffa000380b">00175</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_vektor_1a67d3505b8ac1268e5740feffa000380b">operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_vektor_1a032e83f770f3a43e03226c869b0da317">Vektor&lt;V&gt;</link>&amp;&#32;other)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+<anchor xml:id="_vector_8h_source_1l00176"/>00176 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dydis&#32;!=&#32;other.dydis)&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00177"/>00177 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;dydis;&#32;++i)&#32;{
+<anchor xml:id="_vector_8h_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!(duom[i]&#32;==&#32;other.duom[i]))&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00179"/>00179 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_vector_8h_source_1l00180"/>00180 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_vector_8h_source_1l00181"/>00181 }
+<anchor xml:id="_vector_8h_source_1l00182"/>00182 <emphasis role="comment">//setteriai</emphasis>
+<anchor xml:id="_vector_8h_source_1l00183"/>00183 
+<anchor xml:id="_vector_8h_source_1l00184"/>00184 
+<anchor xml:id="_vector_8h_source_1l00185"/>00185 <emphasis role="comment">//getteriai</emphasis>
+<anchor xml:id="_vector_8h_source_1l00186"/>00186 
+<anchor xml:id="_vector_8h_source_1l00187"/>00187 
+<anchor xml:id="_vector_8h_source_1l00188"/>00188 };
+</programlisting></section>

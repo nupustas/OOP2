@@ -12,6 +12,7 @@
 #include<sstream>
 #include<chrono>
 #include<limits>
+#include<ios>
 #include<string>
 #include<type_traits>
 #include<exception>
@@ -39,16 +40,6 @@ using std::string;
 using std::setw;
 using std::is_same_v;
 
-
-struct Stud
-{
-    string Vardas, Pavarde;
-    vector <int> paz;
-    int pazcount;
-    double galutinis;
-    int egz;
-    char vm;
- };
 
 const string MNames[25] = {
     "Andrius", "Dainius", "Jonas" , "Marius", "Orestas", "Povilas", 

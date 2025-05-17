@@ -1,18 +1,21 @@
 #include "manolib.h"
 #include "functions.h"
-#include <exception>
+#include "student.h"
+#include "vector.h"
 
+
+using Container = Vektor<Stud>;
 //using Container = std::vector<Stud>;
-//using Container = std::deque<Stud>;
-using Container = std::list<Stud>;
+
 
 int main()
 {   
-    srand(time(NULL));
+    srand(static_cast<unsigned int>(time(0)));
+
     try 
     {
         Container grupe;
-        cout << "Using container: " << typeid(Container).name() << endl;
+        //cout << "Using container: " << typeid(Container).name() << endl;
         char a;
 
         cout << "1 - Input everything manually" << endl;
@@ -20,13 +23,15 @@ int main()
         cout << "3 - Generate everything" << endl;
         cout << "4 - Read from file" << endl;
         cout << "5 - Performance test" << endl;
+        cout << "6 - Class tests" << endl;
+        cout << "7 - Vektor class tests" << endl;
 
         cin >> a;
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-        while (a < '1' || a > '5')  
+        while (a < '1' || a > '7')  
         {
-            cout << "Invalid input. Enter 1, 2, 3, 4, or 5: ";
+            cout << "Invalid input. Enter 1, 2, 3, 4, 5 or 6: ";
             cin >> a;
             cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
@@ -62,7 +67,32 @@ int main()
             grupe = SpeedTesting<Container>();
             return 0;
         }
+        else if (a == '6') 
+        {   
+            TestStud();  // Run the test function
+            return 0;
+        }
+        else if (a == '7') 
+        {   
+            std::vector<int> og;
+            Vektor <int> klase;
+            size_t sz = 100000; // 100000, 1000000, 10000000, 100000000
+            cin>>sz;
+            cout<< "Size: " << sz << endl;
+            auto start_split = std::chrono::high_resolution_clock::now();
+            for (int i = 1; i <= sz; ++i) og.push_back(i);
+            auto end_split = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> split_duration = end_split - start_split;
+            cout<< "OG vector: " << fixed << setprecision(5) << split_duration.count() << " s" << endl;
 
+
+            auto start = std::chrono::high_resolution_clock::now();
+            for (int i = 1; i <= sz; ++i) klase.push_back(i);
+            auto end = std::chrono::high_resolution_clock::now();
+            std::chrono::duration<double> duration = end - start;
+            cout<< "Vektor class: " << fixed << setprecision(5) << duration.count() << " s" << endl;
+            return 0;
+        }
         if (grupe.empty())  
         {
             throw std::runtime_error("Error: No data to process.");

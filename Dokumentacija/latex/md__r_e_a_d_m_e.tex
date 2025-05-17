@@ -1,0 +1,117 @@
+\chapter{Studentų galutinio balo skaičiavimo programa}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Studentų galutinio balo skaičiavimo programa@{Studentų galutinio balo skaičiavimo programa}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Projekto paleidimas naudojant CMake}{Projekto paleidimas naudojant CMake}}\label{md__r_e_a_d_m_e_autotoc_md1}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{1. Reikalingi įrankiai}{1. Reikalingi įrankiai}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Prieš paleidžiant projektą, įsitikinkite, kad turite šiuos įrankius\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{CMake}}\+: \href{https://cmake.org/download/}{\texttt{ Atsisiųsti CMake}} (minimum v3.\+10)
+\item {\bfseries{C++ kompiliatorius}} (GCC, CLANG, MSVC)
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{2. Parsisiųskite projektą, jei jo dar neturite}{2. Parsisiųskite projektą, jei jo dar neturite}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsubsubsection{\texorpdfstring{Projekto klonavimas iš git\+:}{Projekto klonavimas iš git\+:}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git\ clone\ https://github.com/nupustas/oop.vp}
+
+\end{DoxyCode}
+ Paklonave projektą, atidarykite jo aplanką.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsubsubsection{\texorpdfstring{Projekto kompiliavimas\+:}{Projekto kompiliavimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ build}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{cmake\ ..}
+
+\end{DoxyCode}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/build\ .\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsubsubsection{\texorpdfstring{Projekto paleidimas\+:}{Projekto paleidimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ release}
+\DoxyCodeLine{OOP.exe}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Projekto struktūra\+:}{Projekto struktūra\+:}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily include/}}}\+: Aplankalas, kuriame laikomi projekto header failai.
+\item {\bfseries{{\ttfamily src/}}}\+: Pagrindinis programos kodas.
+\item {\bfseries{{\ttfamily CMake\+Lists.\+txt}}}\+: CMake instrukcijos kompiliavimui.
+\item {\bfseries{{\ttfamily \doxylink{_r_e_a_d_m_e_8md}{Read\+ME.\+md}}}}\+: Programos instrukcija.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{V3.\+0}{V3.\+0}}\label{md__r_e_a_d_m_e_autotoc_md8}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{\texorpdfstring{Vector klasės funkcijų pavyzdžiai}{Vector klasės funkcijų pavyzdžiai}}\label{md__r_e_a_d_m_e_autotoc_md9}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysubsubsection{\texorpdfstring{1. {\ttfamily void erase(size\+\_\+t index)}}{1. {\ttfamily void erase(size\+\_\+t index)}}}\label{md__r_e_a_d_m_e_autotoc_md10}
+Ši funkcija pašalina vieną konteinerio elementą, kurio index yra paduotas. \hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysubsubsubsubsection{\texorpdfstring{Veikimas\+:}{Veikimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md11}
+Iš pradžių patikrinama ar paduotas {\bfseries{index}} nėra didesnis nei esamo konteinerio dydis, jei ne, visi elementai esantys dešinėje index\textquotesingle{}o pastumiami į kairę ir pakeičiamas konteinerio dydis.\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysubsubsection{\texorpdfstring{2. {\ttfamily V\texorpdfstring{$\ast$}{*} erase(\+V\texorpdfstring{$\ast$}{*} first, V\texorpdfstring{$\ast$}{*} last)}}{2. {\ttfamily V\texorpdfstring{$\ast$}{*} erase(\+V\texorpdfstring{$\ast$}{*} first, V\texorpdfstring{$\ast$}{*} last)}}}\label{md__r_e_a_d_m_e_autotoc_md12}
+Ši funkcija, pašalina konteinerio elementus nuo į ja paduotų index\+: nuo \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} V\texorpdfstring{$\ast$}{*} first \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} iki \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} V\texorpdfstring{$\ast$}{*} last \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \hypertarget{md__r_e_a_d_m_e_autotoc_md13}{}\doxysubsubsubsubsection{\texorpdfstring{Veikimas\+:}{Veikimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md13}
+Patikrinama ar first nėra mažesnis už masyvo pradžią, ar last nėra didesnis už masyvo pabaigą, ir ar first \texorpdfstring{$<$}{<} last. Tada pointeriai first ir last paverčiami į index\textquotesingle{}us, ir elementai kurie yra už \textquotesingle{}last\textquotesingle{} yra pastumiami į kairę. Pakeičiamas konteinerio \textquotesingle{}dydis\textquotesingle{} ir grąžinamas pirmo elemento po ištrintų iteratorius. ~\newline
+\hypertarget{md__r_e_a_d_m_e_autotoc_md14}{}\doxysubsubsection{\texorpdfstring{3. {\ttfamily V\& operator\mbox{[}$\,$\mbox{]}(size\+\_\+t index)}}{3. {\ttfamily V\& operator\mbox{[}$\,$\mbox{]}(size\+\_\+t index)}}}\label{md__r_e_a_d_m_e_autotoc_md14}
+Operatorius \mbox{[}\mbox{]}, leidžia prieti prie norimo elemento konteineryje. Norint pasiekti bet kokį elementą konteineryje, naudojamas šis operatorius per norimo elemento index\textquotesingle{}ą. {\ttfamily Pvz.\+: Vector\mbox{[}i\mbox{]}} \hypertarget{md__r_e_a_d_m_e_autotoc_md15}{}\doxysubsubsubsubsection{\texorpdfstring{Veikimas\+:}{Veikimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md15}
+Patikrinama ar index nėra didesnis už konteinerio dydį, jei ne grąžinamas duomenų masyvo elementas. {\ttfamily return duom\mbox{[}index\mbox{]};}\hypertarget{md__r_e_a_d_m_e_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{4. {\ttfamily bool operator==(const Vektor\texorpdfstring{$<$}{<}V\texorpdfstring{$>$}{>}\& other)}}{4. {\ttfamily bool operator==(const Vektor\texorpdfstring{$<$}{<}V\texorpdfstring{$>$}{>}\& other)}}}\label{md__r_e_a_d_m_e_autotoc_md16}
+Operatorius ==, šis leidžia patikrinti ar du konteineriai yra lygūs. \hypertarget{md__r_e_a_d_m_e_autotoc_md17}{}\doxysubsubsubsubsection{\texorpdfstring{Veikimas\+:}{Veikimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md17}
+Visų pirmą patikrinama ar konteinerių dydis lygus, jei ne iškart grąžinama {\bfseries{false}} reikšmė. Jei konteinerių dydis toks pat, tuomet tikrinama ar kiekvinas konteinerių elementas lygus. Jei visi elementai lygūs, grąžinama {\bfseries{true}} reikšmė.\hypertarget{md__r_e_a_d_m_e_autotoc_md18}{}\doxysubsubsection{\texorpdfstring{5. {\ttfamily void pop\+\_\+back()}}{5. {\ttfamily void pop\+\_\+back()}}}\label{md__r_e_a_d_m_e_autotoc_md18}
+Ši funkcija leidžia pašalinti konteinerio paskutinį elementą. \hypertarget{md__r_e_a_d_m_e_autotoc_md19}{}\doxysubsubsubsubsection{\texorpdfstring{Veikimas\+:}{Veikimas\+:}}\label{md__r_e_a_d_m_e_autotoc_md19}
+Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažinamas vienu. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{-\/-\/dydis;}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md20}{}\doxysection{\texorpdfstring{Testavimas}{Testavimas}}\label{md__r_e_a_d_m_e_autotoc_md20}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md21}{}\doxysubsubsection{\texorpdfstring{Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.}{Šiose lentelėse pateikiami skirtingų C++ konteinerių (vector, list, deque) testavimo rezultatai.}}\label{md__r_e_a_d_m_e_autotoc_md21}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md22}{}\doxysubsection{\texorpdfstring{🖥 Testavimo sistemos parametrai\+:}{🖥 Testavimo sistemos parametrai\+:}}\label{md__r_e_a_d_m_e_autotoc_md22}
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily Procesorius\+: Intel Core i5-\/10300H}}}
+\item {\bfseries{{\ttfamily Operatyvioji atmintis\+: 2×4\+GB DDR4 3200MHz}}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md23}{}\doxysection{\texorpdfstring{-\/ {\bfseries{{\ttfamily Diskas\+: 512GB NVMe SSD}}}}{-\/ {\bfseries{{\ttfamily Diskas\+: 512GB NVMe SSD}}}}}\label{md__r_e_a_d_m_e_autotoc_md23}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md24}{}\doxysubsubsection{\texorpdfstring{Originalus Vector vs Vektor klasė}{Originalus Vector vs Vektor klasė}}\label{md__r_e_a_d_m_e_autotoc_md24}
+
+\begin{DoxyItemize}
+\item {\bfseries{Užpildymas naudojant push\+\_\+back() funkciją}} \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Dydis   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vector   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Klasė    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Dydis   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vector   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Klasė    }\\\cline{1-3}
+\endhead
+10000   &0.\+00010 s   &0.\+00006 s    \\\cline{1-3}
+100000   &0.\+00101 s   &0.\+00051 s    \\\cline{1-3}
+1000000   &0.\+00414 s   &0.\+00477 s    \\\cline{1-3}
+10000000   &0.\+04605 s   &0.\+04761 s    \\\cline{1-3}
+100000000   &0.\+50926 s   &0.\+39100 s    \\\cline{1-3}
+1000000000   &9.\+06876 s   &6.\+91821 s   \\\cline{1-3}
+\end{longtabu}
+
+\item {\bfseries{Programos spartos analizė}} \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vector   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Klasė    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Failas   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Vector   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Klasė    }\\\cline{1-3}
+\endhead
+Studentai10000   &0.\+17188 s   &0.\+13205 s    \\\cline{1-3}
+Studentai100000   &1.\+03871 s   &1.\+09587 s    \\\cline{1-3}
+Studentai1000000   &9.\+88531 s   &10.\+2013 s    \\\cline{1-3}
+Studentai10000000   &100.\+456 s   &110.\+858 s   \\\cline{1-3}
+\end{longtabu}
+
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md25}{}\doxysubsubsection{\texorpdfstring{Testų analizė}{Testų analizė}}\label{md__r_e_a_d_m_e_autotoc_md25}
+
+\begin{DoxyItemize}
+\item Užpildant konteinerį naudojant push\+\_\+back() funkciją, vektoriaus klasė yra spartesnė
+\item Naudojant programoje, klasė yra šiek tiek pranašesnė apdorojant mažus studentų kiekius, tačiau kai studentų daug originalus vektorius vistiek veikia sparčiau. 
+\end{DoxyItemize}

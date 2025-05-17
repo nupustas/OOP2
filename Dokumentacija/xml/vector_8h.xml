@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="vector_8h" kind="file" language="C++">
+    <compoundname>vector.h</compoundname>
+    <includes refid="manolib_8h" local="yes">manolib.h</includes>
+    <includedby refid="main_8cpp" local="yes">src/main.cpp</includedby>
+    <includedby refid="tests_8cpp" local="yes">src/tests.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>manolib.h</label>
+        <link refid="manolib_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>algorithm</label>
+      </node>
+      <node id="12">
+        <label>chrono</label>
+      </node>
+      <node id="8">
+        <label>ctime</label>
+      </node>
+      <node id="5">
+        <label>deque</label>
+      </node>
+      <node id="17">
+        <label>exception</label>
+      </node>
+      <node id="10">
+        <label>fstream</label>
+      </node>
+      <node id="6">
+        <label>iomanip</label>
+      </node>
+      <node id="14">
+        <label>ios</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>list</label>
+      </node>
+      <node id="11">
+        <label>sstream</label>
+      </node>
+      <node id="15">
+        <label>string</label>
+      </node>
+      <node id="16">
+        <label>type_traits</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/vector.h</label>
+        <link refid="vector_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/tests.cpp</label>
+        <link refid="tests_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_vektor" prot="public">Vektor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="manolib_8h" kindref="compound">manolib.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="5" refid="class_vektor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor</ref>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>V*<sp/>duom;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dydis;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>talpa;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resize(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>V*<sp/>temp<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V[n];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;dydis;<sp/>i++)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>=<sp/>duom[i];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>duom;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>duom<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>talpa<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Standard<sp/>typedefs<sp/>required<sp/>by<sp/>STL<sp/>compatibility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_vektor_1a8d759015bcf357f66a44a3fb07767cc7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1a8d759015bcf357f66a44a3fb07767cc7" kindref="member">value_type</ref><sp/>=<sp/>V;</highlight></codeline>
+<codeline lineno="25" refid="class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1ae82bfd92dc55bb8d22f70e6f2b39a422" kindref="member">reference</ref><sp/>=<sp/>V&amp;;</highlight></codeline>
+<codeline lineno="26" refid="class_vektor_1ad454706115806fe05ec64b01240b3d23" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1ad454706115806fe05ec64b01240b3d23" kindref="member">const_reference</ref><sp/>=<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;;</highlight></codeline>
+<codeline lineno="27" refid="class_vektor_1a2c33bbc07b22977de729ab7bef761124" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1a2c33bbc07b22977de729ab7bef761124" kindref="member">iterator</ref><sp/>=<sp/>V*;</highlight></codeline>
+<codeline lineno="28" refid="class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1a47611cfc39bdb6d9fcb1eca8d78772df" kindref="member">const_iterator</ref><sp/>=<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V*;</highlight></codeline>
+<codeline lineno="29" refid="class_vektor_1aa973b8be4fcff1b278587f73851e6412" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="class_vektor_1aa973b8be4fcff1b278587f73851e6412" kindref="member">size_type</ref><sp/>=<sp/>size_t;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//Konstruktoriai</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" refkind="member"><highlight class="normal"><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor</ref>():<sp/>duom(nullptr),<sp/>dydis(0),<sp/>talpa(0)<sp/>{}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//inicilizavimas<sp/>su<sp/>talpaa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91" refkind="member"><highlight class="normal"><ref refid="class_vektor_1a250e2be3ab4d9deddbc7d3da4ca06d91" kindref="member">Vektor</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>d):<sp/>dydis(0),<sp/>talpa(d)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>duom<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V[d];</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39" refid="class_vektor_1a67b8f571c724876f2c973b983c3c7a69" refkind="member"><highlight class="normal"><ref refid="class_vektor_1a67b8f571c724876f2c973b983c3c7a69" kindref="member">Vektor</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>d,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>value):<sp/>dydis(d),<sp/>talpa(d)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>duom<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V[d];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>d;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom[i]<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45" refid="class_vektor_1af8393162c7248fad4ae83acb11fa2ee2" refkind="member"><highlight class="normal"><ref refid="class_vektor_1af8393162c7248fad4ae83acb11fa2ee2" kindref="member">~Vektor</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>duom;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1ac2fbba41a1816fcdf6e3a7492719cdf0" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dydis;}</highlight></codeline>
+<codeline lineno="50" refid="class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1ad05848675e93846df5d5bfb17ccdf4e7" kindref="member">max_size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::numeric_limits&lt;size_t&gt;::max();}</highlight></codeline>
+<codeline lineno="51" refid="class_vektor_1a776eab835626a981955ec020cef5001c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a776eab835626a981955ec020cef5001c" kindref="member">capacity</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>talpa;}</highlight></codeline>
+<codeline lineno="52" refid="class_vektor_1a68f21ad21b36b39f8e398c7efdb70085" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a68f21ad21b36b39f8e398c7efdb70085" kindref="member">empty</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dydis<sp/>==0;}</highlight></codeline>
+<codeline lineno="53" refid="class_vektor_1ae2eaebca369760c7e0757965e111464a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1ae2eaebca369760c7e0757965e111464a" kindref="member">reserve</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>n)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>&gt;<sp/>talpa)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(n);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58" refid="class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a2cc9152c8ab906eb1c294ffd1c3c14e1" kindref="member">erase</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/>dydis)<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Index<sp/>out<sp/>of<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>index;<sp/>i<sp/>&lt;<sp/>dydis<sp/>-<sp/>1;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom[i]<sp/>=<sp/>duom[i<sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>--dydis;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65" refid="class_vektor_1a3723a74869b85d1e3db007abab6d669f" refkind="member"><highlight class="normal">V*<sp/><ref refid="class_vektor_1a3723a74869b85d1e3db007abab6d669f" kindref="member">erase</ref>(V*<sp/>first,<sp/>V*<sp/>last)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(first<sp/>&lt;<sp/>duom<sp/>||<sp/>last<sp/>&gt;<sp/>duom<sp/>+<sp/>dydis<sp/>||<sp/>first<sp/>&gt;<sp/>last)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>iterator<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>start<sp/>=<sp/>first<sp/>-<sp/>duom;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" kindref="member">end</ref><sp/>=<sp/>last<sp/>-<sp/>duom;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>range<sp/>=<sp/><ref refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" kindref="member">end</ref><sp/>-<sp/>start;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/><ref refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" kindref="member">end</ref>;<sp/>i<sp/>&lt;<sp/>dydis;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom[i<sp/>-<sp/>range]<sp/>=<sp/>duom[i];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>dydis<sp/>-=<sp/>range;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom<sp/>+<sp/>start;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80" refid="class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1ac2cc3de61fa2ccbc9b1c06839e3b7486" kindref="member">swap</ref>(<ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;<sp/>other){</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>std::swap(duom,<sp/>other.duom);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>std::swap(dydis,<sp/>other.dydis);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>std::swap(talpa,<sp/>other.talpa);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85" refid="class_vektor_1aeb4dcc6a639c7622777995808c3262a8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1aeb4dcc6a639c7622777995808c3262a8" kindref="member">shrink_to_fit</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(talpa<sp/>&gt;<sp/>dydis)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>V*<sp/>temp<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V[dydis];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dydis;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp[i]<sp/>=<sp/>duom[i];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>duom;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom<sp/>=<sp/>temp;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>talpa<sp/>=<sp/>dydis;}}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//Vektoriaus<sp/>funkciju<sp/>realizacijos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="class_vektor_1a9aa67f181dc9c7a210c46d11df876539" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a9aa67f181dc9c7a210c46d11df876539" kindref="member">push_back</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>V&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dydis<sp/>==<sp/>talpa)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>new_talpa;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(talpa<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_talpa<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_talpa<sp/>=<sp/>talpa<sp/>*<sp/>2;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(new_talpa);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>duom[dydis++]<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108" refid="class_vektor_1acdd650cea26a2d95119a5710fda9b5d8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1acdd650cea26a2d95119a5710fda9b5d8" kindref="member">pop_back</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dydis<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Cannot<sp/>pop_back<sp/>from<sp/>empty<sp/>vector&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>--dydis;}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4" refkind="member"><highlight class="normal">V*<sp/><ref refid="class_vektor_1a2d303cdf34fba1f0b9be04924819dfd4" kindref="member">begin</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom;}</highlight></codeline>
+<codeline lineno="115" refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" refkind="member"><highlight class="normal">V*<sp/><ref refid="class_vektor_1a8b3ccfae217c6a8d113ee0f29f1da347" kindref="member">end</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom+dydis;}</highlight></codeline>
+<codeline lineno="116" refid="class_vektor_1a16c88c1da1b91a25f954aa59cbed811f" refkind="member"><highlight class="normal">V&amp;<sp/><ref refid="class_vektor_1a16c88c1da1b91a25f954aa59cbed811f" kindref="member">front</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom[0];<sp/>}</highlight></codeline>
+<codeline lineno="117" refid="class_vektor_1a75342fa6b213f629e153e5084225d065" refkind="member"><highlight class="normal">V&amp;<sp/><ref refid="class_vektor_1a75342fa6b213f629e153e5084225d065" kindref="member">back</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom[dydis<sp/>-<sp/>1];<sp/>}</highlight></codeline>
+<codeline lineno="118" refid="class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a" refkind="member"><highlight class="normal">V*<sp/><ref refid="class_vektor_1a930fa80a1421a1556cd69fcc14bdce2a" kindref="member">clear</ref>()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>duom;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>duom<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>dydis<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>talpa<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_vektor_1ac928e3c873e1e28659e0769dff4a5f11" refkind="member"><highlight class="normal">V&amp;<sp/><ref refid="class_vektor_1ac928e3c873e1e28659e0769dff4a5f11" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/>dydis)<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::out_of_range(</highlight><highlight class="stringliteral">&quot;Index<sp/>out<sp/>of<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duom[index];</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb" refkind="member"><highlight class="normal"><ref refid="class_vektor_1abe0174bf5ed4d30b63d9310fc48e8deb" kindref="member">Vektor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;<sp/>other)<sp/>:<sp/>dydis(other.dydis),<sp/>talpa(other.talpa)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>duom<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V[talpa];</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dydis;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom[i]<sp/>=<sp/>other.duom[i];</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copy<sp/>assignment<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf" refkind="member"><highlight class="normal"><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;<sp/><ref refid="class_vektor_1a6a9803f7a09ebf1f6e3724d3275007bf" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;other)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>duom;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dydis<sp/>=<sp/>other.dydis;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>talpa<sp/>=<sp/>other.talpa;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>V[dydis];</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dydis;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom[i]<sp/>=<sp/>other.duom[i];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Move<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="class_vektor_1a28bf10b82fb39256290f3fb322441d55" refkind="member"><highlight class="normal"><ref refid="class_vektor_1a28bf10b82fb39256290f3fb322441d55" kindref="member">Vektor</ref>(<ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;&amp;<sp/>other)<sp/>noexcept<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>duom(other.duom),<sp/>dydis(other.dydis),<sp/>talpa(other.talpa)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>other.duom<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>other.dydis<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>other.talpa<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Move<sp/>assignment<sp/>operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_vektor_1a4669f56e978065a8cc8046df4dd0d21b" refkind="member"><highlight class="normal"><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;<sp/><ref refid="class_vektor_1a4669f56e978065a8cc8046df4dd0d21b" kindref="member">operator=</ref>(<ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;&amp;<sp/>other)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;other)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>duom;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duom<sp/>=<sp/>other.duom;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dydis<sp/>=<sp/>other.dydis;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>talpa<sp/>=<sp/>other.talpa;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>other.duom<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>other.dydis<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>other.talpa<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175" refid="class_vektor_1a67d3505b8ac1268e5740feffa000380b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a67d3505b8ac1268e5740feffa000380b" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_vektor_1a032e83f770f3a43e03226c869b0da317" kindref="member">Vektor&lt;V&gt;</ref>&amp;<sp/>other)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dydis<sp/>!=<sp/>other.dydis)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dydis;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!(duom[i]<sp/>==<sp/>other.duom[i]))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="comment">//setteriai</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//getteriai</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="include/vector.h"/>
+  </compounddef>
+</doxygen>

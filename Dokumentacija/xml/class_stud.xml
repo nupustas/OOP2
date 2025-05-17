@@ -1,0 +1,487 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_stud" kind="class" language="C++" prot="public">
+    <compoundname>Stud</compoundname>
+    <basecompoundref refid="class_zmogus" prot="public" virt="non-virtual">Zmogus</basecompoundref>
+    <includes refid="student_8h" local="no">student.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_stud_1ad2c3e28e56dddd477c73b7f4024d2e62" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; Stud::paz</definition>
+        <argsstring></argsstring>
+        <name>paz</name>
+        <qualifiedname>Stud::paz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="9" column="17" bodyfile="include/student.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stud_1a888ec71dda6c6b3f9390d2141dc7ef17" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Stud::egz</definition>
+        <argsstring></argsstring>
+        <name>egz</name>
+        <qualifiedname>Stud::egz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="10" column="9" bodyfile="include/student.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stud_1a52d0e1c089bbcba44db3b32c74421f24" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Stud::vm</definition>
+        <argsstring></argsstring>
+        <name>vm</name>
+        <qualifiedname>Stud::vm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="11" column="10" bodyfile="include/student.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_stud_1ad7a4cc0da0bd429aadefce0da69330cf" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Stud::galutinis</definition>
+        <argsstring></argsstring>
+        <name>galutinis</name>
+        <qualifiedname>Stud::galutinis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="12" column="12" bodyfile="include/student.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stud_1a97585839898d45dc9fc815d5b36e2b69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Stud::Stud</definition>
+        <argsstring>()</argsstring>
+        <name>Stud</name>
+        <qualifiedname>Stud::Stud</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="16" column="5" bodyfile="include/student.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a6e16964de60326f7a598a0b47903f574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Stud::Stud</definition>
+        <argsstring>(const std::string &amp;v, const std::string &amp;p, const std::vector&lt; int &gt; &amp;pazymiai, int e, char vmod, double gal)</argsstring>
+        <name>Stud</name>
+        <qualifiedname>Stud::Stud</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>pazymiai</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>vmod</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="17" column="5" bodyfile="include/student.h" bodystart="17" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1aa1c38d670d1f269ebd48588c40ad58db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Stud::~Stud</definition>
+        <argsstring>()</argsstring>
+        <name>~Stud</name>
+        <qualifiedname>Stud::~Stud</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="21" column="5" bodyfile="include/student.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1ad473232271f7e160f811c6ae206d326c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Stud::Stud</definition>
+        <argsstring>(const Stud &amp;other)</argsstring>
+        <name>Stud</name>
+        <qualifiedname>Stud::Stud</qualifiedname>
+        <param>
+          <type>const <ref refid="class_stud" kindref="compound">Stud</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="24" column="5" bodyfile="include/student.h" bodystart="24" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a311ba01abe5e734694bd281a9653226f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_stud" kindref="compound">Stud</ref> &amp;</type>
+        <definition>Stud &amp; Stud::operator=</definition>
+        <argsstring>(const Stud &amp;other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Stud::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_stud" kindref="compound">Stud</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="28" column="10" bodyfile="include/student.h" bodystart="28" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1ac62c75899e911e4f1d55e1047564225c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Stud::Stud</definition>
+        <argsstring>(Stud &amp;&amp;other)</argsstring>
+        <name>Stud</name>
+        <qualifiedname>Stud::Stud</qualifiedname>
+        <param>
+          <type><ref refid="class_stud" kindref="compound">Stud</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="40" column="5" bodyfile="include/student.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_stud" kindref="compound">Stud</ref> &amp;</type>
+        <definition>Stud &amp; Stud::operator=</definition>
+        <argsstring>(Stud &amp;&amp;other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Stud::operator=</qualifiedname>
+        <param>
+          <type><ref refid="class_stud" kindref="compound">Stud</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="49" column="10" bodyfile="include/student.h" bodystart="49" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a4d3c5d9554efdc1f68d66958375e71e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stud::setEgz</definition>
+        <argsstring>(int e)</argsstring>
+        <name>setEgz</name>
+        <qualifiedname>Stud::setEgz</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="106" column="10" bodyfile="include/student.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stud::setVm</definition>
+        <argsstring>(char v)</argsstring>
+        <name>setVm</name>
+        <qualifiedname>Stud::setVm</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="107" column="10" bodyfile="include/student.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stud::setGalutinis</definition>
+        <argsstring>(double g)</argsstring>
+        <name>setGalutinis</name>
+        <qualifiedname>Stud::setGalutinis</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>g</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="108" column="10" bodyfile="include/student.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1acbfb081c993f6482c59cb57d449c4c5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stud::addPaz</definition>
+        <argsstring>(int pazymys)</argsstring>
+        <name>addPaz</name>
+        <qualifiedname>Stud::addPaz</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pazymys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="109" column="10" bodyfile="include/student.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a25998973a74b359a72a95d49beae0c08" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Stud::getEgz</definition>
+        <argsstring>() const</argsstring>
+        <name>getEgz</name>
+        <qualifiedname>Stud::getEgz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="111" column="9" bodyfile="include/student.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>char</type>
+        <definition>char Stud::getVm</definition>
+        <argsstring>() const</argsstring>
+        <name>getVm</name>
+        <qualifiedname>Stud::getVm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="112" column="10" bodyfile="include/student.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a45c7d38ccc4203365b448101344ba4e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double Stud::getGalutinis</definition>
+        <argsstring>() const</argsstring>
+        <name>getGalutinis</name>
+        <qualifiedname>Stud::getGalutinis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="113" column="12" bodyfile="include/student.h" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1aa6575230afb3ea980563b2cb039bd4c9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt; int &gt; Stud::getPaz</definition>
+        <argsstring>() const</argsstring>
+        <name>getPaz</name>
+        <qualifiedname>Stud::getPaz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="114" column="17" bodyfile="include/student.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1ac8b2e8ca576f42a8446fac6d745947aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stud::removeLastPaz</definition>
+        <argsstring>()</argsstring>
+        <name>removeLastPaz</name>
+        <qualifiedname>Stud::removeLastPaz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="115" column="10" bodyfile="include/student.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a07f94d74e9e563756d78605ac8093a9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stud::FinalScore</definition>
+        <argsstring>()</argsstring>
+        <name>FinalScore</name>
+        <qualifiedname>Stud::FinalScore</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="118" column="10" bodyfile="include/student.h" bodystart="118" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stud_1a2e343213dc95664555965f08648527c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Stud::print</definition>
+        <argsstring>() const override</argsstring>
+        <name>print</name>
+        <qualifiedname>Stud::print</qualifiedname>
+        <reimplements refid="class_zmogus_1aa52869cc6a869223fedcb9f7676534fc">print</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="134" column="10" bodyfile="include/student.h" bodystart="134" bodyend="136"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_stud_1ab0ae2d598da52d7298daa3083d28b576" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream &amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, Stud &amp;s)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <qualifiedname>Stud::operator&gt;&gt;</qualifiedname>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="class_stud" kindref="compound">Stud</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="64" column="25" bodyfile="include/student.h" bodystart="64" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_stud_1a9072c21de23b6a0596457f5a87a24780" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const Stud &amp;s)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>Stud::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_stud" kindref="compound">Stud</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/student.h" line="93" column="12" bodyfile="include/student.h" bodystart="93" bodyend="103"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Stud</label>
+        <link refid="class_stud"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Zmogus</label>
+        <link refid="class_zmogus"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Stud</label>
+        <link refid="class_stud"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Zmogus</label>
+        <link refid="class_zmogus"/>
+      </node>
+    </collaborationgraph>
+    <location file="include/student.h" line="7" column="1" bodyfile="include/student.h" bodystart="7" bodyend="137"/>
+    <listofallmembers>
+      <member refid="class_stud_1acbfb081c993f6482c59cb57d449c4c5e" prot="public" virt="non-virtual"><scope>Stud</scope><name>addPaz</name></member>
+      <member refid="class_stud_1a888ec71dda6c6b3f9390d2141dc7ef17" prot="private" virt="non-virtual"><scope>Stud</scope><name>egz</name></member>
+      <member refid="class_stud_1a07f94d74e9e563756d78605ac8093a9a" prot="public" virt="non-virtual"><scope>Stud</scope><name>FinalScore</name></member>
+      <member refid="class_stud_1ad7a4cc0da0bd429aadefce0da69330cf" prot="private" virt="non-virtual"><scope>Stud</scope><name>galutinis</name></member>
+      <member refid="class_stud_1a25998973a74b359a72a95d49beae0c08" prot="public" virt="non-virtual"><scope>Stud</scope><name>getEgz</name></member>
+      <member refid="class_stud_1a45c7d38ccc4203365b448101344ba4e2" prot="public" virt="non-virtual"><scope>Stud</scope><name>getGalutinis</name></member>
+      <member refid="class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63" prot="public" virt="non-virtual"><scope>Stud</scope><name>getPavarde</name></member>
+      <member refid="class_stud_1aa6575230afb3ea980563b2cb039bd4c9" prot="public" virt="non-virtual"><scope>Stud</scope><name>getPaz</name></member>
+      <member refid="class_zmogus_1aaea44664c236e2fadf022f3821862499" prot="public" virt="non-virtual"><scope>Stud</scope><name>getVardas</name></member>
+      <member refid="class_stud_1aef03c2e2f603dd42886d7d6dbefe14b6" prot="public" virt="non-virtual"><scope>Stud</scope><name>getVm</name></member>
+      <member refid="class_stud_1a9072c21de23b6a0596457f5a87a24780" prot="public" virt="non-virtual"><scope>Stud</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_stud_1a311ba01abe5e734694bd281a9653226f" prot="public" virt="non-virtual"><scope>Stud</scope><name>operator=</name></member>
+      <member refid="class_stud_1afd1e9be92f8d351aa99b4c09a332ea3a" prot="public" virt="non-virtual"><scope>Stud</scope><name>operator=</name></member>
+      <member refid="class_stud_1ab0ae2d598da52d7298daa3083d28b576" prot="public" virt="non-virtual"><scope>Stud</scope><name>operator&gt;&gt;</name></member>
+      <member refid="class_zmogus_1a2300d6db4227967c96dd83a555fa7b86" prot="protected" virt="non-virtual"><scope>Stud</scope><name>Pavarde</name></member>
+      <member refid="class_stud_1ad2c3e28e56dddd477c73b7f4024d2e62" prot="private" virt="non-virtual"><scope>Stud</scope><name>paz</name></member>
+      <member refid="class_stud_1a2e343213dc95664555965f08648527c2" prot="public" virt="virtual"><scope>Stud</scope><name>print</name></member>
+      <member refid="class_stud_1ac8b2e8ca576f42a8446fac6d745947aa" prot="public" virt="non-virtual"><scope>Stud</scope><name>removeLastPaz</name></member>
+      <member refid="class_stud_1a4d3c5d9554efdc1f68d66958375e71e0" prot="public" virt="non-virtual"><scope>Stud</scope><name>setEgz</name></member>
+      <member refid="class_stud_1ae2a1a428d2ba892f734e29c0e45c11c5" prot="public" virt="non-virtual"><scope>Stud</scope><name>setGalutinis</name></member>
+      <member refid="class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2" prot="public" virt="non-virtual"><scope>Stud</scope><name>setPavarde</name></member>
+      <member refid="class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b" prot="public" virt="non-virtual"><scope>Stud</scope><name>setVardas</name></member>
+      <member refid="class_stud_1a2f2961b1c7a9cc5252ab3ce153980e12" prot="public" virt="non-virtual"><scope>Stud</scope><name>setVm</name></member>
+      <member refid="class_stud_1a97585839898d45dc9fc815d5b36e2b69" prot="public" virt="non-virtual"><scope>Stud</scope><name>Stud</name></member>
+      <member refid="class_stud_1a6e16964de60326f7a598a0b47903f574" prot="public" virt="non-virtual"><scope>Stud</scope><name>Stud</name></member>
+      <member refid="class_stud_1ad473232271f7e160f811c6ae206d326c" prot="public" virt="non-virtual"><scope>Stud</scope><name>Stud</name></member>
+      <member refid="class_stud_1ac62c75899e911e4f1d55e1047564225c" prot="public" virt="non-virtual"><scope>Stud</scope><name>Stud</name></member>
+      <member refid="class_zmogus_1ad752feab373733e70e2101724e8d1d9d" prot="protected" virt="non-virtual"><scope>Stud</scope><name>Vardas</name></member>
+      <member refid="class_stud_1a52d0e1c089bbcba44db3b32c74421f24" prot="private" virt="non-virtual"><scope>Stud</scope><name>vm</name></member>
+      <member refid="class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574" prot="public" virt="non-virtual"><scope>Stud</scope><name>Zmogus</name></member>
+      <member refid="class_zmogus_1a6ca61a3bcea221478551dd04419d2433" prot="public" virt="non-virtual"><scope>Stud</scope><name>Zmogus</name></member>
+      <member refid="class_stud_1aa1c38d670d1f269ebd48588c40ad58db" prot="public" virt="non-virtual"><scope>Stud</scope><name>~Stud</name></member>
+      <member refid="class_zmogus_1a6183937c7da8254430a6c99cfa89fe69" prot="public" virt="virtual"><scope>Stud</scope><name>~Zmogus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

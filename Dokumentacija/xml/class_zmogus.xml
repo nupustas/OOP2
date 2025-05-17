@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="class_zmogus" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Zmogus</compoundname>
+    <derivedcompoundref refid="class_stud" prot="public" virt="non-virtual">Stud</derivedcompoundref>
+    <includes refid="human_8h" local="no">human.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_zmogus_1ad752feab373733e70e2101724e8d1d9d" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Zmogus::Vardas</definition>
+        <argsstring></argsstring>
+        <name>Vardas</name>
+        <qualifiedname>Zmogus::Vardas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="6" column="12" bodyfile="include/human.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_zmogus_1a2300d6db4227967c96dd83a555fa7b86" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Zmogus::Pavarde</definition>
+        <argsstring></argsstring>
+        <name>Pavarde</name>
+        <qualifiedname>Zmogus::Pavarde</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="6" column="19" bodyfile="include/human.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Zmogus::Zmogus</definition>
+        <argsstring>()</argsstring>
+        <name>Zmogus</name>
+        <qualifiedname>Zmogus::Zmogus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="9" column="5" bodyfile="include/human.h" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1a6ca61a3bcea221478551dd04419d2433" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Zmogus::Zmogus</definition>
+        <argsstring>(const string &amp;v, const string &amp;p)</argsstring>
+        <name>Zmogus</name>
+        <qualifiedname>Zmogus::Zmogus</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="10" column="5" bodyfile="include/human.h" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1a6183937c7da8254430a6c99cfa89fe69" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Zmogus::~Zmogus</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Zmogus</name>
+        <qualifiedname>Zmogus::~Zmogus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="11" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1aaea44664c236e2fadf022f3821862499" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Zmogus::getVardas</definition>
+        <argsstring>() const</argsstring>
+        <name>getVardas</name>
+        <qualifiedname>Zmogus::getVardas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="14" column="12" bodyfile="include/human.h" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string Zmogus::getPavarde</definition>
+        <argsstring>() const</argsstring>
+        <name>getPavarde</name>
+        <qualifiedname>Zmogus::getPavarde</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="15" column="12" bodyfile="include/human.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Zmogus::setVardas</definition>
+        <argsstring>(const string &amp;v)</argsstring>
+        <name>setVardas</name>
+        <qualifiedname>Zmogus::setVardas</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="17" column="10" bodyfile="include/human.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Zmogus::setPavarde</definition>
+        <argsstring>(const string &amp;p)</argsstring>
+        <name>setPavarde</name>
+        <qualifiedname>Zmogus::setPavarde</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="18" column="10" bodyfile="include/human.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_zmogus_1aa52869cc6a869223fedcb9f7676534fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Zmogus::print</definition>
+        <argsstring>() const =0</argsstring>
+        <name>print</name>
+        <qualifiedname>Zmogus::print</qualifiedname>
+        <reimplementedby refid="class_stud_1a2e343213dc95664555965f08648527c2">print</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/human.h" line="20" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Stud</label>
+        <link refid="class_stud"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Zmogus</label>
+        <link refid="class_zmogus"/>
+      </node>
+    </inheritancegraph>
+    <location file="include/human.h" line="4" column="1" bodyfile="include/human.h" bodystart="4" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_zmogus_1a11ee9ac120fbb7d6a4e1f4da3a602b63" prot="public" virt="non-virtual"><scope>Zmogus</scope><name>getPavarde</name></member>
+      <member refid="class_zmogus_1aaea44664c236e2fadf022f3821862499" prot="public" virt="non-virtual"><scope>Zmogus</scope><name>getVardas</name></member>
+      <member refid="class_zmogus_1a2300d6db4227967c96dd83a555fa7b86" prot="protected" virt="non-virtual"><scope>Zmogus</scope><name>Pavarde</name></member>
+      <member refid="class_zmogus_1aa52869cc6a869223fedcb9f7676534fc" prot="public" virt="pure-virtual"><scope>Zmogus</scope><name>print</name></member>
+      <member refid="class_zmogus_1ac34eb9eb78f1c75080df7230ca61f2d2" prot="public" virt="non-virtual"><scope>Zmogus</scope><name>setPavarde</name></member>
+      <member refid="class_zmogus_1a2158d2752cd52e970ac4c809446e9d8b" prot="public" virt="non-virtual"><scope>Zmogus</scope><name>setVardas</name></member>
+      <member refid="class_zmogus_1ad752feab373733e70e2101724e8d1d9d" prot="protected" virt="non-virtual"><scope>Zmogus</scope><name>Vardas</name></member>
+      <member refid="class_zmogus_1aa7a8ba4d3c4778f9b35d59eef3e72574" prot="public" virt="non-virtual"><scope>Zmogus</scope><name>Zmogus</name></member>
+      <member refid="class_zmogus_1a6ca61a3bcea221478551dd04419d2433" prot="public" virt="non-virtual"><scope>Zmogus</scope><name>Zmogus</name></member>
+      <member refid="class_zmogus_1a6183937c7da8254430a6c99cfa89fe69" prot="public" virt="virtual"><scope>Zmogus</scope><name>~Zmogus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

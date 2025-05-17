@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_student_8h" xml:lang="en-US">
+<title>include/student.h File Reference</title>
+<indexterm><primary>include/student.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;human.h&quot;<?linebreak?>#include &quot;manolib.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_stud">Stud</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
