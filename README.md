@@ -88,7 +88,7 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 #### Originalus Vector vs Vektor klasė
 - **Užpildymas naudojant push_back() funkciją**
 | Dydis       | Vector       | Klasė      |     
-|-------------|----------    |----------  |
+|-------------|--------------|------------|
 | 10000       |  0.00010 s   |  0.00006 s |
 | 100000      |  0.00101 s   |  0.00051 s |
 | 1000000     |  0.00414 s   |  0.00477 s | 
@@ -98,7 +98,7 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 
 -  **Programos spartos analizė**
 | Failas            | Vector     | Klasė      |      
-|-------------------|----------  |----------  |
+|-------------------|------------|------------|
 | Studentai10000    |  0.17188 s |  0.13205 s | 
 | Studentai100000   |  1.03871 s |  1.09587 s | 
 | Studentai1000000  |  9.88531 s |  10.2013 s | 
