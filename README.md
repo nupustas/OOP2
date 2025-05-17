@@ -1,13 +1,13 @@
 ## Studentų galutinio balo skaičiavimo programa
 
 Šis projektas yra C++ programa, kuri apskaičiuoja galutinį studento balą pagal jų namų darbų, bei egzamino įvertinimus.
-# Projekto paleidijmas
+# Projekto paleidimas
 
 ## Naudojant setup.exe
 * Parsisiųskite **setup.exe** failą iš github repozitorijos
 * Paleiskite **setup.exe** failą
 * Sekite ekrane rodomas diegimo instrukcijas
-* Įdiegę **setup.exe** darbalaukyje atsiras nuoroda paleisti programą.
+* Įdiegę **setup.exe** darbalaukyje atsiras nuoroda paleisti programą
 * Projektas bus įdiegtas čia: C:\Program Files (x86)\VU\Vejas-Prastienis
 
 ## Projekto paleidimas naudojant CMake
@@ -66,7 +66,7 @@ Patikrinama ar index nėra didesnis už konteinerio dydį, jei ne grąžinamas d
 #### 4. ```bool operator==(const Vektor<V>& other)```
 Operatorius ==, šis leidžia patikrinti ar du konteineriai yra lygūs.
 ###### Veikimas:
-Visų pirmą patikrinama ar konteinerių dydis lygus, jei ne iškart grąžinama **false** reikšmė. Jei konteinerių dydis toks pat, tuomet tikrinama ar kiekvinas konteinerių elementas lygus. Jei visi elementai lygūs, grąžinama **true** reikšmė.
+Visų pirmą patikrinama ar konteinerių dydis lygus, jei ne iškart grąžinama **false** reikšmė. Jei konteinerių dydis toks pat, tuomet tikrinama ar kiekvienas konteinerių elementas lygus. Jei visi elementai lygūs, grąžinama **true** reikšmė.
 
 #### 5. ```void pop_back()```
 Ši funkcija leidžia pašalinti konteinerio paskutinį elementą.
