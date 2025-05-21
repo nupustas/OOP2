@@ -40,10 +40,12 @@ OOP.exe
 ```
 ## Projekto struktūra:
 
+- **`Dokumentacija/`**: Aplankalas, kuriame yra visa projekto dokumentacija.
 - **`include/`**: Aplankalas, kuriame laikomi projekto header failai.
 - **`src/`**: Pagrindinis programos kodas.
 - **`CMakeLists.txt`**: CMake instrukcijos kompiliavimui.
 - **`ReadME.md`**: Programos instrukcija.
+- **`setup.exe`**: Programos diegimo failas.
 
 
 ## V3.0
