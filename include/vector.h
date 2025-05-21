@@ -2,7 +2,7 @@
 #include "manolib.h"
 
 template<typename V>
-class Vektor{
+class Vektor {
 private:
     V* duom;
     size_t dydis;
@@ -20,15 +20,9 @@ void resize(size_t n)
     talpa = n;
 }
 public:
-// Standard typedefs required by STL compatibility
+
 using value_type = V;
-using reference = V&;
-using const_reference = const V&;
-using iterator = V*;
-using const_iterator = const V*;
 using size_type = size_t;
-
-
 
 //Konstruktoriai
 Vektor(): duom(nullptr), dydis(0), talpa(0) {}
@@ -90,7 +84,8 @@ void shrink_to_fit() {
         }
         delete[] duom;
         duom = temp;
-        talpa = dydis;}}
+        talpa = dydis;}
+    }
 
 //Vektoriaus funkciju realizacijos
 void push_back(const V& value) {
@@ -115,15 +110,13 @@ V* begin() {return duom;}
 V* end() {return duom+dydis;}
 V& front() { return duom[0]; }
 V& back() { return duom[dydis - 1]; }
-V* clear()
+void clear()
 {
     delete[] duom;
     duom = nullptr;
     dydis = 0;
     talpa = 0;
-    return duom;
 }
-
 
 //
 V& operator[](size_t index) {
@@ -143,7 +136,7 @@ Vektor<V>& operator=(const Vektor<V>& other) {
         delete[] duom;
         dydis = other.dydis;
         talpa = other.talpa;
-        duom = new V[dydis];
+        duom = new V[other.talpa];
         for (size_t i = 0; i < dydis; ++i) {
             duom[i] = other.duom[i];
         }
@@ -179,10 +172,4 @@ bool operator==(const Vektor<V>& other) const {
     }
     return true;
 }
-//setteriai
-
-
-//getteriai
-
-
-};
+}; 
