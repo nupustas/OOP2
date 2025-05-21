@@ -76,21 +76,30 @@ int main()
         {   
             std::vector<int> og;
             Vektor <int> klase;
-            size_t sz = 100000; // 100000, 1000000, 10000000, 100000000
-            cin>>sz;
+            size_t sz = 100000000; 
+            //cin>>sz;
+            size_t x=0;
             cout<< "Size: " << sz << endl;
             auto start_split = std::chrono::high_resolution_clock::now();
-            for (int i = 1; i <= sz; ++i) og.push_back(i);
+            for (int i = 1; i <= sz; ++i){
+            og.push_back(i);
+                if(og.capacity() == og.size()) x++;
+            } 
             auto end_split = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double> split_duration = end_split - start_split;
             cout<< "OG vector: " << fixed << setprecision(5) << split_duration.count() << " s" << endl;
+            cout<< "OG vector atminties perskirstymu: " <<x<<endl;
 
-
+            size_t y=0;
             auto start = std::chrono::high_resolution_clock::now();
-            for (int i = 1; i <= sz; ++i) klase.push_back(i);
+            for (int i = 1; i <= sz; ++i) {
+                klase.push_back(i);
+                if(klase.capacity() == klase.size()) y++;
+            }
             auto end = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double> duration = end - start;
             cout<< "Vektor class: " << fixed << setprecision(5) << duration.count() << " s" << endl;
+            cout<< "Vektor class atminties perskirstymu: " <<y<<endl;
             return 0;
         }
         if (grupe.empty())  

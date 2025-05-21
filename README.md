@@ -99,6 +99,11 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 | 100000000    | 0.50926 s  | 0.39100 s  |
 | 1000000000   | 9.06876 s  | 6.91821 s  |
 
+- **Atminties perskirstymai užpildant 100000000 elementų**
+-Vector - 46
+-Klasė - 27
+
+
 -  **Programos spartos analizė**
 
 | Failas         | Vector     | Klasė      |
