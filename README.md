@@ -100,11 +100,11 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 | 1000000000   | 9.06876 s  | 6.91821 s  |
 
 - **Atminties perskirstymai užpildant 100000000 elementų**
--Vector - 46
--Klasė - 27
+- Vector - 46
+- Klasė - 27
 
 
--  **Programos spartos analizė**
+-  **Visos programos spartos analizė**
 
 | Failas         | Vector     | Klasė      |
 |----------------|------------|------------|
@@ -113,6 +113,32 @@ Patikrinama ar konteineris nėra tusčias, jei ne, tuomet jo dydis yra pamažina
 | Studentai1000000| 9.88531 s | 10.2013 s  |
 | Studentai10000000| 100.456 s| 110.858 s  |
 
+-  **Failo nuskaitymas**
+
+| Failas         | Vector     | Klasė      |
+|----------------|------------|------------|
+| Studentai10000 | 0.07248 s  | 0.07543 s  |
+| Studentai100000| 0.45636 s  | 0.48701 s  |
+| Studentai1000000| 4.34023 s | 4.33894 s  |
+| Studentai10000000| 44.1217 s| 47.9668 s  |
+
+-  **Failo rušiavimas**
+
+| Failas         | Vector     | Klasė      |
+|----------------|------------|------------|
+| Studentai10000 | 0.00236 s  | 0.00264 s  |
+| Studentai100000| 0.01519 s  | 0.01320 s  |
+| Studentai1000000| 0.12810 s | 0.12640 s  |
+| Studentai10000000| 1.61965 s| 1.48394 s  |
+
+-  **Failo padalijimas į du ir įrašymas į juos**
+
+| Failas         | Vector     | Klasė      |
+|----------------|------------|------------|
+| Studentai10000 | 0.04739  s  | 0.05355 s  |
+| Studentai100000| 0.50018 s  | 0.45399 s  |
+| Studentai1000000| 4.93666 s | 4.85637 s  |
+| Studentai10000000| 49.74274 s| 53.5512 s  |
 
 #### Testų analizė
 * Užpildant konteinerį naudojant push_back() funkciją, vektoriaus klasė yra spartesnė

@@ -172,4 +172,24 @@ bool operator==(const Vektor<V>& other) const {
     }
     return true;
 }
+bool operator!=(const Vektor<V>& other) const {
+    return !(*this == other);
+}
+bool operator<(const Vektor<V>& other) const {
+    for (size_t i = 0; i < std::min(dydis, other.dydis); ++i) {
+        if (duom[i] < other.duom[i]) return true;
+        if (duom[i] > other.duom[i]) return false;
+    }
+    return dydis < other.dydis;
+}
+bool operator<=(const Vektor<V>& other) const {
+    return !(other < *this);
+}
+bool operator>(const Vektor<V>& other) const {
+    return other < *this;
+}
+bool operator>=(const Vektor<V>& other) const {
+    return !(*this < other);
+}
+
 }; 
